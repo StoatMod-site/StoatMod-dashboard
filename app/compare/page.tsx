@@ -1,5 +1,6 @@
 import { Breadcrumbs } from "../Breadcrumbs";
 import { PublicFooter } from "../PublicFooter";
+import { OpenSourceCallout } from "../OpenSourceCallout";
 import { PublicPageHeading, PublicSummary } from "../PublicPageHeading";
 import { SiteNav } from "../SiteNav";
 import { JsonLd } from "../JsonLd";
@@ -16,6 +17,7 @@ const contents = [
   ["privacy", "Privacy"],
   ["choose", "Which one fits"],
   ["method", "How we checked"],
+  ["request-bot", "Request a bot"],
 ] as const;
 
 // Logos and banners are copies of each bot's public Stoat profile avatar and background.
@@ -51,7 +53,7 @@ const ranking: { bot: BotId; headline: string; summary: string; strengths: strin
     bot: "stoatmod",
     headline: "The only one that reads what a message means",
     summary: "Stoatmod's own AI, running on our hardware, checks messages for serious harm across categories such as hate, violent extremism, illegal activity and sexual content. It acts only when a category scores 90% or higher, and an optional Thinking check makes it double-check borderline cases and explain itself.",
-    strengths: ["AI content moderation with per-category policies", "Cases, warning escalation and a full appeal portal", "Join protection, link protection, spam detection and optional CAPTCHA", "Global bans and reports reviewed by the Stoatmod team"],
+    strengths: ["AI content moderation with per-category policies", "Cases, warning escalation and a full appeal portal", "Join protection, link protection, spam detection and optional CAPTCHA", "Global bans and reports reviewed by the Stoatmod team", "Bot, API, website and dashboard source under AGPL-3.0"],
     gaps: ["No raid lockdown or waiting room yet", "No scam-link threat feed yet", "Image scanning is still experimental", "Model weights have not been released yet"],
   },
   {
@@ -120,7 +122,7 @@ const privacy: { bot: BotId; anchor: string; badge: string; findings: Finding[];
 ];
 
 const stoatmodBetter = [
-  { text: "Our code isn't public, so you can't check our claims the way you can with AutoMod and bronx.", href: "/about", label: "About Stoatmod" },
+  { text: "Our bot and website code is public, but the moderation model's weights have not been released yet.", href: siteConfig.botSourceUrl, label: "Bot and API source" },
   { text: "Join verification and the report form still use Cloudflare Turnstile, though only after the person agrees.", href: "/privacy-changes#remains", label: "What's still there" },
   { text: "Global bans and warnings work across servers. Only authorised Stoatmod admins can see them, and only to deal with abuse.", href: "/privacy-changes#remains", label: "What's still there" },
   { text: "Our AI reads every message in the channels it moderates. Stoat has said this is allowed without opt-in as long as nothing is kept after the check, which is how it works.", href: "/privacy-changes#consistency", label: "What Stoat told us" },
@@ -134,36 +136,75 @@ const choices = [
 ];
 
 const sources: { bot: BotId; links: { label: string; href: string }[] }[] = [
-  { bot: "stoatmod", links: [{ label: "Features", href: "/features" }, { label: "Documentation", href: "/docs" }, { label: "Privacy changes", href: "/privacy-changes" }] },
+  { bot: "stoatmod", links: [{ label: "Bot and API source", href: siteConfig.botSourceUrl }, { label: "Website and dashboard source", href: siteConfig.websiteSourceUrl }, { label: "Features", href: "/features" }, { label: "Documentation", href: "/docs" }, { label: "Privacy changes", href: "/privacy-changes" }] },
   { bot: "kuma", links: [{ label: "Website", href: "https://kumabot.xyz/" }, { label: "Commands", href: "https://kumabot.xyz/commands" }, { label: "Privacy policy", href: "https://kumabot.xyz/privacy" }] },
   { bot: "automod", links: [{ label: "Website", href: "https://automod.vale.rocks/" }, { label: "Documentation", href: "https://automod.vale.rocks/docs/automod" }, { label: "Source code", href: "https://tangled.org/vale.rocks/AutoMod" }] },
   { bot: "bronx", links: [{ label: "Website", href: "https://bronx.siqnole.dev/" }, { label: "Documentation", href: "https://bronx.siqnole.dev/docs/" }, { label: "Privacy page", href: "https://bronx.siqnole.dev/privacy" }] },
 ];
 
 const seo = {
-  title: "AutoMod vs Kuma vs bronx vs Stoatmod: Stoat Moderation Bots Compared",
-  description: "We ranked four Stoat bots, Stoatmod, Kuma, AutoMod and bronx, on moderation across ten areas, and set out what each one does with your data.",
+  title: "Stoat Moderation Bots Compared: Stoatmod, Kuma, AutoMod & bronx",
+  description: "Compare Stoatmod, Kuma, AutoMod and bronx across 10 moderation features, privacy practices and source availability. See scores, evidence and setup links.",
   path: "/compare",
-  modifiedTime: "2026-10-14T00:00:00+01:00",
+  image: "/compare/og-stoat-bots-comparison.png",
+  imageAlt: "Stoat moderation bots compared: Stoatmod, Kuma, AutoMod and bronx. Features, privacy and open-source code.",
+  publishedTime: "2026-10-14T00:00:00+01:00",
+  modifiedTime: "2026-10-15T00:00:00+01:00",
 };
 
-export const metadata = {
-  ...buildMetadata({ title: seo.title, description: seo.description, path: seo.path, type: "article", modifiedTime: seo.modifiedTime }),
-  keywords: ["Stoat moderation bot", "best Stoat bot", "AutoMod Stoat", "Kuma bot", "bronx bot", "Stoatmod"],
-};
+export const metadata = buildMetadata({
+  title: seo.title,
+  description: seo.description,
+  path: seo.path,
+  image: seo.image,
+  imageAlt: seo.imageAlt,
+  imageWidth: 1733,
+  imageHeight: 908,
+  type: "article",
+  modifiedTime: seo.modifiedTime,
+});
 
 const schema = {
   "@context": "https://schema.org",
   "@graph": [
     organizationSchema(),
     websiteSchema(),
-    webPageSchema({ title: seo.title, description: seo.description, path: seo.path }),
+    {
+      ...webPageSchema({ title: seo.title, description: seo.description, path: seo.path }),
+      dateModified: seo.modifiedTime,
+      primaryImageOfPage: { "@id": `${absoluteUrl(seo.path)}#image` },
+      mainEntity: { "@id": `${absoluteUrl(seo.path)}#article` },
+    },
+    {
+      "@type": "ImageObject",
+      "@id": `${absoluteUrl(seo.path)}#image`,
+      url: absoluteUrl(seo.image),
+      contentUrl: absoluteUrl(seo.image),
+      width: 1733,
+      height: 908,
+      caption: seo.imageAlt,
+    },
+    {
+      "@type": "Article",
+      "@id": `${absoluteUrl(seo.path)}#article`,
+      headline: seo.title,
+      description: seo.description,
+      url: absoluteUrl(seo.path),
+      inLanguage: "en-GB",
+      datePublished: seo.publishedTime,
+      dateModified: seo.modifiedTime,
+      image: { "@id": `${absoluteUrl(seo.path)}#image` },
+      author: { "@id": `${siteConfig.origin}/#organization` },
+      publisher: { "@id": `${siteConfig.origin}/#organization` },
+      mainEntityOfPage: { "@id": `${absoluteUrl(seo.path)}#page` },
+    },
     {
       "@type": "ItemList",
       "@id": `${absoluteUrl(seo.path)}#ranking`,
       name: "Stoat moderation bots ranked by moderation capability",
       itemListOrder: "https://schema.org/ItemListOrderDescending",
-      itemListElement: ranking.map((item, index) => ({ "@type": "ListItem", position: index + 1, name: bots[item.bot].name })),
+      numberOfItems: ranking.length,
+      itemListElement: ranking.map((item, index) => ({ "@type": "ListItem", position: index + 1, name: bots[item.bot].name, url: absoluteUrl(`${seo.path}#rank-${item.bot}`) })),
     },
     breadcrumbSchema([
       { name: siteConfig.name, path: "/" },
@@ -207,15 +248,16 @@ export default function ComparePage() {
       <PublicPageHeading
         compact
         eyebrow="Bot comparison"
-        title={<>Stoat moderation bots,<br />ranked side by side.</>}
-        description="We ranked four Stoat bots on how well they moderate, then set out what each one does with your data, using the findings from our privacy changes page."
+        title={<>Stoat moderation bots,<br />compared side by side.</>}
+        description="Compare Stoatmod, Kuma, AutoMod and bronx across 10 moderation areas, with privacy findings and public source links."
         action={{ href: "#scorecard", label: "See the scorecard" }}
       />
       <PublicSummary
         title="Ranked on moderation. Checked for privacy."
         description="Every score is shown and every claim links to its source, so you can check our working."
-        facts={["10 moderation areas", "Checked 14 October 2026", "Sources for every claim"]}
+        facts={["10 moderation areas", "Feature review: 14 October 2026", "Source update: 15 October 2026"]}
       />
+      <OpenSourceCallout />
 
       <div className={styles.layout}>
         <aside className={styles.toc} aria-label="On this page">
@@ -240,7 +282,7 @@ export default function ComparePage() {
               {ranking.map((item, index) => {
                 const score = total(item.bot);
                 return (
-                  <li key={item.bot} className={`${styles.rankCard} ${index === 0 ? styles.leader : ""}`}>
+                  <li key={item.bot} id={`rank-${item.bot}`} className={`${styles.rankCard} ${index === 0 ? styles.leader : ""}`}>
                     <div className={styles.bannerWrap}>
                       <BotBanner bot={item.bot} />
                       <span className={styles.position}>#{index + 1}</span>
@@ -359,6 +401,7 @@ export default function ComparePage() {
             <p className={styles.sectionNumber}>05 / How we checked</p>
             <h2>From each bot&apos;s own pages and code.</h2>
             <p>We checked each bot&apos;s website and documentation on 14 October 2026 and scored only what they say works on Stoat. AutoMod and bronx are open source, so we could also read their code. Kuma&apos;s code isn&apos;t public, so we relied on its own website, commands page and privacy policy. Features change, so if a bot has added something we missed, tell us and we&apos;ll re-score it.</p>
+            <p>On 15 October 2026, we published Stoatmod&apos;s bot and dashboard API, plus the website and server dashboard, under AGPL-3.0. You can now inspect the code and its setup instructions in the repositories below. The moderation model&apos;s weights will be released separately.</p>
             <p>Each bot&apos;s logo and banner come from its public Stoat profile and belong to its developer. We show them only so you can recognise each bot.</p>
             <div className={styles.sources}>
               {sources.map((item) => (
@@ -370,6 +413,21 @@ export default function ComparePage() {
                   })}
                 </div>
               ))}
+            </div>
+          </section>
+          <section className={styles.section} id="request-bot">
+            <p className={styles.sectionNumber}>06 / Add a bot</p>
+            <h2>Request your bot to be added.</h2>
+            <p>Developers and community members can suggest a Stoat bot for this comparison. Send us the public details below so we can assess it using the same criteria as every other bot.</p>
+            <ul className={styles.requestList}>
+              <li>Bot name and its public Stoat bot profile.</li>
+              <li>Website, documentation and supported Stoat moderation features.</li>
+              <li>Privacy policy and public source code, where available.</li>
+              <li>A contact address for questions or corrections.</li>
+            </ul>
+            <div className={styles.requestActions}>
+              <a href={`mailto:${siteConfig.contactEmail}?subject=${encodeURIComponent("Request to add a Stoat bot to the comparison")}`}>Request a bot review <span aria-hidden="true">↗</span></a>
+              <a href={`mailto:${siteConfig.contactEmail}`}>{siteConfig.contactEmail}</a>
             </div>
           </section>
         </article>

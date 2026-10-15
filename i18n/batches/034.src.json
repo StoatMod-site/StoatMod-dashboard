@@ -68,7 +68,6 @@
  "Make activity tracking and leaderboards opt-in, which Stoat says it's now asking every bot to do.",
  "Delete applications after a set time; Stoat's guidance points to 30 days.",
  "Remove the developer channel and make the privacy page match what the code does.",
- "Our code isn't public, so you can't check our claims the way you can with AutoMod and bronx.",
  "Join verification and the report form still use Cloudflare Turnstile, though only after the person agrees.",
  "Global bans and warnings work across servers. Only authorised Stoatmod admins can see them, and only to deal with abuse.",
  "Our AI reads every message in the channels it moderates. Stoat has said this is allowed without opt-in as long as nothing is kept after the check, which is how it works.",

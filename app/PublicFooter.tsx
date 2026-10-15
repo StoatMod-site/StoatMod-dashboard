@@ -26,6 +26,7 @@ export function PublicFooter({ description }: { description?: string }) {
             <h2>Resources</h2>
             <a href="/status">Status</a>
             <a href="/changelog">Changelog</a>
+            <a href={siteConfig.githubUrl}>GitHub <span aria-hidden="true">↗</span></a>
             <a href={siteConfig.supportUrl}>Support <span aria-hidden="true">↗</span></a>
           </div>
           <div className={styles.group}>

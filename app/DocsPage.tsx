@@ -9,6 +9,7 @@ import { ResourceLibrary } from "./ResourceLibrary";
 import styles from "./ReadingPage.module.css";
 import { PublicPageHeading, PublicSummary } from "./PublicPageHeading";
 import { PrivacyUpdateCallout } from "./PrivacyUpdateCallout";
+import { OpenSourceCallout } from "./OpenSourceCallout";
 import { LocaleSelector, tr, useSiteLocale } from "./WebsiteI18n";
 
 const permissions = ["View Channels", "Read Message History", "Send Messages", "Send Embeds", "Manage Messages", "React", "Timeout Members", "Kick Members", "Ban Members", "Assign Roles", "Manage Roles", "Manage Nicknames"];
@@ -25,6 +26,7 @@ export function DocsPage({ guides }: { guides: { href: string; title: string; de
     <PublicPageHeading eyebrow="Documentation" title="Documentation & commands." description="The settings, permissions, and commands behind your moderation setup." action={{href:"#commands",label:"Search commands"}} />
     <PublicSummary title="Start with a setup you understand." description="Find the prerequisites, exact commands, and checks for each task. New to Stoatmod? The quickstart takes you through your first configuration." facts={[`${guides.length} documentation pages`,`${publicCommands.length} command entries`,"Server-specific configuration"]} action={{href:"/docs/getting-started",label:"Open the quickstart"}} />
     <PrivacyUpdateCallout />
+    <OpenSourceCallout />
     <div className="docs-layout">
       <aside className="docs-sidebar"><strong>Documentation</strong><a href="/docs/getting-started">Getting started</a><a href="/docs/permissions">Permissions</a><a href="/docs/automod">Automod</a><a href="/docs/commands">Commands</a><a href="/docs/troubleshooting">Troubleshooting</a><a href="#permissions">Quick permissions</a><a href="#commands">Command reference</a><div><span>Need the control room?</span><a href="/login">Moderator login →</a></div></aside>
       <article className="docs-content">

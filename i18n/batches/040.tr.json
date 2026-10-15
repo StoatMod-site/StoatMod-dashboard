@@ -1,0 +1,97 @@
+[
+ [
+  "Proposer un bot",
+  "Sugerir um bot",
+  "Proponer un bot"
+ ],
+ [
+  "Code du bot, de l’API, du site et du tableau de bord sous AGPL-3.0",
+  "Código do bot, da API, do site e do painel sob AGPL-3.0",
+  "Código del bot, la API, el sitio y el panel bajo AGPL-3.0"
+ ],
+ [
+  "Le code de notre bot et de notre site est public, mais les poids du modèle de modération ne sont pas encore publiés.",
+  "O código do nosso bot e site é público, mas os pesos do modelo de moderação ainda não foram publicados.",
+  "El código de nuestro bot y sitio es público, pero los pesos del modelo de moderación aún no se han publicado."
+ ],
+ [
+  "Comparatif des bots de modération Stoat : Stoatmod, Kuma, AutoMod et bronx",
+  "Comparação de bots de moderação do Stoat: Stoatmod, Kuma, AutoMod e bronx",
+  "Comparativa de bots de moderación de Stoat: Stoatmod, Kuma, AutoMod y bronx"
+ ],
+ [
+  "Comparez Stoatmod, Kuma, AutoMod et bronx sur 10 fonctions de modération, la confidentialité et l’accès au code. Consultez les scores, les preuves et les liens de configuration.",
+  "Compare Stoatmod, Kuma, AutoMod e bronx em 10 funcionalidades de moderação, privacidade e acesso ao código. Consulte pontuações, provas e ligações de configuração.",
+  "Compara Stoatmod, Kuma, AutoMod y bronx en 10 funciones de moderación, privacidad y acceso al código. Consulta puntuaciones, pruebas y enlaces de configuración."
+ ],
+ [
+  "Comparatif des bots de modération Stoat : Stoatmod, Kuma, AutoMod et bronx. Fonctionnalités, confidentialité et code source ouvert.",
+  "Comparação de bots de moderação do Stoat: Stoatmod, Kuma, AutoMod e bronx. Funcionalidades, privacidade e código aberto.",
+  "Comparativa de bots de moderación de Stoat: Stoatmod, Kuma, AutoMod y bronx. Funciones, privacidad y código abierto."
+ ],
+ [
+  "comparés côte à côte.",
+  "comparados lado a lado.",
+  "comparados uno junto a otro."
+ ],
+ [
+  "Comparez Stoatmod, Kuma, AutoMod et bronx dans 10 domaines de modération, avec les constats de confidentialité et les liens vers le code public.",
+  "Compare Stoatmod, Kuma, AutoMod e bronx em 10 áreas de moderação, com conclusões sobre privacidade e ligações para o código público.",
+  "Compara Stoatmod, Kuma, AutoMod y bronx en 10 áreas de moderación, con hallazgos sobre privacidad y enlaces al código público."
+ ],
+ [
+  "Fonctionnalités vérifiées : 14 octobre 2026",
+  "Funcionalidades revistas: 14 de outubro de 2026",
+  "Funciones revisadas: 14 de octubre de 2026"
+ ],
+ [
+  "Code mis à jour : 15 octobre 2026",
+  "Atualização do código: 15 de outubro de 2026",
+  "Actualización del código: 15 de octubre de 2026"
+ ],
+ [
+  "Le 15 octobre 2026, nous avons publié le bot et l’API du tableau de bord de Stoatmod, ainsi que le site et le tableau de bord de serveur, sous AGPL-3.0. Vous pouvez consulter le code et ses instructions d’installation dans les dépôts ci-dessous. Les poids du modèle de modération seront publiés séparément.",
+  "A 15 de outubro de 2026, publicámos o bot e a API do painel do Stoatmod, bem como o site e o painel de servidor, sob AGPL-3.0. Pode consultar o código e as instruções de configuração nos repositórios abaixo. Os pesos do modelo de moderação serão publicados separadamente.",
+  "El 15 de octubre de 2026 publicamos el bot y la API del panel de Stoatmod, junto con el sitio y el panel de servidor, bajo AGPL-3.0. Puedes consultar el código y sus instrucciones de configuración en los repositorios siguientes. Los pesos del modelo de moderación se publicarán por separado."
+ ],
+ [
+  "06 / Ajouter un bot",
+  "06 / Adicionar um bot",
+  "06 / Añadir un bot"
+ ],
+ [
+  "Demandez l’ajout de votre bot.",
+  "Peça a inclusão do seu bot.",
+  "Solicita que se añada tu bot."
+ ],
+ [
+  "Les développeurs et les membres de la communauté peuvent proposer un bot Stoat pour ce comparatif. Envoyez-nous les informations publiques ci-dessous pour que nous l’évaluions selon les mêmes critères que les autres bots.",
+  "Programadores e membros da comunidade podem sugerir um bot do Stoat para esta comparação. Envie os dados públicos abaixo para o avaliarmos segundo os mesmos critérios dos restantes bots.",
+  "Los desarrolladores y miembros de la comunidad pueden proponer un bot de Stoat para esta comparativa. Envíanos los datos públicos indicados para evaluarlo con los mismos criterios que los demás bots."
+ ],
+ [
+  "Le nom du bot et son profil public sur Stoat.",
+  "Nome do bot e o seu perfil público no Stoat.",
+  "Nombre del bot y su perfil público en Stoat."
+ ],
+ [
+  "Le site, la documentation et les fonctions de modération disponibles sur Stoat.",
+  "Site, documentação e funcionalidades de moderação disponíveis no Stoat.",
+  "Sitio, documentación y funciones de moderación disponibles en Stoat."
+ ],
+ [
+  "La politique de confidentialité et le code source public, s’ils sont disponibles.",
+  "Política de privacidade e código-fonte público, quando disponíveis.",
+  "Política de privacidad y código fuente público, si están disponibles."
+ ],
+ [
+  "Une adresse de contact pour les questions ou corrections.",
+  "Um endereço de contacto para perguntas ou correções.",
+  "Una dirección de contacto para preguntas o correcciones."
+ ],
+ [
+  "Demander l’évaluation d’un bot",
+  "Pedir a avaliação de um bot",
+  "Solicitar la evaluación de un bot"
+ ]
+]

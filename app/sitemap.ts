@@ -8,14 +8,14 @@ import { absoluteUrl } from "./lib/site-config";
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   if (isPrivatePreview()) return [];
   const core = [
-    { path: "/", updated: "2026-09-30" },
-    { path: "/features", updated: "2026-10-02" },
-    { path: "/guides", updated: "2026-09-30" },
-    { path: "/docs", updated: "2026-10-02" },
+    { path: "/", updated: "2026-10-15" },
+    { path: "/features", updated: "2026-10-15" },
+    { path: "/guides", updated: "2026-10-15" },
+    { path: "/docs", updated: "2026-10-15" },
     { path: "/discovery", updated: "2026-09-30" },
     { path: "/privacy", updated: "2026-10-02" },
-    { path: "/privacy-changes", updated: "2026-10-14" },
-    { path: "/compare", updated: "2026-10-14" },
+    { path: "/privacy-changes", updated: "2026-10-15" },
+    { path: "/compare", updated: "2026-10-15", images: [absoluteUrl("/compare/og-stoat-bots-comparison.png")] },
     { path: "/status", updated: "2026-09-30" },
   ];
   const content = allContentPages().map(({ href, page }) => ({ path: href, updated: page.updated }));

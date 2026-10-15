@@ -345,11 +345,6 @@
   "Quitar el canal del desarrollador y hacer que la página de privacidad coincida con lo que hace el código."
  ],
  [
-  "Notre code n'est pas public, vous ne pouvez donc pas vérifier nos affirmations comme vous pouvez le faire pour AutoMod et bronx.",
-  "O nosso código não é público, por isso não pode verificar as nossas afirmações como pode fazer com o AutoMod e o bronx.",
-  "Nuestro código no es público, así que no puedes comprobar lo que decimos como sí puedes hacerlo con AutoMod y bronx."
- ],
- [
   "La vérification à l'arrivée et le formulaire de signalement utilisent encore Cloudflare Turnstile, mais seulement après l'accord de la personne.",
   "A verificação de entrada e o formulário de denúncia ainda usam o Cloudflare Turnstile, mas só depois de a pessoa concordar.",
   "La verificación de entrada y el formulario de reporte todavía usan Cloudflare Turnstile, pero solo después de que la persona acepte."

@@ -1,5 +1,6 @@
 import { Breadcrumbs } from "../Breadcrumbs";
 import { PublicFooter } from "../PublicFooter";
+import { OpenSourceCallout } from "../OpenSourceCallout";
 import { PublicPageHeading, PublicSummary } from "../PublicPageHeading";
 import { SiteNav } from "../SiteNav";
 import { JsonLd } from "../JsonLd";
@@ -372,6 +373,7 @@ export default function PrivacyChangesPage() {
         facts={["AI runs on our own hardware", "Clear deletion deadlines", "Anonymous server totals only"]}
       />
 
+      <OpenSourceCallout />
       <div className={styles.layout}>
         <aside className={styles.toc} aria-label="On this page">
           <strong>On this page</strong>
