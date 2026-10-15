@@ -1,0 +1,602 @@
+[
+ [
+  "Comparer les bots",
+  "Comparar bots",
+  "Comparar bots"
+ ],
+ [
+  "Le classement",
+  "A classificação",
+  "La clasificación"
+ ],
+ [
+  "Tableau des scores",
+  "Tabela de pontuações",
+  "Tabla de puntuaciones"
+ ],
+ [
+  "Lequel vous convient",
+  "Qual lhe convém",
+  "Cuál te conviene"
+ ],
+ [
+  "Notre méthode",
+  "Como verificámos",
+  "Cómo lo comprobamos"
+ ],
+ [
+  "Repère les contenus nuisibles d'après leur sens, et pas seulement en comparant des mots.",
+  "Deteta conteúdo nocivo pelo seu significado, e não apenas por correspondência de palavras.",
+  "Detecta contenido dañino por lo que significa, no solo comparando palabras."
+ ],
+ [
+  "Flood, répétitions, spam de mentions et exclusions temporaires automatiques.",
+  "Inundações de mensagens, repetições, spam de menções e suspensões automáticas.",
+  "Inundaciones de mensajes, repeticiones, spam de menciones y suspensiones automáticas."
+ ],
+ [
+  "Supprimer les liens indésirables et les sites d'arnaque ou d'hameçonnage connus.",
+  "Remover links indesejados e sites de burla ou phishing conhecidos.",
+  "Eliminar enlaces no deseados y sitios de estafa o phishing conocidos."
+ ],
+ [
+  "Vagues d'arrivées, nouveaux comptes, vérification et limites pour les nouveaux venus.",
+  "Vagas de entradas, contas novas, verificação e limites para quem acabou de chegar.",
+  "Oleadas de entradas, cuentas nuevas, verificación y límites para quienes acaban de llegar."
+ ],
+ [
+  "Avertissements, exclusions temporaires, expulsions et bannissements, avec dossiers et escalade automatique.",
+  "Avisos, suspensões, expulsões e banimentos, com casos e escalamento automático.",
+  "Advertencias, suspensiones, expulsiones y baneos, con casos y escalado automático."
+ ],
+ [
+  "Dire aux membres ce qui s'est passé et leur permettre de faire un recours.",
+  "Dizer aos membros o que aconteceu e permitir-lhes recorrer.",
+  "Decir a los miembros qué ha pasado y permitirles apelar."
+ ],
+ [
+  "Journaux de modération et outils permettant aux modérateurs de revoir les décisions.",
+  "Registos de moderação e ferramentas para os moderadores reverem decisões.",
+  "Registros de moderación y herramientas para que los moderadores revisen las decisiones."
+ ],
+ [
+  "Vérifier les noms automatiquement, et pas seulement les modifier à la main.",
+  "Verificar nomes automaticamente, e não apenas alterá-los à mão.",
+  "Revisar los nombres automáticamente, no solo cambiarlos a mano."
+ ],
+ [
+  "Analyser les images sur Stoat pour y repérer du gore ou du contenu explicite.",
+  "Analisar imagens no Stoat para detetar violência gráfica ou conteúdo explícito.",
+  "Analizar imágenes en Stoat en busca de violencia gráfica o contenido explícito."
+ ],
+ [
+  "Arrêter un arnaqueur ou un agresseur connu sur plusieurs serveurs Stoat.",
+  "Travar um burlão ou abusador conhecido em vários servidores do Stoat.",
+  "Detener a un estafador o acosador conocido en varios servidores de Stoat."
+ ],
+ [
+  "Le seul qui comprend ce que veut dire un message",
+  "O único que lê o que uma mensagem significa",
+  "El único que entiende lo que significa un mensaje"
+ ],
+ [
+  "L'IA de Stoatmod, qui tourne sur notre propre matériel, vérifie les messages pour repérer des préjudices graves dans des catégories comme la haine, l'extrémisme violent, les activités illégales et le contenu sexuel. Elle n'agit que lorsqu'une catégorie atteint 90 % ou plus, et la vérification facultative Réflexion lui fait revérifier les cas limites et expliquer sa décision.",
+  "A IA do Stoatmod, que corre no nosso próprio hardware, verifica as mensagens em busca de danos graves em categorias como ódio, extremismo violento, atividade ilegal e conteúdo sexual. Só age quando uma categoria atinge 90% ou mais, e a verificação opcional de Raciocínio faz com que volte a verificar casos no limite e explique a decisão.",
+  "La IA de Stoatmod, que funciona en nuestro propio hardware, revisa los mensajes en busca de daños graves en categorías como el odio, el extremismo violento, la actividad ilegal y el contenido sexual. Solo actúa cuando una categoría alcanza el 90 % o más, y la comprobación opcional de Razonamiento hace que vuelva a revisar los casos dudosos y explique su decisión."
+ ],
+ [
+  "Modération du contenu par IA avec des règles par catégorie",
+  "Moderação de conteúdo por IA com políticas por categoria",
+  "Moderación de contenido con IA y políticas por categoría"
+ ],
+ [
+  "Dossiers, escalade des avertissements et portail de recours complet",
+  "Casos, escalamento de avisos e um portal de recurso completo",
+  "Casos, escalado de advertencias y un portal de apelaciones completo"
+ ],
+ [
+  "Protection d'arrivée, protection des liens, détection du spam et CAPTCHA facultatif",
+  "Proteção de entrada, proteção de links, deteção de spam e CAPTCHA opcional",
+  "Protección de entrada, protección de enlaces, detección de spam y CAPTCHA opcional"
+ ],
+ [
+  "Bannissements globaux et signalements examinés par l'équipe Stoatmod",
+  "Banimentos globais e denúncias analisados pela equipa do Stoatmod",
+  "Baneos globales y reportes revisados por el equipo de Stoatmod"
+ ],
+ [
+  "Pas encore de verrouillage anti-raid ni de salle d'attente",
+  "Ainda sem bloqueio anti-raide nem sala de espera",
+  "Todavía sin bloqueo antirraid ni sala de espera"
+ ],
+ [
+  "Pas encore de liste de menaces pour les liens d'arnaque",
+  "Ainda sem lista de ameaças para links de burla",
+  "Todavía sin lista de amenazas para enlaces de estafa"
+ ],
+ [
+  "L'analyse d'images est encore expérimentale",
+  "A análise de imagens ainda é experimental",
+  "El análisis de imágenes todavía es experimental"
+ ],
+ [
+  "Les poids du modèle ne sont pas encore publiés",
+  "Os pesos do modelo ainda não foram publicados",
+  "Los pesos del modelo aún no se han publicado"
+ ],
+ [
+  "La boîte à outils à base de règles la plus complète",
+  "O conjunto de ferramentas baseado em regras mais completo",
+  "El conjunto de herramientas basado en reglas más completo"
+ ],
+ [
+  "Kuma a l'ensemble de règles le plus complet : un filtre de contenu à plusieurs niveaux qui voit à travers le leetspeak et les lettres qui se ressemblent, la vérification des liens grâce à une liste de menaces, une suite anti-raid avec verrouillage et salle d'attente, ainsi que des dossiers avec recours. Il n'utilise pas d'IA : il repère des motifs plutôt que de comprendre le sens.",
+  "O Kuma tem o conjunto de regras mais completo: um filtro de conteúdo por níveis que vê através do leetspeak e de letras parecidas, verificação de links com uma lista de ameaças, um conjunto anti-raide com bloqueio e sala de espera, e casos com recurso. Não usa IA, por isso procura padrões em vez de ler o significado.",
+  "Kuma tiene el conjunto de reglas más completo: un filtro de contenido por niveles que ve a través del leetspeak y de las letras parecidas, comprobación de enlaces con una lista de amenazas, un conjunto antirraid con bloqueo y sala de espera, y casos con apelaciones. No usa IA, así que busca patrones en lugar de entender el significado."
+ ],
+ [
+  "Anti-raid avec verrouillage, salle d'attente et période d'essai pour les nouveaux venus",
+  "Anti-raide com bloqueio, sala de espera e período de experiência para quem chega",
+  "Antirraid con bloqueo, sala de espera y periodo de prueba para quienes llegan"
+ ],
+ [
+  "Filtre de contenu à plusieurs niveaux et vérification des liens par liste de menaces",
+  "Filtro de conteúdo por níveis e verificação de links com lista de ameaças",
+  "Filtro de contenido por niveles y comprobación de enlaces con lista de amenazas"
+ ],
+ [
+  "Dossiers, échelle d'escalade, recours et journaux détaillés",
+  "Casos, escada de escalamento, recursos e registos detalhados",
+  "Casos, escala de sanciones, apelaciones y registros detallados"
+ ],
+ [
+  "À base de motifs, il peut donc manquer des préjudices formulés avec des mots ordinaires",
+  "Baseado em padrões, por isso pode falhar danos escritos com palavras comuns",
+  "Se basa en patrones, así que puede pasar por alto daños escritos con palabras corrientes"
+ ],
+ [
+  "L'analyse d'images est réservée à Discord et Fluxer",
+  "A análise de imagens é só para Discord e Fluxer",
+  "El análisis de imágenes es solo para Discord y Fluxer"
+ ],
+ [
+  "Raid Guard inter-serveurs est réservé à Discord et Fluxer",
+  "O Raid Guard entre servidores é só para Discord e Fluxer",
+  "Raid Guard entre servidores es solo para Discord y Fluxer"
+ ],
+ [
+  "Des bases solides, en open source",
+  "Bases sólidas, em código aberto",
+  "Bases sólidas y de código abierto"
+ ],
+ [
+  "AutoMod couvre l'essentiel : avertissement, expulsion, bannissement, exclusion temporaire et purge, un historique des infractions, un filtre de mots avec niveaux de sévérité, des réglages anti-spam et des journaux des messages et des actions des modérateurs, ainsi qu'un tableau de bord web.",
+  "O AutoMod cobre o essencial: avisar, expulsar, banir, suspender e limpar mensagens, um registo de infrações, um filtro de palavras com níveis de rigor, definições de spam e registos de mensagens e ações dos moderadores, além de um painel web.",
+  "AutoMod cubre lo esencial: advertir, expulsar, banear, suspender y purgar, un historial de infracciones, un filtro de palabras con niveles de rigor, ajustes de spam y registros de mensajes y acciones de los moderadores, además de un panel web."
+ ],
+ [
+  "Commandes de modération de base et infractions",
+  "Comandos de moderação essenciais e infrações",
+  "Comandos de moderación básicos e infracciones"
+ ],
+ [
+  "Filtre de mots avec niveaux de sévérité et réglages anti-spam",
+  "Filtro de palavras com níveis de rigor e definições de spam",
+  "Filtro de palabras con niveles de rigor y ajustes de spam"
+ ],
+ [
+  "Code open source que tout le monde peut lire",
+  "Código aberto que qualquer pessoa pode ler",
+  "Código abierto que cualquiera puede leer"
+ ],
+ [
+  "Pas d'anti-raid, de vérification ni de filtre de liens documentés",
+  "Sem anti-raide, verificação ou filtro de links documentados",
+  "Sin antirraid, verificación ni filtro de enlaces documentados"
+ ],
+ [
+  "Pas de recours",
+  "Sem recursos",
+  "Sin apelaciones"
+ ],
+ [
+  "Un bot de divertissement avec un peu de modération",
+  "Um bot de entretenimento com moderação à parte",
+  "Un bot de entretenimiento con algo de moderación"
+ ],
+ [
+  "bronx est surtout conçu pour s'amuser : économie, jeux d'argent, comptage, niveaux, commandes personnalisées et jeu de rôle. Ses outils de modération sont réels mais légers : bannissement, expulsion et exclusion temporaire, un historique de modération, un filtre de mots et d'expressions régulières, de simples déclencheurs anti-raid et des journaux d'audit.",
+  "O bronx foi feito sobretudo para diversão: economia, jogos de apostas, contagem, níveis, comandos personalizados e roleplay. As suas ferramentas de moderação são reais mas leves: banir, expulsar e suspender, um histórico de moderação, um filtro de palavras e expressões regulares, gatilhos anti-raide simples e registos de auditoria.",
+  "bronx está pensado sobre todo para divertirse: economía, juegos de apuestas, conteo, niveles, comandos personalizados y rol. Sus herramientas de moderación son reales pero ligeras: banear, expulsar y suspender, un historial de moderación, un filtro de palabras y expresiones regulares, activadores antirraid sencillos y registros de auditoría."
+ ],
+ [
+  "Déclencheurs anti-raid pour les vagues d'arrivées, le spam de messages et les comptes sans avatar",
+  "Gatilhos anti-raide para vagas de entradas, spam de mensagens e contas sem avatar",
+  "Activadores antirraid para oleadas de entradas, spam de mensajes y cuentas sin avatar"
+ ],
+ [
+  "Filtre de mots et d'expressions régulières avec exemptions",
+  "Filtro de palavras e expressões regulares com isenções",
+  "Filtro de palabras y expresiones regulares con exenciones"
+ ],
+ [
+  "Journaux d'audit des suppressions, modifications, arrivées, départs et actions des modérateurs",
+  "Registos de auditoria de eliminações, edições, entradas, saídas e ações dos moderadores",
+  "Registros de auditoría de eliminaciones, ediciones, entradas, salidas y acciones de los moderadores"
+ ],
+ [
+  "La modération n'est pas sa priorité",
+  "A moderação não é o seu foco",
+  "La moderación no es su prioridad"
+ ],
+ [
+  "Pas de commande d'avertissement, de recours, de filtre de liens ni de vérification",
+  "Sem comando de aviso, recursos, filtro de links nem verificação",
+  "Sin comando de advertencia, apelaciones, filtro de enlaces ni verificación"
+ ],
+ [
+  "Kuma publie une politique de confidentialité détaillée, permet aux membres de consulter, exporter et supprimer leurs données, et dit ne pas garder de copies des messages.",
+  "O Kuma publica uma política de privacidade detalhada, permite aos membros ver, exportar e eliminar os seus dados, e diz que não guarda cópias das mensagens.",
+  "Kuma publica una política de privacidad detallada, permite a los miembros ver, exportar y eliminar sus datos, y dice que no guarda copias de los mensajes."
+ ],
+ [
+  "Le signalement inter-serveurs était activé par défaut. Les communautés Stoat en sont désormais exclues.",
+  "A sinalização entre servidores estava ativada por predefinição. As comunidades do Stoat estão agora excluídas.",
+  "El marcado entre servidores estaba activado de forma predeterminada. Las comunidades de Stoat ahora quedan excluidas."
+ ],
+ [
+  "Les contrôles d'IP et le rapprochement de réseaux étaient activés par défaut. La vérification sur Stoat n'examine plus votre connexion.",
+  "As verificações de IP e a ligação de redes estavam ativadas por predefinição. A verificação no Stoat já não olha para a sua ligação.",
+  "Las comprobaciones de IP y la vinculación de redes estaban activadas de forma predeterminada. La verificación en Stoat ya no mira tu conexión."
+ ],
+ [
+  "Le pont copie les messages, noms et avatars des membres vers Discord et Fluxer sur la seule décision d'un admin, sans avis ni étape de consentement pour les membres.",
+  "A ponte copia as mensagens, nomes e avatares dos membros para o Discord e o Fluxer apenas por decisão de um administrador, sem aviso nem passo de consentimento para os membros.",
+  "El puente copia los mensajes, nombres y avatares de los miembros a Discord y Fluxer solo por decisión de un administrador, sin aviso ni paso de consentimiento para los miembros."
+ ],
+ [
+  "Prévenir les membres quand un salon est relié par un pont et leur permettre d'accepter avant que leurs messages quittent Stoat.",
+  "Avisar os membros quando um canal está ligado por ponte e deixá-los concordar antes de as mensagens saírem do Stoat.",
+  "Avisar a los miembros cuando un canal está conectado por un puente y dejarles aceptar antes de que sus mensajes salgan de Stoat."
+ ],
+ [
+  "Publier son code, ou le faire vérifier de manière indépendante, pour que ses affirmations puissent être contrôlées.",
+  "Publicar o seu código, ou mandá-lo verificar de forma independente, para que as suas afirmações possam ser confirmadas.",
+  "Publicar su código, o hacer que se revise de forma independiente, para que se puedan comprobar sus afirmaciones."
+ ],
+ [
+  "Nous n'avons trouvé ni statistiques d'activité par personne, ni partage entre serveurs, ni messages envoyés à un service d'IA externe.",
+  "Não encontrámos estatísticas de atividade por pessoa, partilha entre servidores nem mensagens enviadas a um serviço de IA externo.",
+  "No encontramos estadísticas de actividad por persona, ni intercambio entre servidores, ni mensajes enviados a un servicio de IA externo."
+ ],
+ [
+  "Pas de politique de confidentialité, de conditions ni d'avis de confidentialité, alors que son développeur fait partie de l'équipe Stoat et que son serveur d'assistance est vérifié. Son développeur dit qu'une politique est en préparation avec l'aide de juristes.",
+  "Sem política de privacidade, termos nem aviso de privacidade, apesar de o seu programador fazer parte da equipa do Stoat e de o servidor de suporte ser verificado. O programador diz que está a preparar uma com aconselhamento jurídico.",
+  "Sin política de privacidad, términos ni aviso de privacidad, aunque su desarrollador forma parte del equipo de Stoat y su servidor de soporte está verificado. Su desarrollador dice que está preparando una con asesoramiento legal."
+ ],
+ [
+  "Le code affiche le texte de chaque message dans la sortie du bot. Son développeur dit que c'est une fonction de débogage, non conservée sur l'instance officielle.",
+  "O código imprime o texto de cada mensagem na saída do bot. O programador diz que é uma funcionalidade de depuração e que não é guardada na instância oficial.",
+  "El código imprime el texto de cada mensaje en la salida del bot. Su desarrollador dice que es una función de depuración y que no se guarda en la instancia oficial."
+ ],
+ [
+  "Chaque commande est journalisée avec le nom d'utilisateur, l'identifiant, le nom du serveur et le texte complet de la commande.",
+  "Cada comando é registado com o nome de utilizador, o ID, o nome do servidor e o texto completo do comando.",
+  "Cada comando se registra con el nombre de usuario, el ID, el nombre del servidor y el texto completo del comando."
+ ],
+ [
+  "Les votes d'expulsion gardent qui a voté contre qui, et rien ne les supprime.",
+  "Os registos de votekick guardam quem votou contra quem, e nada os elimina.",
+  "Los registros de votekick guardan quién votó contra quién, y nada los elimina."
+ ],
+ [
+  "Publier une politique de confidentialité qui dit ce qu'il collecte et combien de temps il le garde.",
+  "Publicar uma política de privacidade que diga o que recolhe e durante quanto tempo o guarda.",
+  "Publicar una política de privacidad que diga qué recopila y cuánto tiempo lo guarda."
+ ],
+ [
+  "Désactiver par défaut l'affichage des messages dans le code.",
+  "Desativar por predefinição a impressão de mensagens no código.",
+  "Desactivar de forma predeterminada la impresión de mensajes en el código."
+ ],
+ [
+  "Supprimer les votes d'expulsion après un délai défini.",
+  "Eliminar os registos de votekick após um prazo definido.",
+  "Eliminar los registros de votekick tras un plazo definido."
+ ],
+ [
+  "Nous n'avons trouvé aucun contenu de message stocké hors de Stoat (seulement des compteurs), aucun service d'IA ni aucune collecte d'IP, et les membres peuvent télécharger leurs données ou se désinscrire.",
+  "Não encontrámos conteúdo de mensagens guardado fora do Stoat (só contagens), nenhum serviço de IA nem recolha de IP, e os membros podem descarregar os seus dados ou sair.",
+  "No encontramos contenido de mensajes guardado fuera de Stoat (solo recuentos), ni servicios de IA ni recopilación de IP, y los miembros pueden descargar sus datos o darse de baja."
+ ],
+ [
+  "Les messages, modifications, suppressions et commandes de chaque membre sont comptés par personne dès l'arrivée de bronx. Les membres peuvent se désinscrire, mais personne ne leur demande d'abord.",
+  "As mensagens, edições, eliminações e comandos de cada membro são contados por pessoa a partir do momento em que o bronx entra. Os membros podem sair, mas ninguém lhes pergunta primeiro.",
+  "Los mensajes, ediciones, eliminaciones y comandos de cada miembro se cuentan por persona desde que bronx entra. Los miembros pueden darse de baja, pero nadie les pregunta antes."
+ ],
+ [
+  "N'importe qui peut classer les personnes les plus actives sur tous les serveurs où se trouve bronx.",
+  "Qualquer pessoa pode classificar as pessoas mais ativas em todos os servidores onde o bronx está.",
+  "Cualquiera puede clasificar a las personas más activas de todos los servidores en los que está bronx."
+ ],
+ [
+  "Sa page de confidentialité dit que rien n'est collecté passivement, mais le code compte chaque message envoyé.",
+  "A sua página de privacidade diz que nada é recolhido passivamente, mas o código conta cada mensagem que uma pessoa envia.",
+  "Su página de privacidad dice que no se recopila nada de forma pasiva, pero el código cuenta cada mensaje que envía una persona."
+ ],
+ [
+  "Les informations des serveurs sont publiées dans un salon de développeur, et les réponses aux candidatures sont gardées sans date de suppression.",
+  "Os dados dos servidores são publicados num canal de programador, e as respostas às candidaturas são guardadas sem prazo de eliminação.",
+  "Los datos de los servidores se publican en un canal del desarrollador, y las respuestas a las solicitudes se guardan sin plazo de eliminación."
+ ],
+ [
+  "Rendre le suivi d'activité et les classements facultatifs (opt-in), ce que Stoat dit désormais demander à tous les bots.",
+  "Tornar o registo de atividade e as classificações opcionais (opt-in), o que o Stoat diz estar agora a pedir a todos os bots.",
+  "Hacer que el seguimiento de actividad y las clasificaciones sean opcionales (opt-in), algo que Stoat dice que ahora pide a todos los bots."
+ ],
+ [
+  "Supprimer les candidatures après un délai défini ; les indications de Stoat parlent de 30 jours.",
+  "Eliminar as candidaturas após um prazo definido; as orientações do Stoat apontam para 30 dias.",
+  "Eliminar las solicitudes tras un plazo definido; las indicaciones de Stoat apuntan a 30 días."
+ ],
+ [
+  "Supprimer le salon de développeur et faire correspondre la page de confidentialité à ce que fait le code.",
+  "Remover o canal de programador e fazer a página de privacidade corresponder ao que o código faz.",
+  "Quitar el canal del desarrollador y hacer que la página de privacidad coincida con lo que hace el código."
+ ],
+ [
+  "Notre code n'est pas public, vous ne pouvez donc pas vérifier nos affirmations comme vous pouvez le faire pour AutoMod et bronx.",
+  "O nosso código não é público, por isso não pode verificar as nossas afirmações como pode fazer com o AutoMod e o bronx.",
+  "Nuestro código no es público, así que no puedes comprobar lo que decimos como sí puedes hacerlo con AutoMod y bronx."
+ ],
+ [
+  "La vérification à l'arrivée et le formulaire de signalement utilisent encore Cloudflare Turnstile, mais seulement après l'accord de la personne.",
+  "A verificação de entrada e o formulário de denúncia ainda usam o Cloudflare Turnstile, mas só depois de a pessoa concordar.",
+  "La verificación de entrada y el formulario de reporte todavía usan Cloudflare Turnstile, pero solo después de que la persona acepte."
+ ],
+ [
+  "Les bannissements et avertissements globaux s'appliquent à plusieurs serveurs. Seuls les admins Stoatmod autorisés peuvent les voir, et uniquement pour traiter les abus.",
+  "Os banimentos e avisos globais funcionam entre servidores. Só os administradores autorizados do Stoatmod os podem ver, e apenas para lidar com abusos.",
+  "Los baneos y advertencias globales funcionan entre servidores. Solo los administradores autorizados de Stoatmod pueden verlos, y solo para tratar abusos."
+ ],
+ [
+  "Notre IA lit chaque message dans les salons qu'elle modère. Stoat a dit que c'est autorisé sans opt-in tant que rien n'est gardé après la vérification, et c'est ainsi qu'elle fonctionne.",
+  "A nossa IA lê cada mensagem nos canais que modera. O Stoat disse que isto é permitido sem opt-in desde que nada seja guardado depois da verificação, que é como funciona.",
+  "Nuestra IA lee cada mensaje en los canales que modera. Stoat ha dicho que esto está permitido sin opt-in siempre que no se guarde nada después de la comprobación, que es como funciona."
+ ],
+ [
+  "Ce que Stoat nous a dit",
+  "O que o Stoat nos disse",
+  "Lo que nos dijo Stoat"
+ ],
+ [
+  "Repérer les messages nuisibles d'après leur sens, avec recours et conservation courte",
+  "Detetar mensagens nocivas pelo seu significado, com recursos e retenção curta",
+  "Detectar mensajes dañinos por lo que significan, con apelaciones y conservación corta"
+ ],
+ [
+  "Protection anti-raid renforcée, verrouillages et vérification des liens d'arnaque",
+  "Proteção anti-raide reforçada, bloqueios e verificação de links de burla",
+  "Protección antirraid fuerte, bloqueos y comprobación de enlaces de estafa"
+ ],
+ [
+  "Des bases de modération simples et open source",
+  "Bases de moderação simples e em código aberto",
+  "Bases de moderación sencillas y de código abierto"
+ ],
+ [
+  "Économie, jeux et niveaux avec une modération légère",
+  "Economia, jogos e níveis com moderação leve",
+  "Economía, juegos y niveles con moderación ligera"
+ ],
+ [
+  "Code source",
+  "Código-fonte",
+  "Código fuente"
+ ],
+ [
+  "AutoMod, Kuma, bronx ou Stoatmod : comparaison des bots de modération Stoat",
+  "AutoMod vs Kuma vs bronx vs Stoatmod: comparação de bots de moderação do Stoat",
+  "AutoMod vs Kuma vs bronx vs Stoatmod: comparativa de bots de moderación de Stoat"
+ ],
+ [
+  "Nous avons classé quatre bots Stoat, Stoatmod, Kuma, AutoMod et bronx, sur la modération dans dix domaines, et expliqué ce que chacun fait de vos données.",
+  "Classificámos quatro bots do Stoat, Stoatmod, Kuma, AutoMod e bronx, na moderação em dez áreas, e explicámos o que cada um faz com os seus dados.",
+  "Clasificamos cuatro bots de Stoat, Stoatmod, Kuma, AutoMod y bronx, por su moderación en diez áreas, y explicamos qué hace cada uno con tus datos."
+ ],
+ [
+  "meilleur bot Stoat",
+  "melhor bot do Stoat",
+  "mejor bot de Stoat"
+ ],
+ [
+  "AutoMod Stoat",
+  "AutoMod Stoat",
+  "AutoMod Stoat"
+ ],
+ [
+  "Kuma bot",
+  "Kuma bot",
+  "Kuma bot"
+ ],
+ [
+  "bronx bot",
+  "bronx bot",
+  "bronx bot"
+ ],
+ [
+  "Comparaison de bots",
+  "Comparação de bots",
+  "Comparativa de bots"
+ ],
+ [
+  "Les bots de modération Stoat,",
+  "Os bots de moderação do Stoat,",
+  "Los bots de moderación de Stoat,"
+ ],
+ [
+  "classés côte à côte.",
+  "classificados lado a lado.",
+  "clasificados uno junto a otro."
+ ],
+ [
+  "Nous avons classé quatre bots Stoat selon la qualité de leur modération, puis expliqué ce que chacun fait de vos données, à partir des constats de notre page sur les changements de confidentialité.",
+  "Classificámos quatro bots do Stoat pela qualidade da sua moderação e depois explicámos o que cada um faz com os seus dados, com base nas conclusões da nossa página de alterações de privacidade.",
+  "Clasificamos cuatro bots de Stoat según lo bien que moderan y luego explicamos qué hace cada uno con tus datos, a partir de los hallazgos de nuestra página de cambios de privacidad."
+ ],
+ [
+  "Voir le tableau des scores",
+  "Ver a tabela de pontuações",
+  "Ver la tabla de puntuaciones"
+ ],
+ [
+  "Classés sur la modération. Vérifiés sur la confidentialité.",
+  "Classificados pela moderação. Verificados pela privacidade.",
+  "Clasificados por su moderación. Revisados por su privacidad."
+ ],
+ [
+  "Chaque score est affiché et chaque affirmation renvoie à sa source, pour que vous puissiez vérifier notre travail.",
+  "Cada pontuação é mostrada e cada afirmação tem ligação para a sua fonte, para que possa verificar o nosso trabalho.",
+  "Se muestra cada puntuación y cada afirmación enlaza a su fuente, para que puedas comprobar nuestro trabajo."
+ ],
+ [
+  "10 domaines de modération",
+  "10 áreas de moderação",
+  "10 áreas de moderación"
+ ],
+ [
+  "Vérifié le 14 octobre 2026",
+  "Verificado a 14 de outubro de 2026",
+  "Comprobado el 14 de octubre de 2026"
+ ],
+ [
+  "Des sources pour chaque affirmation",
+  "Fontes para cada afirmação",
+  "Fuentes para cada afirmación"
+ ],
+ [
+  "Nous développons Stoatmod, nous ne sommes donc pas neutres.",
+  "Somos nós que fazemos o Stoatmod, por isso não somos neutros.",
+  "Nosotros hacemos Stoatmod, así que no somos neutrales."
+ ],
+ [
+  "C'est pourquoi le tableau complet des scores et notre méthode figurent sur cette page. Si vous pensez que nous nous sommes trompés sur un bot, y compris le nôtre, dites-le-nous et nous corrigerons.",
+  "É por isso que a tabela completa de pontuações e o nosso método estão nesta página. Se acha que nos enganámos sobre algum bot, incluindo o nosso, diga-nos e corrigimos.",
+  "Por eso la tabla completa de puntuaciones y nuestro método están en esta página. Si crees que nos hemos equivocado con algún bot, incluido el nuestro, dínoslo y lo corregiremos."
+ ],
+ [
+  "01 / Le classement",
+  "01 / A classificação",
+  "01 / La clasificación"
+ ],
+ [
+  "Classés selon leurs capacités de modération.",
+  "Classificados pela capacidade de moderação.",
+  "Clasificados por su capacidad de moderación."
+ ],
+ [
+  "Chaque bot reçoit une note de 0 à 3 dans dix domaines de modération, pour un total sur 30.",
+  "Cada bot recebe uma pontuação de 0 a 3 em dez áreas de moderação, num total de 30.",
+  "Cada bot recibe una puntuación de 0 a 3 en diez áreas de moderación, sobre un total de 30."
+ ],
+ [
+  "Points forts",
+  "Pontos fortes",
+  "Puntos fuertes"
+ ],
+ [
+  "Lacunes",
+  "Lacunas",
+  "Carencias"
+ ],
+ [
+  "Stoatmod et Kuma sont à égalité de points",
+  "O Stoatmod e o Kuma estão empatados em pontos",
+  "Stoatmod y Kuma empatan a puntos"
+ ],
+ [
+  "Les deux obtiennent 22 sur 30. En cas d'égalité, nous départageons selon le premier domaine du tableau où les scores diffèrent. Il s'agit de la compréhension des messages, où l'IA de Stoatmod obtient 3 et les filtres de Kuma 2. AutoMod et bronx sont aussi à égalité, et AutoMod est devant sur le spam. Si les raids sont votre principale inquiétude, Kuma est le meilleur choix.",
+  "Ambos têm 22 em 30. Quando os totais empatam, desempatamos pela primeira área da tabela em que as pontuações diferem. É a compreensão das mensagens, em que a IA do Stoatmod tem 3 e os filtros do Kuma têm 2. O AutoMod e o bronx também empatam, e o AutoMod está à frente no spam. Se os raides são a sua maior preocupação, o Kuma é a melhor escolha.",
+  "Ambos sacan 22 de 30. Cuando los totales empatan, desempatamos por la primera área de la tabla en la que las puntuaciones difieren. Es la comprensión de mensajes, donde la IA de Stoatmod saca 3 y los filtros de Kuma sacan 2. AutoMod y bronx también empatan, y AutoMod va por delante en spam. Si los raids son tu mayor preocupación, Kuma es la mejor opción."
+ ],
+ [
+  "02 / Tableau des scores",
+  "02 / Tabela de pontuações",
+  "02 / Tabla de puntuaciones"
+ ],
+ [
+  "Dix domaines, notés de 0 à 3.",
+  "Dez áreas, pontuadas de 0 a 3.",
+  "Diez áreas, puntuadas de 0 a 3."
+ ],
+ [
+  "0 signifie qu'une fonction n'est pas proposée ou documentée sur Stoat, 1 est basique, 2 est bon et 3 est le plus complet des quatre. Les fonctions disponibles uniquement sur Discord ou Fluxer ne comptent pas.",
+  "0 significa que uma funcionalidade não é oferecida ou documentada no Stoat, 1 é básico, 2 é bom e 3 é o mais completo dos quatro. As funcionalidades disponíveis só no Discord ou no Fluxer não contam.",
+  "0 significa que una función no se ofrece o no está documentada en Stoat, 1 es básico, 2 es bueno y 3 es lo más completo de los cuatro. Las funciones que solo están en Discord o Fluxer no cuentan."
+ ],
+ [
+  "Scores de modération de chaque bot",
+  "Pontuações de moderação de cada bot",
+  "Puntuaciones de moderación de cada bot"
+ ],
+ [
+  "Domaine",
+  "Área",
+  "Área"
+ ],
+ [
+  "03 / Confidentialité",
+  "03 / Privacidade",
+  "03 / Privacidad"
+ ],
+ [
+  "Ce que chaque bot fait de vos données.",
+  "O que cada bot faz com os seus dados.",
+  "Qué hace cada bot con tus datos."
+ ],
+ [
+  "Les bots de modération lisent beaucoup de messages : leur façon de traiter les données compte donc autant que ce qu'ils repèrent. Ces résumés viennent directement de notre page sur les changements de confidentialité, où chaque constat renvoie au code ou à la page d'où il provient. Stoat a dit demander à tous les bots d'utiliser l'opt-in pour les données liées à une personne, et que les politiques de confidentialité deviendront obligatoires.",
+  "Os bots de moderação leem muitas mensagens, por isso a forma como tratam os dados importa tanto como o que detetam. Estes resumos vêm diretamente da nossa página de alterações de privacidade, onde cada conclusão tem ligação para o código ou a página de onde veio. O Stoat disse que está a pedir a todos os bots que usem opt-in para dados ligados a uma pessoa, e que as políticas de privacidade vão passar a ser obrigatórias.",
+  "Los bots de moderación leen muchos mensajes, así que cómo tratan los datos importa tanto como lo que detectan. Estos resúmenes salen directamente de nuestra página de cambios de privacidad, donde cada hallazgo enlaza al código o a la página de donde salió. Stoat ha dicho que está pidiendo a todos los bots que usen opt-in para los datos ligados a una persona, y que las políticas de privacidad serán obligatorias."
+ ],
+ [
+  "Lire la page sur les changements de confidentialité",
+  "Ler a página de alterações de privacidade",
+  "Leer la página de cambios de privacidad"
+ ],
+ [
+  "Problèmes de confidentialité",
+  "Preocupações de privacidade",
+  "Problemas de privacidad"
+ ],
+ [
+  "Ce qu'il pourrait mieux faire",
+  "Como poderia melhorar",
+  "Qué podría mejorar"
+ ],
+ [
+  "Lire tous les constats",
+  "Ler todas as conclusões",
+  "Leer todos los hallazgos"
+ ],
+ [
+  "Notre propre bilan",
+  "O nosso próprio registo",
+  "Nuestro propio historial"
+ ],
+ [
+  "Après un examen de confidentialité par Stoat, notre IA tourne sur notre propre matériel, les messages modérés sont supprimés 30 jours après la décision, et les contrôles d'IP, le partage entre serveurs et les statistiques par personne ont disparu.",
+  "Depois de uma revisão de privacidade pelo Stoat, a nossa IA corre no nosso próprio hardware, as mensagens moderadas são eliminadas 30 dias após a decisão, e as verificações de IP, a partilha entre servidores e as estatísticas por pessoa desapareceram.",
+  "Tras una revisión de privacidad de Stoat, nuestra IA funciona en nuestro propio hardware, los mensajes moderados se eliminan 30 días después de la decisión, y ya no hay comprobaciones de IP, intercambio entre servidores ni estadísticas por persona."
+ ],
+ [
+  "Ce que nous pourrions mieux faire",
+  "Onde podemos melhorar",
+  "Qué podríamos mejorar"
+ ],
+ [
+  "04 / Lequel vous convient",
+  "04 / Qual lhe convém",
+  "04 / Cuál te conviene"
+ ]
+]

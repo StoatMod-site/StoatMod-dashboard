@@ -1,0 +1,212 @@
+[
+ [
+  "{0} dossier",
+  "{0} caso",
+  "{0} caso"
+ ],
+ [
+  "{0} dossiers",
+  "{0} casos",
+  "{0} casos"
+ ],
+ [
+  "{0} salon",
+  "{0} canal",
+  "{0} canal"
+ ],
+ [
+  "{0} salons",
+  "{0} canais",
+  "{0} canales"
+ ],
+ [
+  "{0} image",
+  "{0} imagem",
+  "{0} imagen"
+ ],
+ [
+  "{0} images",
+  "{0} imagens",
+  "{0} imágenes"
+ ],
+ [
+  "{0} événement",
+  "{0} evento",
+  "{0} evento"
+ ],
+ [
+  "{0} événements",
+  "{0} eventos",
+  "{0} eventos"
+ ],
+ [
+  "{0} autorisation",
+  "{0} permissão",
+  "{0} permiso"
+ ],
+ [
+  "{0} autorisations",
+  "{0} permissões",
+  "{0} permisos"
+ ],
+ [
+  "{0} place",
+  "{0} lugar",
+  "{0} puesto"
+ ],
+ [
+  "{0} places",
+  "{0} lugares",
+  "{0} puestos"
+ ],
+ [
+  "{0} sondage",
+  "{0} sondagem",
+  "{0} encuesta"
+ ],
+ [
+  "{0} sondages",
+  "{0} sondagens",
+  "{0} encuestas"
+ ],
+ [
+  "{0} votant",
+  "{0} votante",
+  "{0} votante"
+ ],
+ [
+  "{0} votants",
+  "{0} votantes",
+  "{0} votantes"
+ ],
+ [
+  "{0} tentative",
+  "{0} tentativa",
+  "{0} intento"
+ ],
+ [
+  "{0} tentatives",
+  "{0} tentativas",
+  "{0} intentos"
+ ],
+ [
+  "{0} an",
+  "{0} ano",
+  "{0} año"
+ ],
+ [
+  "{0} ans",
+  "{0} anos",
+  "{0} años"
+ ],
+ [
+  "{0} mois",
+  "{0} mês",
+  "{0} mes"
+ ],
+ [
+  "{0} mois",
+  "{0} meses",
+  "{0} meses"
+ ],
+ [
+  "{0} jour",
+  "{0} dia",
+  "{0} día"
+ ],
+ [
+  "{0} jours",
+  "{0} dias",
+  "{0} días"
+ ],
+ [
+  "{0} mise à jour",
+  "{0} atualização",
+  "{0} actualización"
+ ],
+ [
+  "{0} mises à jour",
+  "{0} atualizações",
+  "{0} actualizaciones"
+ ],
+ [
+  "{0} fichier",
+  "{0} ficheiro",
+  "{0} archivo"
+ ],
+ [
+  "{0} fichiers",
+  "{0} ficheiros",
+  "{0} archivos"
+ ],
+ [
+  "{0} source",
+  "{0} fonte",
+  "{0} fuente"
+ ],
+ [
+  "{0} sources",
+  "{0} fontes",
+  "{0} fuentes"
+ ],
+ [
+  "{0} serveur correspondant",
+  "{0} servidor correspondente",
+  "{0} servidor coincidente"
+ ],
+ [
+  "{0} serveurs correspondants",
+  "{0} servidores correspondentes",
+  "{0} servidores coincidentes"
+ ],
+ [
+  "{0} serveur examiné",
+  "{0} servidor revisto",
+  "{0} servidor revisado"
+ ],
+ [
+  "{0} serveurs examinés",
+  "{0} servidores revistos",
+  "{0} servidores revisados"
+ ],
+ [
+  "{0} incident actif",
+  "{0} incidente ativo",
+  "{0} incidente activo"
+ ],
+ [
+  "{0} incidents actifs",
+  "{0} incidentes ativos",
+  "{0} incidentes activos"
+ ],
+ [
+  "{0} action",
+  "{0} ação",
+  "{0} acción"
+ ],
+ [
+  "{0} actions",
+  "{0} ações",
+  "{0} acciones"
+ ],
+ [
+  "{0} action prévue",
+  "{0} ação prevista",
+  "{0} acción prevista"
+ ],
+ [
+  "{0} actions prévues",
+  "{0} ações previstas",
+  "{0} acciones previstas"
+ ],
+ [
+  "1 autorisation du bot est manquante",
+  "Falta 1 permissão do bot",
+  "Falta 1 permiso del bot"
+ ],
+ [
+  "{0} autorisations du bot sont manquantes",
+  "Faltam {0} permissões do bot",
+  "Faltan {0} permisos del bot"
+ ]
+]

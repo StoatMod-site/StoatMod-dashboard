@@ -1,0 +1,702 @@
+[
+ [
+  "serveurs",
+  "servidores",
+  "servidores"
+ ],
+ [
+  "VÉRIFIER",
+  "VERIFICAR",
+  "COMPROBAR"
+ ],
+ [
+  "AGIR",
+  "AGIR",
+  "ACTUAR"
+ ],
+ [
+  "EXAMINER",
+  "REVER",
+  "REVISAR"
+ ],
+ [
+  "automod Stoat",
+  "automod Stoat",
+  "automod de Stoat"
+ ],
+ [
+  "la protection anti-spam",
+  "a proteção contra spam",
+  "la protección contra spam"
+ ],
+ [
+  "les dossiers de modération",
+  "os casos de moderação",
+  "los casos de moderación"
+ ],
+ [
+  "les statistiques de modération",
+  "as estatísticas de moderação",
+  "las estadísticas de moderación"
+ ],
+ [
+  "les rôles automatiques",
+  "os cargos automáticos",
+  "los roles automáticos"
+ ],
+ [
+  "la protection à l’arrivée",
+  "a proteção de entrada",
+  "la protección de entrada"
+ ],
+ [
+  "l’automod",
+  "o automod",
+  "el automod"
+ ],
+ [
+  "les statistiques du serveur",
+  "as estatísticas do servidor",
+  "las estadísticas del servidor"
+ ],
+ [
+  "la protection des liens",
+  "a proteção de ligações",
+  "la protección de enlaces"
+ ],
+ [
+  "la modération des images",
+  "a moderação de imagens",
+  "la moderación de imágenes"
+ ],
+ [
+  "les recours",
+  "os recursos",
+  "las apelaciones"
+ ],
+ [
+  "fonctionnalités",
+  "funcionalidades",
+  "funciones"
+ ],
+ [
+  "guides",
+  "guias",
+  "guías"
+ ],
+ [
+  "thèmes",
+  "temas",
+  "temas"
+ ],
+ [
+  "adhésions",
+  "participações",
+  "pertenencias"
+ ],
+ [
+  "ou",
+  "ou",
+  "o"
+ ],
+ [
+  "et",
+  "e",
+  "y"
+ ],
+ [
+  "Copier",
+  "Copiar",
+  "Copiar"
+ ],
+ [
+  "Ressource",
+  "Recurso",
+  "Recurso"
+ ],
+ [
+  "RÉSUMÉ",
+  "RESUMO",
+  "RESUMEN"
+ ],
+ [
+  "DISPONIBILITÉ",
+  "DISPONIBILIDADE",
+  "DISPONIBILIDAD"
+ ],
+ [
+  "Non enregistré",
+  "Não registado",
+  "Sin registrar"
+ ],
+ [
+  "Tous les guides",
+  "Todos os guias",
+  "Todas las guías"
+ ],
+ [
+  "Toute la documentation",
+  "Toda a documentação",
+  "Toda la documentación"
+ ],
+ [
+  "Changements de confidentialité",
+  "Alterações de privacidade",
+  "Cambios de privacidad"
+ ],
+ [
+  "Rechercher des guides…",
+  "Encontrar guias…",
+  "Buscar guías…"
+ ],
+ [
+  "Rechercher des pages de documentation…",
+  "Encontrar páginas de documentação…",
+  "Buscar páginas de documentación…"
+ ],
+ [
+  "Gardez votre communauté en bonne forme.",
+  "Mantenha a sua comunidade em boa forma.",
+  "Mantén tu comunidad en buena forma."
+ ],
+ [
+  "Les totaux d’adhésions sont des décomptes agrégés de serveurs et peuvent inclure la même personne dans plus d’une communauté.",
+  "Os totais de participações são contagens agregadas de servidores e podem incluir a mesma pessoa em mais de uma comunidade.",
+  "Los totales de pertenencias son recuentos agregados de servidores y pueden incluir a la misma persona en más de una comunidad."
+ ],
+ [
+  "Retirer cette autorisation n’affecte ni votre recours ni votre accès au processus d’examen.",
+  "Retirar esta permissão não afeta o seu recurso nem o seu acesso ao processo de revisão.",
+  "Retirar este permiso no afecta a tu apelación ni a tu acceso al proceso de revisión."
+ ],
+ [
+  "N’envoyez jamais de mots de passe, de jetons de bot, de clés d’API ni de codes de tableau de bord dans un message d’assistance.",
+  "Nunca envie palavras-passe, tokens de bot, chaves de API ou códigos do painel numa mensagem de suporte.",
+  "Nunca envíes contraseñas, tokens de bot, claves de API ni códigos del panel en un mensaje de soporte."
+ ],
+ [
+  "Vous pouvez avoir le droit de déposer une plainte auprès d’une autre autorité là où vous vivez ou travaillez.",
+  "Pode ter o direito de apresentar queixa a outra autoridade no local onde vive ou trabalha.",
+  "Puedes tener derecho a presentar una reclamación ante otra autoridad del lugar donde vives o trabajas."
+ ],
+ [
+  "Catégories et seuils",
+  "Categorias e limiares",
+  "Categorías y umbrales"
+ ],
+ [
+  "Seuils par serveur",
+  "Limiares por servidor",
+  "Umbrales por servidor"
+ ],
+ [
+  "Filtrage des liens externes",
+  "Filtragem de ligações externas",
+  "Filtrado de enlaces externos"
+ ],
+ [
+  "Modération des images",
+  "Moderação de imagens",
+  "Moderación de imágenes"
+ ],
+ [
+  "Lien privé du membre",
+  "Ligação privada do membro",
+  "Enlace privado del miembro"
+ ],
+ [
+  "Motifs",
+  "Motivos",
+  "Motivos"
+ ],
+ [
+  "Notes",
+  "Notas",
+  "Notas"
+ ],
+ [
+  "Preuves",
+  "Provas",
+  "Pruebas"
+ ],
+ [
+  "Arrivée d’un nouveau membre",
+  "Entrada de um novo membro",
+  "Unión de un nuevo miembro"
+ ],
+ [
+  "Statistiques du serveur",
+  "Estatísticas do servidor",
+  "Estadísticas del servidor"
+ ],
+ [
+  "Tableau de bord privé du serveur",
+  "Painel privado do servidor",
+  "Panel privado del servidor"
+ ],
+ [
+  "Code de recours + identifiant d’utilisateur",
+  "Código de recurso + ID de utilizador",
+  "Código de apelación + ID de usuario"
+ ],
+ [
+  "Appliquer",
+  "Aplicar",
+  "Aplicar"
+ ],
+ [
+  "Centre de protection",
+  "Centro de proteção",
+  "Centro de protección"
+ ],
+ [
+  "Répétitions",
+  "Repetições",
+  "Repeticiones"
+ ],
+ [
+  "Rafales",
+  "Rajadas",
+  "Ráfagas"
+ ],
+ [
+  "Votre serveur",
+  "O seu servidor",
+  "Tu servidor"
+ ],
+ [
+  "Identifiant de dossier ou membre",
+  "ID do caso ou membro",
+  "ID de caso o miembro"
+ ],
+ [
+  "Décomptes agrégés",
+  "Contagens agregadas",
+  "Recuentos agregados"
+ ],
+ [
+  "Visibilité contrôlée",
+  "Visibilidade controlada",
+  "Visibilidad controlada"
+ ],
+ [
+  "Un ou plusieurs rôles",
+  "Um ou vários cargos",
+  "Uno o varios roles"
+ ],
+ [
+  "Autorisations et hiérarchie",
+  "Permissões e hierarquia",
+  "Permisos y jerarquía"
+ ],
+ [
+  "Comptes de moins de 14 jours",
+  "Contas com menos de 14 dias",
+  "Cuentas de menos de 14 días"
+ ],
+ [
+  "Contournement par un modérateur",
+  "Desvio por um moderador",
+  "Omisión por un moderador"
+ ],
+ [
+  "Désactivé tant qu’il n’est pas activé",
+  "Desativado até ser ativado",
+  "Desactivado hasta que se active"
+ ],
+ [
+  "Salons et autorisation des GIF",
+  "Canais e permissão de GIF",
+  "Canales y permiso de GIF"
+ ],
+ [
+  "Expérimental",
+  "Experimental",
+  "Experimental"
+ ],
+ [
+  "Paramètres du serveur et des salons",
+  "Definições do servidor e dos canais",
+  "Configuración del servidor y de los canales"
+ ],
+ [
+  "L’envoi reste en place",
+  "O carregamento permanece no lugar",
+  "La subida permanece en su sitio"
+ ],
+ [
+  "Déclaration et preuves",
+  "Declaração e provas",
+  "Declaración y pruebas"
+ ],
+ [
+  "Accepter ou refuser avec un motif",
+  "Aceitar ou recusar com motivo",
+  "Aceptar o denegar con motivo"
+ ],
+ [
+  "Protection à l’arrivée",
+  "Proteção de entrada",
+  "Protección de entrada"
+ ],
+ [
+  "Protection des liens",
+  "Proteção de ligações",
+  "Protección de enlaces"
+ ],
+ [
+  "Recours",
+  "Recursos",
+  "Apelaciones"
+ ],
+ [
+  "README.md",
+  "README.md",
+  "README.md"
+ ],
+ [
+  "log_it",
+  "log_it",
+  "log_it"
+ ],
+ [
+  "bronx",
+  "bronx",
+  "bronx"
+ ],
+ [
+  "cogs/snipe.h",
+  "cogs/snipe.h",
+  "cogs/snipe.h"
+ ],
+ [
+  "database/tables.cpp",
+  "database/tables.cpp",
+  "database/tables.cpp"
+ ],
+ [
+  "main.cpp",
+  "main.cpp",
+  "main.cpp"
+ ],
+ [
+  "cogs/bridge.h",
+  "cogs/bridge.h",
+  "cogs/bridge.h"
+ ],
+ [
+  "DailyFacts",
+  "DailyFacts",
+  "DailyFacts"
+ ],
+ [
+  "Starboard",
+  "Starboard",
+  "Starboard"
+ ],
+ [
+  "Logger",
+  "Logger",
+  "Logger"
+ ],
+ [
+  "bolt",
+  "bolt",
+  "bolt"
+ ],
+ [
+  "inforights.im",
+  "inforights.im",
+  "inforights.im"
+ ],
+ [
+  "modstoat.site",
+  "modstoat.site",
+  "modstoat.site"
+ ],
+ [
+  "XXXXXXXXXX",
+  "XXXXXXXXXX",
+  "XXXXXXXXXX"
+ ],
+ [
+  "AB12CD34",
+  "AB12CD34",
+  "AB12CD34"
+ ],
+ [
+  "Stoatmod / {0}",
+  "Stoatmod / {0}",
+  "Stoatmod / {0}"
+ ],
+ [
+  "{0} fonctionnalités",
+  "{0} funcionalidades",
+  "{0} funciones"
+ ],
+ [
+  "{0} fonctionnalités à explorer",
+  "{0} funcionalidades para explorar",
+  "{0} funciones por explorar"
+ ],
+ [
+  "{0} guides pratiques",
+  "{0} guias práticos",
+  "{0} guías prácticas"
+ ],
+ [
+  "{0} guides sur {1}",
+  "{0} de {1} guias",
+  "{0} de {1} guías"
+ ],
+ [
+  "{0} pages de documentation",
+  "{0} páginas de documentação",
+  "{0} páginas de documentación"
+ ],
+ [
+  "{0} pages de documentation sur {1}",
+  "{0} de {1} páginas de documentação",
+  "{0} de {1} páginas de documentación"
+ ],
+ [
+  "{0} entrées de commandes",
+  "{0} entradas de comandos",
+  "{0} entradas de comandos"
+ ],
+ [
+  "{0} sections",
+  "{0} secções",
+  "{0} secciones"
+ ],
+ [
+  "{0} thèmes",
+  "{0} temas",
+  "{0} temas"
+ ],
+ [
+  "{0} communautés à explorer.",
+  "{0} comunidades para explorar.",
+  "{0} comunidades por explorar."
+ ],
+ [
+  "1 fiche vérifiée.",
+  "1 listagem verificada.",
+  "1 ficha verificada."
+ ],
+ [
+  "{0} fiches vérifiées.",
+  "{0} listagens verificadas.",
+  "{0} fichas verificadas."
+ ],
+ [
+  "{0} adhésions",
+  "{0} participações",
+  "{0} pertenencias"
+ ],
+ [
+  "{0} membres · Fiche vérifiée",
+  "{0} membros · Listagem verificada",
+  "{0} miembros · Ficha verificada"
+ ],
+ [
+  "{0} messages aujourd’hui (UTC)",
+  "{0} mensagens hoje (UTC)",
+  "{0} mensajes hoy (UTC)"
+ ],
+ [
+  "Remontée le {0}",
+  "Promovida em {0}",
+  "Impulsada el {0}"
+ ],
+ [
+  "Approuvée le {0}",
+  "Aprovada em {0}",
+  "Aprobada el {0}"
+ ],
+ [
+  "Fiche mise à jour le {0}",
+  "Listagem atualizada em {0}",
+  "Ficha actualizada el {0}"
+ ],
+ [
+  "Vérifié le {0}",
+  "Revisto em {0}",
+  "Revisado el {0}"
+ ],
+ [
+  "Instantané public mis à jour le {0} UTC",
+  "Instantâneo público atualizado em {0} UTC",
+  "Instantánea pública actualizada el {0} UTC"
+ ],
+ [
+  "Rang d’activité publique n°{0}",
+  "Posição de atividade pública n.º {0}",
+  "Puesto de actividad pública n.º {0}"
+ ],
+ [
+  "Avantages : {0}",
+  "Vantagens: {0}",
+  "Ventajas: {0}"
+ ],
+ [
+  "Historique quotidien : {0}",
+  "Histórico diário: {0}",
+  "Historial diario: {0}"
+ ],
+ [
+  "Contrôle : {0}",
+  "Controlo: {0}",
+  "Control: {0}"
+ ],
+ [
+  "Configuration dans : {0}",
+  "Configurar em: {0}",
+  "Se configura en: {0}"
+ ],
+ [
+  "Réponses : {0}",
+  "Respostas: {0}",
+  "Respuestas: {0}"
+ ],
+ [
+  "Couvre : {0}",
+  "Abrange: {0}",
+  "Cubre: {0}"
+ ],
+ [
+  "Enregistre : {0}",
+  "Regista: {0}",
+  "Registra: {0}"
+ ],
+ [
+  "Portée : {0}",
+  "Âmbito: {0}",
+  "Alcance: {0}"
+ ],
+ [
+  "Trouver par : {0}",
+  "Encontrar por: {0}",
+  "Buscar por: {0}"
+ ],
+ [
+  "Accès : {0}",
+  "Acesso: {0}",
+  "Acceso: {0}"
+ ],
+ [
+  "Données d’activité : {0}",
+  "Dados de atividade: {0}",
+  "Datos de actividad: {0}"
+ ],
+ [
+  "Totaux publics : {0}",
+  "Totais públicos: {0}",
+  "Totales públicos: {0}"
+ ],
+ [
+  "Déclencheur : {0}",
+  "Acionador: {0}",
+  "Desencadenante: {0}"
+ ],
+ [
+  "Liste de rôles : {0}",
+  "Lista de cargos: {0}",
+  "Lista de roles: {0}"
+ ],
+ [
+  "Nécessite : {0}",
+  "Requer: {0}",
+  "Requiere: {0}"
+ ],
+ [
+  "Vérification : {0}",
+  "Verificação: {0}",
+  "Verificación: {0}"
+ ],
+ [
+  "Portée par défaut : {0}",
+  "Âmbito predefinido: {0}",
+  "Alcance predeterminado: {0}"
+ ],
+ [
+  "Récupération : {0}",
+  "Recuperação: {0}",
+  "Recuperación: {0}"
+ ],
+ [
+  "Objectif : {0}",
+  "Finalidade: {0}",
+  "Finalidad: {0}"
+ ],
+ [
+  "Par défaut : {0}",
+  "Predefinição: {0}",
+  "Predeterminado: {0}"
+ ],
+ [
+  "Exceptions : {0}",
+  "Exceções: {0}",
+  "Excepciones: {0}"
+ ],
+ [
+  "Disponibilité : {0}",
+  "Disponibilidade: {0}",
+  "Disponibilidad: {0}"
+ ],
+ [
+  "En cas d’échec de la vérification : {0}",
+  "Em caso de falha na verificação: {0}",
+  "Si falla la comprobación: {0}"
+ ],
+ [
+  "Examen : {0}",
+  "Revisão: {0}",
+  "Revisión: {0}"
+ ],
+ [
+  "Décisions : {0}",
+  "Decisões: {0}",
+  "Decisiones: {0}"
+ ],
+ [
+  "Thème : {=0}",
+  "Tema: {=0}",
+  "Tema: {=0}"
+ ],
+ [
+  "{=0} – Serveur Stoat | Stoatmod",
+  "{=0} – Servidor Stoat | Stoatmod",
+  "{=0} – Servidor de Stoat | Stoatmod"
+ ],
+ [
+  "Comment rejoindre {=0}",
+  "Como entrar em {=0}",
+  "Cómo unirse a {=0}"
+ ],
+ [
+  "Rejoindre {=0}",
+  "Entrar em {=0}",
+  "Unirse a {=0}"
+ ],
+ [
+  "Utilisez l’invitation Stoat de cette page pour ouvrir {=0} dans Stoat. Connectez-vous ou créez un compte Stoat si on vous le demande, puis suivez l’invitation et lisez les règles de la communauté.",
+  "Use o convite Stoat desta página para abrir {=0} no Stoat. Inicie sessão ou crie uma conta Stoat, se lhe for pedido, depois siga o convite e leia as regras da comunidade.",
+  "Usa la invitación de Stoat de esta página para abrir {=0} en Stoat. Inicia sesión o crea una cuenta de Stoat si se te pide, luego sigue la invitación y lee las normas de la comunidad."
+ ],
+ [
+  "Voir {=0}",
+  "Ver {=0}",
+  "Ver {=0}"
+ ],
+ [
+  "Bannière du serveur {=0}",
+  "Faixa do servidor {=0}",
+  "Banner del servidor {=0}"
+ ],
+ [
+  "Serveurs étiquetés {=0}",
+  "Servidores com a etiqueta {=0}",
+  "Servidores etiquetados {=0}"
+ ]
+]

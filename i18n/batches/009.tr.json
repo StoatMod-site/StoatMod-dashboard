@@ -1,0 +1,632 @@
+[
+ [
+  "Distinguez l’absence de réponse d’un échec d’action : prouvez d’abord que le bot peut voir le salon et y répondre, puis testez l’opération demandée.",
+  "Separe a ausência de resposta de uma falha de ação: primeiro prove que o bot consegue ver e responder no canal e depois teste a operação pedida.",
+  "Distingue la falta de respuesta de un fallo de acción: primero demuestra que el bot puede ver el canal y responder en él y luego prueba la operación solicitada."
+ ],
+ [
+  "Vérifications de base",
+  "Verificações básicas",
+  "Comprobaciones básicas"
+ ],
+ [
+  "Consultez la page d’état en direct.",
+  "Consulte a página de estado em direto.",
+  "Consulta la página de estado en directo."
+ ],
+ [
+  "Utilisez ~help ou ~info comme simple test de réponse.",
+  "Use ~help ou ~info como teste de resposta simples.",
+  "Usa ~help o ~info como prueba de respuesta sencilla."
+ ],
+ [
+  "Confirmez View Channels, Read Message History, Send Messages et Send Embeds.",
+  "Confirme View Channels, Read Message History, Send Messages e Send Embeds.",
+  "Confirma View Channels, Read Message History, Send Messages y Send Embeds."
+ ],
+ [
+  "Utilisez la syntaxe de commande documentée.",
+  "Use a sintaxe de comando documentada.",
+  "Usa la sintaxis de comando documentada."
+ ],
+ [
+  "Vérifiez si la commande exige l’accès du propriétaire du serveur, de Manage Server ou un accès délégué au tableau de bord.",
+  "Verifique se o comando exige acesso do proprietário do servidor, de Manage Server ou acesso delegado ao painel.",
+  "Comprueba si el comando requiere acceso del propietario del servidor, de Manage Server o acceso delegado al panel."
+ ],
+ [
+  "Si une réponse apparaît mais que rien ne change",
+  "Se aparecer uma resposta mas nada mudar",
+  "Si aparece una respuesta pero no cambia nada"
+ ],
+ [
+  "Considérez qu’il s’agit d’un échec d’action et non d’un échec de réponse. Vérifiez la hiérarchie, les identifiants cibles et l’autorisation précise, puis inspectez l’état réel du membre ou du rôle ainsi que le dossier ou l’enregistrement d’audit.",
+  "Trate-o como uma falha de ação e não como uma falha de resposta. Verifique a hierarquia, os IDs alvo e a permissão específica e depois inspecione o estado real do membro ou cargo e o registo do caso ou da auditoria.",
+  "Trátalo como un fallo de acción y no de respuesta. Comprueba la jerarquía, los ID objetivo y el permiso específico y luego inspecciona el estado real del miembro o rol y el registro del caso o de la auditoría."
+ ],
+ [
+  "Escalader avec des preuves",
+  "Escalar com provas",
+  "Escalar con pruebas"
+ ],
+ [
+  "Indiquez l’heure, les identifiants du serveur et du salon, la commande exacte, le résultat attendu et l’état observé du serveur. N’envoyez jamais de codes de connexion au tableau de bord, de cookies de session, de codes de recours ou de preuves privées dans un salon public.",
+  "Indique a hora, os IDs do servidor e do canal, o comando exato, o resultado esperado e o estado observado do servidor. Nunca envie códigos de início de sessão do painel, cookies de sessão, códigos de recurso ou provas privadas num canal público.",
+  "Indica la hora, los ID del servidor y del canal, el comando exacto, el resultado esperado y el estado observado del servidor. Nunca envíes códigos de acceso al panel, cookies de sesión, códigos de apelación ni pruebas privadas en un canal público."
+ ],
+ [
+  "Documentation introuvable | Stoatmod",
+  "Documentação não encontrada | Stoatmod",
+  "Documentación no encontrada | Stoatmod"
+ ],
+ [
+  "Cette page de documentation Stoatmod n’existe pas.",
+  "Esta página de documentação do Stoatmod não existe.",
+  "Esta página de documentación de Stoatmod no existe."
+ ],
+ [
+  "Documentation et référence des commandes Stoatmod",
+  "Documentação e referência de comandos do Stoatmod",
+  "Documentación y referencia de comandos de Stoatmod"
+ ],
+ [
+  "Installez, configurez et dépannez Stoatmod grâce à des guides centrés sur les tâches, des commandes exactes, des autorisations et des vérifications de résultat.",
+  "Instale, configure e resolva problemas do Stoatmod com guias centrados em tarefas, comandos exatos, permissões e verificações de resultado.",
+  "Instala, configura y soluciona problemas de Stoatmod con guías centradas en tareas, comandos exactos, permisos y comprobaciones de resultado."
+ ],
+ [
+  "Installez, configurez et dépannez le bot de modération Stoatmod pour les serveurs Stoat.",
+  "Instale, configure e resolva problemas do bot de moderação Stoatmod para servidores Stoat.",
+  "Instala, configura y soluciona problemas del bot de moderación Stoatmod para servidores de Stoat."
+ ],
+ [
+  "Documentation et commandes.",
+  "Documentação e comandos.",
+  "Documentación y comandos."
+ ],
+ [
+  "Les paramètres, autorisations et commandes qui sous-tendent votre configuration de modération.",
+  "As definições, permissões e comandos por trás da sua configuração de moderação.",
+  "Los ajustes, permisos y comandos que hay detrás de tu configuración de moderación."
+ ],
+ [
+  "Commencez avec une configuration que vous comprenez.",
+  "Comece com uma configuração que compreenda.",
+  "Empieza con una configuración que entiendas."
+ ],
+ [
+  "Trouvez les prérequis, les commandes exactes et les vérifications pour chaque tâche. Nouveau sur Stoatmod ? Le démarrage rapide vous guide dans votre première configuration.",
+  "Encontre os pré-requisitos, os comandos exatos e as verificações de cada tarefa. É novo no Stoatmod? O início rápido guia-o na primeira configuração.",
+  "Encuentra los requisitos previos, los comandos exactos y las comprobaciones de cada tarea. ¿Eres nuevo en Stoatmod? El inicio rápido te guía en tu primera configuración."
+ ],
+ [
+  "Configuration propre à chaque serveur",
+  "Configuração específica de cada servidor",
+  "Configuración específica de cada servidor"
+ ],
+ [
+  "Ouvrir le démarrage rapide",
+  "Abrir o início rápido",
+  "Abrir el inicio rápido"
+ ],
+ [
+  "Premiers pas",
+  "Primeiros passos",
+  "Primeros pasos"
+ ],
+ [
+  "Automod",
+  "Automod",
+  "Automod"
+ ],
+ [
+  "Dépannage",
+  "Resolução de problemas",
+  "Solución de problemas"
+ ],
+ [
+  "Autorisations rapides",
+  "Permissões rápidas",
+  "Permisos rápidos"
+ ],
+ [
+  "Connexion modérateur →",
+  "Início de sessão de moderador →",
+  "Acceso de moderador →"
+ ],
+ [
+  "01 / DOCUMENTATION",
+  "01 / DOCUMENTAÇÃO",
+  "01 / DOCUMENTACIÓN"
+ ],
+ [
+  "Choisissez la tâche à accomplir",
+  "Escolha a tarefa que precisa de concluir",
+  "Elige la tarea que necesitas completar"
+ ],
+ [
+  "Trouvez les prérequis, les commandes et les vérifications pour votre prochaine tâche. Ces guides couvrent le service Stoatmod hébergé.",
+  "Encontre os pré-requisitos, comandos e verificações para a sua próxima tarefa. Estes guias abrangem o serviço Stoatmod alojado.",
+  "Encuentra los requisitos previos, los comandos y las comprobaciones para tu próxima tarea. Estas guías cubren el servicio Stoatmod alojado."
+ ],
+ [
+  "pages de documentation",
+  "páginas de documentação",
+  "páginas de documentación"
+ ],
+ [
+  "02 / AUTORISATIONS",
+  "02 / PERMISSÕES",
+  "02 / PERMISOS"
+ ],
+ [
+  "après l’installation et chaque fois que la structure des rôles ou des salons change. Le rôle du bot doit se situer au-dessus de chaque membre qu’il modère et de chaque rôle qu’il attribue.",
+  "após a instalação e sempre que a estrutura de cargos ou canais mudar. O cargo do bot tem de estar acima de todos os membros que modera e de todos os cargos que atribui.",
+  "después de la instalación y siempre que cambie la estructura de roles o de canales. El rol del bot debe estar por encima de cada miembro que modera y de cada rol que asigna."
+ ],
+ [
+  "Vérifier le résultat réel",
+  "Verificar o resultado real",
+  "Verificar el resultado real"
+ ],
+ [
+  "Un audit d’autorisations ou un message de réussite aide au diagnostic, mais l’état du membre, du message ou du rôle dans Stoat fait foi.",
+  "Uma auditoria de permissões ou uma mensagem de sucesso apoia o diagnóstico, mas o estado do membro, mensagem ou cargo no Stoat é a fonte de verdade.",
+  "Una auditoría de permisos o un mensaje de éxito ayuda al diagnóstico, pero el estado del miembro, del mensaje o del rol en Stoat es la fuente de verdad."
+ ],
+ [
+  "Lire le guide complet des autorisations et de la hiérarchie →",
+  "Ler o guia completo de permissões e hierarquia →",
+  "Leer la guía completa de permisos y jerarquía →"
+ ],
+ [
+  "03 / RÉFÉRENCE DES COMMANDES",
+  "03 / REFERÊNCIA DE COMANDOS",
+  "03 / REFERENCIA DE COMANDOS"
+ ],
+ [
+  "Chaque commande publique",
+  "Todos os comandos públicos",
+  "Todos los comandos públicos"
+ ],
+ [
+  "Copiez directement depuis Stoat les identifiants de serveur, de salon, de rôle, d’utilisateur et de dossier. Les commandes à bascule utilisent",
+  "Copie diretamente do Stoat os IDs de servidor, canal, cargo, utilizador e caso. Os comandos de alternância usam",
+  "Copia directamente desde Stoat los ID de servidor, canal, rol, usuario y caso. Los comandos de alternancia usan"
+ ],
+ [
+  "Aucune commande ne correspond à “",
+  "Nenhum comando corresponde a “",
+  "Ningún comando coincide con “"
+ ],
+ [
+  "Comment configurer les candidatures au serveur",
+  "Como configurar candidaturas ao servidor",
+  "Cómo configurar las solicitudes al servidor"
+ ],
+ [
+  "Configurer les candidatures et la vérification des membres d’un serveur Stoat | Stoatmod",
+  "Configurar candidaturas e verificação de membros num servidor Stoat | Stoatmod",
+  "Configurar las solicitudes y la verificación de miembros de un servidor de Stoat | Stoatmod"
+ ],
+ [
+  "Créez un formulaire de candidature par message privé, choisissez les salons visibles par les candidats, combinez-le avec des contrôles CAPTCHA et examinez les nouveaux membres dans Stoatmod.",
+  "Crie um formulário de candidatura por mensagem privada, escolha os canais que os candidatos podem ver, combine-o com verificações CAPTCHA e reveja novos membros no Stoatmod.",
+  "Crea un formulario de solicitud por mensaje privado, elige los canales que pueden ver los solicitantes, combínalo con comprobaciones CAPTCHA y revisa a los nuevos miembros en Stoatmod."
+ ],
+ [
+  "Guide des candidatures de nouveaux membres",
+  "Guia de candidaturas de novos membros",
+  "Guía de solicitudes de nuevos miembros"
+ ],
+ [
+  "Demandez aux nouveaux membres de répondre en privé à vos questions avant de leur donner accès au serveur. Ce pas-à-pas vous mène du premier formulaire jusqu’à un membre approuvé qui peut voir les salons et discuter.",
+  "Peça aos novos membros que respondam em privado às suas perguntas antes de lhes conceder acesso ao servidor. Este passo a passo leva-o do primeiro formulário até um membro aprovado que pode ver os canais e conversar.",
+  "Pide a los nuevos miembros que respondan en privado a tus preguntas antes de darles acceso al servidor. Esta guía paso a paso te lleva desde el primer formulario hasta un miembro aprobado que puede ver los canales y chatear."
+ ],
+ [
+  "Préparer l’accès et la journalisation",
+  "Preparar o acesso e o registo",
+  "Preparar el acceso y el registro"
+ ],
+ [
+  "Vérifier les autorisations du bot",
+  "Verificar as permissões do bot",
+  "Comprobar los permisos del bot"
+ ],
+ [
+  "Stoatmod a besoin de Manage Roles, Manage Permissions, Assign Roles, Timeout Members et Kick Members, ainsi que de l’autorisation d’envoyer des messages et des embeds dans votre salon de journal.",
+  "O Stoatmod precisa de Manage Roles, Manage Permissions, Assign Roles, Timeout Members e Kick Members, além de permissão para enviar mensagens e embeds no seu canal de registo.",
+  "Stoatmod necesita Manage Roles, Manage Permissions, Assign Roles, Timeout Members y Kick Members, además de permiso para enviar mensajes y embeds en tu canal de registro."
+ ],
+ [
+  "Positionner le rôle du bot",
+  "Posicionar o cargo do bot",
+  "Situar el rol del bot"
+ ],
+ [
+  "Placez Stoatmod au-dessus des membres et des rôles automatiques qu’il gérera. La configuration des candidatures crée un rôle Membre vérifié pour accorder l’accès aux membres approuvés.",
+  "Coloque o Stoatmod acima dos membros e dos cargos automáticos que irá gerir. A configuração das candidaturas cria um cargo de membro verificado para conceder acesso aos membros aprovados.",
+  "Coloca a Stoatmod por encima de los miembros y roles automáticos que gestionará. La configuración de solicitudes crea un rol de miembro verificado para dar acceso a los miembros aprobados."
+ ],
+ [
+  "Choisir un salon de journal privé",
+  "Escolher um canal de registo privado",
+  "Elegir un canal de registro privado"
+ ],
+ [
+  "Les candidatures envoyées et les résultats d’examen y sont consignés.",
+  "As candidaturas submetidas e os resultados de revisão são registados aqui.",
+  "Las solicitudes enviadas y los resultados de revisión se registran aquí."
+ ],
+ [
+  "Ouvrir Candidatures",
+  "Abrir Candidaturas",
+  "Abrir Solicitudes"
+ ],
+ [
+  "Connectez-vous au tableau de bord du serveur, ouvrez Candidatures et sélectionnez Formulaire et configuration.",
+  "Inicie sessão no painel do servidor, abra Candidaturas e selecione Formulário e configuração.",
+  "Inicia sesión en el panel del servidor, abre Solicitudes y selecciona Formulario y configuración."
+ ],
+ [
+  "Choisir ce que les candidats peuvent voir",
+  "Escolher o que os candidatos podem ver",
+  "Elegir lo que pueden ver los solicitantes"
+ ],
+ [
+  "Activez Exiger une candidature. Sous Avant l’approbation, choisissez les salons de règles ou d’informations que les candidats doivent pouvoir lire. Utilisez les cases des catégories pour sélectionner des groupes, ou choisissez les salons un par un. Laissez tout décoché pour masquer tous les salons du serveur jusqu’à l’approbation.",
+  "Ative Exigir uma candidatura. Em Antes da aprovação, escolha os canais de regras ou informação que os candidatos devem poder ler. Use as caixas de categoria para selecionar grupos ou escolha os canais individualmente. Deixe tudo por selecionar para ocultar todos os canais do servidor até à aprovação.",
+  "Activa Exigir una solicitud. En Antes de la aprobación, elige los canales de normas o información que deben poder leer los solicitantes. Usa las casillas de categoría para seleccionar grupos o elige los canales uno a uno. Deja todo sin marcar para ocultar todos los canales del servidor hasta la aprobación."
+ ],
+ [
+  "Les salons visibles sont en lecture seule pour les candidats. Les réponses sont envoyées par message privé, et l’exclusion temporaire de vérification empêche de discuter pendant l’attente de l’examen.",
+  "Os canais visíveis são só de leitura para os candidatos. As respostas são enviadas por mensagem privada e a suspensão de verificação impede a conversação enquanto aguardam revisão.",
+  "Los canales visibles son de solo lectura para los solicitantes. Las respuestas se envían por mensaje privado y la suspensión de verificación impide chatear mientras esperan la revisión."
+ ],
+ [
+  "Créer et prévisualiser votre formulaire",
+  "Criar e pré-visualizar o formulário",
+  "Crear y previsualizar tu formulario"
+ ],
+ [
+  "Présenter votre communauté",
+  "Apresentar a sua comunidade",
+  "Presentar tu comunidad"
+ ],
+ [
+  "Utilisez l’introduction pour expliquer à qui s’adresse le serveur et ce que les candidats doivent attendre.",
+  "Use a introdução para explicar a quem se destina o servidor e o que os candidatos devem esperar.",
+  "Usa la introducción para explicar a quién va dirigido el servidor y qué deben esperar los solicitantes."
+ ],
+ [
+  "Ajouter vos questions",
+  "Adicionar as suas perguntas",
+  "Añadir tus preguntas"
+ ],
+ [
+  "Par exemple, demandez pourquoi ils veulent rejoindre avec une question textuelle, proposez des centres d’intérêt dans une question à choix multiple et terminez par une acceptation des règles. Marquez les questions comme obligatoires ou facultatives.",
+  "Por exemplo, pergunte porque querem entrar com uma pergunta de texto, ofereça interesses numa pergunta de escolha múltipla e termine com uma aceitação das regras. Marque as perguntas como obrigatórias ou opcionais.",
+  "Por ejemplo, pregunta por qué quieren unirse con una pregunta de texto, ofrece intereses en una pregunta de opción múltiple y termina con una aceptación de las normas. Marca las preguntas como obligatorias u opcionales."
+ ],
+ [
+  "Personnaliser les embeds",
+  "Personalizar os embeds",
+  "Personalizar los embeds"
+ ],
+ [
+  "Choisissez les emojis et couleurs des questions, définissez la couleur par défaut et le pied de page du formulaire, puis personnalisez la confirmation d’envoi. Dupliquez ou réordonnez les questions selon vos besoins.",
+  "Escolha os emojis e cores das perguntas, defina a cor predefinida e o rodapé do formulário e personalize a confirmação de submissão. Duplique ou reordene as perguntas conforme necessário.",
+  "Elige los emojis y colores de las preguntas, define el color predeterminado y el pie del formulario y personaliza la confirmación de envío. Duplica o reordena las preguntas según necesites."
+ ],
+ [
+  "Lire l’aperçu du message privé",
+  "Ler a pré-visualização da mensagem privada",
+  "Leer la vista previa del mensaje privado"
+ ],
+ [
+  "Prévisualisez l’accord de confidentialité, chaque question et le message d’envoi. Utilisez une réponse d’essai pour voir comment se lit la conversation ; l’aperçu n’envoie pas de véritable candidature.",
+  "Pré-visualize o acordo de privacidade, cada pergunta e a mensagem submetida. Use uma resposta de exemplo para ver como a conversa se lê; a pré-visualização não envia uma candidatura real.",
+  "Previsualiza el acuerdo de privacidad, cada pregunta y el mensaje enviado. Usa una respuesta de ejemplo para ver cómo se lee la conversación; la vista previa no envía una solicitud real."
+ ],
+ [
+  "Enregistrer et confirmer la configuration de l’accès",
+  "Guardar e confirmar a configuração do acesso",
+  "Guardar y confirmar la configuración del acceso"
+ ],
+ [
+  "Sélectionnez Enregistrer les paramètres des candidatures. Attendez que l’accès aux salons soit configuré et résolvez tout message La configuration demande votre attention avant de tester.",
+  "Selecione Guardar definições das candidaturas. Aguarde que o acesso aos canais seja configurado e resolva qualquer mensagem A configuração precisa de atenção antes de testar.",
+  "Selecciona Guardar configuración de las solicitudes. Espera a que se configure el acceso a los canales y resuelve cualquier mensaje La configuración necesita atención antes de probar."
+ ],
+ [
+  "Connecter la vérification d’arrivée existante",
+  "Ligar a verificação de entrada existente",
+  "Conectar la verificación de entrada existente"
+ ],
+ [
+  "Les candidatures suivent les paramètres Protection des arrivées et CAPTCHA pour chaque membre du serveur. La protection des arrivées soumet à un contrôle les comptes de moins de 14 jours ; le CAPTCHA pour chaque membre couvre aussi les comptes plus anciens. Le premier message privé contient un avis de confidentialité exigeant une réponse I agree. Lorsqu’un contrôle est requis, un message privé ultérieur contient un lien de vérification dans le navigateur ; Stoatmod n’analyse pas les adresses IP. Le membre réussit les contrôles CAPTCHA avant de recevoir les questions.",
+  "As candidaturas seguem as definições Proteção de entrada e CAPTCHA a todos os membros do servidor. A proteção de entrada submete a verificação as contas com menos de 14 dias; o CAPTCHA a todos os membros abrange também contas mais antigas. A primeira mensagem privada contém um aviso de privacidade que exige uma resposta I agree. Quando é exigida uma verificação, uma mensagem privada posterior contém uma ligação de verificação no navegador; o Stoatmod não analisa endereços IP. O membro conclui as verificações CAPTCHA antes de receber as perguntas.",
+  "Las solicitudes siguen los ajustes Protección de entrada y CAPTCHA a todos los miembros del servidor. La protección de entrada somete a verificación las cuentas de menos de 14 días; el CAPTCHA a todos los miembros también cubre las cuentas más antiguas. El primer mensaje privado contiene un aviso de privacidad que exige una respuesta I agree. Cuando se requiere una comprobación, un mensaje privado posterior contiene un enlace de verificación en el navegador; Stoatmod no analiza direcciones IP. El miembro completa las comprobaciones CAPTCHA antes de recibir las preguntas."
+ ],
+ [
+  "Réussir la vérification démarre le questionnaire. Un administrateur doit tout de même approuver la candidature soumise avant que le membre ne reçoive l’accès.",
+  "Passar a verificação inicia o questionário. Um administrador tem na mesma de aprovar a candidatura submetida antes de o membro receber acesso.",
+  "Superar la verificación inicia el cuestionario. Un administrador aún debe aprobar la solicitud enviada antes de que el miembro reciba acceso."
+ ],
+ [
+  "Examiner et décider",
+  "Rever e decidir",
+  "Revisar y decidir"
+ ],
+ [
+  "Activer vos notifications",
+  "Ativar as suas notificações",
+  "Activar tus notificaciones"
+ ],
+ [
+  "Dans Examiner les candidatures, activez M’envoyer un message privé lorsqu’une personne postule si vous souhaitez une notification personnelle. Les candidatures envoyées apparaissent aussi dans le salon des journaux.",
+  "Em Rever candidaturas, ative Enviar-me uma mensagem privada quando alguém se candidatar se quiser uma notificação pessoal. As candidaturas submetidas também aparecem no canal de registos.",
+  "En Revisar solicitudes, activa Enviarme un mensaje privado cuando alguien envíe una solicitud si quieres una notificación personal. Las solicitudes enviadas también aparecen en el canal de registros."
+ ],
+ [
+  "Lire la candidature terminée",
+  "Ler a candidatura concluída",
+  "Leer la solicitud completada"
+ ],
+ [
+  "Sélectionnez un candidat en attente d’examen. Vérifiez ses réponses, le résultat de la vérification et l’échéance affichée.",
+  "Selecione um candidato a aguardar revisão. Verifique as respostas, o resultado da verificação e o prazo apresentado.",
+  "Selecciona a un solicitante que espera revisión. Comprueba sus respuestas, el resultado de la verificación y el plazo mostrado."
+ ],
+ [
+  "Approuver un membre convenable",
+  "Aprovar um membro adequado",
+  "Aprobar a un miembro adecuado"
+ ],
+ [
+  "Choisissez Approuver et accorder l’accès dans le tableau de bord, ou exécutez la commande avec un motif dans le serveur de ce candidat en utilisant son identifiant utilisateur exact.",
+  "Escolha Aprovar e conceder acesso no painel ou execute o comando com um motivo no servidor desse candidato usando o ID de utilizador exato.",
+  "Elige Aprobar y conceder acceso en el panel o ejecuta el comando con un motivo en el servidor de ese solicitante usando su ID de usuario exacto."
+ ],
+ [
+  "Expliquer un refus",
+  "Explicar uma recusa",
+  "Explicar un rechazo"
+ ],
+ [
+  "Saisissez un motif et choisissez Refuser et expulser, ou utilisez la commande du serveur. Stoatmod retire le membre et envoie le motif par message privé lorsque c’est possible.",
+  "Introduza um motivo e escolha Recusar e expulsar ou use o comando do servidor. O Stoatmod remove o membro e envia o motivo por mensagem privada quando possível.",
+  "Introduce un motivo y elige Rechazar y expulsar o usa el comando del servidor. Stoatmod expulsa al miembro y envía el motivo por mensaje privado cuando es posible."
+ ],
+ [
+  "Les membres disposent de sept jours pour terminer la vérification et le formulaire. L’envoi déclenche une période d’examen et de conservation de 14 jours. À l’échéance, une candidature sans décision est automatiquement refusée et tous les enregistrements de candidature sont supprimés. Les candidatures acceptées et refusées manuellement sont également supprimées à cette date. Les candidatures inachevées sont supprimées après la fenêtre de finalisation de sept jours.",
+  "Os membros têm sete dias para concluir a verificação e o formulário. A submissão inicia um período de revisão e retenção de 14 dias. No prazo final, uma candidatura sem decisão é automaticamente recusada e todos os registos de candidatura são eliminados. As candidaturas aceites e recusadas manualmente também são eliminadas nessa data. As candidaturas por concluir são eliminadas após a janela de conclusão de sete dias.",
+  "Los miembros tienen siete días para completar la verificación y el formulario. El envío inicia un periodo de revisión y conservación de 14 días. Al vencer el plazo, una solicitud sin decisión se rechaza automáticamente y se eliminan todos los registros de solicitud. Las solicitudes aceptadas y las rechazadas manualmente también se eliminan en esa fecha. Las solicitudes sin terminar se eliminan tras la ventana de finalización de siete días."
+ ],
+ [
+  "Tester le parcours complet d’un membre",
+  "Testar o percurso completo de um membro",
+  "Probar el recorrido completo de un miembro"
+ ],
+ [
+  "Rejoignez avec un compte de membre ordinaire contrôlé. Les bots et les modérateurs exemptés ne suivent pas le parcours normal des candidats.",
+  "Entre com uma conta de membro normal controlada. Os bots e os moderadores isentos não seguem o fluxo normal de candidato.",
+  "Únete con una cuenta de miembro ordinario controlada. Los bots y los moderadores exentos no siguen el flujo normal de solicitante."
+ ],
+ [
+  "Confirmez que seuls les salons sélectionnés sont visibles et que le compte ne peut pas discuter.",
+  "Confirme que apenas os canais selecionados são visíveis e que a conta não pode conversar.",
+  "Confirma que solo son visibles los canales seleccionados y que la cuenta no puede chatear."
+ ],
+ [
+  "Lisez et acceptez l’accord de confidentialité, réussissez les contrôles de navigateur requis, puis répondez à chaque question dans le message privé. Utilisez ~application dans le message privé pour reprendre si nécessaire.",
+  "Leia e aceite o acordo de privacidade, conclua as verificações de navegador exigidas e responda a cada pergunta na mensagem privada. Use ~application na mensagem privada para retomar, se necessário.",
+  "Lee y acepta el acuerdo de privacidad, completa las comprobaciones de navegador requeridas y responde a cada pregunta en el mensaje privado. Usa ~application en el mensaje privado para reanudar si hace falta."
+ ],
+ [
+  "Envoyez la candidature et vérifiez qu’elle apparaît dans la boîte d’examen et dans les journaux.",
+  "Submeta a candidatura e verifique se aparece na caixa de revisão e nos registos.",
+  "Envía la solicitud y comprueba que aparece en la bandeja de revisión y en los registros."
+ ],
+ [
+  "Approuvez-la, attendez Décision appliquée, puis confirmez que le membre a le rôle d’accès et les rôles automatiques configurés, voit les salons attendus et n’a plus d’exclusion temporaire liée à la candidature.",
+  "Aprove-a, aguarde Decisão aplicada e confirme que o membro tem o cargo de acesso e os cargos automáticos configurados, consegue ver os canais esperados e não tem suspensão da candidatura.",
+  "Apruébala, espera a Decisión aplicada y confirma que el miembro tiene el rol de acceso y los roles automáticos configurados, puede ver los canales esperados y no tiene suspensión de la solicitud."
+ ],
+ [
+  "Si la configuration de l’accès échoue, corrigez les autorisations et utilisez Enregistrer et réparer l’accès. Si une décision enregistrée ne s’applique pas, corrigez le problème signalé et sélectionnez Réessayer l’action.",
+  "Se a configuração do acesso falhar, corrija as permissões e use Guardar e reparar o acesso. Se uma decisão guardada não for aplicada, corrija o problema indicado e selecione Repetir a ação.",
+  "Si la configuración del acceso falla, corrige los permisos y usa Guardar y reparar el acceso. Si una decisión guardada no se aplica, corrige el problema indicado y selecciona Reintentar la acción."
+ ],
+ [
+  "Lancer une configuration de modération Stoatmod",
+  "Lançar uma configuração de moderação do Stoatmod",
+  "Lanzar una configuración de moderación de Stoatmod"
+ ],
+ [
+  "Plan de lancement de la modération d’un serveur Stoat avec Stoatmod",
+  "Plano de lançamento da moderação de um servidor Stoat com o Stoatmod",
+  "Plan de lanzamiento de la moderación de un servidor de Stoat con Stoatmod"
+ ],
+ [
+  "Planifiez et lancez un système de modération Stoat avec responsabilités, autorisations, politique, communication du personnel et vérification des résultats.",
+  "Planeie e lance um sistema de moderação do Stoat com responsabilidades, permissões, política, comunicação da equipa e verificação de resultados.",
+  "Planifica y lanza un sistema de moderación de Stoat con responsables, permisos, política, comunicación del personal y verificación de resultados."
+ ],
+ [
+  "Guide de lancement de bout en bout",
+  "Guia de lançamento de ponta a ponta",
+  "Guía de lanzamiento de principio a fin"
+ ],
+ [
+  "Utilisez ce pas-à-pas destiné aux opérateurs pour passer d’une politique de modération planifiée à un lancement prêt pour le personnel, et pas seulement à un bot techniquement installé.",
+  "Use este passo a passo ao nível do operador para passar de uma política de moderação planeada a um lançamento pronto para a equipa, e não apenas a um bot tecnicamente instalado.",
+  "Usa esta guía paso a paso a nivel de operador para pasar de una política de moderación planificada a un lanzamiento listo para el personal, y no solo a un bot técnicamente instalado."
+ ],
+ [
+  "Planifier la configuration",
+  "Planear a configuração",
+  "Planificar la configuración"
+ ],
+ [
+  "Choisissez le propriétaire du serveur ou le modérateur principal responsable de la politique initiale.",
+  "Escolha o proprietário do servidor ou o moderador principal responsável pela política inicial.",
+  "Elige al propietario del servidor o al moderador principal responsable de la política inicial."
+ ],
+ [
+  "Sélectionnez un salon de journal privé.",
+  "Selecione um canal de registo privado.",
+  "Selecciona un canal de registro privado."
+ ],
+ [
+  "Choisissez un salon et un compte de test contrôlés.",
+  "Escolha um canal e uma conta de teste controlados.",
+  "Elige un canal y una cuenta de prueba controlados."
+ ],
+ [
+  "Notez les protections qui doivent être activées dès le départ.",
+  "Anote que proteções devem começar ativadas.",
+  "Anota qué protecciones deben empezar activadas."
+ ],
+ [
+  "Installer et auditer",
+  "Instalar e auditar",
+  "Instalar y auditar"
+ ],
+ [
+  "Inviter le bot hébergé",
+  "Convidar o bot alojado",
+  "Invitar al bot alojado"
+ ],
+ [
+  "Utilisez le profil officiel de Stoatmod pour le service hébergé, ou suivez les instructions GitHub pour héberger votre propre instance.",
+  "Use o perfil oficial do Stoatmod para o serviço alojado ou siga as instruções do GitHub para alojar a sua própria instância.",
+  "Usa el perfil oficial de Stoatmod para el servicio alojado o sigue las instrucciones de GitHub para alojar tu propia instancia."
+ ],
+ [
+  "Déplacer le rôle du bot",
+  "Mover o cargo do bot",
+  "Mover el rol del bot"
+ ],
+ [
+  "Placez-le au-dessus des membres et des rôles qu’il doit gérer.",
+  "Coloque-o acima dos membros e cargos que precisa de gerir.",
+  "Colócalo por encima de los miembros y roles que necesita gestionar."
+ ],
+ [
+  "Résolvez chaque autorisation manquante et chaque point de hiérarchie.",
+  "Resolva todas as permissões em falta e todos os pontos de hierarquia.",
+  "Resuelve cada permiso que falta y cada punto de jerarquía."
+ ],
+ [
+  "Configurer la journalisation",
+  "Configurar o registo",
+  "Configurar el registro"
+ ],
+ [
+  "Choisissez un salon où le bot peut voir, envoyer et inclure des embeds.",
+  "Escolha um canal onde o bot possa ver, enviar e incorporar embeds.",
+  "Elige un canal donde el bot pueda ver, enviar e insertar embeds."
+ ],
+ [
+  "Choisir une politique prudente",
+  "Escolher uma política prudente",
+  "Elegir una política prudente"
+ ],
+ [
+  "Conserver le seuil par défaut",
+  "Manter o limiar predefinido",
+  "Mantener el umbral predeterminado"
+ ],
+ [
+  "Commencez à 90 % pendant que vous découvrez comment les messages de votre communauté sont notés.",
+  "Comece nos 90% enquanto aprende como as mensagens da sua comunidade são pontuadas.",
+  "Empieza en el 90 % mientras descubres cómo se puntúan los mensajes de tu comunidad."
+ ],
+ [
+  "Examiner les protections spécialisées",
+  "Rever as proteções especializadas",
+  "Revisar las protecciones especializadas"
+ ],
+ [
+  "Vérifiez séparément les paramètres de spam, d’arrivée, de pseudos, d’images et de liens.",
+  "Verifique individualmente as definições de spam, entrada, alcunhas, imagens e ligações.",
+  "Comprueba por separado los ajustes de spam, entrada, apodos, imágenes y enlaces."
+ ],
+ [
+  "Utiliser d’abord l’observation ou l’examen",
+  "Usar primeiro a observação ou a revisão",
+  "Usar primero la observación o la revisión"
+ ],
+ [
+  "Évitez une application stricte immédiate pour les catégories incertaines.",
+  "Evite uma aplicação rigorosa imediata nas categorias incertas.",
+  "Evita una aplicación estricta inmediata en las categorías inciertas."
+ ],
+ [
+  "Documenter la politique",
+  "Documentar a política",
+  "Documentar la política"
+ ],
+ [
+  "Informez les membres de la vérification, de la modération automatique et des recours.",
+  "Informe os membros sobre a verificação, a moderação automática e os recursos.",
+  "Informa a los miembros sobre la verificación, la moderación automática y las apelaciones."
+ ],
+ [
+  "Vérifier le parcours complet",
+  "Verificar o percurso completo",
+  "Verificar el recorrido completo"
+ ],
+ [
+  "L’état du message ou du membre change réellement.",
+  "O estado da mensagem ou do membro muda realmente.",
+  "El estado del mensaje o del miembro cambia realmente."
+ ],
+ [
+  "La réponse décrit fidèlement le résultat.",
+  "A resposta descreve com exatidão o resultado.",
+  "La respuesta describe con exactitud el resultado."
+ ],
+ [
+  "L’événement ou le dossier contient le bon motif et le bon statut.",
+  "O evento ou caso contém o motivo e o estado corretos.",
+  "El evento o el caso contiene el motivo y el estado correctos."
+ ],
+ [
+  "Un modérateur autorisé peut accéder au tableau de bord.",
+  "Um moderador autorizado consegue aceder ao painel.",
+  "Un moderador autorizado puede acceder al panel."
+ ],
+ [
+  "Le serveur dispose d’une voie de récupération en cas d’échec d’une action ou de faux positif.",
+  "O servidor tem um caminho de recuperação para uma ação falhada ou um falso positivo.",
+  "El servidor tiene una vía de recuperación para una acción fallida o un falso positivo."
+ ],
+ [
+  "Comment modérer un serveur Stoat",
+  "Como moderar um servidor Stoat",
+  "Cómo moderar un servidor de Stoat"
+ ],
+ [
+  "Comment modérer un serveur Stoat : liste de contrôle pratique",
+  "Como moderar um servidor Stoat: lista de verificação prática",
+  "Cómo moderar un servidor de Stoat: lista de comprobación práctica"
+ ],
+ [
+  "Élaborez une politique de modération claire pour un serveur Stoat, avec autorisations, automod, examen humain, dossiers, recours et vérifications continues.",
+  "Crie uma política de moderação clara para um servidor Stoat, com permissões, automod, revisão humana, casos, recursos e verificações contínuas.",
+  "Crea una política de moderación clara para un servidor de Stoat, con permisos, automod, revisión humana, casos, apelaciones y comprobaciones continuas."
+ ],
+ [
+  "Guide de modération Stoat",
+  "Guia de moderação do Stoat",
+  "Guía de moderación de Stoat"
+ ],
+ [
+  "Un système de modération sain combine des règles compréhensibles, une automatisation proportionnée, des enregistrements fiables et un examen humain, plutôt que de s’appuyer sur un seul filtre agressif.",
+  "Um sistema de moderação saudável combina regras compreensíveis, automatização proporcionada, registos fiáveis e revisão humana, em vez de depender de um único filtro agressivo.",
+  "Un sistema de moderación sano combina normas comprensibles, automatización proporcionada, registros fiables y revisión humana, en lugar de depender de un único filtro agresivo."
+ ]
+]

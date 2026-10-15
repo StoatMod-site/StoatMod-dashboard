@@ -1,0 +1,1302 @@
+[
+ [
+  "Les paramètres du serveur décident de l’action",
+  "As definições do servidor decidem a ação",
+  "La configuración del servidor decide la acción"
+ ],
+ [
+  "Examiner l’enregistrement",
+  "Rever o registo",
+  "Revisar el registro"
+ ],
+ [
+  "Les actions éligibles peuvent créer des dossiers",
+  "As ações elegíveis podem criar casos",
+  "Las acciones elegibles pueden crear casos"
+ ],
+ [
+  "L’automatisation, avec une voie de révision.",
+  "Automatização, com um caminho de revisão.",
+  "Automatización, con una vía de revisión."
+ ],
+ [
+  "Flux de travail illustratif",
+  "Fluxo de trabalho ilustrativo",
+  "Flujo de trabajo ilustrativo"
+ ],
+ [
+  "Fonctionnalités de Stoatmod",
+  "Funcionalidades do Stoatmod",
+  "Funciones de Stoatmod"
+ ],
+ [
+  "PROTECTION CONFIGURABLE",
+  "PROTEÇÃO CONFIGURÁVEL",
+  "PROTECCIÓN CONFIGURABLE"
+ ],
+ [
+  "ACCÈS PAR CODE À USAGE UNIQUE",
+  "ACESSO POR CÓDIGO DE UTILIZAÇÃO ÚNICA",
+  "ACCESO CON CÓDIGO DE UN SOLO USO"
+ ],
+ [
+  "DOSSIERS RÉVISABLES",
+  "CASOS REVISÁVEIS",
+  "CASOS REVISABLES"
+ ],
+ [
+  "PARAMÈTRES EN DIRECT",
+  "DEFINIÇÕES EM DIRETO",
+  "CONFIGURACIÓN EN VIVO"
+ ],
+ [
+  "Qu’est-ce que Stoatmod ?",
+  "O que é o Stoatmod?",
+  "¿Qué es Stoatmod?"
+ ],
+ [
+  "Un système de modération qui garde les gens aux commandes.",
+  "Um sistema de moderação que mantém as pessoas no controlo.",
+  "Un sistema de moderación que mantiene a las personas al mando."
+ ],
+ [
+  "Stoatmod est un bot de modération pour les communautés Stoat. Il peut surveiller les protections qu’un serveur active, appliquer sa politique configurée et conserver suffisamment de contexte pour que les modérateurs comprennent ce qui s’est passé.",
+  "O Stoatmod é um bot de moderação para comunidades Stoat. Pode vigiar as proteções que um servidor ativa, aplicar a sua política configurada e preservar contexto suficiente para os moderadores perceberem o que aconteceu.",
+  "Stoatmod es un bot de moderación para comunidades de Stoat. Puede vigilar las protecciones que activa un servidor, aplicar su política configurada y conservar suficiente contexto para que los moderadores entiendan qué ocurrió."
+ ],
+ [
+  "Les vérifications automatiques ne remplacent pas le jugement humain. Les seuils, les exclusions, les catégories de modération et l’escalade des avertissements restent configurables par l’équipe du serveur.",
+  "As verificações automáticas não substituem o juízo humano. Os limiares, exclusões, categorias de moderação e escalada de advertências continuam configuráveis pela equipa do servidor.",
+  "Las comprobaciones automáticas no sustituyen el juicio humano. Los umbrales, las exclusiones, las categorías de moderación y la escalada de advertencias siguen siendo configurables por el equipo del servidor."
+ ],
+ [
+  "Conçu pour toute l’équipe de modération",
+  "Criado para toda a equipa de moderação",
+  "Creado para todo el equipo de moderación"
+ ],
+ [
+  "Une protection que votre équipe",
+  "Uma proteção que a sua equipa",
+  "Una protección que tu equipo"
+ ],
+ [
+  "peut configurer et vérifier.",
+  "pode configurar e rever.",
+  "puede configurar y revisar."
+ ],
+ [
+  "Utilisez les commandes pour les changements rapides et le tableau de bord pour les preuves, les statistiques et la configuration complète.",
+  "Use comandos para alterações rápidas e o painel para provas, estatísticas e a configuração completa.",
+  "Usa comandos para cambios rápidos y el panel para pruebas, estadísticas y la configuración completa."
+ ],
+ [
+  "Voir toutes les fonctionnalités de Stoatmod",
+  "Ver todas as funcionalidades do Stoatmod",
+  "Ver todas las funciones de Stoatmod"
+ ],
+ [
+  "Une configuration maîtrisée",
+  "Uma configuração controlada",
+  "Una configuración controlada"
+ ],
+ [
+  "De l’installation à une configuration vérifiée.",
+  "Da instalação a uma configuração verificada.",
+  "De la instalación a una configuración verificada."
+ ],
+ [
+  "Ouvrir le guide de configuration complet →",
+  "Abrir o guia de configuração completo →",
+  "Abrir la guía de configuración completa →"
+ ],
+ [
+  "Invitez le bot via son profil officiel Stoat.",
+  "Convide o bot através do seu perfil oficial do Stoat.",
+  "Invita al bot a través de su perfil oficial de Stoat."
+ ],
+ [
+  "Vérifier les autorisations",
+  "Verificar permissões",
+  "Comprobar permisos"
+ ],
+ [
+  "Lancez l’audit de configuration et corrigez la hiérarchie des rôles ou les autorisations manquantes.",
+  "Execute a auditoria de configuração e corrija a hierarquia de cargos ou as permissões em falta.",
+  "Ejecuta la auditoría de configuración y corrige la jerarquía de roles o los permisos que falten."
+ ],
+ [
+  "Choisir les protections",
+  "Escolher proteções",
+  "Elegir protecciones"
+ ],
+ [
+  "Configurez les catégories de modération, les seuils et les exclusions de salons.",
+  "Configure categorias de moderação, limiares e exclusões de canais.",
+  "Configura las categorías de moderación, los umbrales y las exclusiones de canales."
+ ],
+ [
+  "Vérifier un résultat",
+  "Verificar um resultado",
+  "Verificar un resultado"
+ ],
+ [
+  "Confirmez que le bot peut mener à bien une vraie action configurée avant de vous fier à l’automatisation.",
+  "Confirme que o bot consegue concluir uma ação real configurada antes de confiar na automatização.",
+  "Confirma que el bot puede completar una acción real configurada antes de confiar en la automatización."
+ ],
+ [
+  "Communautés publiques approuvées",
+  "Comunidades públicas aprovadas",
+  "Comunidades públicas aprobadas"
+ ],
+ [
+  "Découvrez les serveurs qui ont choisi d’apparaître dans Découverte.",
+  "Veja os servidores que escolheram aparecer na Descoberta.",
+  "Consulta los servidores que han elegido aparecer en Descubrimiento."
+ ],
+ [
+  "Parcourir Stoat Découverte",
+  "Explorar o Stoat Descoberta",
+  "Explorar Stoat Descubrimiento"
+ ],
+ [
+  "membres · Fiche vérifiée",
+  "membros · Listagem verificada",
+  "miembros · Ficha verificada"
+ ],
+ [
+  "Les profils publics de serveurs approuvés apparaîtront ici lorsque l’annuaire public sera disponible.",
+  "Os perfis públicos de servidores aprovados aparecerão aqui quando o diretório público estiver disponível.",
+  "Los perfiles públicos de servidores aprobados aparecerán aquí cuando el directorio público esté disponible."
+ ],
+ [
+  "Statistiques publiques du réseau Stoatmod",
+  "Estatísticas públicas da rede Stoatmod",
+  "Estadísticas públicas de la red Stoatmod"
+ ],
+ [
+  "Serveurs partageant des totaux publics",
+  "Servidores que partilham totais públicos",
+  "Servidores que comparten totales públicos"
+ ],
+ [
+  "Adhésions cumulées",
+  "Participações combinadas",
+  "Pertenencias combinadas"
+ ],
+ [
+  "Dossiers historiques enregistrés",
+  "Casos históricos registados",
+  "Casos históricos registrados"
+ ],
+ [
+  "Ressources pour modérateurs",
+  "Recursos para moderadores",
+  "Recursos para moderadores"
+ ],
+ [
+  "Résolvez la tâche, puis configurez.",
+  "Resolva a tarefa e depois configure.",
+  "Resuelve la tarea y luego configura."
+ ],
+ [
+  "Guide",
+  "Guia",
+  "Guía"
+ ],
+ [
+  "Bloquer le spam et les mentions de masse sur Stoat",
+  "Travar o spam e as menções em massa no Stoat",
+  "Detener el spam y las menciones masivas en Stoat"
+ ],
+ [
+  "Choisissez la bonne protection et vérifiez qu’elle se comporte comme prévu.",
+  "Escolha a proteção certa e verifique se se comporta como esperado.",
+  "Elige la protección adecuada y comprueba que se comporta como se espera."
+ ],
+ [
+  "Autorisations requises et hiérarchie des rôles",
+  "Permissões necessárias e hierarquia de cargos",
+  "Permisos requeridos y jerarquía de roles"
+ ],
+ [
+  "Comprenez chaque autorisation dont Stoatmod a besoin et pourquoi des actions peuvent être bloquées.",
+  "Compreenda cada permissão de que o Stoatmod precisa e porque as ações podem ser bloqueadas.",
+  "Entiende cada permiso que necesita Stoatmod y por qué se pueden bloquear acciones."
+ ],
+ [
+  "Liste de contrôle",
+  "Lista de verificação",
+  "Lista de comprobación"
+ ],
+ [
+  "Examiner la configuration de modération de votre serveur",
+  "Rever a configuração de moderação do seu servidor",
+  "Revisar la configuración de moderación de tu servidor"
+ ],
+ [
+  "Passez en revue les autorisations, la politique, les journaux, les recours et la maintenance continue.",
+  "Reveja as permissões, a política, os registos, os recursos e a manutenção contínua.",
+  "Repasa los permisos, la política, los registros, las apelaciones y el mantenimiento continuo."
+ ],
+ [
+  "FAQ Stoatmod",
+  "Perguntas frequentes do Stoatmod",
+  "Preguntas frecuentes de Stoatmod"
+ ],
+ [
+  "Quelques points avant d’inviter le bot.",
+  "Algumas coisas antes de convidar o bot.",
+  "Unas cuantas cosas antes de invitar al bot."
+ ],
+ [
+  "Que peut protéger Stoatmod ?",
+  "O que pode o Stoatmod proteger?",
+  "¿Qué puede proteger Stoatmod?"
+ ],
+ [
+  "Selon votre configuration, Stoatmod peut vérifier les catégories de modération, le spam, les mentions de masse, les liens externes, les images envoyées, les noms d’utilisateur, les pseudos et les nouveaux comptes.",
+  "Consoante a sua configuração, o Stoatmod pode verificar categorias de moderação, spam, menções em massa, ligações externas, imagens carregadas, nomes de utilizador, alcunhas e contas novas.",
+  "Según tu configuración, Stoatmod puede comprobar categorías de moderación, spam, menciones masivas, enlaces externos, imágenes subidas, nombres de usuario, apodos y cuentas nuevas."
+ ],
+ [
+  "Comparez les protections disponibles.",
+  "Compare as proteções disponíveis.",
+  "Compara las protecciones disponibles."
+ ],
+ [
+  "Comment configurer Stoatmod ?",
+  "Como configuro o Stoatmod?",
+  "¿Cómo configuro Stoatmod?"
+ ],
+ [
+  "Ajoutez le bot à votre serveur Stoat, vérifiez ses autorisations et sa position de rôle, puis choisissez les protections dont votre communauté a besoin.",
+  "Adicione o bot ao seu servidor Stoat, verifique as suas permissões e posição de cargo e depois escolha as proteções de que a sua comunidade precisa.",
+  "Añade el bot a tu servidor de Stoat, comprueba sus permisos y la posición de su rol, y luego elige las protecciones que necesita tu comunidad."
+ ],
+ [
+  "Suivez le guide de configuration pas à pas.",
+  "Siga o guia de configuração passo a passo.",
+  "Sigue la guía de configuración paso a paso."
+ ],
+ [
+  "Les modérateurs peuvent-ils vérifier les décisions automatiques ?",
+  "Os moderadores podem rever as decisões automáticas?",
+  "¿Pueden los moderadores revisar las decisiones automáticas?"
+ ],
+ [
+  "Les avertissements et les actions de modération éligibles peuvent être enregistrés sous forme de dossiers avec motifs et statut. Le tableau de bord et le",
+  "As advertências e as ações de moderação elegíveis podem ser registadas como casos com motivos e estado. O painel e o",
+  "Las advertencias y las acciones de moderación elegibles se pueden registrar como casos con motivos y estado. El panel y el"
+ ],
+ [
+  "parcours de recours",
+  "fluxo de recurso",
+  "flujo de apelación"
+ ],
+ [
+  "offrent à votre équipe une voie de révision structurée.",
+  "dão à sua equipa um caminho de revisão estruturado.",
+  "ofrecen a tu equipo una vía de revisión estructurada."
+ ],
+ [
+  "Stoatmod est-il open source ?",
+  "O Stoatmod é de código aberto?",
+  "¿Stoatmod es de código abierto?"
+ ],
+ [
+  "Le bot, l'API du tableau de bord, le site et le tableau de bord de serveur de Stoatmod sont open source sous AGPL-3.0. Les dépôts GitHub expliquent comment héberger votre propre instance.",
+  "O bot, a API do painel, o site e o painel de servidor do Stoatmod são de código aberto sob AGPL-3.0. Os repositórios GitHub incluem instruções para executar a sua própria instância.",
+  "El bot, la API del panel, el sitio y el panel de servidor de Stoatmod son de código abierto bajo AGPL-3.0. Los repositorios de GitHub incluyen instrucciones para ejecutar tu propia instancia."
+ ],
+ [
+  "documentation publique",
+  "documentação pública",
+  "documentación pública"
+ ],
+ [
+  "couvre le comportement et les autorisations pris en charge, tandis que la",
+  "abrange o comportamento e as permissões suportados, enquanto a",
+  "cubre el comportamiento y los permisos admitidos, mientras que la"
+ ],
+ [
+  "politique de confidentialité",
+  "política de privacidade",
+  "política de privacidad"
+ ],
+ [
+  "explique comment les informations sont traitées.",
+  "explica como as informações são tratadas.",
+  "explica cómo se trata la información."
+ ],
+ [
+  "Confiance et responsabilité",
+  "Confiança e responsabilidade",
+  "Confianza y responsabilidad"
+ ],
+ [
+  "Vérifiez comment le service est exploité.",
+  "Verifique como o serviço é operado.",
+  "Comprueba cómo se opera el servicio."
+ ],
+ [
+  "Garde-fous de sécurité et de modération",
+  "Salvaguardas de segurança e moderação",
+  "Salvaguardas de seguridad y moderación"
+ ],
+ [
+  "Lire l’approche opérationnelle →",
+  "Ler a abordagem operacional →",
+  "Leer el enfoque operativo →"
+ ],
+ [
+  "Voir quelles informations sont traitées →",
+  "Ver que informações são tratadas →",
+  "Ver qué información se trata →"
+ ],
+ [
+  "État du système en direct",
+  "Estado do sistema em direto",
+  "Estado del sistema en vivo"
+ ],
+ [
+  "Vérifier l’état actuel du service →",
+  "Verificar o estado atual do serviço →",
+  "Comprobar el estado actual del servicio →"
+ ],
+ [
+  "Suivre les mises à jour importantes →",
+  "Acompanhar as atualizações importantes →",
+  "Seguir las actualizaciones importantes →"
+ ],
+ [
+  "Commencer par une configuration vérifiée",
+  "Comece com uma configuração verificada",
+  "Empieza con una configuración verificada"
+ ],
+ [
+  "Un serveur plus serein.",
+  "Um servidor mais sereno.",
+  "Un servidor más tranquilo."
+ ],
+ [
+  "Un processus plus clair.",
+  "Um processo mais claro.",
+  "Un proceso más claro."
+ ],
+ [
+  "Automod Stoat, statistiques de modération et protection responsable pour des communautés plus saines.",
+  "Automod Stoat, estatísticas de moderação e proteção responsável para comunidades mais saudáveis.",
+  "Automod de Stoat, estadísticas de moderación y protección responsable para comunidades más sanas."
+ ],
+ [
+  "404 / Page introuvable",
+  "404 / Página não encontrada",
+  "404 / Página no encontrada"
+ ],
+ [
+  "Cette page n’existe pas.",
+  "Esta página não existe.",
+  "Esta página no existe."
+ ],
+ [
+  "Le lien a peut-être changé, ou cette page n’est plus disponible.",
+  "A ligação pode ter mudado ou esta página já não está disponível.",
+  "El enlace puede haber cambiado o esta página ya no está disponible."
+ ],
+ [
+  "Retour à l’accueil",
+  "Voltar ao início",
+  "Volver al inicio"
+ ],
+ [
+  "Trouvez votre prochaine étape.",
+  "Encontre o seu próximo passo.",
+  "Encuentra tu siguiente paso."
+ ],
+ [
+  "Parcourez la documentation pour l’aide à la configuration, les commandes et les guides de modération.",
+  "Explore a documentação para ajuda de configuração, comandos e guias de moderação.",
+  "Consulta la documentación para ayuda con la configuración, comandos y guías de moderación."
+ ],
+ [
+  "Guides communautaires",
+  "Guias da comunidade",
+  "Guías de la comunidad"
+ ],
+ [
+  "Ouvrir la documentation",
+  "Abrir a documentação",
+  "Abrir la documentación"
+ ],
+ [
+  "Retour au site",
+  "Voltar ao site",
+  "Volver al sitio web"
+ ],
+ [
+  "Guides",
+  "Guias",
+  "Guías"
+ ],
+ [
+  "Confiance",
+  "Confiança",
+  "Confianza"
+ ],
+ [
+  "Découvrir des serveurs Stoat vérifiés",
+  "Descobrir servidores Stoat verificados",
+  "Descubrir servidores de Stoat verificados"
+ ],
+ [
+  "Ce que nous avons changé en matière de confidentialité",
+  "O que alterámos em matéria de privacidade",
+  "Qué hemos cambiado en materia de privacidad"
+ ],
+ [
+  "Important :",
+  "Importante:",
+  "Importante:"
+ ],
+ [
+  "Les détails, au même endroit.",
+  "Os detalhes, num só lugar.",
+  "Los detalles, en un solo lugar."
+ ],
+ [
+  "Poursuivre la tâche",
+  "Continuar a tarefa",
+  "Continuar la tarea"
+ ],
+ [
+  "Ressources Stoatmod associées",
+  "Recursos relacionados do Stoatmod",
+  "Recursos de Stoatmod relacionados"
+ ],
+ [
+  "Ouvrir la ressource →",
+  "Abrir o recurso →",
+  "Abrir el recurso →"
+ ],
+ [
+  "Prêt à configurer un serveur ?",
+  "Pronto para configurar um servidor?",
+  "¿Listo para configurar un servidor?"
+ ],
+ [
+  "Installez Stoatmod, puis vérifiez le premier résultat.",
+  "Instale o Stoatmod e depois verifique o primeiro resultado.",
+  "Instala Stoatmod y luego verifica el primer resultado."
+ ],
+ [
+  "Ouvrir le profil officiel du bot →",
+  "Abrir o perfil oficial do bot →",
+  "Abrir el perfil oficial del bot →"
+ ],
+ [
+  "Navigation du pied de page",
+  "Navegação do rodapé",
+  "Navegación del pie de página"
+ ],
+ [
+  "Ressources",
+  "Recursos",
+  "Recursos"
+ ],
+ [
+  "Journal des modifications",
+  "Registo de alterações",
+  "Registro de cambios"
+ ],
+ [
+  "À propos",
+  "Sobre",
+  "Acerca de"
+ ],
+ [
+  "Des guides pratiques.",
+  "Guias práticos.",
+  "Guías prácticas."
+ ],
+ [
+  "Trouvez votre guide",
+  "Encontre o seu guia",
+  "Encuentra tu guía"
+ ],
+ [
+  "Une bonne configuration commence ici.",
+  "Uma boa configuração começa aqui.",
+  "Una buena configuración empieza aquí."
+ ],
+ [
+  "Connectez le bot, vérifiez ses autorisations et choisissez les protections dont votre communauté a besoin. Commencez par le démarrage rapide, puis parcourez les guides ci-dessous.",
+  "Ligue o bot, verifique as suas permissões e escolha as proteções de que a sua comunidade precisa. Comece pelo arranque rápido e depois percorra os guias abaixo.",
+  "Conecta el bot, comprueba sus permisos y elige las protecciones que necesita tu comunidad. Empieza con el inicio rápido y luego repasa las guías de abajo."
+ ],
+ [
+  "Commandes exactes",
+  "Comandos exatos",
+  "Comandos exactos"
+ ],
+ [
+  "Vérifications des résultats",
+  "Verificações de resultados",
+  "Comprobaciones de resultados"
+ ],
+ [
+  "De la configuration à la modération quotidienne",
+  "Da configuração à moderação diária",
+  "De la configuración a la moderación diaria"
+ ],
+ [
+  "Choisissez votre prochaine étape.",
+  "Escolha o seu próximo passo.",
+  "Elige tu siguiente paso."
+ ],
+ [
+  "Prêt pour votre communauté",
+  "Pronto para a sua comunidade",
+  "Listo para tu comunidad"
+ ],
+ [
+  "Mettez votre configuration en pratique.",
+  "Ponha a sua configuração em prática.",
+  "Pon en práctica tu configuración."
+ ],
+ [
+  "Ouvrir le profil officiel du bot",
+  "Abrir o perfil oficial do bot",
+  "Abrir el perfil oficial del bot"
+ ],
+ [
+  "Stoatmod /",
+  "Stoatmod /",
+  "Stoatmod /"
+ ],
+ [
+  "Lire le guide",
+  "Ler o guia",
+  "Leer la guía"
+ ],
+ [
+  "Aucun résultat correspondant",
+  "Nenhum resultado correspondente",
+  "Sin resultados coincidentes"
+ ],
+ [
+  "Essayez un autre mot-clé ou revenez à la collection complète.",
+  "Experimente outra palavra-chave ou volte à coleção completa.",
+  "Prueba con otra palabra clave o vuelve a la colección completa."
+ ],
+ [
+  "Effacer la recherche",
+  "Limpar pesquisa",
+  "Borrar búsqueda"
+ ],
+ [
+  "Réseau",
+  "Rede",
+  "Red"
+ ],
+ [
+  "Serveurs",
+  "Servidores",
+  "Servidores"
+ ],
+ [
+  "Signalements d’utilisateurs",
+  "Denúncias de utilizadores",
+  "Denuncias de usuarios"
+ ],
+ [
+  "Boîte d’assistance",
+  "Caixa de suporte",
+  "Bandeja de soporte"
+ ],
+ [
+  "Demandes de bannissement",
+  "Pedidos de banimento",
+  "Solicitudes de bloqueo"
+ ],
+ [
+  "Date d’arrivée indisponible",
+  "Data de entrada indisponível",
+  "Fecha de unión no disponible"
+ ],
+ [
+  "Arrivé aujourd’hui",
+  "Entrou hoje",
+  "Se unió hoy"
+ ],
+ [
+  "Impossible d’actualiser le tableau de bord d’administration.",
+  "Não foi possível atualizar o painel de administração.",
+  "No se pudo actualizar el panel de administración."
+ ],
+ [
+  "Impossible de charger les signalements.",
+  "Não foi possível carregar as denúncias.",
+  "No se pudieron cargar las denuncias."
+ ],
+ [
+  "Impossible d’ouvrir le signalement.",
+  "Não foi possível abrir a denúncia.",
+  "No se pudo abrir la denuncia."
+ ],
+ [
+  "Impossible d’ouvrir cette conversation.",
+  "Não foi possível abrir esta conversa.",
+  "No se pudo abrir esta conversación."
+ ],
+ [
+  "Réponse mise en file d’attente depuis support@modstoat.site.",
+  "Resposta colocada em fila a partir de support@modstoat.site.",
+  "Respuesta puesta en cola desde support@modstoat.site."
+ ],
+ [
+  "Impossible de mettre la réponse en file d’attente.",
+  "Não foi possível colocar a resposta em fila.",
+  "No se pudo poner la respuesta en cola."
+ ],
+ [
+  "Courriel mis en file d’attente depuis support@modstoat.site.",
+  "Email colocado em fila a partir de support@modstoat.site.",
+  "Correo puesto en cola desde support@modstoat.site."
+ ],
+ [
+  "Impossible de mettre le courriel en file d’attente.",
+  "Não foi possível colocar o email em fila.",
+  "No se pudo poner el correo en cola."
+ ],
+ [
+  "Impossible de rechercher les sujets de confidentialité.",
+  "Não foi possível pesquisar os titulares de privacidade.",
+  "No se pudieron buscar los sujetos de privacidad."
+ ],
+ [
+  "Impossible d’ouvrir l’export de confidentialité.",
+  "Não foi possível abrir a exportação de privacidade.",
+  "No se pudo abrir la exportación de privacidad."
+ ],
+ [
+  "Impossible de créer l’export de confidentialité.",
+  "Não foi possível criar a exportação de privacidade.",
+  "No se pudo crear la exportación de privacidad."
+ ],
+ [
+  "Demande de bannissement global envoyée au propriétaire. Le statut d’application sera mis à jour ici après examen.",
+  "Pedido de banimento global enviado ao proprietário. O estado de aplicação será atualizado aqui após a revisão.",
+  "Solicitud de bloqueo global enviada al propietario. El estado de aplicación se actualizará aquí tras la revisión."
+ ],
+ [
+  "Impossible d’envoyer la demande.",
+  "Não foi possível submeter o pedido.",
+  "No se pudo enviar la solicitud."
+ ],
+ [
+  "Stoat n’a pas pu récupérer d’invitation active.",
+  "O Stoat não conseguiu obter um convite ativo.",
+  "Stoat no pudo obtener una invitación activa."
+ ],
+ [
+  "La recherche d’invitation a expiré. Le bot est peut-être hors ligne.",
+  "A pesquisa de convite expirou. O bot pode estar offline.",
+  "La búsqueda de invitación agotó el tiempo de espera. Puede que el bot esté desconectado."
+ ],
+ [
+  "Impossible de récupérer une invitation active.",
+  "Não foi possível obter um convite ativo.",
+  "No se pudo obtener una invitación activa."
+ ],
+ [
+  "Stoat n’a pas confirmé que Stoatmod a quitté le serveur.",
+  "O Stoat não confirmou que o Stoatmod saiu do servidor.",
+  "Stoat no confirmó que Stoatmod haya salido del servidor."
+ ],
+ [
+  "Le bot n’a pas pu quitter ce serveur.",
+  "O bot não conseguiu sair deste servidor.",
+  "El bot no pudo salir de este servidor."
+ ],
+ [
+  "Impossible de vérifier l’état de la suppression.",
+  "Não foi possível verificar o estado da remoção.",
+  "No se pudo comprobar el estado de la eliminación."
+ ],
+ [
+  "Saisissez un motif d’au moins 3 caractères.",
+  "Introduza um motivo com pelo menos 3 carateres.",
+  "Introduce un motivo de al menos 3 caracteres."
+ ],
+ [
+  "Impossible de mettre ce serveur sur liste noire.",
+  "Não foi possível colocar este servidor na lista negra.",
+  "No se pudo poner este servidor en la lista negra."
+ ],
+ [
+  "Décision enregistrée. Notification au signaleur mise en file d’attente.",
+  "Decisão guardada. Notificação ao autor da denúncia colocada em fila.",
+  "Decisión guardada. Notificación al denunciante puesta en cola."
+ ],
+ [
+  "Impossible de trancher le signalement.",
+  "Não foi possível decidir a denúncia.",
+  "No se pudo resolver la denuncia."
+ ],
+ [
+  "Notification au signaleur de nouveau mise en file d’attente.",
+  "Notificação ao autor da denúncia colocada de novo em fila.",
+  "Notificación al denunciante puesta de nuevo en cola."
+ ],
+ [
+  "Impossible de relancer la notification au signaleur.",
+  "Não foi possível repetir a notificação ao autor da denúncia.",
+  "No se pudo reintentar la notificación al denunciante."
+ ],
+ [
+  "Demande d’informations mise en file d’attente pour envoi par message privé.",
+  "Pedido de informações colocado em fila para envio por mensagem privada.",
+  "Solicitud de información puesta en cola para su envío por mensaje privado."
+ ],
+ [
+  "Impossible de demander des informations complémentaires.",
+  "Não foi possível pedir mais informações.",
+  "No se pudo solicitar más información."
+ ],
+ [
+  "Impossible d’examiner la candidature à Découverte.",
+  "Não foi possível rever a candidatura à Descoberta.",
+  "No se pudo revisar la solicitud de Descubrimiento."
+ ],
+ [
+  "Retirer ce serveur de Découverte ? Sa fiche publique sera supprimée immédiatement.",
+  "Revogar este servidor da Descoberta? A sua listagem pública será removida imediatamente.",
+  "¿Revocar este servidor de Descubrimiento? Su ficha pública se eliminará de inmediato."
+ ],
+ [
+  "Approbation de Découverte révoquée.",
+  "Aprovação da Descoberta revogada.",
+  "Aprobación de Descubrimiento revocada."
+ ],
+ [
+  "Impossible de révoquer la fiche Découverte.",
+  "Não foi possível revogar a listagem da Descoberta.",
+  "No se pudo revocar la ficha de Descubrimiento."
+ ],
+ [
+  "Ouverture des opérations du personnel…",
+  "A abrir as operações da equipa…",
+  "Abriendo las operaciones del personal…"
+ ],
+ [
+  "Communautés connectées",
+  "Comunidades ligadas",
+  "Comunidades conectadas"
+ ],
+ [
+  "Annuaire des serveurs",
+  "Diretório de servidores",
+  "Directorio de servidores"
+ ],
+ [
+  "serveurs correspondent",
+  "servidores correspondem",
+  "servidores coinciden"
+ ],
+ [
+  "Rechercher",
+  "Pesquisar",
+  "Buscar"
+ ],
+ [
+  "Serveur, nom d’utilisateur du propriétaire ou identifiant",
+  "Servidor, nome de utilizador do proprietário ou ID",
+  "Servidor, nombre de usuario del propietario o ID"
+ ],
+ [
+  "Tous les états d’autorisations",
+  "Todos os estados de permissões",
+  "Todos los estados de permisos"
+ ],
+ [
+  "Avec toutes les autorisations",
+  "Com todas as permissões",
+  "Con todos los permisos"
+ ],
+ [
+  "Sans toutes les autorisations",
+  "Sem todas as permissões",
+  "Sin todos los permisos"
+ ],
+ [
+  "Audit indisponible",
+  "Auditoria indisponível",
+  "Auditoría no disponible"
+ ],
+ [
+  "Tous les états de journal",
+  "Todos os estados de registo",
+  "Todos los estados de registro"
+ ],
+ [
+  "Avec salon de journal",
+  "Com canal de registo",
+  "Con canal de registro"
+ ],
+ [
+  "Sans salon de journal",
+  "Sem canal de registo",
+  "Sin canal de registro"
+ ],
+ [
+  "Trier",
+  "Ordenar",
+  "Ordenar"
+ ],
+ [
+  "Nom A–Z",
+  "Nome A–Z",
+  "Nombre A–Z"
+ ],
+ [
+  "Nom Z–A",
+  "Nome Z–A",
+  "Nombre Z–A"
+ ],
+ [
+  "Bot installé depuis le plus longtemps",
+  "Bot instalado há mais tempo",
+  "Bot instalado hace más tiempo"
+ ],
+ [
+  "Bot installé le plus récemment",
+  "Bot instalado mais recentemente",
+  "Bot instalado más recientemente"
+ ],
+ [
+  "Le plus de messages aujourd’hui",
+  "Mais mensagens hoje",
+  "Más mensajes hoy"
+ ],
+ [
+  "Récemment mis à jour",
+  "Atualizado recentemente",
+  "Actualizado recientemente"
+ ],
+ [
+  "Nom d’utilisateur inconnu",
+  "Nome de utilizador desconhecido",
+  "Nombre de usuario desconocido"
+ ],
+ [
+  "Identifiant du propriétaire indisponible",
+  "ID do proprietário indisponível",
+  "ID del propietario no disponible"
+ ],
+ [
+  "L’horodatage d’arrivée du bot apparaîtra après la prochaine actualisation complète du serveur.",
+  "A data e hora de entrada do bot aparecerá após a próxima atualização completa do servidor.",
+  "La marca de tiempo de unión del bot aparecerá tras la próxima actualización completa del servidor."
+ ],
+ [
+  "Toutes les autorisations accordées",
+  "Todas as permissões concedidas",
+  "Todos los permisos concedidos"
+ ],
+ [
+  "Des autorisations nécessitent votre attention",
+  "As permissões precisam de atenção",
+  "Los permisos necesitan atención"
+ ],
+ [
+  "Audit des autorisations indisponible",
+  "Auditoria de permissões indisponível",
+  "Auditoría de permisos no disponible"
+ ],
+ [
+  "Autorisations du bot manquantes",
+  "Permissões do bot em falta",
+  "Permisos del bot que faltan"
+ ],
+ [
+  "Autorisations manquantes",
+  "Permissões em falta",
+  "Permisos que faltan"
+ ],
+ [
+  "Le dossier du membre bot n’a pas pu être vérifié dans le dernier instantané du serveur.",
+  "O registo de membro do bot não pôde ser verificado no último instantâneo do servidor.",
+  "No se pudo comprobar el registro de miembro del bot en la última instantánea del servidor."
+ ],
+ [
+  "Salons",
+  "Canais",
+  "Canales"
+ ],
+ [
+  "Rôles",
+  "Cargos",
+  "Roles"
+ ],
+ [
+  "Salon de journal :",
+  "Canal de registo:",
+  "Canal de registro:"
+ ],
+ [
+  "Mis à jour",
+  "Atualizado",
+  "Actualizado"
+ ],
+ [
+  "Recherche d’une invitation…",
+  "A procurar convite…",
+  "Buscando invitación…"
+ ],
+ [
+  "Obtenir une invitation active aléatoire",
+  "Obter um convite ativo aleatório",
+  "Obtener una invitación activa aleatoria"
+ ],
+ [
+  "Ouvrir l’invitation ↗",
+  "Abrir convite ↗",
+  "Abrir invitación ↗"
+ ],
+ [
+  "Retrait du bot…",
+  "A remover o bot…",
+  "Retirando el bot…"
+ ],
+ [
+  "Réessayer le retrait",
+  "Repetir remoção",
+  "Reintentar la eliminación"
+ ],
+ [
+  "Mettre le serveur sur liste noire",
+  "Colocar servidor na lista negra",
+  "Poner el servidor en la lista negra"
+ ],
+ [
+  "Action n°",
+  "Ação n.º",
+  "Acción n.º"
+ ],
+ [
+  "En attente du processus du bot…",
+  "A aguardar o processo do bot…",
+  "Esperando al proceso del bot…"
+ ],
+ [
+  "Stoatmod quitte le serveur…",
+  "O Stoatmod está a sair do servidor…",
+  "Stoatmod está saliendo del servidor…"
+ ],
+ [
+  "Aucun serveur ne correspond à ces filtres.",
+  "Nenhum servidor corresponde a estes filtros.",
+  "Ningún servidor coincide con estos filtros."
+ ],
+ [
+  "File d’examen de sécurité globale",
+  "Fila de revisão de segurança global",
+  "Cola de revisión de seguridad global"
+ ],
+ [
+  "Signalements globaux",
+  "Denúncias globais",
+  "Denuncias globales"
+ ],
+ [
+  "Référence",
+  "Referência",
+  "Referencia"
+ ],
+ [
+  "Signaleur",
+  "Autor da denúncia",
+  "Denunciante"
+ ],
+ [
+  "Cible",
+  "Alvo",
+  "Objetivo"
+ ],
+ [
+  "Motif",
+  "Motivo",
+  "Motivo"
+ ],
+ [
+  "+ Rédiger",
+  "+ Escrever",
+  "+ Redactar"
+ ],
+ [
+  "Rechercher dans la messagerie",
+  "Pesquisar no correio",
+  "Buscar en el correo"
+ ],
+ [
+  "Conversation d’assistance",
+  "Conversa de suporte",
+  "Conversación de soporte"
+ ],
+ [
+  "Fermer la conversation",
+  "Fechar conversa",
+  "Cerrar conversación"
+ ],
+ [
+  "Facultatif · séparez les adresses par des virgules",
+  "Opcional · separe os endereços com vírgulas",
+  "Opcional · separa las direcciones con comas"
+ ],
+ [
+  "Facultatif · masqué aux destinataires",
+  "Opcional · oculto aos destinatários",
+  "Opcional · oculto a los destinatarios"
+ ],
+ [
+  "Répondre",
+  "Responder",
+  "Responder"
+ ],
+ [
+  "Envoyer depuis support@modstoat.site",
+  "Enviar a partir de support@modstoat.site",
+  "Enviar desde support@modstoat.site"
+ ],
+ [
+  "Sélectionnez une conversation ou rédigez un message. La suppression des courriels reste réservée au propriétaire.",
+  "Selecione uma conversa ou escreva uma mensagem. A eliminação de emails continua controlada pelo proprietário.",
+  "Selecciona una conversación o redacta un mensaje. La eliminación de correos sigue bajo el control del propietario."
+ ],
+ [
+  "Opérations Découverte et réseau",
+  "Operações de Descoberta e rede",
+  "Operaciones de Descubrimiento y red"
+ ],
+ [
+  "Candidatures à Découverte",
+  "Candidaturas à Descoberta",
+  "Solicitudes de Descubrimiento"
+ ],
+ [
+  "en attente d’examen par le personnel",
+  "a aguardar revisão da equipa",
+  "pendientes de revisión por el personal"
+ ],
+ [
+  "Serveur inconnu",
+  "Servidor desconhecido",
+  "Servidor desconocido"
+ ],
+ [
+  "Examiner l’invitation soumise ↗",
+  "Inspecionar o convite submetido ↗",
+  "Inspeccionar la invitación enviada ↗"
+ ],
+ [
+  "Note de décision",
+  "Nota de decisão",
+  "Nota de decisión"
+ ],
+ [
+  "Approuver",
+  "Aprovar",
+  "Aprobar"
+ ],
+ [
+  "Révoquer la fiche",
+  "Revogar listagem",
+  "Revocar ficha"
+ ],
+ [
+  "Soumise",
+  "Submetida",
+  "Enviada"
+ ],
+ [
+  "· Les décisions sont attribuées à votre compte administrateur",
+  "· As decisões são atribuídas à sua conta de administrador",
+  "· Las decisiones se atribuyen a tu cuenta de administrador"
+ ],
+ [
+  "Tableau de bord de confidentialité",
+  "Painel de privacidade",
+  "Panel de privacidad"
+ ],
+ [
+  "Rechercher et exporter les données stockées",
+  "Pesquisar e exportar dados guardados",
+  "Buscar y exportar datos almacenados"
+ ],
+ [
+  "Les résultats administrateur remplacent les adresses IP brutes par des valeurs HMAC à clé. La suppression est volontairement indisponible et doit être gérée par le propriétaire global.",
+  "Os resultados do administrador substituem os endereços IP em bruto por valores HMAC com chave. A eliminação está deliberadamente indisponível e tem de ser tratada pelo proprietário global.",
+  "Los resultados de administrador sustituyen las direcciones IP en bruto por valores HMAC con clave. La eliminación no está disponible a propósito y debe gestionarla el propietario global."
+ ],
+ [
+  "Recherche de personne concernée",
+  "Pesquisa de titular",
+  "Búsqueda de sujeto"
+ ],
+ [
+  "Trouver des personnes",
+  "Encontrar titulares",
+  "Encontrar sujetos"
+ ],
+ [
+  "Choisissez la personne exacte",
+  "Escolha o titular exato",
+  "Elige el sujeto exacto"
+ ],
+ [
+  "Approbation du propriétaire requise",
+  "Aprovação do proprietário necessária",
+  "Se requiere aprobación del propietario"
+ ],
+ [
+  "Demander un bannissement global",
+  "Pedir um banimento global",
+  "Solicitar un bloqueo global"
+ ],
+ [
+  "Votre identité et le motif sont joints à la demande. La page suit désormais séparément l’examen du propriétaire et la tâche d’application du bot.",
+  "A sua identidade e o motivo são anexados ao pedido. A página acompanha agora separadamente a revisão do proprietário e a tarefa de aplicação do bot.",
+  "Tu identidad y el motivo se adjuntan a la solicitud. La página ahora hace un seguimiento independiente de la revisión del propietario y de la tarea de aplicación del bot."
+ ],
+ [
+  "Identifiant Stoat d’utilisateur de 26 caractères",
+  "ID de utilizador do Stoat de 26 carateres",
+  "ID de usuario de Stoat de 26 caracteres"
+ ],
+ [
+  "Saisissez l’identifiant Stoat de 26 caractères du compte",
+  "Introduza o ID de utilizador do Stoat de 26 carateres da conta",
+  "Introduce el ID de usuario de Stoat de 26 caracteres de la cuenta"
+ ],
+ [
+  "Envoyer pour approbation du propriétaire",
+  "Enviar para aprovação do proprietário",
+  "Enviar para aprobación del propietario"
+ ],
+ [
+  "File d’approbation et d’application",
+  "Fila de aprovação e aplicação",
+  "Cola de aprobación y aplicación"
+ ],
+ [
+  "Demandes de bannissement global",
+  "Pedidos de banimento global",
+  "Solicitudes de bloqueo global"
+ ],
+ [
+  "en attente d’examen du propriétaire",
+  "a aguardar revisão do proprietário",
+  "pendientes de revisión del propietario"
+ ],
+ [
+  "Demandé par",
+  "Pedido por",
+  "Solicitado por"
+ ],
+ [
+  "Examiné par",
+  "Revisto por",
+  "Revisado por"
+ ],
+ [
+  "GLOBAL-",
+  "GLOBAL-",
+  "GLOBAL-"
+ ],
+ [
+  "Aucune demande de bannissement global n’a encore été soumise.",
+  "Ainda não foi submetido nenhum pedido de banimento global.",
+  "Todavía no se ha enviado ninguna solicitud de bloqueo global."
+ ],
+ [
+  "Blocage permanent du réseau",
+  "Bloqueio permanente da rede",
+  "Bloqueo permanente de la red"
+ ],
+ [
+  "Liste noire",
+  "Lista negra",
+  "Lista negra"
+ ],
+ [
+  "Fermer la fenêtre de liste noire",
+  "Fechar a janela da lista negra",
+  "Cerrar el cuadro de la lista negra"
+ ],
+ [
+  "Stoatmod enverra un message privé au propriétaire du serveur, quittera le serveur et le quittera automatiquement de nouveau chaque fois qu’il y sera réinvité.",
+  "O Stoatmod enviará uma mensagem privada ao proprietário do servidor, sairá do servidor e sairá automaticamente de novo sempre que for reconvidado.",
+  "Stoatmod enviará un mensaje privado al propietario del servidor, saldrá del servidor y volverá a salir automáticamente cada vez que sea reinvitado."
+ ],
+ [
+  "Propriétaire",
+  "Proprietário",
+  "Propietario"
+ ],
+ [
+  "Expliquez pourquoi ce serveur est mis sur liste noire",
+  "Explique porque este servidor está a ser colocado na lista negra",
+  "Explica por qué este servidor se pone en la lista negra"
+ ],
+ [
+  "Annuler",
+  "Cancelar",
+  "Cancelar"
+ ],
+ [
+  "Mettre sur liste noire et retirer le bot",
+  "Colocar na lista negra e remover o bot",
+  "Poner en la lista negra y retirar el bot"
+ ],
+ [
+  "Serveurs actifs",
+  "Servidores ativos",
+  "Servidores activos"
+ ],
+ [
+  "Utilisateurs couverts",
+  "Utilizadores abrangidos",
+  "Usuarios cubiertos"
+ ],
+ [
+  "Signalements en attente",
+  "Denúncias pendentes",
+  "Denuncias pendientes"
+ ],
+ [
+  "Examens Découverte",
+  "Revisões da Descoberta",
+  "Revisiones de Descubrimiento"
+ ],
+ [
+  "Preuves en attente de décision",
+  "Provas a aguardar decisão",
+  "Pruebas pendientes de decisión"
+ ],
+ [
+  "Communautés en attente d’examen",
+  "Comunidades a aguardar revisão",
+  "Comunidades pendientes de revisión"
+ ],
+ [
+  "Demandes en attente d’examen du propriétaire",
+  "Pedidos a aguardar revisão do proprietário",
+  "Solicitudes pendientes de revisión del propietario"
+ ],
+ [
+  "Accès au classement du propriétaire",
+  "Acesso ao ranking do proprietário",
+  "Acceso a la clasificación del propietario"
+ ]
+]

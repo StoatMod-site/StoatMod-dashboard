@@ -1,0 +1,817 @@
+[
+ [
+  "Conserver un seuil prudent",
+  "Manter um limiar prudente",
+  "Mantener un umbral prudente"
+ ],
+ [
+  "Commencez à 90 % pendant que vous apprenez comment les vrais messages de votre communauté sont classés.",
+  "Comece nos 90% enquanto aprende como as mensagens reais da comunidade são classificadas.",
+  "Empieza en el 90 % mientras aprendes cómo se clasifican los mensajes reales de tu comunidad."
+ ],
+ [
+  "Vérifier un résultat réel",
+  "Verificar um resultado real",
+  "Verificar un resultado real"
+ ],
+ [
+  "Utilisez un compte de test contrôlé et confirmez que l’état du membre, du message, du rôle et du dossier éligible correspond au résultat signalé.",
+  "Use uma conta de teste controlada e confirme que o estado do membro, da mensagem, do cargo e do caso elegível corresponde ao resultado comunicado.",
+  "Usa una cuenta de prueba controlada y confirma que el estado del miembro, del mensaje, del rol y del caso elegible coincide con el resultado informado."
+ ],
+ [
+  "Ce que débloque le tableau de bord privé",
+  "O que o painel privado desbloqueia",
+  "Qué desbloquea el panel privado"
+ ],
+ [
+  "Le tableau de bord privé réunit paramètres, dossiers, recours et activité dans un seul centre de contrôle. L’accès est limité au propriétaire du serveur, aux membres disposant de Manage Server ou aux personnes auxquelles le propriétaire l’a explicitement accordé ; le seul statut de modérateur ordinaire ne suffit pas.",
+  "O painel privado reúne definições, casos, recursos e atividade num único centro de controlo. O acesso está limitado ao proprietário do servidor, aos membros com Manage Server ou às pessoas a quem o proprietário o concedeu explicitamente; o simples estatuto de moderador não é suficiente.",
+  "El panel privado reúne ajustes, casos, apelaciones y actividad en un solo centro de control. El acceso está limitado al propietario del servidor, a los miembros con Manage Server o a las personas a las que el propietario lo haya concedido de forma explícita; el mero estado de moderador no es suficiente."
+ ],
+ [
+  "Demandez un code de connexion au tableau de bord à usage unique.",
+  "Peça um código de início de sessão do painel de utilização única.",
+  "Solicita un código de acceso al panel de un solo uso."
+ ],
+ [
+  "Quittez le démarrage rapide avec des preuves",
+  "Termine o início rápido com provas",
+  "Termina el inicio rápido con pruebas"
+ ],
+ [
+  "Une vraie entrée de journal est arrivée dans le salon prévu.",
+  "Uma entrada de registo real chegou ao canal pretendido.",
+  "Una entrada de registro real llegó al canal previsto."
+ ],
+ [
+  "L’action testée a modifié l’état réel du serveur.",
+  "A ação testada alterou o estado real do servidor.",
+  "La acción probada cambió el estado real del servidor."
+ ],
+ [
+  "La réponse n’a pas affirmé un succès pour une action bloquée sur un rôle ou une autorisation.",
+  "A resposta não declarou sucesso numa ação de cargo ou permissão bloqueada.",
+  "La respuesta no afirmó que una acción de rol o permiso bloqueada hubiera tenido éxito."
+ ],
+ [
+  "Les dossiers n’existent que pour les actions éligibles et décrivent ce qui s’est produit.",
+  "Os casos só existem para ações elegíveis e descrevem o que ocorreu.",
+  "Los casos solo existen para acciones elegibles y describen lo que ocurrió."
+ ],
+ [
+  "Les règles du serveur expliquent toute vérification, modération automatique et voie de recours.",
+  "As regras do servidor explicam qualquer verificação, moderação automática e via de recurso.",
+  "Las normas del servidor explican cualquier verificación, moderación automática y vía de apelación."
+ ],
+ [
+  "Installer Stoatmod",
+  "Instalar o Stoatmod",
+  "Instalar Stoatmod"
+ ],
+ [
+  "Installer le bot de modération Stoatmod sur Stoat",
+  "Instalar o bot de moderação Stoatmod no Stoat",
+  "Instalar el bot de moderación Stoatmod en Stoat"
+ ],
+ [
+  "Invitez le bot Stoatmod hébergé, placez correctement son rôle et préparez le serveur pour sa première configuration.",
+  "Convide o bot Stoatmod alojado, coloque o seu cargo corretamente e prepare o servidor para a primeira configuração.",
+  "Invita al bot Stoatmod alojado, coloca su rol correctamente y prepara el servidor para su primera configuración."
+ ],
+ [
+  "Installation",
+  "Instalação",
+  "Instalación"
+ ],
+ [
+  "Cette référence d’installation se termine lorsque le bot hébergé est connecté, correctement placé et prêt à être configuré ; le démarrage rapide couvre ensuite les tests de politique et de résultat.",
+  "Esta referência de instalação termina quando o bot alojado está ligado, corretamente posicionado e pronto para configuração; o início rápido cobre a seguir a política e os testes de resultado.",
+  "Esta referencia de instalación termina cuando el bot alojado está conectado, correctamente situado y listo para configurarse; el inicio rápido cubre a continuación la política y las pruebas de resultado."
+ ],
+ [
+  "Utiliser le bot hébergé officiel",
+  "Use o bot alojado oficial",
+  "Usar el bot alojado oficial"
+ ],
+ [
+  "Ouvrez le profil officiel du bot Stoatmod et choisissez le serveur que vous gérez. Pour héberger votre propre instance, suivez les instructions des dépôts du bot et du site.",
+  "Abra o perfil oficial do bot do Stoatmod e escolha o servidor que gere. Para executar a sua própria instância, siga as instruções nos repositórios do bot e do site.",
+  "Abre el perfil oficial del bot de Stoatmod y elige el servidor que gestionas. Para ejecutar tu propia instancia, sigue las instrucciones de los repositorios del bot y del sitio."
+ ],
+ [
+  "Séquence d’installation",
+  "Sequência de instalação",
+  "Secuencia de instalación"
+ ],
+ [
+  "Inviter Stoatmod",
+  "Convidar o Stoatmod",
+  "Invitar a Stoatmod"
+ ],
+ [
+  "Utilisez le profil officiel lié depuis ce site et sélectionnez le serveur voulu.",
+  "Use o perfil oficial ligado a partir deste site e selecione o servidor pretendido.",
+  "Usa el perfil oficial enlazado desde este sitio y selecciona el servidor deseado."
+ ],
+ [
+  "Confirmer que le bot est connecté",
+  "Confirmar que o bot está ligado",
+  "Confirmar que el bot está conectado"
+ ],
+ [
+  "Vérifiez que Stoatmod apparaît comme membre avant de dépanner la configuration.",
+  "Verifique se o Stoatmod aparece como membro antes de resolver problemas de configuração.",
+  "Comprueba que Stoatmod aparece como miembro antes de solucionar problemas de configuración."
+ ],
+ [
+  "Examiner le rôle créé",
+  "Rever o cargo criado",
+  "Revisar el rol creado"
+ ],
+ [
+  "Placez-le au-dessus des membres et des rôles automatiques qu’il doit gérer.",
+  "Coloque-o acima dos membros e dos cargos automáticos que tem de gerir.",
+  "Colócalo por encima de los miembros y roles automáticos que debe gestionar."
+ ],
+ [
+  "Accorder les autorisations requises",
+  "Conceder as permissões necessárias",
+  "Conceder los permisos necesarios"
+ ],
+ [
+  "Utilisez le guide des autorisations comme référence plutôt que d’accorder un rôle d’administrateur indéfini.",
+  "Use o guia de permissões como fonte de verdade em vez de conceder um cargo de administrador indefinido.",
+  "Usa la guía de permisos como fuente de verdad en lugar de conceder un rol de administrador indefinido."
+ ],
+ [
+  "Lancer l’audit d’installation",
+  "Executar a auditoria de instalação",
+  "Ejecutar la auditoría de instalación"
+ ],
+ [
+  "Résolvez chaque constat d’autorisation et de hiérarchie avant de passer à la configuration.",
+  "Resolva todas as conclusões de permissões e hierarquia antes de passar à configuração.",
+  "Resuelve cada hallazgo de permisos y jerarquía antes de pasar a la configuración."
+ ],
+ [
+  "Passation de l’installation",
+  "Passagem da instalação",
+  "Entrega de la instalación"
+ ],
+ [
+  "Stoatmod est connecté au serveur voulu.",
+  "O Stoatmod está ligado ao servidor pretendido.",
+  "Stoatmod está conectado al servidor deseado."
+ ],
+ [
+  "Le rôle du bot est positionné pour les actions que vous prévoyez d’utiliser.",
+  "O cargo do bot está posicionado para as ações que pretende usar.",
+  "El rol del bot está situado para las acciones que piensas usar."
+ ],
+ [
+  "Les 12 autorisations auditées sont toutes disponibles.",
+  "Estão disponíveis todas as 12 permissões auditadas.",
+  "Los 12 permisos auditados están disponibles."
+ ],
+ [
+  "L’étape suivante est le démarrage rapide après installation : journalisation, accès au tableau de bord, politique et test de résultat contrôlé.",
+  "O passo seguinte é o início rápido pós-instalação: registo, acesso ao painel, política e um teste de resultado controlado.",
+  "El siguiente paso es el inicio rápido tras la instalación: registro, acceso al panel, política y una prueba de resultado controlada."
+ ],
+ [
+  "Autorisations et hiérarchie des rôles",
+  "Permissões e hierarquia de cargos",
+  "Permisos y jerarquía de roles"
+ ],
+ [
+  "Guide des autorisations et de la hiérarchie des rôles de Stoatmod",
+  "Guia de permissões e hierarquia de cargos do Stoatmod",
+  "Guía de permisos y jerarquía de roles de Stoatmod"
+ ],
+ [
+  "Comprenez les 12 autorisations que Stoatmod audite et comment la hiérarchie des rôles Stoat influe sur la modération et les rôles automatiques.",
+  "Compreenda as 12 permissões que o Stoatmod audita e como a hierarquia de cargos do Stoat afeta a moderação e os cargos automáticos.",
+  "Comprende los 12 permisos que audita Stoatmod y cómo la jerarquía de roles de Stoat afecta a la moderación y a los roles automáticos."
+ ],
+ [
+  "Une commande peut être syntaxiquement correcte et échouer quand même si le bot n’a pas une autorisation, ne voit pas le salon ou se trouve sous le membre ou le rôle ciblé.",
+  "Um comando pode estar sintaticamente correto e falhar na mesma se o bot não tiver uma permissão, não conseguir ver o canal ou estiver abaixo do membro ou cargo alvo.",
+  "Un comando puede ser sintácticamente correcto y aun así fallar si el bot no tiene un permiso, no puede ver el canal o está por debajo del miembro o rol objetivo."
+ ],
+ [
+  "Les 12 autorisations auditées",
+  "As 12 permissões auditadas",
+  "Los 12 permisos auditados"
+ ],
+ [
+  "View Channels",
+  "View Channels",
+  "View Channels"
+ ],
+ [
+  "Read Message History",
+  "Read Message History",
+  "Read Message History"
+ ],
+ [
+  "Send Messages",
+  "Send Messages",
+  "Send Messages"
+ ],
+ [
+  "Send Embeds",
+  "Send Embeds",
+  "Send Embeds"
+ ],
+ [
+  "Manage Messages",
+  "Manage Messages",
+  "Manage Messages"
+ ],
+ [
+  "React",
+  "React",
+  "React"
+ ],
+ [
+  "Timeout Members",
+  "Timeout Members",
+  "Timeout Members"
+ ],
+ [
+  "Kick Members",
+  "Kick Members",
+  "Kick Members"
+ ],
+ [
+  "Ban Members",
+  "Ban Members",
+  "Ban Members"
+ ],
+ [
+  "Assign Roles",
+  "Assign Roles",
+  "Assign Roles"
+ ],
+ [
+  "Manage Roles",
+  "Manage Roles",
+  "Manage Roles"
+ ],
+ [
+  "Manage Nicknames",
+  "Manage Nicknames",
+  "Manage Nicknames"
+ ],
+ [
+  "Placez le rôle de Stoatmod au-dessus de chaque membre ordinaire qu’il doit modérer et de chaque rôle qu’il doit attribuer. Stoat rejette l’attribution de rôles, la restauration de pseudos, les exclusions temporaires, les expulsions et les bannissements lorsque le bot qui agit n’est pas assez haut dans la hiérarchie.",
+  "Coloque o cargo do Stoatmod acima de todos os membros normais que precisa de moderar e de todos os cargos que precisa de atribuir. O Stoat rejeita a atribuição de cargos, a restauração de alcunhas, as suspensões, as expulsões e os banimentos quando o bot que atua não está suficientemente alto na hierarquia.",
+  "Coloca el rol de Stoatmod por encima de todos los miembros ordinarios que necesita moderar y de todos los roles que necesita asignar. Stoat rechaza la asignación de roles, la restauración de apodos, las suspensiones, las expulsiones y los bloqueos cuando el bot que actúa no está lo bastante alto en la jerarquía."
+ ],
+ [
+  "Un enregistrement d’audit d’apparence réussie ne prouve pas que le membre ou le rôle a changé. Vérifiez l’état réel du serveur après la configuration et après toute modification d’autorisation.",
+  "Um registo de auditoria com aspeto de sucesso não é prova de que o membro ou o cargo mudou. Verifique o estado real do servidor após a configuração e após qualquer alteração de permissões.",
+  "Un registro de auditoría que parece exitoso no prueba que el miembro o el rol haya cambiado. Verifica el estado real del servidor después de la configuración y de cualquier cambio de permisos."
+ ],
+ [
+  "Accès au salon des journaux",
+  "Acesso ao canal de registos",
+  "Acceso al canal de registros"
+ ],
+ [
+  "Le bot doit pouvoir voir le salon sélectionné.",
+  "O bot tem de conseguir ver o canal selecionado.",
+  "El bot debe poder ver el canal seleccionado."
+ ],
+ [
+  "Il doit pouvoir y envoyer des messages et des embeds.",
+  "Tem de conseguir enviar mensagens e embeds nele.",
+  "Debe poder enviar mensajes y embeds en él."
+ ],
+ [
+  "Les autorisations propres à une catégorie de salons peuvent remplacer un rôle de serveur plus large.",
+  "As permissões específicas de uma categoria de canais podem sobrepor-se a um cargo de servidor mais amplo.",
+  "Los permisos específicos de una categoría de canales pueden anular un rol de servidor más amplio."
+ ],
+ [
+  "Une commande qui fonctionne dans un salon ne prouve pas l’accès dans un autre.",
+  "Um comando que funciona num canal não prova o acesso noutro.",
+  "Un comando que funciona en un canal no prueba el acceso en otro."
+ ],
+ [
+  "Audit et récupération",
+  "Auditoria e recuperação",
+  "Auditoría y recuperación"
+ ],
+ [
+  "Lancer la configuration",
+  "Executar a configuração",
+  "Ejecutar la configuración"
+ ],
+ [
+  "Recueillez les constats actuels d’autorisations et de hiérarchie.",
+  "Recolha as conclusões atuais de permissões e hierarquia.",
+  "Recoge los hallazgos actuales de permisos y jerarquía."
+ ],
+ [
+  "Corriger de haut en bas",
+  "Corrigir de cima para baixo",
+  "Corregir de arriba abajo"
+ ],
+ [
+  "Corrigez la position du rôle du bot avant de dépanner chaque action.",
+  "Corrija a posição do cargo do bot antes de resolver problemas de cada ação.",
+  "Corrige la posición del rol del bot antes de solucionar cada acción."
+ ],
+ [
+  "Revérifier la cible",
+  "Voltar a verificar o alvo",
+  "Volver a comprobar el objetivo"
+ ],
+ [
+  "Confirmez que le membre, le rôle et le salon se trouvent dans l’accès effectif du bot.",
+  "Confirme que o membro, o cargo e o canal estão dentro do acesso efetivo do bot.",
+  "Confirma que el miembro, el rol y el canal están dentro del acceso efectivo del bot."
+ ],
+ [
+  "Répéter une action contrôlée",
+  "Repetir uma ação controlada",
+  "Repetir una acción controlada"
+ ],
+ [
+  "Vérifiez à la fois la réponse et le résultat réel.",
+  "Verifique tanto a resposta como o resultado real.",
+  "Verifica tanto la respuesta como el resultado real."
+ ],
+ [
+  "Référence des commandes Stoatmod",
+  "Referência de comandos do Stoatmod",
+  "Referencia de comandos de Stoatmod"
+ ],
+ [
+  "Commandes Stoatmod : référence complète du bot de modération",
+  "Comandos do Stoatmod: referência completa do bot de moderação",
+  "Comandos de Stoatmod: referencia completa del bot de moderación"
+ ],
+ [
+  "Parcourez les commandes Stoatmod prises en charge pour les membres, la modération, l’automod, les rôles, la journalisation, les recours et Découverte.",
+  "Explore os comandos do Stoatmod suportados para membros, moderação, automod, cargos, registo, recursos e Descoberta.",
+  "Explora los comandos de Stoatmod compatibles para miembros, moderación, automod, roles, registro, apelaciones y Descubrimiento."
+ ],
+ [
+  "Référence des commandes",
+  "Referência de comandos",
+  "Referencia de comandos"
+ ],
+ [
+  "Utilisez exactement les formes de commande ci-dessous. Les commandes à bascule acceptent enable, disable ou status — pas on et off.",
+  "Use exatamente as formas de comando abaixo. Os comandos de alternância aceitam enable, disable ou status — não on e off.",
+  "Usa exactamente las formas de comando de abajo. Los comandos de alternancia aceptan enable, disable o status, no on y off."
+ ],
+ [
+  "Reprend la candidature en cours dans le message privé du bot, ou en choisit une à l’aide de l’identifiant de candidature fourni par le bot.",
+  "Retoma a candidatura atual na mensagem privada do bot ou escolhe uma usando o ID de candidatura fornecido pelo bot.",
+  "Reanuda la solicitud actual en el mensaje privado del bot o elige una con el ID de solicitud proporcionado por el bot."
+ ],
+ [
+  "Approuve une candidature soumise, avec un motif, dans le serveur du candidat. Nécessite l’accès au tableau de bord du serveur.",
+  "Aprova uma candidatura submetida, com um motivo, no servidor do candidato. Requer acesso ao painel do servidor.",
+  "Aprueba una solicitud enviada, con un motivo, en el servidor del solicitante. Requiere acceso al panel del servidor."
+ ],
+ [
+  "Refuse une candidature soumise et expulse avec un motif. À utiliser dans le serveur du candidat ; nécessite l’accès au tableau de bord du serveur.",
+  "Recusa uma candidatura submetida e expulsa com um motivo. Use no servidor do candidato; requer acesso ao painel do servidor.",
+  "Rechaza una solicitud enviada y expulsa con un motivo. Úsalo en el servidor del solicitante; requiere acceso al panel del servidor."
+ ],
+ [
+  "Commandes générales",
+  "Comandos gerais",
+  "Comandos generales"
+ ],
+ [
+  "Affiche l’aide des commandes.",
+  "Mostra a ajuda dos comandos.",
+  "Muestra la ayuda de los comandos."
+ ],
+ [
+  "Choisit la langue des réponses.",
+  "Escolhe o idioma das respostas.",
+  "Elige el idioma de las respuestas."
+ ],
+ [
+  "Ouvre le flux de signalement du serveur lorsqu’il est activé.",
+  "Abre o fluxo de denúncia do servidor quando ativado.",
+  "Abre el flujo de denuncias del servidor cuando está activado."
+ ],
+ [
+  "Démarre un signalement de sécurité global privé.",
+  "Inicia uma denúncia de segurança global privada.",
+  "Inicia una denuncia de seguridad global privada."
+ ],
+ [
+  "Remonte une fiche Découverte approuvée éligible.",
+  "Impulsiona uma listagem aprovada da Descoberta elegível.",
+  "Impulsa una ficha aprobada de Descubrimiento elegible."
+ ],
+ [
+  "Commandes de modération",
+  "Comandos de moderação",
+  "Comandos de moderación"
+ ],
+ [
+  "Liste les avertissements actifs.",
+  "Lista as advertências ativas.",
+  "Lista las advertencias activas."
+ ],
+ [
+  "Crée un avertissement.",
+  "Cria uma advertência.",
+  "Crea una advertencia."
+ ],
+ [
+  "Retire une exclusion temporaire.",
+  "Remove uma suspensão.",
+  "Quita una suspensión."
+ ],
+ [
+  "Expulse un membre.",
+  "Expulsa um membro.",
+  "Expulsa a un miembro."
+ ],
+ [
+  "Bannit un membre avec un motif.",
+  "Bane um membro com um motivo.",
+  "Bloquea a un miembro con un motivo."
+ ],
+ [
+  "Retire un bannissement du serveur avec un motif.",
+  "Remove um banimento do servidor com um motivo.",
+  "Quita un bloqueo del servidor con un motivo."
+ ],
+ [
+  "Ouvre un dossier.",
+  "Abre um caso.",
+  "Abre un caso."
+ ],
+ [
+  "Liste les dossiers récents.",
+  "Lista os casos recentes.",
+  "Lista los casos recientes."
+ ],
+ [
+  "Commandes de protection et de configuration",
+  "Comandos de proteção e configuração",
+  "Comandos de protección y configuración"
+ ],
+ [
+  "Audite l’état de préparation de la configuration.",
+  "Audita a prontidão da configuração.",
+  "Audita la preparación de la configuración."
+ ],
+ [
+  "Consulte ou modifie l’escalade des avertissements.",
+  "Consulta ou altera a escalada de advertências.",
+  "Consulta o cambia la escalada de advertencias."
+ ],
+ [
+  "Consulte ou modifie la sensibilité de la modération.",
+  "Consulta ou altera a sensibilidade da moderação.",
+  "Consulta o cambia la sensibilidad de la moderación."
+ ],
+ [
+  "Gère les catégories de modération.",
+  "Gere as categorias de moderação.",
+  "Gestiona las categorías de moderación."
+ ],
+ [
+  "Gère la détection du spam.",
+  "Gere a deteção de spam.",
+  "Gestiona la detección de spam."
+ ],
+ [
+  "Gère le filtrage des liens externes.",
+  "Gere a filtragem de ligações externas.",
+  "Gestiona el filtrado de enlaces externos."
+ ],
+ [
+  "Gère l’exemption des modérateurs ; ~mod-exemption en est un alias.",
+  "Gere a isenção de moderadores; ~mod-exemption é um alias.",
+  "Gestiona la exención de moderadores; ~mod-exemption es un alias."
+ ],
+ [
+  "Rôles et journalisation",
+  "Cargos e registo",
+  "Roles y registro"
+ ],
+ [
+  "Ajoute un rôle automatique.",
+  "Adiciona um cargo automático.",
+  "Añade un rol automático."
+ ],
+ [
+  "Retire un rôle.",
+  "Remove um cargo.",
+  "Quita un rol."
+ ],
+ [
+  "Liste les rôles automatiques.",
+  "Lista os cargos automáticos.",
+  "Lista los roles automáticos."
+ ],
+ [
+  "Choisit le salon des journaux ; ~log-channel et ~log channel sont des formes acceptées.",
+  "Escolhe o canal de registos; ~log-channel e ~log channel são formas aceites.",
+  "Elige el canal de registros; ~log-channel y ~log channel son formas aceptadas."
+ ],
+ [
+  "Exclut un salon ou une catégorie.",
+  "Exclui um canal ou categoria.",
+  "Excluye un canal o una categoría."
+ ],
+ [
+  "Le remet dans le périmètre de la modération automatique.",
+  "Repõe-no no âmbito da moderação automática.",
+  "Lo devuelve al ámbito de la moderación automática."
+ ],
+ [
+  "Configurer l’automod et la protection",
+  "Configurar o automod e a proteção",
+  "Configurar el automod y la protección"
+ ],
+ [
+  "Configurer l’automod, les seuils et les catégories de Stoatmod",
+  "Configurar o automod, os limiares e as categorias do Stoatmod",
+  "Configurar el automod, los umbrales y las categorías de Stoatmod"
+ ],
+ [
+  "Configurez les seuils, catégories, spam, liens, images, protection des arrivées, pseudos et exemptions de modérateurs de Stoatmod.",
+  "Configure os limiares, categorias, spam, ligações, imagens, proteção de entrada, alcunhas e isenções de moderadores do Stoatmod.",
+  "Configura los umbrales, categorías, spam, enlaces, imágenes, protección de entrada, apodos y exenciones de moderadores de Stoatmod."
+ ],
+ [
+  "Configuration de l’automod",
+  "Configuração do automod",
+  "Configuración del automod"
+ ],
+ [
+  "Traitez les scores de catégorie, les systèmes de protection spécialisés et le périmètre par salon comme des réglages distincts, puis vérifiez-les ensemble lors d’un test contrôlé.",
+  "Trate as pontuações de categoria, os sistemas de proteção especializados e o âmbito por canal como controlos separados e depois verifique-os em conjunto num teste controlado.",
+  "Trata las puntuaciones de categoría, los sistemas de protección especializados y el ámbito por canal como controles independientes y luego verifícalos juntos en una prueba controlada."
+ ],
+ [
+  "Commencer par la politique par défaut",
+  "Começar com a política predefinida",
+  "Empezar con la política predeterminada"
+ ],
+ [
+  "Le seuil de modération de contenu par défaut est de 90 %. Les propriétaires de serveur peuvent choisir un seuil de 0 % à 100 %, avec des exceptions facultatives par catégorie. Les pourcentages sont des scores du modèle, pas des probabilités calibrées de préjudice.",
+  "O limiar de moderação de conteúdo predefinido é de 90%. Os proprietários do servidor podem escolher um limiar de 0% a 100%, com substituições opcionais para categorias individuais. As percentagens são pontuações do modelo, não probabilidades calibradas de dano.",
+  "El umbral de moderación de contenido predeterminado es del 90 %. Los propietarios del servidor pueden elegir un umbral del 0 % al 100 %, con anulaciones opcionales para categorías individuales. Los porcentajes son puntuaciones del modelo, no probabilidades calibradas de daño."
+ ],
+ [
+  "Configurer chaque protection",
+  "Configurar cada proteção",
+  "Configurar cada protección"
+ ],
+ [
+  "Consulte l’état des catégories.",
+  "Consulta o estado das categorias.",
+  "Consulta el estado de las categorías."
+ ],
+ [
+  "Consulte la sensibilité effective.",
+  "Consulta a sensibilidade efetiva.",
+  "Consulta la sensibilidad efectiva."
+ ],
+ [
+  "Consulte la détection du spam.",
+  "Consulta a deteção de spam.",
+  "Consulta la detección de spam."
+ ],
+ [
+  "Consulte le filtre général des liens externes.",
+  "Consulta o filtro geral de ligações externas.",
+  "Consulta el filtro general de enlaces externos."
+ ],
+ [
+  "Consulte l’analyse des images.",
+  "Consulta a análise de imagens.",
+  "Consulta el análisis de imágenes."
+ ],
+ [
+  "Consulte la vérification des nouveaux comptes.",
+  "Consulta a verificação de contas novas.",
+  "Consulta la verificación de cuentas nuevas."
+ ],
+ [
+  "Consulte les contrôles des noms d’utilisateur et des pseudos.",
+  "Consulta as verificações de nomes de utilizador e alcunhas.",
+  "Consulta las comprobaciones de nombres de usuario y apodos."
+ ],
+ [
+  "Périmètre et exemptions",
+  "Âmbito e isenções",
+  "Ámbito y exenciones"
+ ],
+ [
+  "Utilisez include et exclude avec l’identifiant d’un salon ou d’une catégorie pour contrôler le périmètre de la modération automatique. L’exemption des modérateurs est activée par défaut. La journalisation peut tout de même avoir lieu dans les espaces exclus de l’intervention automatique ; testez donc à la fois la modération et le comportement de l’audit.",
+  "Use include e exclude com o ID de um canal ou categoria para controlar o âmbito da moderação automática. A isenção de moderadores está ativada por predefinição. O registo pode ainda ocorrer em espaços excluídos da intervenção automática, por isso teste tanto a moderação como o comportamento da auditoria.",
+  "Usa include y exclude con el ID de un canal o categoría para controlar el ámbito de la moderación automática. La exención de moderadores está activada por defecto. El registro aún puede producirse en espacios excluidos de la intervención automática, así que prueba tanto la moderación como el comportamiento de la auditoría."
+ ],
+ [
+  "Liste de vérification",
+  "Lista de verificação",
+  "Lista de comprobación"
+ ],
+ [
+  "Le bot peut voir et gérer le salon de test.",
+  "O bot consegue ver e gerir o canal de teste.",
+  "El bot puede ver y gestionar el canal de prueba."
+ ],
+ [
+  "La catégorie et le seuil choisis sont visibles dans le tableau de bord.",
+  "A categoria e o limiar escolhidos são visíveis no painel.",
+  "La categoría y el umbral elegidos se ven en el panel."
+ ],
+ [
+  "La réponse correspond à l’action configurée.",
+  "A resposta corresponde à ação configurada.",
+  "La respuesta coincide con la acción configurada."
+ ],
+ [
+  "L’état réel du message ou du membre a changé comme prévu.",
+  "O estado real da mensagem ou do membro mudou como esperado.",
+  "El estado real del mensaje o del miembro cambió como se esperaba."
+ ],
+ [
+  "L’enregistrement du dossier ou de l’événement n’exagère pas le résultat.",
+  "O registo do caso ou do evento não exagera o resultado.",
+  "El registro del caso o del evento no exagera el resultado."
+ ],
+ [
+  "Avertissements et dossiers de modération",
+  "Advertências e casos de moderação",
+  "Advertencias y casos de moderación"
+ ],
+ [
+  "Guide des avertissements et des dossiers de modération de Stoatmod",
+  "Guia de advertências e casos de moderação do Stoatmod",
+  "Guía de advertencias y casos de moderación de Stoatmod"
+ ],
+ [
+  "Créez, consultez et supprimez des avertissements Stoatmod, et comprenez comment les dossiers interagissent avec l’escalade et les recours.",
+  "Crie, consulte e remova advertências do Stoatmod e compreenda como os casos interagem com a escalada e os recursos.",
+  "Crea, consulta y elimina advertencias de Stoatmod y comprende cómo interactúan los casos con la escalada y las apelaciones."
+ ],
+ [
+  "Dossiers et politique d’avertissement",
+  "Casos e política de advertências",
+  "Casos y política de advertencias"
+ ],
+ [
+  "Les avertissements contribuent à l’escalade tandis que les dossiers conservent l’historique propre au serveur. Supprimer un enregistrement et annuler une sanction ne sont pas la même opération.",
+  "As advertências contribuem para a escalada, enquanto os casos preservam o registo específico do servidor. Remover um registo e reverter uma penalização não é a mesma operação.",
+  "Las advertencias contribuyen a la escalada, mientras que los casos conservan el registro propio del servidor. Eliminar un registro y revertir una sanción no son la misma operación."
+ ],
+ [
+  "Escalade par défaut",
+  "Escalada predefinida",
+  "Escalada predeterminada"
+ ],
+ [
+  "La politique par défaut applique une exclusion temporaire à trois avertissements actifs, une expulsion à cinq et un bannissement à sept. Le tableau de bord peut la remplacer par une politique par paliers avec des seuils uniques.",
+  "A política predefinida aplica uma suspensão com três advertências ativas, uma expulsão com cinco e um banimento com sete. O painel pode substituí-la por uma política por fases com limiares únicos.",
+  "La política predeterminada aplica una suspensión con tres advertencias activas, una expulsión con cinco y un bloqueo con siete. El panel puede sustituirla por una política escalonada con umbrales únicos."
+ ],
+ [
+  "Consulte la politique d’avertissement actuelle.",
+  "Consulta a política de advertências atual.",
+  "Consulta la política de advertencias actual."
+ ],
+ [
+  "Définit les seuils d’exclusion temporaire, d’expulsion et de bannissement.",
+  "Define as contagens de suspensão, expulsão e banimento.",
+  "Define los recuentos de suspensión, expulsión y bloqueo."
+ ],
+ [
+  "Rétablit la politique par défaut.",
+  "Repõe a política predefinida.",
+  "Restaura la política predeterminada."
+ ],
+ [
+  "Créer et consulter des enregistrements",
+  "Criar e consultar registos",
+  "Crear y consultar registros"
+ ],
+ [
+  "Crée un avertissement pour un identifiant utilisateur Stoat valide.",
+  "Cria uma advertência para um ID de utilizador Stoat válido.",
+  "Crea una advertencia para un ID de usuario de Stoat válido."
+ ],
+ [
+  "Consulte un dossier.",
+  "Consulta um caso.",
+  "Consulta un caso."
+ ],
+ [
+  "Suppression et annulation",
+  "Remoção e reversão",
+  "Eliminación y reversión"
+ ],
+ [
+  "Supprimer un dossier d’avertissement l’empêche de contribuer à l’escalade tout en conservant son état supprimé. Supprimer un dossier qui n’est pas un avertissement n’annule pas une exclusion temporaire, une expulsion ou un bannissement. Utilisez le recours ou la commande de modération appropriée lorsque l’état réel du serveur doit changer.",
+  "Remover um caso de advertência impede-o de contribuir para a escalada, mantendo o seu estado de removido. Remover um caso que não seja de advertência não anula uma suspensão, expulsão ou banimento. Use o recurso ou o comando de moderação adequado quando o estado real do servidor tiver de mudar.",
+  "Eliminar un caso de advertencia evita que contribuya a la escalada y conserva su estado de eliminado. Eliminar un caso que no sea de advertencia no deshace una suspensión, expulsión o bloqueo. Usa la apelación o el comando de moderación adecuado cuando deba cambiar el estado real del servidor."
+ ],
+ [
+  "Qualité des enregistrements",
+  "Qualidade dos registos",
+  "Calidad de los registros"
+ ],
+ [
+  "Copiez un identifiant de membre valide.",
+  "Copie um ID de membro válido.",
+  "Copia un ID de miembro válido."
+ ],
+ [
+  "Rédigez un motif qu’un autre modérateur pourra comprendre.",
+  "Escreva um motivo que outro moderador consiga compreender.",
+  "Escribe un motivo que otro moderador pueda entender."
+ ],
+ [
+  "Ajoutez des notes lorsqu’une correction manuelle ultérieure change l’issue.",
+  "Adicione notas quando uma correção manual posterior alterar o resultado.",
+  "Añade notas cuando una corrección manual posterior cambie el resultado."
+ ],
+ [
+  "Ne supposez jamais que chaque événement opérationnel crée un dossier ou contient l’attribution à un auteur.",
+  "Nunca assuma que cada evento operacional cria um caso ou contém atribuição de autor.",
+  "Nunca asumas que cada evento operativo crea un caso o contiene atribución de autor."
+ ],
+ [
+  "Actions d’exclusion temporaire, d’expulsion et de bannissement",
+  "Ações de suspensão, expulsão e banimento",
+  "Acciones de suspensión, expulsión y bloqueo"
+ ],
+ [
+  "Commandes Stoatmod d’exclusion temporaire, d’expulsion et de bannissement",
+  "Comandos de suspensão, expulsão e banimento do Stoatmod",
+  "Comandos de suspensión, expulsión y bloqueo de Stoatmod"
+ ],
+ [
+  "Utilisez les commandes Stoatmod mute, unmute, kick et ban avec des vérifications d’autorisation, de hiérarchie et de résultat.",
+  "Use os comandos mute, unmute, kick e ban do Stoatmod com verificações de permissões, hierarquia e resultado.",
+  "Usa los comandos mute, unmute, kick y ban de Stoatmod con comprobaciones de permisos, jerarquía y resultado."
+ ],
+ [
+  "Modération manuelle",
+  "Moderação manual",
+  "Moderación manual"
+ ],
+ [
+  "La réponse d’une commande n’est qu’une partie de l’opération. Vérifiez l’état réel du membre et indiquez un motif clair pour chaque action de modération. Supprimer un dossier est l’exception.",
+  "A resposta de um comando é apenas uma parte da operação. Verifique o estado real do membro e inclua um motivo claro em cada ação de moderação. Remover um caso é a exceção.",
+  "La respuesta de un comando es solo una parte de la operación. Verifica el estado real del miembro e incluye un motivo claro en cada acción de moderación. Eliminar un caso es la excepción."
+ ],
+ [
+  "Exclut temporairement avec un motif obligatoire. Placez la durée avant ou après le motif, ou omettez-la pour une exclusion d’une heure.",
+  "Suspende com um motivo obrigatório. Coloque a duração antes ou depois do motivo ou omita-a para uma suspensão de uma hora.",
+  "Suspende con un motivo obligatorio. Pon la duración antes o después del motivo, u omítela para una suspensión de una hora."
+ ],
+ [
+  "Retire l’exclusion temporaire.",
+  "Remove a suspensão.",
+  "Quita la suspensión."
+ ],
+ [
+  "Retire le membre du serveur.",
+  "Remove o membro do servidor.",
+  "Elimina al miembro del servidor."
+ ],
+ [
+  "Bannit le membre du serveur.",
+  "Bane o membro do servidor.",
+  "Bloquea al miembro del servidor."
+ ],
+ [
+  "Retire le bannissement du serveur et consigne le motif de l’annulation.",
+  "Remove o banimento do servidor e regista o motivo da reversão.",
+  "Quita el bloqueo del servidor y registra el motivo de la reversión."
+ ],
+ [
+  "Syntaxe souple de mute",
+  "Sintaxe flexível de mute",
+  "Sintaxis flexible de mute"
+ ],
+ [
+  "Utilisez une mention de membre ou un identifiant utilisateur. Ces deux formes excluent temporairement pendant 25 minutes : ~mute @member 25m repeated spam et ~mute @member repeated spam 25m. Sans durée, une heure est appliquée : ~mute @member repeated spam. Un motif est toujours obligatoire.",
+  "Use uma menção de membro ou um ID de utilizador. Estas duas formas suspendem durante 25 minutos: ~mute @member 25m repeated spam e ~mute @member repeated spam 25m. Omitir a duração usa uma hora: ~mute @member repeated spam. É sempre obrigatório um motivo.",
+  "Usa una mención de miembro o un ID de usuario. Estas dos formas suspenden durante 25 minutos: ~mute @member 25m repeated spam y ~mute @member repeated spam 25m. Si omites la duración se usa una hora: ~mute @member repeated spam. Siempre se requiere un motivo."
+ ],
+ [
+  "Les durées acceptent 25m, 2h, 1h30m et 25 minutes, jusqu’à quatre semaines. Unmute, unban, warn, kick, ban, les décisions de candidature et le contournement de vérification exigent aussi un motif ; la suppression d’un dossier n’en exige pas.",
+  "As durações suportam 25m, 2h, 1h30m e 25 minutes, até quatro semanas. Unmute, unban, warn, kick, ban, as decisões de candidatura e a dispensa de verificação também exigem um motivo; a remoção de um caso não.",
+  "Las duraciones admiten 25m, 2h, 1h30m y 25 minutes, hasta cuatro semanas. Unmute, unban, warn, kick, ban, las decisiones de solicitud y la omisión de verificación también requieren un motivo; eliminar un caso no."
+ ]
+]

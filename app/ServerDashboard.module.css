@@ -1,0 +1,435 @@
+/* A single, scoped layout system for the per-server control room. */
+.shell:global(#server-dashboard) {
+  --ink: #111111;
+  --paper: #f5f5f5;
+  --panel: #fff;
+  --surface: #fff;
+  --surface-raised: #fff;
+  --surface-soft: #f0f0f0;
+  --surface-inverse: #111111;
+  --text-inverse: #ffffff;
+  --line: #dedede;
+  --line-strong: #a8a8a8;
+  --muted: #666666;
+  --accent: #111111;
+  --accent-soft: #ececec;
+  --support: #276fbe;
+  --support-soft: #edf6ff;
+  --success: #444444;
+  --warning: #444444;
+  --danger: #444444;
+  --coral: #111111;
+  --lime: #dddddd;
+  --blue: #f4f4f4;
+  display: grid;
+  grid-template-columns: 236px minmax(0, 1fr);
+  min-height: 100dvh;
+  background: var(--paper);
+  color: var(--ink);
+  font-size: 14px;
+}
+
+:global(html[data-theme="dark"]) .shell:global(#server-dashboard) {
+  --ink: #f4f4f4;
+  --paper: #090909;
+  --panel: #111111;
+  --surface: #111111;
+  --surface-raised: #171717;
+  --surface-soft: #1c1c1c;
+  --surface-inverse: #f4f4f4;
+  --text-inverse: #090909;
+  --line: #2d2d2d;
+  --line-strong: #555555;
+  --muted: #a3a3a3;
+  --accent: #f4f4f4;
+  --accent-soft: #242424;
+  --support: #83beff;
+  --support-soft: #132a40;
+  --success: #cccccc;
+  --warning: #cccccc;
+  --danger: #cccccc;
+  --coral: #f4f4f4;
+  --lime: #343434;
+  --blue: #1a1a1a;
+}
+
+.shell:global(#server-dashboard) :global(*) { min-width: 0; }
+.shell:global(#server-dashboard) :global(button), .shell:global(#server-dashboard) :global(input), .shell:global(#server-dashboard) :global(select), .shell:global(#server-dashboard) :global(textarea) { font: inherit; }
+.shell:global(#server-dashboard) :global(button) { cursor: pointer; }
+.shell:global(#server-dashboard) :global(button:disabled) { cursor: not-allowed; opacity: .5; }
+.shell:global(#server-dashboard) :global(:is(button, a, input, select, textarea, summary):focus-visible) { outline: 2px solid var(--accent); outline-offset: 3px; }
+.shell:global(#server-dashboard) :global(:is(input:not([type="checkbox"]):not([type="radio"]):not([type="range"]), select, textarea)) { max-width: 100%; min-height: 40px; padding: .65rem .8rem; border: 1px solid var(--line); border-radius: 8px; background: var(--surface-raised); color: var(--ink); box-shadow: none; }
+.shell:global(#server-dashboard) :global(input::placeholder), .shell:global(#server-dashboard) :global(textarea::placeholder) { color: var(--muted); opacity: .85; }
+.shell:global(#server-dashboard) :global(input[type="checkbox"]), .shell:global(#server-dashboard) :global(input[type="radio"]), .shell:global(#server-dashboard) :global(input[type="range"]) { accent-color: var(--accent); }
+.shell:global(#server-dashboard) :global(label) { font-size: .78rem; }
+.shell:global(#server-dashboard) :global(.eyebrow) { color: var(--muted); font-size: .62rem; letter-spacing: .12em; font-weight: 700; }
+.shell:global(#server-dashboard) :global(.panel) { border: 1px solid var(--line); border-radius: 14px; background: var(--panel); color: var(--ink); box-shadow: none; overflow: hidden; }
+.shell:global(#server-dashboard) :global(.panel-heading) { gap: 1rem; min-height: 76px; margin: 0; padding: 1.25rem 1.4rem; border-bottom: 1px solid var(--line); }
+.shell:global(#server-dashboard) :global(.panel-heading h2) { margin: .35rem 0 0; font-size: 1.05rem; line-height: 1.3; letter-spacing: -.025em; }
+.shell:global(#server-dashboard) :global(.panel-heading > span) { color: var(--muted); font-size: .7rem; white-space: nowrap; }
+.shell:global(#server-dashboard) :global(.primary-button), .shell:global(#server-dashboard) :global(.secondary-button) { display: inline-flex; width: auto; min-height: 40px; align-items: center; justify-content: center; gap: 1rem; margin: 0; padding: .7rem 1rem; border-radius: 8px; font-size: .76rem; font-weight: 700; line-height: 1.35; }
+.shell:global(#server-dashboard) :global(.primary-button) { border: 1px solid var(--ink); background: var(--ink); color: var(--panel); }
+.shell:global(#server-dashboard) :global(.primary-button:hover:not(:disabled)) { background: color-mix(in srgb, var(--ink) 85%, var(--panel)); }
+.shell:global(#server-dashboard) :global(.secondary-button) { border: 1px solid var(--line); background: var(--surface-raised); color: var(--ink); }
+.shell:global(#server-dashboard) :global(.secondary-button:hover:not(:disabled)) { border-color: var(--accent); background: var(--accent-soft); }
+.shell:global(#server-dashboard) :global(.text-button) { color: var(--accent); font-size: .75rem; }
+.shell:global(#server-dashboard) :global(.panel-actions) { display: flex; flex-wrap: wrap; align-items: center; justify-content: flex-end; gap: .8rem; margin: 0; padding: 1.2rem 1.4rem; border-top: 1px solid var(--line); }
+.shell:global(#server-dashboard) :global(.save-notice) { margin: 1rem; padding: .85rem 1rem; border-radius: 8px; background: var(--accent-soft); color: var(--ink); font-size: .78rem; }
+.shell:global(#server-dashboard) :global(.neutral-badge), .shell:global(#server-dashboard) :global(.support-badge) { display: inline-flex; flex: 0 0 auto; width: max-content; align-items: center; padding: .3rem .55rem; border: 1px solid var(--line); border-radius: 6px; background: var(--surface-soft); color: var(--muted); font-size: .63rem; font-weight: 650; line-height: 1.3; }
+.shell:global(#server-dashboard) :global(.support-badge) { border-color: var(--line); background: var(--surface-soft); color: var(--ink); }
+
+/* Persistent navigation, without narrowing the content into a fixed canvas. */
+.shell:global(#server-dashboard) :global(.sidebar) { position: sticky; inset: auto; top: 0; display: flex; width: auto; height: 100dvh; flex-direction: column; gap: 0; padding: 1.5rem 1rem; border: 0; border-right: 1px solid var(--line); background: var(--panel); color: var(--ink); overflow-y: auto; }
+.shell:global(#server-dashboard) :global(.sidebar-brand) { position: static; display: block; width: 142px; height: 68px; margin: -.55rem 0 .8rem .5rem; object-fit: contain; filter: invert(1); }
+:global(html[data-theme="dark"]) .shell:global(#server-dashboard) :global(.sidebar-brand) { filter: none; }
+.shell:global(#server-dashboard) :global(.server-chip) { display: flex; gap: .7rem; margin: 0 0 1.35rem; padding: .8rem .65rem; border: 1px solid var(--line); border-radius: 10px; background: var(--surface-soft); }
+.shell:global(#server-dashboard) :global(.server-chip strong) { overflow: hidden; font-size: .78rem; text-overflow: ellipsis; white-space: nowrap; }
+.shell:global(#server-dashboard) :global(.server-chip small) { margin-top: .2rem; color: var(--muted); font-size: .64rem; }
+.shell:global(#server-dashboard) :global(.server-avatar) { flex: 0 0 34px; width: 34px; height: 34px; border: 0; border-radius: 9px; background: var(--accent-soft); color: var(--accent); }
+.shell:global(#server-dashboard) :global(.sidebar nav) { display: grid; gap: .3rem; }
+.shell:global(#server-dashboard) :global(.sidebar nav button), .shell:global(#server-dashboard) :global(.sidebar-support) { display: flex; width: 100%; align-items: center; gap: .75rem; min-height: 41px; padding: .65rem .75rem; border: 1px solid transparent; border-radius: 8px; background: transparent; color: var(--muted); font-size: .77rem; font-weight: 550; text-align: left; }
+.shell:global(#server-dashboard) :global(.sidebar nav button svg) { flex: 0 0 18px; width: 18px; height: 18px; }
+.shell:global(#server-dashboard) :global(.sidebar nav button:hover), .shell:global(#server-dashboard) :global(.sidebar-support:hover) { background: var(--surface-soft); color: var(--ink); }
+.shell:global(#server-dashboard) :global(.sidebar nav button.active), .shell:global(#server-dashboard) :global(.sidebar-support.active) { background: var(--ink); color: var(--panel); font-weight: 700; }
+.shell:global(#server-dashboard) :global(.sidebar nav button.active::before), .shell:global(#server-dashboard) :global(.sidebar nav button.active::after) { display: none; }
+.shell:global(#server-dashboard) :global(.sidebar-support) { margin-top: 1.5rem; }
+.shell:global(#server-dashboard) :global(.sidebar-foot) { margin-top: auto; padding: 1.5rem .75rem 0; border: 0; color: var(--muted); font-size: .65rem; }
+.shell:global(#server-dashboard) :global(.sidebar-foot button) { color: var(--muted); }
+.shell:global(#server-dashboard) :global(.workspace) { width: 100%; max-width: 1740px; min-width: 0; margin: 0 auto; padding: 2.1rem clamp(1.2rem, 3.1vw, 3.2rem) 4rem; background: transparent; }
+.shell:global(#server-dashboard) :global(.topbar) { display: flex; justify-content: space-between; align-items: center; gap: 1rem; min-height: 0; margin: 0 0 2rem; padding: 0; border: 0; background: transparent; }
+.shell:global(#server-dashboard) :global(.topbar .eyebrow) { display: flex; flex-wrap: wrap; gap: .65rem; margin: 0 0 .7rem; font-size: .62rem; font-weight: 500; letter-spacing: .04em; text-transform: none; }
+.shell:global(#server-dashboard) :global(.topbar h1) { margin: 0; font-size: clamp(1.75rem, 2.7vw, 2.45rem); font-weight: 650; line-height: 1.1; letter-spacing: -.045em; }
+.shell:global(#server-dashboard) :global(.workspace-description) { margin: .65rem 0 0; color: var(--muted); font-size: .82rem; line-height: 1.5; }
+.shell:global(#server-dashboard) :global(.live-pill) { padding: .55rem .75rem; border: 1px solid var(--line); border-radius: 7px; background: var(--panel); color: var(--muted); font-size: .64rem; }
+.shell:global(#server-dashboard) :global(.live-pill > span) { background: var(--ink); }
+.shell:global(#server-dashboard) :global(.dashboard-surface) { padding: 0; border: 0; border-radius: 0; background: transparent; box-shadow: none; }
+.shell:global(#server-dashboard) :global(.standalone-surface) { border: 1px solid var(--line); border-radius: 14px; background: var(--panel); }
+.shell:global(#server-dashboard) :global(.dashboard-subnav) { gap: 1.1rem; margin: 0 0 1.6rem; padding: 0; border-bottom: 1px solid var(--line); }
+.shell:global(#server-dashboard) :global(.dashboard-subnav button) { position: relative; padding: .65rem .25rem .9rem; border: 0; border-radius: 0; background: transparent; color: var(--muted); font-size: .79rem; }
+.shell:global(#server-dashboard) :global(.dashboard-subnav button[aria-current="page"]) { background: transparent; color: var(--accent); box-shadow: 0 2px 0 var(--accent); font-weight: 650; }
+.shell:global(#server-dashboard) :global(.overview-surface) { gap: 1.2rem; }
+.shell:global(#server-dashboard) :global(.metric-grid) { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1rem; border: 0; }
+.shell:global(#server-dashboard) :global(.metric-card) { grid-column: auto; min-height: 152px; padding: 1.25rem; border: 1px solid var(--line); border-radius: 12px; background: var(--panel); color: var(--ink); }
+.shell:global(#server-dashboard) :global(.metric-card::after) { display: none; }
+.shell:global(#server-dashboard) :global(.metric-card p), .shell:global(#server-dashboard) :global(.metric-card small) { color: var(--muted); }
+.shell:global(#server-dashboard) :global(.metric-card strong) { color: var(--ink); font-size: 2.3rem; font-weight: 600; letter-spacing: -.055em; }
+.shell:global(#server-dashboard) :global(.metric-card.coral) { border-color: color-mix(in srgb, var(--accent) 35%, var(--line)); background: var(--accent-soft); }
+.shell:global(#server-dashboard) :global(.metric-card.coral strong) { color: var(--accent); }
+.shell:global(#server-dashboard) :global(.health-panel), .shell:global(#server-dashboard) :global(.public-stats-panel) { padding: 1.4rem; }
+.shell:global(#server-dashboard) :global(.bar-track span) { background: var(--accent); }
+.shell:global(#server-dashboard) :global(.bar-column:nth-child(even) .bar-track span) { background: color-mix(in srgb, var(--accent) 55%, var(--surface-soft)); }
+
+/* Cases: readable inbox, a deliberate detail pane, and collapsible score tails. */
+.shell:global(#server-dashboard) :global(.case-workspace) { display: grid; grid-template-columns: minmax(270px, .8fr) minmax(0, 1.65fr); gap: 1.2rem; align-items: start; }
+.shell:global(#server-dashboard) :global(.case-index-panel) { position: sticky; top: 1rem; padding: 0; }
+.shell:global(#server-dashboard) :global(.case-inbox-tools) { display: grid; gap: .8rem; padding: 1rem; border-bottom: 1px solid var(--line); }
+.shell:global(#server-dashboard) :global(.case-search) { position: relative; display: flex; align-items: center; }
+.shell:global(#server-dashboard) :global(.case-search svg) { position: absolute; left: .75rem; width: 16px; color: var(--muted); }
+.shell:global(#server-dashboard) :global(.case-search input) { width: 100%; padding-left: 2.2rem!important; font-size: .74rem; }
+.shell:global(#server-dashboard) :global(.case-filter-row) { display: flex; align-items: center; justify-content: space-between; gap: .8rem; }
+.shell:global(#server-dashboard) :global(.case-filter-row label) { display: flex; align-items: center; gap: .6rem; color: var(--muted); font-size: .68rem; }
+.shell:global(#server-dashboard) :global(.case-filter-row select) { min-height: 32px; padding: .4rem .6rem; font-size: .69rem; }
+.shell:global(#server-dashboard) :global(.case-filter-row > span) { color: var(--muted); font-size: .65rem; }
+.shell:global(#server-dashboard) :global(.case-review-list) { display: grid; gap: .4rem; max-height: min(780px, 72dvh); padding: .65rem; overflow: auto; }
+.shell:global(#server-dashboard) :global(.case-review-list > button) { display: block; width: 100%; padding: 1rem; border: 1px solid transparent; border-radius: 9px; background: transparent; color: var(--ink); text-align: left; }
+.shell:global(#server-dashboard) :global(.case-review-list > button:hover) { background: var(--surface-soft); }
+.shell:global(#server-dashboard) :global(.case-review-list > button.active) { border-color: color-mix(in srgb, var(--accent) 45%, var(--line)); background: var(--accent-soft); box-shadow: none; color: var(--ink); }
+.shell:global(#server-dashboard) :global(.case-review-list header) { display: flex; justify-content: space-between; gap: .5rem; margin: 0 0 .8rem; }
+.shell:global(#server-dashboard) :global(.case-review-list header code), .shell:global(#server-dashboard) :global(.case-review-list time) { color: var(--muted); font-size: .62rem; font-weight: 500; }
+.shell:global(#server-dashboard) :global(.case-member-line) { display: flex; gap: .6rem; align-items: center; }
+.shell:global(#server-dashboard) :global(.case-member-line strong) { flex: 1; margin: 0; font-size: .82rem; overflow-wrap: anywhere; }
+.shell:global(#server-dashboard) :global(.case-member-line > span:last-child) { color: var(--muted); }
+.shell:global(#server-dashboard) :global(.case-member-initial) { display: grid; flex: 0 0 27px; width: 27px; height: 27px; place-items: center; border-radius: 8px; background: var(--surface-raised); color: var(--accent); font-size: .72rem; font-weight: 700; }
+.shell:global(#server-dashboard) :global(.case-review-list p) { display: -webkit-box; margin: .65rem 0 .85rem; overflow: hidden; color: var(--muted); font-size: .73rem; line-height: 1.55; -webkit-line-clamp: 2; -webkit-box-orient: vertical; }
+.shell:global(#server-dashboard) :global(.case-review-list footer) { display: flex; gap: .5rem; justify-content: flex-start; align-items: center; }
+.shell:global(#server-dashboard) :global(.case-status), .shell:global(#server-dashboard) :global(.case-action-tag) { display: inline-flex; align-items: center; padding: .25rem .5rem; border-radius: 5px; background: var(--surface-soft); color: var(--muted); font-size: .6rem; font-weight: 650; line-height: 1.3; text-transform: none; }
+.shell:global(#server-dashboard) :global(.case-status.active) { background: color-mix(in srgb, var(--success) 12%, var(--panel)); color: var(--success); }
+.shell:global(#server-dashboard) :global(.case-action-tag) { background: color-mix(in srgb, var(--warning) 12%, var(--panel)); color: var(--warning); }
+.shell:global(#server-dashboard) :global(.case-action-tag.ban) { background: color-mix(in srgb, var(--danger) 12%, var(--panel)); color: var(--danger); }
+.shell:global(#server-dashboard) :global(.case-review-placeholder) { display: flex; min-height: 540px; flex-direction: column; align-items: center; justify-content: center; gap: .6rem; padding: 2rem; text-align: center; }
+.shell:global(#server-dashboard) :global(.case-review-placeholder .case-placeholder-icon) { display: grid; width: 64px; height: 64px; margin-bottom: 1.2rem; place-items: center; border: 1px solid var(--line); border-radius: 18px; background: var(--surface-soft); color: var(--accent); }
+.shell:global(#server-dashboard) :global(.case-placeholder-icon svg) { width: 28px; height: 28px; }
+.shell:global(#server-dashboard) :global(.case-review-placeholder h2) { margin: .1rem 0; font-size: 1.45rem; }
+.shell:global(#server-dashboard) :global(.case-review-placeholder p:last-child) { max-width: 310px; margin: .3rem 0; color: var(--muted); font-size: .82rem; line-height: 1.7; }
+.shell:global(#server-dashboard) :global(.case-workspace > .case-review-panel) { position: static; display: grid; gap: 1.4rem; max-height: none; padding: 1.5rem; border: 1px solid var(--line); }
+.shell:global(#server-dashboard) :global(.case-review-head) { display: flex; gap: 1rem; align-items: center; justify-content: space-between; padding-bottom: 1.2rem; border-bottom: 1px solid var(--line); }
+.shell:global(#server-dashboard) :global(.case-review-head h2) { margin: .35rem 0 0; font-size: 1.3rem; letter-spacing: -.03em; overflow-wrap: anywhere; }
+.shell:global(#server-dashboard) :global(.case-detail-head-actions) { display: flex; align-items: center; gap: .7rem; }
+.shell:global(#server-dashboard) :global(.case-detail-head-actions button) { width: 32px; height: 32px; border: 1px solid var(--line); border-radius: 7px; background: var(--surface-raised); color: var(--muted); font-size: 1.1rem; }
+.shell:global(#server-dashboard) :global(.case-review-panel .case-review-meta) { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.15rem 1rem; border: 0; }
+.shell:global(#server-dashboard) :global(.case-review-panel .case-review-meta > div) { padding: 0; border: 0; }
+.shell:global(#server-dashboard) :global(.case-review-meta dt) { margin-bottom: .35rem; color: var(--muted); font-size: .64rem; text-transform: none; letter-spacing: 0; }
+.shell:global(#server-dashboard) :global(.case-review-panel .case-review-meta dd) { margin: 0; font-size: .78rem; line-height: 1.6; overflow-wrap: anywhere; }
+.shell:global(#server-dashboard) :global(.case-review-panel .case-review-meta code) { color: var(--muted); font-size: .62rem; }
+.shell:global(#server-dashboard) :global(.case-review-context) { display: grid; grid-template-columns: 1fr; gap: .8rem; }
+.shell:global(#server-dashboard) :global(.case-review-context > article) { padding: 1.05rem; border: 1px solid var(--line); border-radius: 9px; background: var(--surface-soft); }
+.shell:global(#server-dashboard) :global(.case-review-context h3), .shell:global(#server-dashboard) :global(.case-section-heading h3) { margin: .35rem 0 .5rem; font-size: .88rem; }
+.shell:global(#server-dashboard) :global(.case-review-context article > p:not(.eyebrow)), .shell:global(#server-dashboard) :global(.case-review-context blockquote) { margin: .5rem 0 0; color: var(--ink); font-size: .8rem; line-height: 1.7; overflow-wrap: anywhere; }
+.shell:global(#server-dashboard) :global(.case-review-context blockquote) { padding: .2rem 0 .2rem .85rem; border-left: 2px solid var(--accent); background: transparent; }
+.shell:global(#server-dashboard) :global(.case-review-panel .case-confidence-section), .shell:global(#server-dashboard) :global(.case-review-panel .case-evidence-section) { padding: 0; border: 0; border-radius: 0; background: transparent; }
+.shell:global(#server-dashboard) :global(.case-section-heading) { display: flex; align-items: center; justify-content: space-between; gap: 1rem; margin-bottom: 1rem; }
+.shell:global(#server-dashboard) :global(.case-section-heading > span) { color: var(--muted); font-size: .64rem; }
+.shell:global(#server-dashboard) :global(.category-signals) { display: grid; gap: .85rem; }
+.shell:global(#server-dashboard) :global(.signal-row > div:first-child) { display: flex; justify-content: space-between; gap: 1rem; margin-bottom: .4rem; font-size: .72rem; line-height: 1.45; }
+.shell:global(#server-dashboard) :global(.signal-row strong) { flex-shrink: 0; font-variant-numeric: tabular-nums; font-weight: 600; }
+.shell:global(#server-dashboard) :global(.signal-track) { height: 4px; overflow: hidden; border-radius: 4px; background: var(--surface-soft); }
+.shell:global(#server-dashboard) :global(.signal-track > span) { display: block; height: 100%; border-radius: inherit; background: var(--accent); }
+.shell:global(#server-dashboard) :global(.remaining-signals summary) { margin: .15rem 0; color: var(--muted); font-size: .68rem; cursor: pointer; }
+.shell:global(#server-dashboard) :global(.remaining-signals .signal-row) { margin-top: .85rem; }
+.shell:global(#server-dashboard) :global(.signal-caption) { margin: .8rem 0 0; color: var(--muted); font-size: .64rem; line-height: 1.5; }
+.shell:global(#server-dashboard) :global(.case-entry-list > article) { border-color: var(--line); border-radius: 8px; background: var(--surface-soft); }
+.shell:global(#server-dashboard) :global(.empty-case-entries) { padding: 1rem; border: 1px dashed var(--line); border-radius: 8px; color: var(--muted); font-size: .74rem; }
+.shell:global(#server-dashboard) :global(.case-entry-composer) { border-radius: 9px; }
+.shell:global(#server-dashboard) :global(.case-detail-actions) { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: .8rem; padding-top: 1rem; border-top: 1px solid var(--line); }
+.shell:global(#server-dashboard) :global(.case-detail-actions p) { max-width: 250px; margin: 0; color: var(--muted); font-size: .63rem; line-height: 1.6; }
+.shell:global(#server-dashboard) :global(.case-detail-actions .danger-button) { min-height: 36px; padding: .6rem .8rem; border: 1px solid color-mix(in srgb, var(--danger) 30%, var(--line)); border-radius: 7px; background: transparent; color: var(--danger); font-size: .68rem; }
+
+/* Support logs mirror the blue support embed used by the bot. */
+.shell:global(#server-dashboard) :global(.event-row) { grid-template-columns: 34px minmax(0, 1fr) auto; gap: 1rem; align-items: start; padding: 1.2rem 1.4rem; }
+.shell:global(#server-dashboard) :global(.event-row > div > strong) { font-size: .83rem; }
+.shell:global(#server-dashboard) :global(.event-row > div > p), .shell:global(#server-dashboard) :global(.event-row time) { color: var(--muted); font-family: inherit; font-size: .69rem; line-height: 1.6; }
+.shell:global(#server-dashboard) :global(.event-row.support-event) { margin: 1rem; padding: 1.1rem; border: 1px solid color-mix(in srgb, var(--support) 25%, var(--line)); border-left: 3px solid var(--support); border-radius: 10px; background: var(--support-soft); }
+.shell:global(#server-dashboard) :global(.support-event > div > strong), .shell:global(#server-dashboard) :global(.support-event .support-purpose) { color: var(--support); }
+.shell:global(#server-dashboard) :global(.support-event .support-badge) { margin-left: .65rem; vertical-align: middle; border-color: color-mix(in srgb, var(--support) 25%, transparent); background: var(--support-soft); color: var(--support); }
+.shell:global(#server-dashboard) :global(.support-event .event-icon) { border: 0; background: color-mix(in srgb, var(--support) 15%, var(--panel)); color: var(--support); }
+.shell:global(#server-dashboard) :global(.support-event .category-signals) { max-width: 640px; margin-top: 1rem; color: var(--ink); }
+.shell:global(#server-dashboard) :global(.support-event .signal-track) { background: color-mix(in srgb, var(--support) 13%, var(--panel)); }
+.shell:global(#server-dashboard) :global(.support-event .signal-track > span) { background: var(--support); }
+
+/* Policy controls wrap by available content width, not the viewport alone. */
+.shell:global(#server-dashboard) :global(.protection-workspace) { container-type: inline-size; --protection-accent: var(--ink); --onboarding-accent: var(--ink); }
+.shell:global(#server-dashboard) :global(.protection-hero), .shell:global(#server-dashboard) :global(.protection-sheet) { border: 1px solid var(--line); border-radius: 14px; background: var(--panel); color: var(--ink); }
+.shell:global(#server-dashboard) :global(.protection-hero) { gap: 1.5rem; padding: 1.5rem; }
+.shell:global(#server-dashboard) :global(.protection-hero::before) { display: none; }
+.shell:global(#server-dashboard) :global(.protection-hero h2) { font-size: 1.5rem; }
+.shell:global(#server-dashboard) :global(.protection-mark) { background: var(--ink); color: var(--panel); }
+.shell:global(#server-dashboard) :global(.protection-summary strong) { color: var(--ink); }
+.shell:global(#server-dashboard) :global(.protection-summary span) { color: var(--muted); }
+.shell:global(#server-dashboard) :global(.protection-save) { border-color: var(--line); background: var(--ink); color: var(--panel); }
+.shell:global(#server-dashboard) :global(.protection-save:disabled) { background: var(--surface-soft); color: var(--muted); }
+.shell:global(#server-dashboard) :global(.spam-tuning-guide > span) { background: var(--ink); color: var(--panel); }
+.shell:global(#server-dashboard) :global(.experimental-warning) { border-color: var(--line-strong); background: var(--surface-soft); color: var(--ink); box-shadow: none; }
+.shell:global(#server-dashboard) :global(.protection-hero-copy p:last-child) { max-width: 470px; color: var(--muted); font-size: .8rem; line-height: 1.6; }
+.shell:global(#server-dashboard) :global(.protection-nav) { display: flex; gap: .45rem; overflow-x: auto; padding: .8rem 0; background: transparent; }
+.shell:global(#server-dashboard) :global(.protection-nav a) { flex: 0 0 auto; padding: .6rem .8rem; border: 1px solid var(--line); border-radius: 7px; background: var(--panel); color: var(--muted); font-size: .7rem; }
+.shell:global(#server-dashboard) :global(.protection-nav a:is(:hover, :focus-visible)) { border-color: var(--accent); background: var(--accent-soft); color: var(--accent); }
+.shell:global(#server-dashboard) :global(.protection-section) { padding: 1.6rem; grid-template-columns: 1fr; gap: 1.3rem; }
+.shell:global(#server-dashboard) :global(.protection-heading) { grid-template-columns: 32px minmax(0, 1fr); gap: .8rem; }
+.shell:global(#server-dashboard) :global(.protection-heading h3) { font-size: 1.05rem; }
+.shell:global(#server-dashboard) :global(.protection-heading p:last-child) { max-width: 720px; font-size: .76rem; line-height: 1.65; }
+.shell:global(#server-dashboard) :global(.protection-section > *) { grid-column: 1 / -1; }
+.shell:global(#server-dashboard) :global(.protection-toggle-grid .toggle-row) { min-height: 112px; padding: 1rem; }
+.shell:global(#server-dashboard) :global(.toggle-row strong) { font-size: .8rem; }
+.shell:global(#server-dashboard) :global(.toggle-row small) { font-size: .7rem; line-height: 1.6; }
+.shell:global(#server-dashboard) :global(.policy-studio) { container-type: inline-size; padding: 0; border: 0; border-radius: 0; background: transparent; }
+.shell:global(#server-dashboard) :global(.policy-mode-grid) { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: .7rem; }
+.shell:global(#server-dashboard) :global(.policy-mode-grid label) { display: flex; gap: .65rem; align-items: flex-start; min-height: 136px; margin: 0; padding: 1rem; border: 1px solid var(--line); border-radius: 10px; background: var(--surface-raised); }
+.shell:global(#server-dashboard) :global(.policy-mode-grid label.active) { border-color: var(--accent); background: var(--accent-soft); color: var(--ink); }
+.shell:global(#server-dashboard) :global(.policy-mode-grid input) { margin-top: .15rem; }
+.shell:global(#server-dashboard) :global(.policy-mode-grid strong) { font-size: .88rem; }
+.shell:global(#server-dashboard) :global(.policy-mode-grid small) { color: var(--muted); font-size: .7rem; line-height: 1.6; }
+.shell:global(#server-dashboard) :global(.policy-mode-grid em) { background: transparent; color: var(--accent); }
+.shell:global(#server-dashboard) :global(.policy-default-threshold) { margin: 1rem 0; padding: 1.15rem; border: 1px solid var(--line); border-radius: 10px; background: var(--surface-soft); }
+.shell:global(#server-dashboard) :global(.policy-default-threshold strong) { font-size: .82rem; }
+.shell:global(#server-dashboard) :global(.policy-default-threshold small) { color: var(--muted); font-size: .7rem; line-height: 1.6; }
+.shell:global(#server-dashboard) :global(.policy-default-threshold > b) { color: var(--accent); font-size: 1.45rem; }
+.shell:global(#server-dashboard) :global(.policy-support-note) { display: flex; gap: .8rem; align-items: flex-start; margin: 0 0 1.1rem; padding: 1rem; border: 1px solid var(--line); border-radius: 10px; background: var(--surface-soft); }
+.shell:global(#server-dashboard) :global(.policy-support-note > svg) { flex: 0 0 20px; color: var(--ink); }
+.shell:global(#server-dashboard) :global(.policy-support-note > div) { flex: 1; }
+.shell:global(#server-dashboard) :global(.policy-support-note strong) { color: var(--ink); font-size: .78rem; }
+.shell:global(#server-dashboard) :global(.policy-support-note p) { margin: .3rem 0 0; color: var(--muted); font-size: .7rem; line-height: 1.6; }
+.shell:global(#server-dashboard) :global(.policy-category-table) { overflow: visible; border: 1px solid var(--line); border-radius: 10px; }
+.shell:global(#server-dashboard) :global(.policy-category-table > header), .shell:global(#server-dashboard) :global(.policy-category-row) { display: grid; grid-template-columns: minmax(200px, 1.65fr) 62px 95px minmax(160px, 1.2fr) 85px; align-items: center; gap: .7rem; padding: 1rem; }
+.shell:global(#server-dashboard) :global(.policy-category-table > header) { border-radius: 10px 10px 0 0; background: var(--surface-soft); color: var(--muted); font-size: .58rem; letter-spacing: .07em; }
+.shell:global(#server-dashboard) :global(.policy-category-row) { border-top: 1px solid var(--line); background: transparent; }
+.shell:global(#server-dashboard) :global(.policy-category-row > *) { grid-column: auto; }
+.shell:global(#server-dashboard) :global(.policy-name) { display: grid; gap: .35rem; }
+.shell:global(#server-dashboard) :global(.policy-name strong) { font-size: .77rem; font-weight: 600; line-height: 1.45; }
+.shell:global(#server-dashboard) :global(.policy-name small) { color: var(--muted); font-size: .64rem; }
+.shell:global(#server-dashboard) :global(.support-policy .policy-name small) { color: var(--muted); }
+.shell:global(#server-dashboard) :global(.policy-cell) { display: grid; gap: .4rem; }
+.shell:global(#server-dashboard) :global(.policy-cell input), .shell:global(#server-dashboard) :global(.policy-cell select) { width: 100%; font-size: .72rem; }
+.shell:global(#server-dashboard) :global(.policy-cell select:disabled) { opacity: 1; background: var(--surface-soft); color: var(--muted); }
+.shell:global(#server-dashboard) :global(.policy-included) { display: flex; justify-content: center; align-items: center; gap: .5rem; }
+.shell:global(#server-dashboard) :global(.policy-included input) { position: static; width: 16px; height: 16px; opacity: 1; }
+.shell:global(#server-dashboard) :global(.policy-included i) { display: none; }
+.shell:global(#server-dashboard) :global(.policy-mobile-label) { display: none; }
+.shell:global(#server-dashboard) :global(.policy-effective-action) { color: var(--muted); font-size: .67rem; }
+.shell:global(#server-dashboard) :global(.policy-studio > .panel-actions) { margin-top: 1rem; padding: 1rem 0 0; }
+
+/* Automation Lab: templates, ordered steps, a test area, and a tidy rule library. */
+.shell:global(#server-dashboard) :global(.workspace-intro) { display: flex; gap: 1rem; align-items: center; justify-content: space-between; margin-bottom: 1.3rem; }
+.shell:global(#server-dashboard) :global(.workspace-intro h2) { margin: .45rem 0 .6rem; font-size: clamp(1.3rem, 2vw, 1.7rem); letter-spacing: -.035em; line-height: 1.25; }
+.shell:global(#server-dashboard) :global(.workspace-intro p:last-child) { margin: 0; color: var(--muted); font-size: .8rem; line-height: 1.6; }
+.shell:global(#server-dashboard) :global(.automation-starters) { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: .8rem; margin-bottom: 1.4rem; }
+.shell:global(#server-dashboard) :global(.automation-starters button) { display: flex; align-items: center; gap: .8rem; padding: 1rem; border: 1px solid var(--line); border-radius: 10px; background: var(--panel); color: var(--ink); text-align: left; }
+.shell:global(#server-dashboard) :global(.automation-starters button:hover) { border-color: var(--accent); background: var(--accent-soft); }
+.shell:global(#server-dashboard) :global(.starter-number) { display: grid; flex: 0 0 32px; width: 32px; height: 32px; place-items: center; border-radius: 8px; background: var(--accent-soft); color: var(--accent); font: 600 .7rem monospace; }
+.shell:global(#server-dashboard) :global(.automation-starters button > span:nth-child(2)) { flex: 1; }
+.shell:global(#server-dashboard) :global(.automation-starters strong) { display: block; font-size: .76rem; font-weight: 650; }
+.shell:global(#server-dashboard) :global(.automation-starters small) { display: block; margin-top: .3rem; color: var(--muted); font-size: .63rem; line-height: 1.5; }
+.shell:global(#server-dashboard) :global(.automation-layout) { display: grid; grid-template-columns: minmax(0, 1fr) minmax(270px, 320px); gap: 1.2rem; align-items: start; }
+.shell:global(#server-dashboard) :global(.automation-builder) { padding: 0; border: 1px solid var(--line); }
+.shell:global(#server-dashboard) :global(.automation-basics) { display: grid; grid-template-columns: minmax(0, 1fr) 100px; gap: 1rem; padding: 1.3rem 1.4rem; }
+.shell:global(#server-dashboard) :global(.automation-builder label) { display: grid; gap: .5rem; font-size: .72rem; font-weight: 550; }
+.shell:global(#server-dashboard) :global(.automation-flow) { display: grid; grid-template-columns: 1fr; gap: 1.1rem; padding: .2rem 1.4rem 1.4rem; border: 0; border-radius: 0; background: transparent; }
+.shell:global(#server-dashboard) :global(.automation-step) { display: grid; min-width: 0; gap: .8rem; margin: 0; padding: 1.1rem; border: 1px solid var(--line); border-radius: 10px; background: var(--panel); }
+.shell:global(#server-dashboard) :global(.automation-step legend) { max-width: 100%; padding: 0 .4rem; color: var(--ink); font-size: .82rem; font-weight: 650; line-height: 1.8; }
+.shell:global(#server-dashboard) :global(.automation-step legend > span) { margin-right: .6rem; color: var(--accent); font: 650 .66rem monospace; }
+.shell:global(#server-dashboard) :global(.automation-step legend small) { margin-left: .4rem; color: var(--muted); font-size: .6rem; font-weight: 450; }
+.shell:global(#server-dashboard) :global(.automation-step > p) { margin: 0 0 .2rem; color: var(--muted); font-size: .71rem; line-height: 1.6; }
+.shell:global(#server-dashboard) :global(.automation-conditions header) { display: flex; gap: 1rem; align-items: end; justify-content: space-between; }
+.shell:global(#server-dashboard) :global(.automation-conditions header label) { width: 170px; }
+.shell:global(#server-dashboard) :global(.condition-row) { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, .9fr) 32px; gap: .5rem; padding: .7rem; border-radius: 8px; background: var(--surface-soft); }
+.shell:global(#server-dashboard) :global(.condition-row :is(input, select)) { font-size: .7rem; }
+.shell:global(#server-dashboard) :global(.icon-button) { align-self: center; width: 32px; height: 32px; border: 1px solid var(--line); border-radius: 6px; background: var(--panel); color: var(--muted); }
+.shell:global(#server-dashboard) :global(.automation-empty-condition) { padding: .8rem; border: 1px dashed var(--line); border-radius: 7px; color: var(--muted); font-size: .7rem; line-height: 1.6; }
+.shell:global(#server-dashboard) :global(.automation-action-row) { display: grid; grid-template-columns: 24px minmax(0, 1fr) auto; gap: .65rem; align-items: start; padding: .85rem; border: 1px solid var(--line); border-radius: 8px; background: var(--surface-soft); }
+.shell:global(#server-dashboard) :global(.action-number) { display: grid; width: 23px; height: 38px; place-items: center; color: var(--muted); font: 550 .7rem monospace; }
+.shell:global(#server-dashboard) :global(.action-fields) { display: grid; gap: .6rem; }
+.shell:global(#server-dashboard) :global(.action-fields :is(input, select)) { width: 100%; font-size: .72rem; }
+.shell:global(#server-dashboard) :global(.action-controls) { display: flex; gap: .25rem; padding-top: .15rem; }
+.shell:global(#server-dashboard) :global(.action-controls button) { width: 27px; height: 32px; padding: 0; border: 1px solid var(--line); border-radius: 5px; background: var(--panel); color: var(--muted); }
+.shell:global(#server-dashboard) :global(.automation-action-list > .secondary-button) { justify-self: start; }
+.shell:global(#server-dashboard) :global(.automation-test) { margin: 0 1.4rem 1.4rem; padding: 0; border: 1px solid var(--line); border-radius: 10px; background: var(--surface-soft); }
+.shell:global(#server-dashboard) :global(.automation-test > summary) { display: flex; align-items: center; gap: .8rem; padding: 1rem; color: var(--accent); cursor: pointer; list-style: none; }
+.shell:global(#server-dashboard) :global(.automation-test > summary::-webkit-details-marker) { display: none; }
+.shell:global(#server-dashboard) :global(.automation-test > summary > span:nth-child(2)) { flex: 1; }
+.shell:global(#server-dashboard) :global(.automation-test > summary strong) { display: block; color: var(--ink); font-size: .8rem; }
+.shell:global(#server-dashboard) :global(.automation-test > summary small) { display: block; margin-top: .3rem; color: var(--muted); font-size: .66rem; line-height: 1.5; }
+.shell:global(#server-dashboard) :global(.automation-test-body) { display: grid; gap: 1rem; padding: 1rem; border-top: 1px solid var(--line); }
+.shell:global(#server-dashboard) :global(.automation-test-body textarea) { width: 100%; min-height: 90px; resize: vertical; }
+.shell:global(#server-dashboard) :global(.automation-sample-context) { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .8rem; }
+.shell:global(#server-dashboard) :global(.automation-builder .automation-test-toggle) { display: flex; align-items: center; gap: .5rem; }
+.shell:global(#server-dashboard) :global(.automation-test-toggle input) { width: 15px; height: 15px; }
+.shell:global(#server-dashboard) :global(.automation-test-body > .secondary-button) { justify-self: start; }
+.shell:global(#server-dashboard) :global(.automation-test-result) { padding: 1rem; border: 1px solid var(--line); border-radius: 8px; background: var(--panel); font-size: .75rem; }
+.shell:global(#server-dashboard) :global(.automation-test-result.matched) { border-color: var(--success); }
+.shell:global(#server-dashboard) :global(.automation-test-result p), .shell:global(#server-dashboard) :global(.automation-test-result li) { font-size: .7rem; line-height: 1.6; }
+.shell:global(#server-dashboard) :global(.automation-save-hint) { flex: 1; min-width: 100px; color: var(--muted); font-size: .66rem; line-height: 1.6; }
+.shell:global(#server-dashboard) :global(.automation-rule-library) { display: grid; gap: 1rem; }
+.shell:global(#server-dashboard) :global(.automation-stats) { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: .5rem; padding: 1.25rem 1rem; border: 1px solid var(--line); border-radius: 12px; background: var(--panel); }
+.shell:global(#server-dashboard) :global(.automation-stats > div) { display: grid; gap: .45rem; text-align: center; }
+.shell:global(#server-dashboard) :global(.automation-stats > div + div) { border-left: 1px solid var(--line); }
+.shell:global(#server-dashboard) :global(.automation-stats strong) { font-size: 1.45rem; font-weight: 600; letter-spacing: -.04em; }
+.shell:global(#server-dashboard) :global(.automation-stats span) { color: var(--muted); font-size: .62rem; }
+.shell:global(#server-dashboard) :global(.automation-list) { padding: 0; }
+.shell:global(#server-dashboard) :global(.automation-list article) { display: block; margin: 0; padding: 1.2rem; border: 0; border-bottom: 1px solid var(--line); border-radius: 0; background: transparent; }
+.shell:global(#server-dashboard) :global(.automation-list article:last-child) { border-bottom: 0; }
+.shell:global(#server-dashboard) :global(.automation-list article.editing) { background: var(--accent-soft); }
+.shell:global(#server-dashboard) :global(.automation-list article > header) { display: flex; justify-content: space-between; gap: .4rem; margin-bottom: .85rem; }
+.shell:global(#server-dashboard) :global(.automation-list article > header small) { color: var(--muted); font-size: .6rem; }
+.shell:global(#server-dashboard) :global(.rule-state) { display: flex; align-items: center; gap: .4rem; color: var(--muted); font-size: .6rem; }
+.shell:global(#server-dashboard) :global(.rule-state i) { width: 5px; height: 5px; border-radius: 50%; background: currentColor; }
+.shell:global(#server-dashboard) :global(.rule-state.enabled) { color: var(--success); }
+.shell:global(#server-dashboard) :global(.automation-list article > strong) { display: block; color: var(--ink); font-size: .85rem; font-weight: 650; overflow-wrap: anywhere; }
+.shell:global(#server-dashboard) :global(.automation-list article > p) { margin: .6rem 0; color: var(--muted); font-size: .7rem; line-height: 1.6; }
+.shell:global(#server-dashboard) :global(.rule-recipe) { display: flex; flex-wrap: wrap; gap: .4rem; margin: .8rem 0; color: var(--muted); font-size: .62rem; }
+.shell:global(#server-dashboard) :global(.rule-recipe > span:not(:nth-child(2))) { padding: .25rem .4rem; border-radius: 4px; background: var(--surface-soft); }
+.shell:global(#server-dashboard) :global(.rule-run-count) { color: var(--muted); font-size: .59rem; line-height: 1.7; }
+.shell:global(#server-dashboard) :global(.automation-list article > footer) { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: .4rem; margin-top: 1rem; }
+.shell:global(#server-dashboard) :global(.automation-list article > footer button) { min-height: 31px; padding: .3rem; border: 1px solid var(--line); border-radius: 5px; background: var(--panel); color: var(--ink); font-size: .61rem; }
+.shell:global(#server-dashboard) :global(.automation-list article > footer button:hover:not(:disabled)) { background: var(--surface-soft); border-color: var(--muted); }
+.shell:global(#server-dashboard) :global(.automation-list article > footer .danger-button), .shell:global(#server-dashboard) :global(.rule-error) { color: var(--danger); }
+.shell:global(#server-dashboard) :global(.automation-library-note) { margin: 0; padding: 0 .5rem; color: var(--muted); font-size: .67rem; line-height: 1.7; }
+.shell:global(#server-dashboard) :global(.empty-state) { display: grid; justify-items: center; gap: .6rem; padding: 2rem 1.2rem; color: var(--muted); font-size: .78rem; text-align: center; }
+.shell:global(#server-dashboard) :global(.empty-state p) { margin: 0; font-size: .73rem; line-height: 1.6; }
+
+@container (max-width: 850px) {
+  .shell:global(#server-dashboard) :global(.policy-category-table > header) { display: none; }
+  .shell:global(#server-dashboard) :global(.policy-category-row) { grid-template-columns: minmax(0, 1fr) minmax(0, 1.3fr) auto; gap: .8rem 1rem; }
+  .shell:global(#server-dashboard) :global(.policy-category-row > *) { grid-column: auto!important; }
+  .shell:global(#server-dashboard) :global(.policy-name) { grid-column: 1 / 3!important; }
+  .shell:global(#server-dashboard) :global(.policy-included) { grid-column: 3!important; justify-self: end; }
+  .shell:global(#server-dashboard) :global(.policy-mobile-label) { display: block; color: var(--muted); font-size: .61rem; }
+  .shell:global(#server-dashboard) :global(.policy-category-row > .support-badge), .shell:global(#server-dashboard) :global(.policy-effective-action) { align-self: end; margin-bottom: .65rem; }
+}
+@container (max-width: 540px) {
+  .shell:global(#server-dashboard) :global(.policy-mode-grid) { grid-template-columns: 1fr; }
+  .shell:global(#server-dashboard) :global(.policy-mode-grid label) { min-height: 0; }
+  .shell:global(#server-dashboard) :global(.policy-support-note > .support-badge) { display: none; }
+  .shell:global(#server-dashboard) :global(.policy-category-row) { grid-template-columns: minmax(0, .7fr) minmax(0, 1.3fr); }
+  .shell:global(#server-dashboard) :global(.policy-name) { grid-column: 1 / -1!important; }
+  .shell:global(#server-dashboard) :global(.policy-included) { grid-column: 1!important; justify-self: start; }
+  .shell:global(#server-dashboard) :global(.policy-category-row > .policy-cell:nth-child(4)) { grid-column: 1 / -1!important; }
+  .shell:global(#server-dashboard) :global(.policy-category-row > .support-badge), .shell:global(#server-dashboard) :global(.policy-effective-action) { grid-column: 1 / -1!important; margin: 0; }
+}
+@media (min-width: 1600px) {
+  .shell:global(#server-dashboard) :global(.automation-layout) { grid-template-columns: minmax(0, 1fr) 370px; }
+  .shell:global(#server-dashboard) :global(.case-workspace) { grid-template-columns: 350px minmax(0, 1fr); }
+  .shell:global(#server-dashboard) :global(.case-review-context) { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 1150px) {
+  .shell:global(#server-dashboard) { grid-template-columns: 204px minmax(0, 1fr); }
+  .shell:global(#server-dashboard) :global(.sidebar) { padding: 1.2rem .7rem; }
+  .shell:global(#server-dashboard) :global(.workspace) { padding: 1.7rem 1.25rem 4rem; }
+  .shell:global(#server-dashboard) :global(.automation-layout) { grid-template-columns: 1fr; }
+  .shell:global(#server-dashboard) :global(.automation-rule-library) { grid-template-columns: 1fr; }
+  .shell:global(#server-dashboard) :global(.automation-stats) { max-width: none; }
+  .shell:global(#server-dashboard) :global(.automation-starters button) { gap: .6rem; padding: .85rem; }
+  .shell:global(#server-dashboard) :global(.starter-number) { display: none; }
+  .shell:global(#server-dashboard) :global(.case-workspace) { grid-template-columns: minmax(230px, .85fr) minmax(0, 1.2fr); }
+  .shell:global(#server-dashboard) :global(.case-workspace > .case-review-panel) { padding: 1rem; }
+  .shell:global(#server-dashboard) :global(.case-review-head) { align-items: flex-start; }
+  .shell:global(#server-dashboard) :global(.case-detail-head-actions) { flex-direction: column-reverse; align-items: end; gap: .5rem; }
+  .shell:global(#server-dashboard) :global(.metric-grid) { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .shell:global(#server-dashboard) :global(.protection-hero) { grid-template-columns: 1fr; }
+  .shell:global(#server-dashboard) :global(.protection-summary) { justify-content: flex-start; }
+}
+@media (max-width: 850px) {
+  .shell:global(#server-dashboard) { display: block; }
+  .shell:global(#server-dashboard) :global(.sidebar) { position: relative; width: 100%; height: auto; padding: 1rem; border-right: 0; border-bottom: 1px solid var(--line); }
+  .shell:global(#server-dashboard) :global(.sidebar-brand) { display: none; }
+  .shell:global(#server-dashboard) :global(.server-chip) { width: max-content; max-width: 100%; margin: 0 0 1rem; padding: 0; border: 0; background: transparent; }
+  .shell:global(#server-dashboard) :global(.sidebar nav) { display: flex; gap: .4rem; overflow-x: auto; padding: 0 0 .3rem; scrollbar-width: thin; }
+  .shell:global(#server-dashboard) :global(.sidebar nav button) { flex: 0 0 auto; width: auto; min-height: 38px; gap: .5rem; padding: .55rem .7rem; white-space: nowrap; }
+  .shell:global(#server-dashboard) :global(.sidebar nav button svg) { width: 16px; height: 16px; }
+  .shell:global(#server-dashboard) :global(.sidebar-support) { position: absolute; top: 1rem; right: 1rem; width: auto; margin: 0; }
+  .shell:global(#server-dashboard) :global(.sidebar-foot) { display: flex; justify-content: space-between; margin: .6rem 0 0; padding: .5rem .25rem 0; }
+  .shell:global(#server-dashboard) :global(.workspace) { padding: 1.4rem 1rem 4rem; }
+  .shell:global(#server-dashboard) :global(.topbar) { margin-bottom: 1.5rem; }
+  .shell:global(#server-dashboard) :global(.live-pill) { display: none; }
+  .shell:global(#server-dashboard) :global(.case-workspace) { grid-template-columns: minmax(240px, .8fr) minmax(0, 1.2fr); }
+  .shell:global(#server-dashboard) :global(.case-index-panel) { position: static; }
+  .shell:global(#server-dashboard) :global(.protection-section) { padding: 1.1rem; }
+}
+@media (max-width: 650px) {
+  .shell:global(#server-dashboard) :global(.case-workspace) { grid-template-columns: 1fr; }
+  .shell:global(#server-dashboard) :global(.case-review-list) { max-height: 340px; }
+  .shell:global(#server-dashboard) :global(.case-review-placeholder) { min-height: 280px; }
+  .shell:global(#server-dashboard) :global(.case-review-head) { align-items: center; }
+  .shell:global(#server-dashboard) :global(.case-detail-head-actions) { flex-direction: row; align-items: center; }
+  .shell:global(#server-dashboard) :global(.case-workspace > .case-review-panel) { padding: 1.2rem; }
+  .shell:global(#server-dashboard) :global(.workspace-intro) { align-items: flex-start; }
+  .shell:global(#server-dashboard) :global(.workspace-intro > .neutral-badge) { display: none; }
+  .shell:global(#server-dashboard) :global(.automation-starters) { grid-template-columns: 1fr; gap: .5rem; }
+  .shell:global(#server-dashboard) :global(.starter-number) { display: grid; }
+  .shell:global(#server-dashboard) :global(.automation-starters small) { margin-top: .2rem; }
+  .shell:global(#server-dashboard) :global(.automation-basics), .shell:global(#server-dashboard) :global(.automation-flow) { padding: 1rem; }
+  .shell:global(#server-dashboard) :global(.automation-flow) { padding-top: .3rem; }
+  .shell:global(#server-dashboard) :global(.automation-step) { padding: .85rem; }
+  .shell:global(#server-dashboard) :global(.automation-conditions header) { align-items: stretch; flex-direction: column; gap: .65rem; }
+  .shell:global(#server-dashboard) :global(.automation-conditions header label) { width: 100%; }
+  .shell:global(#server-dashboard) :global(.automation-conditions header .secondary-button) { align-self: start; }
+  .shell:global(#server-dashboard) :global(.condition-row) { grid-template-columns: minmax(0, 1fr) 32px; }
+  .shell:global(#server-dashboard) :global(.condition-row > select:first-child) { grid-column: 1 / -1; }
+  .shell:global(#server-dashboard) :global(.automation-action-row) { grid-template-columns: 18px minmax(0, 1fr); gap: .5rem; padding: .7rem; }
+  .shell:global(#server-dashboard) :global(.action-controls) { grid-column: 2; justify-content: flex-end; }
+  .shell:global(#server-dashboard) :global(.automation-test) { margin: 0 1rem 1rem; }
+  .shell:global(#server-dashboard) :global(.automation-sample-context) { grid-template-columns: 1fr; }
+  .shell:global(#server-dashboard) :global(.panel-actions) { padding: 1rem; }
+  .shell:global(#server-dashboard) :global(.automation-save-hint) { flex-basis: 100%; }
+  .shell:global(#server-dashboard) :global(.event-row) { grid-template-columns: 26px minmax(0, 1fr); gap: .7rem; padding: 1rem; }
+  .shell:global(#server-dashboard) :global(.event-row time) { grid-column: 2; }
+  .shell:global(#server-dashboard) :global(.support-event .support-badge) { margin: .5rem 0 0; }
+  .shell:global(#server-dashboard) :global(.support-event > div > strong) { display: block; }
+  .shell:global(#server-dashboard) :global(.policy-default-threshold) { grid-template-columns: minmax(0, 1fr) auto; }
+  .shell:global(#server-dashboard) :global(.policy-default-threshold input) { grid-column: 1 / -1; }
+  .shell:global(#server-dashboard) :global(.metric-card) { min-height: 135px; padding: 1rem; }
+  .shell:global(#server-dashboard) :global(.metric-card strong) { font-size: 1.9rem; }
+  .shell:global(#server-dashboard) :global(.metric-card p), .shell:global(#server-dashboard) :global(.metric-card small) { font-size: .64rem; }
+  .shell:global(#server-dashboard) :global(.protection-toggle-grid), .shell:global(#server-dashboard) :global(.protection-preferences) { grid-template-columns: 1fr; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .shell:global(#server-dashboard) :global(*) { scroll-behavior: auto!important; transition: none!important; animation: none!important; }
+}

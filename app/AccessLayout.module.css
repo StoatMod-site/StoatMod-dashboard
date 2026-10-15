@@ -1,0 +1,37 @@
+.page{composes:page from "./PublicPage.module.css"}
+.layout{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.8fr);align-items:start;gap:48px;max-width:var(--public-width);margin:auto;padding:0 var(--public-gutter) 64px}
+.intro{min-width:0}.intro h2{margin:0 0 22px;font-size:24px;line-height:1.2;font-weight:570;letter-spacing:-.04em}
+.eyebrow{margin:0 0 8px;color:var(--muted);font:650 10px/1.5 ui-monospace,Consolas,monospace;letter-spacing:.12em;text-transform:uppercase}
+.lede{margin:22px 0 0;padding-top:22px;border-top:1px solid var(--line);color:var(--muted);font-size:11px;line-height:1.8}.lede a{color:var(--ink);text-underline-offset:3px}
+.steps{margin:0;padding:0;list-style:none;border:1px solid var(--line);background:var(--panel)}
+.steps li{display:grid;grid-template-columns:34px minmax(0,1fr);gap:16px;padding:22px}.steps li+li{border-top:1px solid var(--line)}
+.steps li>span{display:grid;place-items:center;align-self:start;width:34px;height:34px;border:1px solid var(--line);border-radius:4px;background:var(--surface-soft);color:var(--muted);font:11px ui-monospace,monospace}
+.steps strong{font-size:13px;font-weight:600;line-height:1.5}.steps p{margin:7px 0 0;font-size:12px;line-height:1.75;color:var(--muted)}
+.access{min-width:0}
+.panel{padding:28px;border:1px solid var(--line);background:var(--panel)}
+.panel.panel h2{margin:12px 0 17px;font-size:24px;line-height:1.15;font-weight:620;letter-spacing:-.045em}
+.panel.panel :global(.eyebrow),.panel.panel :global(.owner-lock){display:block;margin:0 0 19px;padding:0;border:0;background:none;color:var(--muted);font:600 10px/1.6 ui-monospace,monospace;letter-spacing:.1em;text-transform:uppercase}
+.panel.panel p{margin:0 0 24px;color:var(--muted);font-size:13px;line-height:1.8}
+.panel.panel form{display:grid;gap:18px;margin:0}
+.panel.panel label{display:grid;gap:9px;font-size:11px;font-weight:600;line-height:1.6;color:var(--ink)}
+.panel.panel input{width:100%;min-width:0;min-height:48px;padding:13px 14px;border:1px solid var(--line);border-radius:4px;background:var(--paper);color:var(--ink);font-size:14px;outline-offset:3px}
+.panel.panel input:read-only{color:var(--muted)}
+.panel.panel input::placeholder{color:var(--muted);opacity:.7}
+.panel.panel :global(#access-code){font:22px/1.5 ui-monospace,Consolas,monospace;letter-spacing:.15em}
+.panel.panel :global(.primary-button){display:flex;align-items:center;justify-content:space-between;gap:20px;width:100%;min-height:48px;padding:14px 17px;border:1px solid var(--ink);border-radius:4px;background:var(--ink);color:var(--paper);font-size:12px;font-weight:650;line-height:1.5;cursor:pointer}
+.panel.panel :global(.primary-button span){color:inherit}
+.panel.panel :global(.primary-button:hover:not(:disabled)){background:var(--paper);color:var(--ink)}
+.panel.panel :global(.primary-button:disabled){opacity:.45;cursor:not-allowed}
+.panel.panel small,.panel.panel :global(.fine-print){display:block;color:var(--muted);font-size:10px;line-height:1.8}
+.panel.panel :global(.fine-print){margin:23px 0 0;padding-top:20px;border-top:1px solid var(--line)}
+.panel.panel :global(.form-error){margin:0;padding:12px 14px;border:1px solid color-mix(in srgb,var(--danger) 40%,var(--line));background:color-mix(in srgb,var(--danger) 5%,var(--panel));color:var(--danger);font-size:12px;line-height:1.7}
+.panel code{display:inline-block;padding:3px 6px;border:1px solid var(--line);background:var(--paper);color:var(--ink);font-size:12px}
+.help{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px;margin:22px 0 0}
+.help a{color:var(--muted);font-size:10px;text-decoration:none}
+.help a:hover{color:var(--ink);text-decoration:underline;text-underline-offset:4px}
+.utility :global(.page-language-selector){position:static;display:block;margin:20px 0 0;padding:0;max-width:none}
+.utility :global(.page-language-selector label){display:flex;align-items:center;gap:14px;color:var(--muted);font-size:11px}
+.utility :global(.page-language-selector select){padding:9px 30px 9px 11px;border:1px solid var(--line);background:var(--panel);color:var(--ink);border-radius:4px;font-size:11px}
+
+@media(max-width:800px){.layout{grid-template-columns:1fr;gap:34px;padding-bottom:44px}.intro h2{font-size:22px}}
+@media(max-width:540px){.panel{padding:22px}.panel.panel h2{font-size:23px}.steps li{padding:20px}.help{gap:12px}}

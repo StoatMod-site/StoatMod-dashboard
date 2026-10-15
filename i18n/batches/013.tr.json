@@ -1,0 +1,1202 @@
+[
+ [
+  "Retire un dossier du décompte des avertissements actifs lorsque c’est éligible.",
+  "Remove um caso da contagem de advertências ativas quando elegível.",
+  "Quita un caso del recuento de advertencias activas cuando es elegible."
+ ],
+ [
+  "Donner suite à une décision",
+  "Dar seguimento a uma decisão",
+  "Dar seguimiento a una decisión"
+ ],
+ [
+  "Vérifiez l’exclusion temporaire, le rôle ou l’état du serveur du membre après une action.",
+  "Verifique a suspensão, o cargo ou o estado do servidor do membro após uma ação.",
+  "Comprueba la suspensión, el rol o el estado del servidor del miembro después de una acción."
+ ],
+ [
+  "Résolvez les erreurs de livraison ou les autorisations manquantes avant de considérer l’action comme terminée.",
+  "Resolva os erros de entrega ou as permissões em falta antes de considerar a ação concluída.",
+  "Resuelve los errores de entrega o los permisos que falten antes de considerar completada la acción."
+ ],
+ [
+  "Utilisez des notes pour expliquer une correction ultérieure.",
+  "Use notas para explicar uma correção posterior.",
+  "Usa notas para explicar una corrección posterior."
+ ],
+ [
+  "Examinez les recours séparément de la suppression de dossiers.",
+  "Reveja os recursos separadamente da remoção de casos.",
+  "Revisa las apelaciones por separado de la eliminación de casos."
+ ],
+ [
+  "Bot de rôle automatique Stoat pour les nouveaux membres | Stoatmod",
+  "Bot de cargo automático do Stoat para novos membros | Stoatmod",
+  "Bot de rol automático de Stoat para nuevos miembros | Stoatmod"
+ ],
+ [
+  "Attribuez un ou plusieurs rôles configurés aux nouveaux membres d’un serveur Stoat, avec contrôles de hiérarchie et d’autorisations.",
+  "Atribua um ou mais cargos configurados a novos membros de um servidor Stoat, com verificações de hierarquia e permissões.",
+  "Asigna uno o varios roles configurados a los nuevos miembros de un servidor de Stoat, con comprobaciones de jerarquía y permisos."
+ ],
+ [
+  "Bot de rôle automatique Stoat",
+  "Bot de cargo automático do Stoat",
+  "Bot de rol automático de Stoat"
+ ],
+ [
+  "Choisissez les rôles avec lesquels les nouveaux membres doivent commencer, puis laissez Stoatmod gérer l’attribution répétitive. Utilisez un seul rôle ou une liste pour construire le parcours d’accueil de votre serveur.",
+  "Escolha os cargos com que os novos membros devem começar e deixe o Stoatmod tratar da atribuição repetitiva. Use um só cargo ou uma lista para construir o fluxo de boas-vindas do seu servidor.",
+  "Elige los roles con los que deben empezar los nuevos miembros y deja que Stoatmod se encargue de la asignación repetitiva. Usa un solo rol o una lista para construir el flujo de bienvenida de tu servidor."
+ ],
+ [
+  "Prérequis",
+  "Requisitos",
+  "Requisitos"
+ ],
+ [
+  "Autorisations Assign Roles et Manage Roles.",
+  "Permissões Assign Roles e Manage Roles.",
+  "Permisos Assign Roles y Manage Roles."
+ ],
+ [
+  "Le rôle de Stoatmod au-dessus de chaque rôle qu’il doit attribuer.",
+  "O cargo do Stoatmod acima de todos os cargos que tem de atribuir.",
+  "El rol de Stoatmod por encima de cada rol que debe asignar."
+ ],
+ [
+  "Un rôle cible adapté à l’attribution automatique.",
+  "O cargo alvo adequado a atribuição automática.",
+  "Un rol objetivo adecuado para la asignación automática."
+ ],
+ [
+  "Une vraie arrivée de test après la configuration.",
+  "Uma entrada de teste real após a configuração.",
+  "Una unión de prueba real tras la configuración."
+ ],
+ [
+  "Plusieurs rôles sont pris en charge. Le tableau de bord limite la liste configurée à 25. Les tentatives d’attribution de rôles ont lieu avant l’application de la vérification d’arrivée.",
+  "São suportados vários cargos. O painel limita a lista configurada a 25. As tentativas de atribuição de cargos ocorrem antes de a verificação de entrada ser aplicada.",
+  "Se admiten varios roles. El panel limita la lista configurada a 25. Los intentos de asignación de roles se producen antes de aplicarse la verificación de entrada."
+ ],
+ [
+  "Ajoute un rôle avec la forme courte.",
+  "Adiciona um cargo com a forma curta.",
+  "Añade un rol con la forma corta."
+ ],
+ [
+  "Retire un rôle configuré.",
+  "Remove um cargo configurado.",
+  "Quita un rol configurado."
+ ],
+ [
+  "Affiche chaque rôle automatique configuré.",
+  "Mostra todos os cargos automáticos configurados.",
+  "Muestra cada rol automático configurado."
+ ],
+ [
+  "Supprime toute la liste des rôles automatiques.",
+  "Remove a lista completa de cargos automáticos.",
+  "Elimina toda la lista de roles automáticos."
+ ],
+ [
+  "Mettre en place un parcours d’accueil",
+  "Montar um fluxo de boas-vindas",
+  "Montar un flujo de bienvenida"
+ ],
+ [
+  "Résolvez les problèmes d’autorisation et de hiérarchie avant d’ajouter le rôle.",
+  "Resolva os problemas de permissões e hierarquia antes de adicionar o cargo.",
+  "Resuelve los problemas de permisos y jerarquía antes de añadir el rol."
+ ],
+ [
+  "Ajouter l’identifiant du rôle",
+  "Adicionar o ID do cargo",
+  "Añadir el ID del rol"
+ ],
+ [
+  "Copiez l’identifiant du rôle depuis Stoat et ajoutez-le à la liste des rôles automatiques.",
+  "Copie o identificador do cargo a partir do Stoat e adicione-o à lista de cargos automáticos.",
+  "Copia el identificador del rol desde Stoat y añádelo a la lista de roles automáticos."
+ ],
+ [
+  "Essayer une arrivée de nouveau membre",
+  "Experimentar a entrada de um novo membro",
+  "Probar la unión de un nuevo miembro"
+ ],
+ [
+  "Faites rejoindre un compte contrôlé après la configuration.",
+  "Faça entrar uma conta controlada após a configuração.",
+  "Haz que se una una cuenta controlada después de la configuración."
+ ],
+ [
+  "Vérifier les rôles attribués",
+  "Verificar os cargos atribuídos",
+  "Comprobar los roles asignados"
+ ],
+ [
+  "Ouvrez le profil du membre pour confirmer que les rôles ont été appliqués.",
+  "Abra o perfil do membro para confirmar que os cargos foram aplicados.",
+  "Abre el perfil del miembro para confirmar que los roles se aplicaron."
+ ],
+ [
+  "Modération et statistiques du serveur",
+  "Moderação e estatísticas do servidor",
+  "Moderación y estadísticas del servidor"
+ ],
+ [
+  "Statistiques de serveur Stoat et tableau de bord de modération | Stoatmod",
+  "Estatísticas de servidor Stoat e painel de moderação | Stoatmod",
+  "Estadísticas de servidor de Stoat y panel de moderación | Stoatmod"
+ ],
+ [
+  "Comprenez l’activité d’un serveur Stoat, les tendances des membres, les dossiers de modération et les statistiques publiques agrégées contrôlées par la confidentialité.",
+  "Compreenda a atividade de um servidor Stoat, as tendências de membros, os casos de moderação e as estatísticas públicas agregadas controladas pela privacidade.",
+  "Comprende la actividad de un servidor de Stoat, las tendencias de miembros, los casos de moderación y las estadísticas públicas agregadas controladas por la privacidad."
+ ],
+ [
+  "Statistiques de serveur Stoat",
+  "Estatísticas de servidor Stoat",
+  "Estadísticas de servidor de Stoat"
+ ],
+ [
+  "Voyez où se tiennent les conversations, comment évoluent les membres et ce que traitent vos modérateurs. Utilisez les tendances agrégées pour orienter les revues d’équipe et comprendre votre communauté dans la durée.",
+  "Veja onde acontecem as conversas, como evoluem os membros e o que os seus moderadores estão a tratar. Use tendências agregadas para orientar as revisões da equipa e compreender a sua comunidade ao longo do tempo.",
+  "Mira dónde se producen las conversaciones, cómo cambian los miembros y qué están gestionando tus moderadores. Usa las tendencias agregadas para orientar las revisiones del equipo y entender tu comunidad con el tiempo."
+ ],
+ [
+  "Analyses du tableau de bord privé",
+  "Informações do painel privado",
+  "Análisis del panel privado"
+ ],
+ [
+  "Messages et salons actifs.",
+  "Mensagens e canais ativos.",
+  "Mensajes y canales activos."
+ ],
+ [
+  "Arrivées, départs et croissance nette des membres.",
+  "Entradas, saídas e crescimento líquido de membros.",
+  "Uniones, salidas y crecimiento neto de miembros."
+ ],
+ [
+  "Messages par membre et tendances agrégées des mots.",
+  "Mensagens por membro e tendências agregadas de palavras.",
+  "Mensajes por miembro y tendencias agregadas de palabras."
+ ],
+ [
+  "Dossiers, événements de modération et classements.",
+  "Casos, eventos de moderação e classificações.",
+  "Casos, eventos de moderación y clasificaciones."
+ ],
+ [
+  "Les analyses d’activité reposent sur des compteurs agrégés. Le tableau de bord indique que le texte des messages n’est pas stocké pour la vue des statistiques.",
+  "As informações de atividade foram concebidas com base em contagens agregadas. O painel indica que o texto das mensagens não é guardado para a vista de estatísticas.",
+  "Los análisis de actividad se basan en recuentos agregados. El panel indica que el texto de los mensajes no se almacena para la vista de estadísticas."
+ ],
+ [
+  "Signification des totaux publics",
+  "Significado dos totais públicos",
+  "Significado de los totales públicos"
+ ],
+ [
+  "Le nombre de serveurs inclut les serveurs qui partagent des instantanés de statistiques publiques.",
+  "A contagem de servidores inclui servidores que partilham instantâneos de estatísticas públicas.",
+  "El número de servidores incluye los servidores que comparten instantáneas de estadísticas públicas."
+ ],
+ [
+  "Les appartenances combinées additionnent le nombre de membres de chaque serveur et peuvent compter plusieurs fois la même personne.",
+  "As participações combinadas somam a contagem de cada servidor e podem incluir a mesma pessoa mais de uma vez.",
+  "Las pertenencias combinadas suman el recuento de cada servidor y pueden incluir a la misma persona más de una vez."
+ ],
+ [
+  "Le nombre de dossiers est un total historique, y compris les dossiers supprimés.",
+  "A contagem de casos é um total histórico, incluindo casos removidos.",
+  "El recuento de casos es un total histórico, incluidos los casos eliminados."
+ ],
+ [
+  "L’heure de mise à jour est celle de l’instantané de serveur le plus récent, pas une date de publication du site.",
+  "A hora de atualização é a do instantâneo de servidor mais recente, não uma data de publicação do site.",
+  "La hora de actualización es la de la instantánea de servidor más reciente, no una fecha de publicación del sitio."
+ ],
+ [
+  "Une fiche publique Découverte est distincte des statistiques agrégées. Les fiches nommées sont examinées après la candidature de la communauté.",
+  "Uma listagem pública da Descoberta é distinta das estatísticas agregadas. As listagens nomeadas são revistas depois de a comunidade se candidatar.",
+  "Una ficha pública de Descubrimiento es independiente de las estadísticas agregadas. Las fichas con nombre se revisan después de que la comunidad envíe su solicitud."
+ ],
+ [
+  "Utiliser les statistiques comme contexte",
+  "Usar as estatísticas como contexto",
+  "Usar las estadísticas como contexto"
+ ],
+ [
+  "Un nombre de messages plus élevé ne signifie pas automatiquement une communauté plus saine. Comparez les tendances à la charge des modérateurs, aux signalements, à la fidélisation et aux objectifs propres du serveur avant de modifier la politique.",
+  "Um número de mensagens mais alto não significa automaticamente uma comunidade mais saudável. Compare as tendências com a carga de trabalho dos moderadores, as denúncias, a retenção e os objetivos do próprio servidor antes de alterar a política.",
+  "Un mayor número de mensajes no significa automáticamente una comunidad más sana. Compara las tendencias con la carga de trabajo de los moderadores, las denuncias, la retención y los objetivos del propio servidor antes de cambiar la política."
+ ],
+ [
+  "Recours de modération structurés",
+  "Recursos de moderação estruturados",
+  "Apelaciones de moderación estructuradas"
+ ],
+ [
+  "Recours de modération Stoat et examen des dossiers | Stoatmod",
+  "Recursos de moderação do Stoat e revisão de casos | Stoatmod",
+  "Apelaciones de moderación de Stoat y revisión de casos | Stoatmod"
+ ],
+ [
+  "Offrez aux membres éligibles une voie de recours Stoatmod privée pour les avertissements, exclusions temporaires et bannissements de serveur pris en charge.",
+  "Ofereça aos membros elegíveis uma via de recurso privada do Stoatmod para advertências, suspensões e banimentos de servidor suportados.",
+  "Ofrece a los miembros elegibles una vía de apelación privada de Stoatmod para las advertencias, suspensiones y bloqueos de servidor admitidos."
+ ],
+ [
+  "Recours de modération",
+  "Recursos de moderação",
+  "Apelaciones de moderación"
+ ],
+ [
+  "Associez les actions de serveur éligibles à un code de recours privé, une déclaration du membre, des preuves et une réponse du modérateur, sans exposer publiquement les informations du dossier.",
+  "Associe as ações de servidor elegíveis a um código de recurso privado, uma declaração do membro, provas e uma resposta do moderador, sem expor publicamente as informações do caso.",
+  "Asocia las acciones de servidor elegibles a un código de apelación privado, una declaración del miembro, pruebas y una respuesta del moderador, sin exponer públicamente la información del caso."
+ ],
+ [
+  "Éligibilité et confidentialité",
+  "Elegibilidade e privacidade",
+  "Elegibilidad y privacidad"
+ ],
+ [
+  "Les actions de serveur éligibles reçoivent un code de recours de dix caractères lié à l’identifiant de l’utilisateur concerné. Les déclarations initiales doivent contenir de 20 à 2 000 caractères et peuvent inclure des images de preuve. Les bannissements globaux n’utilisent pas le portail de recours du serveur ; la seule voie de recours est admin@modstoat.site.",
+  "As ações de servidor elegíveis recebem um código de recurso de dez carateres associado ao ID do utilizador afetado. As declarações iniciais devem conter 20–2000 carateres e podem incluir imagens de prova. Os banimentos globais não usam o portal de recursos do servidor; a única via de recurso é admin@modstoat.site.",
+  "Las acciones de servidor elegibles reciben un código de apelación de diez caracteres asociado al ID del usuario afectado. Las declaraciones iniciales deben tener entre 20 y 2000 caracteres y pueden incluir imágenes de prueba. Los bloqueos globales no usan el portal de apelaciones del servidor; la única vía de apelación es admin@modstoat.site."
+ ],
+ [
+  "Résultats possibles",
+  "Resultados possíveis",
+  "Resultados posibles"
+ ],
+ [
+  "Un recours accepté contre un avertissement peut retirer l’avertissement du décompte actif.",
+  "Um recurso aceite contra uma advertência pode remover a advertência da contagem ativa.",
+  "Una apelación aceptada contra una advertencia puede quitarla del recuento activo."
+ ],
+ [
+  "Un recours accepté contre une exclusion temporaire peut demander la levée de l’exclusion.",
+  "Um recurso aceite contra uma suspensão pode pedir a remoção da suspensão.",
+  "Una apelación aceptada contra una suspensión puede solicitar su levantamiento."
+ ],
+ [
+  "Un recours accepté contre un bannissement de serveur peut demander la levée du bannissement.",
+  "Um recurso aceite contra um banimento de servidor pode pedir o desbanimento.",
+  "Una apelación aceptada contra un bloqueo de servidor puede solicitar el desbloqueo."
+ ],
+ [
+  "Un recours refusé consigne la décision et le motif du modérateur.",
+  "Um recurso recusado regista a decisão e o motivo do moderador.",
+  "Una apelación rechazada registra la decisión y el motivo del moderador."
+ ],
+ [
+  "L’annulation est asynchrone et peut échouer lorsque les autorisations, l’état du serveur ou la disponibilité du membre empêchent l’action. Les modérateurs doivent vérifier le résultat réel.",
+  "A reversão é assíncrona e pode falhar quando as permissões, o estado do servidor ou a disponibilidade do membro impedem a ação. Os moderadores devem verificar o resultado real.",
+  "La reversión es asíncrona y puede fallar cuando los permisos, el estado del servidor o la disponibilidad del miembro impiden la acción. Los moderadores deben verificar el resultado real."
+ ],
+ [
+  "Commandes de modérateur",
+  "Comandos de moderador",
+  "Comandos de moderador"
+ ],
+ [
+  "Refuse le recours et consigne le motif.",
+  "Recusa o recurso e regista o motivo.",
+  "Rechaza la apelación y registra el motivo."
+ ],
+ [
+  "Toutes les fonctionnalités",
+  "Todas as funcionalidades",
+  "Todas las funciones"
+ ],
+ [
+  "Trouvez votre prochain outil",
+  "Encontre a sua próxima ferramenta",
+  "Encuentra tu próxima herramienta"
+ ],
+ [
+  "Conçu autour de votre communauté.",
+  "Construído em torno da sua comunidade.",
+  "Creado en torno a tu comunidad."
+ ],
+ [
+  "Choisissez une fonctionnalité pour voir comment elle fonctionne, ce que vous contrôlez et comment démarrer.",
+  "Escolha uma funcionalidade para ver como funciona, o que controla e como começar.",
+  "Elige una función para ver cómo funciona, qué controlas y cómo empezar."
+ ],
+ [
+  "Catégories de fonctionnalités",
+  "Categorias de funcionalidades",
+  "Categorías de funciones"
+ ],
+ [
+  "Rechercher des fonctionnalités",
+  "Pesquisar funcionalidades",
+  "Buscar funciones"
+ ],
+ [
+  "Trouver une fonctionnalité…",
+  "Encontrar uma funcionalidade…",
+  "Encontrar una función…"
+ ],
+ [
+  "à explorer",
+  "para explorar",
+  "por explorar"
+ ],
+ [
+  "Expérimental · Sur option",
+  "Experimental · Opcional",
+  "Experimental · Opcional"
+ ],
+ [
+  "Explorer la fonctionnalité",
+  "Explorar a funcionalidade",
+  "Explorar la función"
+ ],
+ [
+  "Aucune fonctionnalité trouvée",
+  "Nenhuma funcionalidade encontrada",
+  "No se encontró ninguna función"
+ ],
+ [
+  "Essayez une autre recherche ou parcourez toute la bibliothèque de fonctionnalités.",
+  "Experimente outra pesquisa ou explore toda a biblioteca de funcionalidades.",
+  "Prueba otra búsqueda o explora toda la biblioteca de funciones."
+ ],
+ [
+  "Copié ✓",
+  "Copiado ✓",
+  "Copiado ✓"
+ ],
+ [
+  "Copie indisponible. Sélectionnez le texte de la commande pour la copier manuellement.",
+  "Cópia indisponível. Selecione o texto do comando para o copiar manualmente.",
+  "Copia no disponible. Selecciona el texto del comando para copiarlo manualmente."
+ ],
+ [
+  "Commande copiée dans le presse-papiers.",
+  "Comando copiado para a área de transferência.",
+  "Comando copiado al portapapeles."
+ ],
+ [
+  "Découvrir les communautés Stoat",
+  "Descobrir comunidades Stoat",
+  "Descubrir comunidades de Stoat"
+ ],
+ [
+  "Politique de confidentialité",
+  "Política de privacidade",
+  "Política de privacidad"
+ ],
+ [
+  "Bon à savoir",
+  "Bom saber",
+  "Conviene saber"
+ ],
+ [
+  "Expérimental et désactivé par défaut. Les résultats peuvent être inexacts.",
+  "Experimental e desativado por predefinição. Os resultados podem ser inexatos.",
+  "Experimental y desactivado de forma predeterminada. Los resultados pueden ser inexactos."
+ ],
+ [
+  "Le pas-à-pas",
+  "O passo a passo",
+  "El paso a paso"
+ ],
+ [
+  "Comment ça marche.",
+  "Como funciona.",
+  "Cómo funciona."
+ ],
+ [
+  "De vos paramètres au résultat que votre équipe peut examiner.",
+  "Das suas definições ao resultado que a sua equipa pode rever.",
+  "Desde tus ajustes hasta el resultado que tu equipo puede revisar."
+ ],
+ [
+  "Explorer",
+  "Explorar",
+  "Explorar"
+ ],
+ [
+  "Prêt à le configurer ?",
+  "Pronto para o configurar?",
+  "¿Listo para configurarlo?"
+ ],
+ [
+  "Examiné",
+  "Revisto",
+  "Revisado"
+ ],
+ [
+  "Besoin d’aide ? Contactez l’assistance ↗",
+  "Precisa de ajuda? Contacte o suporte ↗",
+  "¿Necesitas ayuda? Contacta con soporte ↗"
+ ],
+ [
+  "Continuer à explorer",
+  "Continuar a explorar",
+  "Seguir explorando"
+ ],
+ [
+  "Mettez-le en pratique.",
+  "Ponha-o em prática.",
+  "Ponlo en práctica."
+ ],
+ [
+  "Intégrez-le à votre serveur",
+  "Integre-o no seu servidor",
+  "Intégralo en tu servidor"
+ ],
+ [
+  "Votre communauté.",
+  "A sua comunidade.",
+  "Tu comunidad."
+ ],
+ [
+  "Votre configuration.",
+  "A sua configuração.",
+  "Tu configuración."
+ ],
+ [
+  "Ajouter Stoatmod",
+  "Adicionar o Stoatmod",
+  "Añadir Stoatmod"
+ ],
+ [
+  "Fonctionnalités de Stoatmod",
+  "Funcionalidades do Stoatmod",
+  "Funciones de Stoatmod"
+ ],
+ [
+  "Explorez la protection configurable, les dossiers de modération, les recours et les outils pour votre communauté Stoat.",
+  "Explore a proteção configurável, os casos de moderação, os recursos e as ferramentas para a sua comunidade Stoat.",
+  "Explora la protección configurable, los casos de moderación, las apelaciones y las herramientas para tu comunidad de Stoat."
+ ],
+ [
+  "La boîte à outils",
+  "A caixa de ferramentas",
+  "La caja de herramientas"
+ ],
+ [
+  "Fonctionnalités.",
+  "Funcionalidades.",
+  "Funciones."
+ ],
+ [
+  "Protection, modération et outils communautaires. Configurés pour votre serveur.",
+  "Proteção, moderação e ferramentas comunitárias. Configurados para o seu servidor.",
+  "Protección, moderación y herramientas comunitarias. Configuradas para tu servidor."
+ ],
+ [
+  "Lire le guide de configuration",
+  "Ler o guia de configuração",
+  "Leer la guía de configuración"
+ ],
+ [
+  "De la première arrivée au recours final.",
+  "Da primeira entrada ao recurso final.",
+  "Desde la primera unión hasta la apelación final."
+ ],
+ [
+  "Choisissez les protections dont votre communauté a besoin, configurez la réponse et donnez à vos modérateurs le contexte pour examiner chaque décision.",
+  "Escolha as proteções de que a sua comunidade precisa, configure a resposta e dê aos seus moderadores o contexto para rever cada decisão.",
+  "Elige las protecciones que necesita tu comunidad, configura la respuesta y da a tus moderadores el contexto para revisar cada decisión."
+ ],
+ [
+  "Commandes + tableau de bord",
+  "Comandos + painel",
+  "Comandos + panel"
+ ],
+ [
+  "Paramètres propres à chaque serveur",
+  "Definições específicas de cada servidor",
+  "Ajustes específicos de cada servidor"
+ ],
+ [
+  "Paramètres pour votre serveur",
+  "Definições para o seu servidor",
+  "Ajustes para tu servidor"
+ ],
+ [
+  "Du contexte pour l’examen humain",
+  "Contexto para revisão humana",
+  "Contexto para la revisión humana"
+ ],
+ [
+  "Un bon point de départ",
+  "Um bom ponto de partida",
+  "Un buen punto de partida"
+ ],
+ [
+  "Construisez votre configuration,",
+  "Construa a sua configuração,",
+  "Construye tu configuración,"
+ ],
+ [
+  "une étape à la fois.",
+  "um passo de cada vez.",
+  "paso a paso."
+ ],
+ [
+  "Commencez par les autorisations, choisissez la protection dont votre serveur a besoin, puis vérifiez le résultat.",
+  "Comece pelas permissões, escolha a proteção de que o seu servidor precisa e depois verifique o resultado.",
+  "Empieza por los permisos, elige la protección que necesita tu servidor y luego comprueba el resultado."
+ ],
+ [
+  "Suivre le guide de configuration complet",
+  "Seguir o guia de configuração completo",
+  "Seguir la guía de configuración completa"
+ ],
+ [
+  "Connecter votre communauté",
+  "Ligar a sua comunidade",
+  "Conectar tu comunidad"
+ ],
+ [
+  "Ajoutez Stoatmod et exécutez",
+  "Adicione o Stoatmod e execute",
+  "Añade Stoatmod y ejecuta"
+ ],
+ [
+  "pour vérifier les autorisations et la hiérarchie des rôles.",
+  "para verificar as permissões e a hierarquia de cargos.",
+  "para comprobar los permisos y la jerarquía de roles."
+ ],
+ [
+  "Faites-en vos règles",
+  "Faça as regras suas",
+  "Haz que las normas sean tuyas"
+ ],
+ [
+  "Choisissez les catégories, les seuils, les exclusions de salons et la manière dont le bot répond.",
+  "Escolha as categorias, os limiares, as exclusões de canais e como o bot responde.",
+  "Elige las categorías, los umbrales, las exclusiones de canales y cómo responde el bot."
+ ],
+ [
+  "Examiner un résultat réel",
+  "Rever um resultado real",
+  "Revisar un resultado real"
+ ],
+ [
+  "Testez une fonctionnalité à la fois et utilisez le tableau de bord pour examiner le résultat.",
+  "Teste uma funcionalidade de cada vez e use o painel para rever o resultado.",
+  "Prueba una función cada vez y usa el panel para revisar el resultado."
+ ],
+ [
+  "Prêt quand vous l’êtes",
+  "Pronto quando estiver",
+  "Listo cuando tú lo estés"
+ ],
+ [
+  "Donnez à votre équipe",
+  "Dê à sua equipa",
+  "Da a tu equipo"
+ ],
+ [
+  "un meilleur point de départ.",
+  "um melhor ponto de partida.",
+  "un mejor punto de partida."
+ ],
+ [
+  "Ajouter Stoatmod à votre serveur",
+  "Adicionar o Stoatmod ao seu servidor",
+  "Añadir Stoatmod a tu servidor"
+ ],
+ [
+  "Explorer la documentation →",
+  "Explorar a documentação →",
+  "Explorar la documentación →"
+ ],
+ [
+  "Fonctionnalité introuvable | Stoatmod",
+  "Funcionalidade não encontrada | Stoatmod",
+  "Función no encontrada | Stoatmod"
+ ],
+ [
+  "Cette page de fonctionnalité Stoatmod n’existe pas.",
+  "Esta página de funcionalidade do Stoatmod não existe.",
+  "Esta página de función de Stoatmod no existe."
+ ],
+ [
+  "Fonctionnalités de Stoatmod – Automod et modération pour Stoat",
+  "Funcionalidades do Stoatmod – Automod e moderação para o Stoat",
+  "Funciones de Stoatmod – Automod y moderación para Stoat"
+ ],
+ [
+  "Explorez les fonctionnalités de Stoatmod : automod, spam, liens, images, arrivées, dossiers, recours, rôles automatiques et statistiques.",
+  "Explore as funcionalidades do Stoatmod: automod, spam, ligações, imagens, entrada, casos, recursos, cargos automáticos e estatísticas.",
+  "Explora las funciones de Stoatmod: automod, spam, enlaces, imágenes, entrada, casos, apelaciones, roles automáticos y estadísticas."
+ ],
+ [
+  "À propos de Stoatmod",
+  "Sobre o Stoatmod",
+  "Acerca de Stoatmod"
+ ],
+ [
+  "À propos de Stoatmod – Modération pour les serveurs Stoat",
+  "Sobre o Stoatmod – Moderação para servidores Stoat",
+  "Acerca de Stoatmod – Moderación para servidores de Stoat"
+ ],
+ [
+  "Découvrez Stoatmod, son bot et son tableau de bord open source, et les moyens d'obtenir de l'aide.",
+  "Conheça o Stoatmod, o seu bot e painel de código aberto e onde obter apoio.",
+  "Conoce Stoatmod, su bot y panel de código abierto y dónde obtener ayuda."
+ ],
+ [
+  "À propos du service",
+  "Sobre o serviço",
+  "Acerca del servicio"
+ ],
+ [
+  "Stoatmod est un bot de modération et un tableau de bord de serveur open source pour les personnes qui gèrent des communautés sur Stoat.",
+  "O Stoatmod é um bot de moderação e painel de servidor de código aberto para quem gere comunidades no Stoat.",
+  "Stoatmod es un bot de moderación y panel de servidor de código abierto para quienes gestionan comunidades en Stoat."
+ ],
+ [
+  "Ce que propose Stoatmod",
+  "O que o Stoatmod oferece",
+  "Qué ofrece Stoatmod"
+ ],
+ [
+  "Modération configurable du contenu et des images.",
+  "Moderação configurável de conteúdo e imagens.",
+  "Moderación configurable de contenido e imágenes."
+ ],
+ [
+  "Contrôles du spam, des mentions de masse, des liens, des pseudos et des arrivées.",
+  "Controlos de spam, menções em massa, ligações, alcunhas e entrada.",
+  "Controles de spam, menciones masivas, enlaces, apodos y entrada."
+ ],
+ [
+  "Avertissements, dossiers, preuves et recours privés.",
+  "Advertências, casos, provas e recursos privados.",
+  "Advertencias, casos, pruebas y apelaciones privadas."
+ ],
+ [
+  "Rôles automatiques, journaux, statistiques, sondages et automatisations de serveur.",
+  "Cargos automáticos, registos, estatísticas, sondagens e automatizações de servidor.",
+  "Roles automáticos, registros, estadísticas, encuestas y automatizaciones de servidor."
+ ],
+ [
+  "Un répertoire public de serveurs examinés pour les communautés éligibles.",
+  "Um diretório público de servidores revistos para comunidades elegíveis.",
+  "Un directorio público de servidores revisados para comunidades elegibles."
+ ],
+ [
+  "Information publique et fonctionnement privé",
+  "Informação pública e operação privada",
+  "Información pública y funcionamiento privado"
+ ],
+ [
+  "Le bot, l'API du tableau de bord, le site et le tableau de bord de serveur sont publiés sous AGPL-3.0. Les codes de connexion, les sessions, les preuves des dossiers et l'administration interne restent privés.",
+  "O bot, a API do painel, o site e o painel de servidor são publicados sob AGPL-3.0. Os códigos de acesso, sessões, provas dos casos e administração interna continuam privados.",
+  "El bot, la API del panel, el sitio y el panel de servidor se publican bajo AGPL-3.0. Los códigos de acceso, sesiones, pruebas de los casos y administración interna siguen siendo privados."
+ ],
+ [
+  "Le code source et les instructions d'auto-hébergement sont disponibles dans les deux dépôts GitHub. Les poids du modèle seront publiés séparément.",
+  "O código-fonte e as instruções de auto-alojamento estão disponíveis nos dois repositórios GitHub. Os pesos do modelo serão publicados separadamente.",
+  "El código fuente y las instrucciones de autoalojamiento están disponibles en los dos repositorios de GitHub. Los pesos del modelo se publicarán por separado."
+ ],
+ [
+  "Comment obtenir de l’aide",
+  "Como obter ajuda",
+  "Cómo obtener ayuda"
+ ],
+ [
+  "Les propriétaires de serveur et les modérateurs peuvent utiliser le serveur d’assistance officiel pour obtenir de l’aide sur Stoatmod. Les questions de confidentialité ou de compte peuvent être envoyées à admin@modstoat.site. Ne partagez jamais de codes de tableau de bord, de codes de recours, de cookies de session ni de preuves privées dans un salon d’assistance public.",
+  "Os proprietários de servidores e moderadores podem usar o servidor de suporte oficial para obter ajuda com o Stoatmod. As questões de privacidade ou de conta podem ser enviadas para admin@modstoat.site. Nunca partilhe códigos do painel, códigos de recurso, cookies de sessão ou provas privadas num canal de suporte público.",
+  "Los propietarios de servidores y los moderadores pueden usar el servidor de soporte oficial para obtener ayuda con Stoatmod. Las preguntas de privacidad o de cuenta se pueden enviar a admin@modstoat.site. Nunca compartas códigos del panel, códigos de apelación, cookies de sesión ni pruebas privadas en un canal de soporte público."
+ ],
+ [
+  "Sécurité et garde-fous opérationnels",
+  "Segurança e salvaguardas operacionais",
+  "Seguridad y salvaguardas operativas"
+ ],
+ [
+  "Sécurité de Stoatmod et garde-fous de modération",
+  "Segurança do Stoatmod e salvaguardas de moderação",
+  "Seguridad de Stoatmod y salvaguardas de moderación"
+ ],
+ [
+  "Comprenez l’accès au tableau de bord Stoatmod, les limites d’autorisation, la vérification des résultats, la modération fail-open et le signalement responsable des failles de sécurité.",
+  "Compreenda o acesso ao painel do Stoatmod, os limites de permissões, a verificação de resultados, a moderação fail-open e a comunicação responsável de falhas de segurança.",
+  "Comprende el acceso al panel de Stoatmod, los límites de permisos, la verificación de resultados, la moderación fail-open y la notificación responsable de problemas de seguridad."
+ ],
+ [
+  "Sécurité et confiance",
+  "Segurança e confiança",
+  "Seguridad y confianza"
+ ],
+ [
+  "La sécurité repose sur des limites d’autorisation, un accès privé, un signalement honnête des défaillances et la vérification de l’état réel du serveur — et non sur le fait de masquer une réussite inexacte derrière une entrée de journal.",
+  "A segurança depende de limites de permissões, acesso privado, comunicação honesta de falhas e verificação do estado real do servidor — não de esconder um sucesso inexato atrás de uma entrada de registo.",
+  "La seguridad depende de límites de permisos, acceso privado, informes honestos de fallos y verificación del estado real del servidor, no de ocultar un éxito inexacto tras una entrada de registro."
+ ],
+ [
+  "L’accès est limité au propriétaire du serveur, aux membres disposant de Manage Server et aux accès explicitement accordés par le propriétaire.",
+  "O acesso está limitado ao proprietário do servidor, aos membros com Manage Server e às concessões explícitas do proprietário.",
+  "El acceso está limitado al propietario del servidor, a los miembros con Manage Server y a las concesiones explícitas del propietario."
+ ],
+ [
+  "Les codes de connexion sont à usage unique et expirent après dix minutes.",
+  "Os códigos de início de sessão são de utilização única e expiram após dez minutos.",
+  "Los códigos de acceso son de un solo uso y caducan a los diez minutos."
+ ],
+ [
+  "Les sessions du tableau de bord durent 12 heures.",
+  "As sessões do painel duram 12 horas.",
+  "Las sesiones del panel duran 12 horas."
+ ],
+ [
+  "Les propriétaires peuvent révoquer l’accès et invalider des sessions.",
+  "Os proprietários podem revogar o acesso e invalidar sessões.",
+  "Los propietarios pueden revocar el acceso e invalidar sesiones."
+ ],
+ [
+  "Les routes privées sont exclues de l’indexation par les moteurs de recherche et des plans de site publics.",
+  "As rotas privadas estão excluídas da indexação em motores de pesquisa e dos mapas do site públicos.",
+  "Las rutas privadas se excluyen de la indexación en buscadores y de los mapas del sitio públicos."
+ ],
+ [
+  "Garde-fous de modération",
+  "Salvaguardas de moderação",
+  "Salvaguardas de moderación"
+ ],
+ [
+  "Le seuil de contenu par défaut est de 90 %.",
+  "O limiar de conteúdo predefinido é de 90%.",
+  "El umbral de contenido predeterminado es del 90 %."
+ ],
+ [
+  "Les modes observation et examen permettent de tester avant l’application.",
+  "Os modos de observação e revisão permitem testar antes da aplicação.",
+  "Los modos de observación y revisión permiten probar antes de aplicar."
+ ],
+ [
+  "Les défaillances du fournisseur laissent le contenu en place au lieu de le supprimer silencieusement.",
+  "As falhas do fornecedor deixam o conteúdo no lugar em vez de o eliminar silenciosamente.",
+  "Los fallos del proveedor dejan el contenido en su sitio en lugar de eliminarlo en silencio."
+ ],
+ [
+  "Les correspondances de pensées suicidaires envoient des messages privés d’aide sans supprimer de messages ni ajouter d’avertissements.",
+  "As correspondências de pensamentos suicidas enviam mensagens privadas de apoio sem eliminar mensagens nem adicionar advertências.",
+  "Las coincidencias de pensamientos suicidas envían mensajes privados de apoyo sin eliminar mensajes ni añadir advertencias."
+ ],
+ [
+  "Les actions graves doivent être vérifiées par rapport à l’état du membre ou du message dans Stoat.",
+  "As ações graves devem ser verificadas face ao estado do membro ou da mensagem no Stoat.",
+  "Las acciones graves deben verificarse con el estado del miembro o del mensaje en Stoat."
+ ],
+ [
+  "Limites connues",
+  "Limites conhecidos",
+  "Límites conocidos"
+ ],
+ [
+  "La hiérarchie des rôles et les autorisations des salons peuvent empêcher une action par ailleurs valide. Les événements Stoat externes peuvent ne pas toujours identifier le modérateur à l’origine. L’annulation automatique après un recours accepté peut échouer lorsque les autorisations ou l’état du serveur ont changé. La documentation décrit ces limites afin que les équipes puissent planifier la récupération.",
+  "A hierarquia de cargos e as permissões dos canais podem impedir uma ação que de outro modo seria válida. Os eventos externos do Stoat podem nem sempre identificar o moderador que atuou. A reversão automática após um recurso aceite pode falhar quando as permissões ou o estado do servidor mudaram. A documentação descreve estes limites para que as equipas possam planear a recuperação.",
+  "La jerarquía de roles y los permisos de los canales pueden impedir una acción que de otro modo sería válida. Los eventos externos de Stoat pueden no identificar siempre al moderador que actuó. La reversión automática tras una apelación aceptada puede fallar cuando los permisos o el estado del servidor han cambiado. La documentación describe estos límites para que los equipos puedan planificar la recuperación."
+ ],
+ [
+  "Signaler un problème de sécurité",
+  "Comunicar uma preocupação de segurança",
+  "Notificar un problema de seguridad"
+ ],
+ [
+  "Envoyez un signalement concis à admin@modstoat.site en indiquant l’URL publique ou la fonctionnalité concernée, l’heure en UTC, les étapes reproductibles et l’impact. N’incluez ni identifiants, ni jetons actifs, ni informations personnelles sans rapport. Utilisez le flux de signalement global privé pour la sécurité des utilisateurs et les abus sur la plateforme plutôt que de publier des preuves.",
+  "Envie uma comunicação concisa para admin@modstoat.site com o URL público ou a funcionalidade afetados, a hora em UTC, os passos reproduzíveis e o impacto. Não inclua credenciais, tokens ativos nem informações pessoais não relacionadas. Use o fluxo de denúncia global privado para denúncias de segurança de utilizadores e abusos da plataforma em vez de publicar provas.",
+  "Envía un informe conciso a admin@modstoat.site con la URL pública o función afectada, la hora en UTC, los pasos reproducibles y el impacto. No incluyas credenciales, tokens activos ni información personal no relacionada. Usa el flujo de denuncia global privado para las denuncias de seguridad de usuarios y de abusos de la plataforma en lugar de publicar pruebas."
+ ],
+ [
+  "Journal des modifications de Stoatmod",
+  "Registo de alterações do Stoatmod",
+  "Registro de cambios de Stoatmod"
+ ],
+ [
+  "Journal des modifications du service et de la documentation Stoatmod",
+  "Registo de alterações do serviço e da documentação do Stoatmod",
+  "Registro de cambios del servicio y de la documentación de Stoatmod"
+ ],
+ [
+  "Suivez les changements significatifs de Stoatmod, de sa documentation, des informations de confiance et du site public.",
+  "Acompanhe as alterações relevantes ao Stoatmod, à sua documentação, às informações de confiança e ao site público.",
+  "Sigue los cambios relevantes de Stoatmod, de su documentación, de la información de confianza y del sitio público."
+ ],
+ [
+  "Historique de Stoatmod",
+  "Historial do Stoatmod",
+  "Historial de Stoatmod"
+ ],
+ [
+  "Ce journal consigne les changements qui affectent la façon dont les modérateurs configurent, comprennent ou s’appuient sur le service Stoatmod hébergé.",
+  "Este registo regista as alterações que afetam a forma como os moderadores configuram, compreendem ou dependem do serviço Stoatmod alojado.",
+  "Este registro recoge los cambios que afectan a cómo los moderadores configuran, entienden o dependen del servicio Stoatmod alojado."
+ ],
+ [
+  "2 octobre 2026",
+  "2 de outubro de 2026",
+  "2 de octubre de 2026"
+ ],
+ [
+  "Nous avons publié un compte rendu complet de nos changements en matière de confidentialité, y compris notre correspondance avec l’équipe Confiance et sécurité de Stoat.",
+  "Publicámos um relato completo das nossas alterações de privacidade, incluindo a nossa correspondência com a equipa de Confiança e Segurança do Stoat.",
+  "Hemos publicado un relato completo de nuestros cambios de privacidad, incluida nuestra correspondencia con el equipo de Confianza y Seguridad de Stoat."
+ ],
+ [
+  "OpenAI, c’est fini : la modération s’appuie désormais sur notre propre IA, et aucun message n’est envoyé à une entreprise d’IA externe.",
+  "O OpenAI acabou: a moderação funciona agora com a nossa própria IA e nenhuma mensagem é enviada a uma empresa de IA externa.",
+  "OpenAI ya no está: la moderación funciona ahora con nuestra propia IA y ningún mensaje se envía a una empresa de IA externa."
+ ],
+ [
+  "Les messages modérés sont supprimés 30 jours après la décision, ou dans les 10 jours suivant un recours.",
+  "As mensagens moderadas são eliminadas 30 dias após a decisão ou no prazo de 10 dias após um recurso.",
+  "Los mensajes moderados se eliminan 30 días después de la decisión, o dentro de los 10 días siguientes a una apelación."
+ ],
+ [
+  "Les adresses IP, les empreintes IP et les vérifications de comptes alternatifs ont été supprimées.",
+  "Os endereços IP, as impressões digitais de IP e as verificações de contas alternativas foram removidos.",
+  "Se eliminaron las direcciones IP, las huellas de IP y las comprobaciones de cuentas alternativas."
+ ],
+ [
+  "Les statistiques par personne, les mots populaires et les classements ont été supprimés. Les statistiques du serveur sont uniquement des totaux anonymes.",
+  "As estatísticas por pessoa, as palavras populares e as classificações foram removidas. As estatísticas do servidor são apenas totais anónimos.",
+  "Se eliminaron las estadísticas por persona, las palabras populares y las clasificaciones. Las estadísticas del servidor son solo totales anónimos."
+ ],
+ [
+  "L’historique d’arrivées entre serveurs et les alertes ont été supprimés.",
+  "O historial de entradas entre servidores e os alertas foram removidos.",
+  "Se eliminaron el historial de uniones entre servidores y las alertas."
+ ],
+ [
+  "Les candidatures sont supprimées après 14 jours, et les enregistrements CAPTCHA dans un délai de 30 jours.",
+  "As candidaturas são eliminadas após 14 dias e os registos de CAPTCHA no prazo de 30 dias.",
+  "Las solicitudes se eliminan a los 14 días y los registros de CAPTCHA en un plazo de 30 días."
+ ],
+ [
+  "Les modérateurs voient un avis sur ces changements en haut du tableau de bord pendant la semaine suivante.",
+  "Os moderadores veem um aviso sobre estas alterações no topo do painel durante a semana seguinte.",
+  "Los moderadores ven un aviso sobre estos cambios en la parte superior del panel durante la semana siguiente."
+ ],
+ [
+  "Lire ce qui a changé et pourquoi",
+  "Ler o que mudou e porquê",
+  "Leer qué ha cambiado y por qué"
+ ],
+ [
+  "Lire la politique de confidentialité mise à jour",
+  "Ler a política de privacidade atualizada",
+  "Leer la política de privacidad actualizada"
+ ],
+ [
+  "1 octobre 2026",
+  "1 de outubro de 2026",
+  "1 de octubre de 2026"
+ ],
+ [
+  "Refonte du tableau de bord.",
+  "Redesenho do painel.",
+  "Rediseño del panel."
+ ],
+ [
+  "Refonte du site : fonctionnalités, documentation mises à jour, et plus encore.",
+  "Redesenho do site: funcionalidades, documentação atualizadas e muito mais.",
+  "Rediseño del sitio: funciones y documentación actualizadas, y más."
+ ],
+ [
+  "30 septembre 2026",
+  "30 de setembro de 2026",
+  "30 de septiembre de 2026"
+ ],
+ [
+  "phase 1 terminée : API OpenAI remplacée et modèle d’IA local déployé (StoatGuard 4B)",
+  "fase 1 concluída: API do OpenAI substituída e modelo de IA local implementado (StoatGuard 4B)",
+  "fase 1 completada: API de OpenAI sustituida y modelo de IA local desplegado (StoatGuard 4B)"
+ ],
+ [
+  "10 septembre 2026",
+  "10 de setembro de 2026",
+  "10 de septiembre de 2026"
+ ],
+ [
+  "Ajout des candidatures au serveur, grâce à Grusiver#0322.",
+  "Adicionadas as candidaturas ao servidor, graças a Grusiver#0322.",
+  "Se han añadido las solicitudes al servidor, gracias a Grusiver#0322."
+ ],
+ [
+  "Correction de problèmes de Découverte.",
+  "Corrigidos problemas da Descoberta.",
+  "Se han corregido problemas de Descubrimiento."
+ ],
+ [
+  "2 septembre 2026",
+  "2 de setembro de 2026",
+  "2 de septiembre de 2026"
+ ],
+ [
+  "Correction de problèmes de CAPTCHA.",
+  "Corrigidos problemas de CAPTCHA.",
+  "Se han corregido problemas de CAPTCHA."
+ ],
+ [
+  "Ajout de paramètres d’ajustement du spam par serveur, grâce à zaboo#2099.",
+  "Adicionadas definições de ajuste de spam por servidor, graças a zaboo#2099.",
+  "Se han añadido ajustes de spam por servidor, gracias a zaboo#2099."
+ ],
+ [
+  "31 août 2026",
+  "31 de agosto de 2026",
+  "31 de agosto de 2026"
+ ],
+ [
+  "Réorganisation de la documentation.",
+  "Documentação reorganizada.",
+  "Se ha reorganizado la documentación."
+ ],
+ [
+  "Ajout de guides.",
+  "Adicionados guias.",
+  "Se han añadido guías."
+ ],
+ [
+  "Préparation de statistiques publiques et de données Découverte rendues côté serveur pour une exploration plus fiable.",
+  "Preparados estatísticas públicas e dados da Descoberta renderizados no servidor para um rastreamento mais fiável.",
+  "Se han preparado las estadísticas públicas y los datos de Descubrimiento renderizados en el servidor para un rastreo más fiable."
+ ],
+ [
+  "Ajout des pages de confiance À propos, Sécurité et Journal des modifications.",
+  "Adicionadas as páginas de confiança Sobre, Segurança e Registo de alterações.",
+  "Se han añadido las páginas de confianza Acerca de, Seguridad y Registro de cambios."
+ ],
+ [
+  "Correction des rôles automatiques : les attributions ne sont signalées qu’une fois que Stoat a confirmé le rôle sur le membre.",
+  "Corrigidos os cargos automáticos: as atribuições só são comunicadas depois de o Stoat confirmar o cargo no membro.",
+  "Se han corregido los roles automáticos: las asignaciones solo se informan después de que Stoat confirme el rol en el miembro."
+ ],
+ [
+  "Correction d’un problème avec des salons exemptés supprimés, grâce à Yinysng#7220.",
+  "Corrigido um problema com canais isentos eliminados, graças a Yinysng#7220.",
+  "Se ha corregido un problema con canales exentos eliminados, gracias a Yinysng#7220."
+ ],
+ [
+  "Correction d’un problème où la détection de comptes alternatifs pouvait bannir globalement des personnes par erreur.",
+  "Corrigido um problema em que a deteção de contas alternativas podia banir globalmente pessoas por engano.",
+  "Se ha corregido un problema por el que la detección de cuentas alternativas podía bloquear globalmente a personas por error."
+ ],
+ [
+  "Harmonisation de la marque Stoatmod et documentation du service hébergé.",
+  "Padronização da marca Stoatmod e documentação do serviço alojado.",
+  "Se ha unificado la marca Stoatmod y documentado el servicio alojado."
+ ],
+ [
+  "30 août 2026",
+  "30 de agosto de 2026",
+  "30 de agosto de 2026"
+ ],
+ [
+  "Lancement de Sondages 2.0 avec un système de sondage amélioré.",
+  "Lançamento das Sondagens 2.0 com um sistema de sondagens melhorado.",
+  "Lanzamiento de Encuestas 2.0 con un sistema de encuestas mejorado."
+ ],
+ [
+  "Amélioration de l’onglet Automatisations du tableau de bord.",
+  "Melhoria do separador Automatizações do painel.",
+  "Mejora de la pestaña Automatizaciones del panel."
+ ],
+ [
+  "Ajout de davantage de personnalisation des politiques de modération.",
+  "Adicionada mais personalização às políticas de moderação.",
+  "Se ha añadido más personalización a las políticas de moderación."
+ ],
+ [
+  "Amélioration de la page des recours.",
+  "Melhoria da página de recursos.",
+  "Mejora de la página de apelaciones."
+ ],
+ [
+  "Ajout des signalements de serveur pour que les membres puissent signaler des utilisateurs et des actions aux modérateurs.",
+  "Adicionadas denúncias de servidor para que os membros possam denunciar utilizadores e ações aos moderadores.",
+  "Se han añadido las denuncias de servidor para que los miembros puedan denunciar usuarios y acciones a los moderadores."
+ ],
+ [
+  "Refonte du signalement global : les utilisateurs peuvent signaler quelqu’un à l’équipe Stoatmod pour examen et éventuel bannissement à l’échelle du réseau.",
+  "Renovação das denúncias globais: os utilizadores podem denunciar alguém à equipa do Stoatmod para revisão e um possível banimento em toda a rede.",
+  "Renovación de las denuncias globales: los usuarios pueden denunciar a alguien al equipo de Stoatmod para su revisión y un posible bloqueo en toda la red."
+ ],
+ [
+  "Ajout d’un guide d’intégration dans le tableau de bord pour les utilisateurs nouveaux et de retour.",
+  "Adicionado um guia de integração no painel para utilizadores novos e que regressam.",
+  "Se ha añadido una guía de incorporación en el panel para usuarios nuevos y recurrentes."
+ ],
+ [
+  "Connexion modérateur.",
+  "Início de sessão de moderador.",
+  "Acceso de moderador."
+ ],
+ [
+  "Connexion du personnel.",
+  "Início de sessão da equipa.",
+  "Acceso del personal."
+ ],
+ [
+  "Connexion propriétaire.",
+  "Início de sessão do proprietário.",
+  "Acceso del propietario."
+ ],
+ [
+  "État du service",
+  "Estado do serviço",
+  "Estado del servicio"
+ ],
+ [
+  "Continuez avec les identifiants correspondant à ce niveau d’accès. Votre compte détermine les serveurs et outils que vous pouvez ouvrir.",
+  "Continue com as credenciais deste nível de acesso. A sua conta determina que servidores e ferramentas pode abrir.",
+  "Continúa con las credenciales de este nivel de acceso. Tu cuenta determina qué servidores y herramientas puedes abrir."
+ ],
+ [
+  "Accès privé au compte",
+  "Acesso privado à conta",
+  "Acceso privado a la cuenta"
+ ],
+ [
+  "Autorisations par rôle",
+  "Permissões por cargo",
+  "Permisos por rol"
+ ],
+ [
+  "Connexion sécurisée",
+  "Início de sessão seguro",
+  "Inicio de sesión seguro"
+ ],
+ [
+  "Aide à l’accès",
+  "Ajuda de acesso",
+  "Ayuda de acceso"
+ ],
+ [
+  "Avant de continuer",
+  "Antes de continuar",
+  "Antes de continuar"
+ ],
+ [
+  "Obtenir l’accès",
+  "Obter acesso",
+  "Obtener acceso"
+ ],
+ [
+  "Gardez vos identifiants privés. Si vous avez besoin d’aide, consultez le",
+  "Mantenha as suas credenciais privadas. Se precisar de ajuda, consulte o",
+  "Mantén tus credenciales privadas. Si necesitas ayuda, consulta la"
+ ],
+ [
+  "guide d’accès au tableau de bord",
+  "guia de acesso ao painel",
+  "guía de acceso al panel"
+ ],
+ [
+  "Image de preuve indisponible",
+  "Imagem de prova indisponível",
+  "Imagen de prueba no disponible"
+ ],
+ [
+  "· Ouvrir l’original ↗",
+  "· Abrir o original ↗",
+  "· Abrir el original ↗"
+ ],
+ [
+  "Acceptez la politique de confidentialité et le traitement du recours avant d’envoyer.",
+  "Aceite a política de privacidade e o tratamento do recurso antes de submeter.",
+  "Acepta la política de privacidad y el tratamiento de la apelación antes de enviar."
+ ],
+ [
+  "Votre complément a été ajouté au dossier.",
+  "O seu acompanhamento foi adicionado ao caso.",
+  "Tu seguimiento se añadió al caso."
+ ],
+ [
+  "Votre recours a été soumis pour examen.",
+  "O seu recurso foi submetido para revisão.",
+  "Tu apelación se envió para revisión."
+ ],
+ [
+  "Autorisation d’amélioration de l’IA retirée. Toute contribution enregistrée a été supprimée.",
+  "Permissão de melhoria da IA retirada. Qualquer contribuição guardada foi eliminada.",
+  "Permiso de mejora de la IA retirado. Cualquier contribución guardada se ha eliminado."
+ ],
+ [
+  "Impossible de retirer l’autorisation.",
+  "Não foi possível retirar a permissão.",
+  "No se pudo retirar el permiso."
+ ],
+ [
+  "Choisissez jusqu’à trois images de preuve.",
+  "Escolha até três imagens de prova.",
+  "Elige hasta tres imágenes de prueba."
+ ],
+ [
+  "Chaque image de preuve doit peser 4 Mo ou moins.",
+  "Cada imagem de prova deve ter 4 MB ou menos.",
+  "Cada imagen de prueba debe pesar 4 MB o menos."
+ ],
+ [
+  "Les images de preuve doivent peser 8 Mo ou moins au total.",
+  "As imagens de prova devem ter 8 MB ou menos no total.",
+  "Las imágenes de prueba deben pesar 8 MB o menos en total."
+ ],
+ [
+  "Choisissez des images PNG, JPEG, WebP ou GIF.",
+  "Escolha imagens PNG, JPEG, WebP ou GIF.",
+  "Elige imágenes PNG, JPEG, WebP o GIF."
+ ],
+ [
+  "en-GB",
+  "en-GB",
+  "en-GB"
+ ],
+ [
+  "fr-FR",
+  "fr-FR",
+  "fr-FR"
+ ],
+ [
+  "pt-PT",
+  "pt-PT",
+  "pt-PT"
+ ],
+ [
+  "es-ES",
+  "es-ES",
+  "es-ES"
+ ],
+ [
+  "Faire appel d’une décision.",
+  "Recorrer de uma decisão.",
+  "Apelar una decisión."
+ ],
+ [
+  "Lisez le dossier. Exposez votre point de vue. Suivez l’examen.",
+  "Leia o caso. Partilhe a sua versão. Acompanhe a revisão.",
+  "Lee el caso. Cuenta tu versión. Sigue la revisión."
+ ],
+ [
+  "Comment fonctionnent les recours",
+  "Como funcionam os recursos",
+  "Cómo funcionan las apelaciones"
+ ],
+ [
+  "Votre dossier privé est ouvert",
+  "O seu caso privado está aberto",
+  "Tu caso privado está abierto"
+ ],
+ [
+  "Un examen équitable commence par les détails.",
+  "Uma revisão justa começa pelos detalhes.",
+  "Una revisión justa empieza por los detalles."
+ ]
+]

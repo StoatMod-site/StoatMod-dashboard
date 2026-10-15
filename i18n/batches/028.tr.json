@@ -1,0 +1,487 @@
+[
+ [
+  "J'accepte de charger Cloudflare Turnstile, une vérification du navigateur qui confirme que ce signalement vient d'une personne. Cloudflare reçoit des informations sur le navigateur et la connexion, comme mon adresse IP, pour l'exécuter. Stoatmod ne les conserve pas. Lisez la",
+  "Aceito carregar o Cloudflare Turnstile, uma verificação do navegador que confirma que esta denúncia vem de uma pessoa. A Cloudflare recebe informações do navegador e da ligação, como o meu endereço IP, para a executar. O Stoatmod não as guarda. Leia a",
+  "Acepto cargar Cloudflare Turnstile, una comprobación del navegador que confirma que este reporte proviene de una persona. Cloudflare recibe información del navegador y de la conexión, como mi dirección IP, para ejecutarla. Stoatmod no la conserva. Lee la"
+ ],
+ [
+  "Autres enregistrements de modération",
+  "Outros registos de moderação",
+  "Otros registros de moderación"
+ ],
+ [
+  "Les suppressions automatiques de liens, les suppressions liées à l'automutilation et les exécutions d'automatisations ne gardent le texte du message que pour que les modérateurs puissent comprendre ce qui s'est passé.",
+  "As remoções automáticas de ligações, as remoções por automutilação e as execuções de automações só guardam o texto da mensagem para que os moderadores possam perceber o que aconteceu.",
+  "Las eliminaciones automáticas de enlaces, las eliminaciones por autolesiones y las ejecuciones de automatizaciones solo conservan el texto del mensaje para que los moderadores puedan revisar lo ocurrido."
+ ],
+ [
+  "Le texte du message est supprimé 30 jours après l'événement, sauf si un recours en cours en a besoin. Le résultat du dossier, les dates et les scores sont conservés.",
+  "O texto da mensagem é eliminado 30 dias após o evento, a menos que um recurso em curso precise dele. O resultado do caso, as datas e as pontuações mantêm-se.",
+  "El texto del mensaje se elimina 30 días después del evento, salvo que una apelación abierta lo necesite. El resultado del caso, las fechas y las puntuaciones permanecen."
+ ],
+ [
+  "Le code affiche le texte de chaque message",
+  "O código imprime o texto de cada mensagem",
+  "El código imprime el texto de cada mensaje"
+ ],
+ [
+  "Chaque message que AutoMod voit, sur chaque serveur, est affiché avec son texte complet dans la sortie du bot, et rien dans le code ne permet de le désactiver. Avec la configuration Docker du guide d'auto-hébergement d'AutoMod, cette sortie serait enregistrée dans un fichier journal sans limite de taille. Le développeur d'AutoMod nous a depuis indiqué que ces journaux sont une fonction de débogage et qu'ils ne sont pas conservés sur l'instance officielle.",
+  "Todas as mensagens que o AutoMod vê, em todos os servidores, são impressas com o texto completo na saída do bot, e nada no código permite desativar isto. Com a configuração Docker do guia de auto-alojamento do AutoMod, essa saída seria guardada num ficheiro de registo sem limite de tamanho. O programador do AutoMod disse-nos entretanto que estes registos são uma função de depuração e que não são conservados na instância oficial.",
+  "Cada mensaje que AutoMod ve, en todos los servidores, se imprime con su texto completo en la salida del bot, y nada en el código permite desactivarlo. Con la configuración de Docker de la guía de autoalojamiento de AutoMod, esa salida se guardaría en un archivo de registro sin límite de tamaño. El desarrollador de AutoMod nos ha dicho desde entonces que estos registros son una función de depuración y que no se conservan en la instancia oficial."
+ ],
+ [
+  "Le serveur d'assistance d'AutoMod porte le badge vérifié de Stoat, son développeur fait partie de l'équipe Stoat, et son README le présente comme « le meilleur bot de modération de Stoat ». Pourtant, son site, sa documentation et son code source ne contiennent ni politique de confidentialité, ni conditions, ni avis de confidentialité : les membres ne peuvent donc pas savoir ce qu'il collecte, combien de temps il le garde ni comment demander la suppression. Son développeur nous a dit que Stoat en a demandé une et qu'elle est en cours de préparation avec des conseils juridiques.",
+  "O servidor de apoio do AutoMod tem o selo de verificado do Stoat, o seu programador faz parte da equipa do Stoat, e o seu README descreve-o como o «principal bot de moderação do Stoat». Mesmo assim, o seu site, a documentação e o código-fonte não têm política de privacidade, termos nem aviso de privacidade, pelo que os membros não conseguem saber o que recolhe, durante quanto tempo o guarda nem como pedir a eliminação. O programador disse-nos que o Stoat pediu uma e que está a ser preparada com aconselhamento jurídico.",
+  "El servidor de soporte de AutoMod tiene la insignia de verificado de Stoat, su desarrollador forma parte del equipo de Stoat y su README lo describe como el «bot de moderación principal de Stoat». Aun así, su sitio web, la documentación y el código fuente no incluyen política de privacidad, términos ni aviso de privacidad, por lo que los miembros no pueden saber qué recopila, cuánto tiempo lo conserva ni cómo pedir su eliminación. Su desarrollador nos ha dicho que Stoat ha pedido una y que se está preparando con asesoramiento jurídico."
+ ],
+ [
+  "Signalement inter-serveurs, activé par défaut",
+  "Sinalização entre servidores, ativada por predefinição",
+  "Marcado entre servidores, activado por defecto"
+ ],
+ [
+  "Mise à jour : le 14 octobre, Kuma a indiqué qu'il n'utilise plus les signalements d'autres communautés sur Stoat, y compris dans Raid Guard.",
+  "Atualização: a 14 de outubro, o Kuma disse que já não usa as denúncias de outras comunidades no Stoat, incluindo no Raid Guard.",
+  "Actualización: el 14 de octubre, Kuma indicó que ya no usa los reportes de otras comunidades en Stoat, incluido Raid Guard."
+ ],
+ [
+  "Le Raid Guard de Kuma « isole ou expulse automatiquement les comptes signalés automatiquement pour activité de raid ou de spam dans d'autres communautés protégées par Kuma ». Son tableau de bord indique Raid Guard comme « (activé par défaut) », et sa file de vérification note les nouveaux membres selon un facteur appelé « Signalé sur un autre serveur Kuma ». Sa politique de confidentialité dit que les données ne sont partagées qu'entre les communautés qu'un administrateur a « explicitement connectées », mais Raid Guard s'appuie sur tous les serveurs Kuma.",
+  "O Raid Guard do Kuma «isola ou expulsa automaticamente contas que foram sinalizadas automaticamente por atividade de raid/spam noutras comunidades protegidas pelo Kuma». O seu painel indica o Raid Guard como «(ativado por predefinição)», e a sua fila de verificação pontua os novos membros com um fator chamado «Sinalizado noutro servidor Kuma». A sua política de privacidade diz que os dados só são partilhados entre comunidades que um administrador «ligou explicitamente», mas o Raid Guard recorre a todos os servidores Kuma.",
+  "El Raid Guard de Kuma «aísla o expulsa automáticamente las cuentas marcadas automáticamente por actividad de raid/spam en otras comunidades protegidas por Kuma». Su panel muestra Raid Guard como «(activado por defecto)», y su cola de verificación puntúa a los nuevos miembros según un factor llamado «Marcado en otro servidor de Kuma». Su política de privacidad dice que los datos solo se comparten entre comunidades que un administrador ha «conectado explícitamente», pero Raid Guard se basa en todos los servidores de Kuma."
+ ],
+ [
+  "Page des commandes : !raidguard",
+  "Página de comandos: !raidguard",
+  "Página de comandos: !raidguard"
+ ],
+ [
+  "Tableau de bord de démonstration : Modération → AutoMod et anti-raid, et File de vérification",
+  "Painel de demonstração: Moderação → AutoMod e Anti-Raid, e Fila de verificação",
+  "Panel de demostración: Moderación → AutoMod y Anti-Raid, y Cola de verificación"
+ ],
+ [
+  "Politique de confidentialité : section 4, « Communautés liées que vous connectez »",
+  "Política de privacidade: secção 4, «Comunidades ligadas que liga»",
+  "Política de privacidad: sección 4, «Comunidades vinculadas que conectas»"
+ ],
+ [
+  "Vérifications d'IP et liaison de réseaux, activées par défaut",
+  "Verificações de IP e associação de redes, ativadas por predefinição",
+  "Comprobaciones de IP y vinculación de redes, activadas por defecto"
+ ],
+ [
+  "Mise à jour : le 14 octobre, Kuma a indiqué que la vérification sur Stoat ne contrôle plus les adresses IP ni les VPN, et que les empreintes d'IP stockées ont été supprimées.",
+  "Atualização: a 14 de outubro, o Kuma disse que a verificação no Stoat já não verifica endereços IP nem VPN, e que os hashes de IP guardados foram eliminados.",
+  "Actualización: el 14 de octubre, Kuma indicó que la verificación en Stoat ya no comprueba direcciones IP ni VPN, y que los hashes de IP almacenados se eliminaron."
+ ],
+ [
+  "Le texte d'aide de vérification de Kuma indique : « Avec 'ip on' (par défaut), la connexion de la personne qui réussit le captcha est examinée pour détecter les VPN/proxys ou les IP à haut risque (via proxycheck.io) et les comptes du même réseau sont liés dans le Dossier du membre », à l'aide d'une IP hachée conservée 30 jours. Sa politique de confidentialité décrit l'anti-VPN comme quelque chose d'utilisé uniquement « lorsqu'un serveur active l'option anti-VPN ».",
+  "O texto de ajuda de verificação do Kuma diz: «Com 'ip on' (predefinição), a ligação de quem passa o captcha é analisada para detetar VPN/proxy ou IP de alto risco (através de proxycheck.io) e as contas da mesma rede são associadas no Dossiê do Membro», usando um IP em hash guardado durante 30 dias. A sua política de privacidade descreve o anti-VPN como algo usado apenas «quando um servidor ativa a opção anti-VPN».",
+  "El texto de ayuda de verificación de Kuma dice: «Con 'ip on' (por defecto), la conexión de quien pasa el captcha se analiza para detectar VPN/proxy o IP de alto riesgo (mediante proxycheck.io) y las cuentas de la misma red se vinculan en el Expediente del Miembro», usando una IP con hash conservada 30 días. Su política de privacidad describe el anti-VPN como algo que solo se usa «cuando un servidor activa la opción anti-VPN»."
+ ],
+ [
+  "Page des commandes : vérification",
+  "Página de comandos: verificação",
+  "Página de comandos: verificación"
+ ],
+ [
+  "Politique de confidentialité : section 1, « Vérification »",
+  "Política de privacidade: secção 1, «Verificação»",
+  "Política de privacidad: sección 1, «Verificación»"
+ ],
+ [
+  "Passerelle entre plateformes sans consentement des membres",
+  "Ponte entre plataformas sem consentimento dos membros",
+  "Puente entre plataformas sin consentimiento de los miembros"
+ ],
+ [
+  "Le propriétaire d'un serveur peut relier un salon à Discord et à Fluxer avec !bridge. La politique de confidentialité de Kuma indique qu'il copie alors les messages des membres, « leur texte, leurs pièces jointes, ainsi que votre nom d'utilisateur et votre avatar », vers les autres plateformes. Le seul contrôle mentionné est que « le pont est désactivé tant qu'un administrateur ne l'a pas configuré ». Nous n'avons trouvé ni avis aux membres, ni étape de consentement, ni possibilité de refus dans sa politique ou l'aide des commandes, ce qui soulève la même question de consentement que pour bolt.",
+  "O dono de um servidor pode ligar um canal ao Discord e ao Fluxer com !bridge. A política de privacidade do Kuma diz que depois copia as mensagens dos membros, «o seu texto, anexos, e o seu nome de utilizador e avatar», para as outras plataformas. O único controlo que menciona é que «a ponte está desativada até um administrador a configurar». Não encontrámos aviso aos membros, passo de consentimento nem opção de recusa na sua política ou na ajuda dos comandos, pelo que isto levanta a mesma questão de consentimento que o bolt.",
+  "El propietario de un servidor puede unir un canal con Discord y Fluxer mediante !bridge. La política de privacidad de Kuma dice que entonces copia los mensajes de los miembros, «su texto, archivos adjuntos y tu nombre de usuario y avatar», a las otras plataformas. El único control que menciona es que «el puente está desactivado hasta que un administrador lo configura». No encontramos aviso a los miembros, paso de consentimiento ni opción de rechazo en su política ni en la ayuda de comandos, por lo que esto plantea la misma cuestión de consentimiento que bolt."
+ ],
+ [
+  "Page des commandes : !bridge",
+  "Página de comandos: !bridge",
+  "Página de comandos: !bridge"
+ ],
+ [
+  "Politique de confidentialité : section 1, « Passerelle entre plateformes »",
+  "Política de privacidade: secção 1, «Ponte entre plataformas»",
+  "Política de privacidad: sección 1, «Puente entre plataformas»"
+ ],
+ [
+  "Historique d'activité par personne",
+  "Histórico de atividade por pessoa",
+  "Historial de actividad por persona"
+ ],
+ [
+  "Les nombres quotidiens de messages, de modifications, de suppressions et de commandes de chaque personne sont conservés pour chaque serveur et chaque salon jusqu'à ce qu'elle se désinscrive ou que le bot parte. Les dernières indications de Stoat permettent de conserver ce type de données aussi longtemps, mais précisent que les compteurs liés à une personne sont des données d'utilisateur qui nécessitent un opt-in.",
+  "As contagens diárias de mensagens, edições, eliminações e comandos de cada pessoa são guardadas por servidor e por canal até a pessoa optar por sair ou o bot sair. As diretrizes mais recentes do Stoat permitem guardar este tipo de dados durante esse tempo, mas dizem que as contagens associadas a uma pessoa são dados do utilizador que exigem consentimento prévio (opt-in).",
+  "Los recuentos diarios de mensajes, ediciones, eliminaciones y comandos de cada persona se guardan por servidor y por canal hasta que se da de baja o el bot se va. La guía más reciente de Stoat permite conservar este tipo de datos tanto tiempo, pero dice que los recuentos vinculados a una persona son datos de usuario que requieren consentimiento previo (opt-in)."
+ ],
+ [
+  "N'importe qui peut lancer .stats top g pour classer les personnes les plus actives sur tous les serveurs où se trouve bronx, même en dehors d'un serveur. Les gens sont classés qu'ils aient déjà utilisé bronx ou non, sauf s'ils se sont désinscrits. Stoat indique que les classements inter-serveurs relèvent de l'opt-in général d'un bot.",
+  "Qualquer pessoa pode executar .stats top g para classificar as pessoas mais ativas em todos os servidores onde o bronx está, mesmo fora de um servidor. As pessoas são classificadas tenham ou não usado o bronx, a menos que tenham optado por sair. O Stoat diz que as classificações entre servidores ficam abrangidas pelo opt-in geral de um bot.",
+  "Cualquiera puede ejecutar .stats top g para clasificar a las personas más activas en todos los servidores donde está bronx, incluso fuera de un servidor. Se clasifica a las personas hayan usado bronx o no, salvo que se hayan dado de baja. Stoat dice que las clasificaciones entre servidores entran en el opt-in general de un bot."
+ ],
+ [
+  "Les réponses aux candidatures sont stockées avec l'identifiant du candidat et sans date limite de suppression. Les dernières indications de Stoat disent que ce type de contenu devrait être conservé 30 jours, sauf raison précise de le garder plus longtemps. Stoatmod supprime les candidatures après 14 jours.",
+  "As respostas das candidaturas são guardadas com o ID do candidato e sem prazo de eliminação. As diretrizes mais recentes do Stoat dizem que este tipo de conteúdo deve ser guardado durante 30 dias, a menos que haja um motivo específico para o guardar mais tempo. O Stoatmod elimina as candidaturas ao fim de 14 dias.",
+  "Las respuestas de las solicitudes se guardan con el ID del solicitante y sin plazo de eliminación. La guía más reciente de Stoat dice que este tipo de contenido debería conservarse 30 días, salvo que haya un motivo concreto para guardarlo más tiempo. Stoatmod elimina las solicitudes a los 14 días."
+ ],
+ [
+  "Messages relayés vers d'autres plateformes",
+  "Mensagens retransmitidas para outras plataformas",
+  "Mensajes reenviados a otras plataformas"
+ ],
+ [
+  "Lorsqu'un administrateur relie un salon, bronx relaie les messages, les noms et les avatars des membres vers une autre plateforme. Les membres ne reçoivent aucun avis et n'ont aucun choix avant que leurs messages quittent le serveur.",
+  "Quando um administrador liga um canal, o bronx retransmite as mensagens, os nomes e os avatares dos membros para outra plataforma. Os membros não recebem qualquer aviso nem têm escolha antes de as suas mensagens saírem do servidor.",
+  "Cuando un administrador une un canal, bronx reenvía los mensajes, nombres y avatares de los miembros a otra plataforma. Los miembros no reciben aviso ni tienen opción antes de que sus mensajes salgan del servidor."
+ ],
+ [
+  "Statistiques par personne : les nombres de messages, de modifications, de suppressions et de commandes liés à un identifiant d'utilisateur sont-ils autorisés ?",
+  "Estatísticas por pessoa: são permitidas contagens de mensagens, edições, eliminações e comandos associadas a um ID de utilizador?",
+  "Estadísticas por persona: ¿se permiten recuentos de mensajes, ediciones, eliminaciones y comandos vinculados a un ID de usuario?"
+ ],
+ [
+  "Vous pouvez les stocker, oui, mais si elles sont liées à un utilisateur, elles doivent être considérées comme des données d'utilisateur/statistiques d'utilisateur et non comme des statistiques génériques, et relèveraient du n° 4.",
+  "Pode guardá-las, sim, mas se estiverem associadas a um utilizador têm de ser consideradas dados do utilizador/estatísticas do utilizador e não estatísticas genéricas, e ficariam abrangidas pelo n.º 4.",
+  "Puedes almacenarlos, sí, pero si están vinculados a un usuario deben considerarse datos de usuario/estadísticas de usuario y no estadísticas genéricas, y entrarían en el n.º 4."
+ ],
+ [
+  "Opt-in ou opt-out : un opt-out par une seule commande suffit-il, ou l'opt-in est-il obligatoire ?",
+  "Opt-in ou opt-out: um opt-out com um único comando é suficiente, ou é obrigatório o opt-in?",
+  "Opt-in u opt-out: ¿basta con un opt-out de un solo comando o es obligatorio el opt-in?"
+ ],
+ [
+  "Pour l'instant, nous demandons à tout le monde d'utiliser l'opt-in. Cela pourrait changer ou devenir plus nuancé dans de futures politiques pour les développeurs.",
+  "Neste momento, estamos a pedir a todos que usem opt-in. Isto pode mudar ou tornar-se mais matizado em futuras políticas para programadores.",
+  "Por ahora estamos pidiendo a todos que usen opt-in. Esto puede cambiar o volverse más matizado en futuras políticas para desarrolladores."
+ ],
+ [
+  "Classements inter-serveurs : un classement sur tous les serveurs est-il autorisé ?",
+  "Classificações entre servidores: é permitida uma tabela de classificação em todos os servidores?",
+  "Clasificaciones entre servidores: ¿se permite una tabla de clasificación en todos los servidores?"
+ ],
+ [
+  "Je dirais que cela relève de votre opt-in général pour la collecte de données, même s'il serait peut-être bien de proposer aussi de se désinscrire spécifiquement de cette fonctionnalité (ce n'est pas une obligation, juste un avis personnel).",
+  "Diria que isto se enquadra no vosso opt-in geral de recolha de dados, embora possa ser bom oferecer também a opção de sair especificamente dessa funcionalidade (não é um requisito, é apenas uma opinião pessoal).",
+  "Diría que esto entra en vuestro opt-in general de recopilación de datos, aunque quizá esté bien ofrecer también la opción de darse de baja de esa función en concreto (no es un requisito, solo una opinión personal)."
+ ],
+ [
+  "Conservation : combien de temps peut-on garder les statistiques d'activité, les journaux de commandes, l'historique des modifications et suppressions, et les candidatures ?",
+  "Retenção: durante quanto tempo podem ser guardadas as estatísticas de atividade, os registos de comandos, o histórico de edições e eliminações e as candidaturas?",
+  "Retención: ¿cuánto tiempo se pueden conservar las estadísticas de actividad, los registros de comandos, el historial de ediciones y eliminaciones y las solicitudes?"
+ ],
+ [
+  "Les données qui contiennent des IPI (p. ex. le contenu des messages, les pièces jointes) devraient être conservées 30 jours, sauf raison explicite de les garder plus longtemps (p. ex. un dossier de modération en cours de recours au 29e jour). Les autres données opérationnelles peuvent être conservées aussi longtemps qu'elles sont pertinentes (la durée la plus longue serait probablement jusqu'au retrait du bot du serveur).",
+  "Os dados que contêm IIP (p. ex. conteúdo de mensagens, anexos) devem ser guardados durante 30 dias, a menos que haja um motivo explícito para os guardar mais tempo (p. ex. um caso de moderação em recurso no dia 29). Outros dados operacionais podem ser guardados enquanto forem relevantes (o período mais longo seria provavelmente até o bot ser removido do servidor).",
+  "Los datos que contienen IIP (p. ej., contenido de mensajes, archivos adjuntos) deberían conservarse 30 días, salvo que haya un motivo explícito para guardarlos más tiempo (p. ej., un caso de moderación en apelación el día 29). Otros datos operativos pueden conservarse mientras sean relevantes (el periodo más largo sería probablemente hasta que el bot se elimine del servidor)."
+ ],
+ [
+  "Passerelles : la configuration d'un pont par un administrateur vaut-elle autorisation, ou les membres doivent-ils être informés ou consentir ?",
+  "Pontes: a configuração de uma ponte por um administrador conta como autorização, ou os membros têm de ser avisados ou consentir?",
+  "Puentes: ¿la configuración de un puente por un administrador cuenta como autorización, o los miembros deben ser informados o consentir?"
+ ],
+ [
+  "Franchement, nous discutons encore de la politique sur les bots passerelles, je n'ai pas de réponse pour le moment.",
+  "Sinceramente, ainda estamos a discutir a política sobre bots de ponte, de momento não tenho resposta.",
+  "La verdad, todavía estamos discutiendo la política sobre bots de puente; ahora mismo no tengo una respuesta."
+ ],
+ [
+  "Politiques de confidentialité : seront-elles obligatoires pour tous les bots qui traitent des données d'utilisateurs ?",
+  "Políticas de privacidade: serão obrigatórias para todos os bots que tratam dados de utilizadores?",
+  "Políticas de privacidad: ¿serán obligatorias para todos los bots que tratan datos de usuarios?"
+ ],
+ [
+  "Nous aimerions que les bots aient des politiques de confidentialité. Je peux confirmer que ce sera une obligation dans nos nouvelles politiques.",
+  "Gostaríamos que os bots tivessem políticas de privacidade. Posso confirmar que isso será um requisito nas nossas novas políticas.",
+  "Nos gustaría que los bots tuvieran políticas de privacidad. Puedo confirmar que será un requisito en nuestras nuevas políticas."
+ ],
+ [
+  "Directives pour les développeurs : y a-t-il un calendrier, et les bots existants auront-ils le temps de s'y conformer ?",
+  "Diretrizes para programadores: há um calendário e os bots existentes terão tempo para se adaptar?",
+  "Directrices para desarrolladores: ¿hay un calendario y los bots existentes tendrán tiempo para cumplirlas?"
+ ],
+ [
+  "En préparation oui, pas de calendrier pour l'instant. [...] oui, il y aura une période de transition.",
+  "Estão a ser preparadas, sim, sem calendário por agora. [...] sim, haverá um período de transição.",
+  "En preparación, sí, sin calendario por ahora. [...] sí, habrá un periodo de transición."
+ ],
+ [
+  "Tout le monde est compté par personne, automatiquement",
+  "Toda a gente é contada por pessoa, automaticamente",
+  "Todos se cuentan por persona, automáticamente"
+ ],
+ [
+  "Chaque message est compté pour l'identifiant de son auteur dès que bronx rejoint un serveur. Seul le nombre est stocké, pas ce qui a été dit. Des totaux à l'échelle du serveur seraient anonymes, mais ces compteurs sont liés à chaque personne et servent à les classer.",
+  "Cada mensagem é contada para o ID do remetente a partir do momento em que o bronx entra. Só o número é guardado, não o que foi dito. Totais de todo o servidor seriam anónimos, mas estas contagens estão associadas a cada pessoa e servem para as classificar.",
+  "Cada mensaje se cuenta para el ID de quien lo envía desde el momento en que bronx se une. Solo se guarda el número, no lo que se dijo. Los totales de todo el servidor serían anónimos, pero estos recuentos están vinculados a cada persona y sirven para clasificarla."
+ ],
+ [
+  "Les membres peuvent se désinscrire, mais on ne leur demande pas d'abord",
+  "Os membros podem optar por sair, mas ninguém lhes pergunta primeiro",
+  "Los miembros pueden darse de baja, pero no se les pregunta antes"
+ ],
+ [
+  "La page de confidentialité de bronx permet à chacun de télécharger ses données ou de se désinscrire, ce qui supprime ses enregistrements et arrête le suivi. Le code le confirme : les messages d'un utilisateur désinscrit sont ignorés avant que bronx ne les compte. Mais personne n'est consulté avant le début du comptage, et Stoat a depuis dit demander à tous les bots d'utiliser l'opt-in.",
+  "A página de privacidade do bronx permite a qualquer pessoa descarregar os seus dados ou optar por sair, o que elimina os seus registos e pára o rastreio futuro. O código confirma-o: as mensagens de um utilizador que optou por sair são descartadas antes de o bronx as contar. Mas ninguém é consultado antes de a contagem começar, e o Stoat disse entretanto que está a pedir a todos os bots que usem opt-in.",
+  "La página de privacidad de bronx permite a cualquiera descargar sus datos o darse de baja, lo que elimina sus registros y detiene el seguimiento futuro. El código lo respalda: los mensajes de un usuario dado de baja se descartan antes de que bronx los cuente. Pero nadie es consultado antes de que empiece el recuento, y Stoat ha dicho desde entonces que pide a todos los bots que usen opt-in."
+ ],
+ [
+  "page de confidentialité de bronx",
+  "página de privacidade do bronx",
+  "página de privacidad de bronx"
+ ],
+ [
+  "Sa page de confidentialité dit que rien n'est collecté passivement",
+  "A sua página de privacidade diz que nada é recolhido de forma passiva",
+  "Su página de privacidad dice que no se recopila nada de forma pasiva"
+ ],
+ [
+  "La page de confidentialité dit « rien n'est collecté passivement — les données ne sont écrites que lorsque vous interagissez avec une fonctionnalité ». Le code compte chaque message envoyé par une personne, qu'elle ait déjà utilisé bronx ou non.",
+  "A página de privacidade diz «nada é recolhido passivamente — os dados só são escritos quando interage com uma funcionalidade». O código conta todas as mensagens que uma pessoa envia, tenha ou não usado o bronx.",
+  "La página de privacidad dice «no se recopila nada de forma pasiva: los datos solo se escriben cuando interactúas con una función». El código cuenta cada mensaje que envía una persona, haya usado o no bronx."
+ ],
+ [
+  "main.cpp#L1011",
+  "main.cpp#L1011",
+  "main.cpp#L1011"
+ ],
+ [
+  "Les commandes de statistiques sont ouvertes à tous les membres. Elles montrent qui envoie le plus de messages dans un serveur, et sur tous les serveurs avec l'option globale. Les gens sont listés sauf s'ils se sont désinscrits.",
+  "Os comandos de estatísticas estão abertos a todos os membros. Mostram quem envia mais mensagens num servidor, e em todos os servidores com a opção global. As pessoas são listadas a menos que tenham optado por sair.",
+  "Los comandos de estadísticas están abiertos a todos los miembros. Muestran quién envía más mensajes en un servidor, y en todos los servidores con la opción global. Se lista a las personas salvo que se hayan dado de baja."
+ ],
+ [
+  "Publié le 2 octobre 2026 · Mis à jour le 14 octobre 2026",
+  "Publicado a 2 de outubro de 2026 · Atualizado a 14 de outubro de 2026",
+  "Publicado el 2 de octubre de 2026 · Actualizado el 14 de octubre de 2026"
+ ],
+ [
+  "Conforme aux dernières indications de Stoat",
+  "Em linha com as diretrizes mais recentes do Stoat",
+  "En línea con la guía más reciente de Stoat"
+ ],
+ [
+  "Stoat a depuis dit que le contenu des messages devrait être conservé 30 jours, sauf raison précise de le garder plus longtemps, comme un dossier de modération en recours au 29e jour. C'est le calendrier ci-dessus. Voir « Dernières indications de Stoat » dans la section 06 pour les réponses complètes.",
+  "O Stoat disse entretanto que o conteúdo das mensagens deve ser guardado durante 30 dias, a menos que haja um motivo específico para o guardar mais tempo, como um caso de moderação em recurso no dia 29. Esse é o calendário acima. Veja «Diretrizes mais recentes do Stoat» na secção 06 para as respostas completas.",
+  "Stoat ha dicho desde entonces que el contenido de los mensajes debería conservarse 30 días, salvo que haya un motivo concreto para guardarlo más tiempo, como un caso de moderación en apelación el día 29. Ese es el calendario de arriba. Consulta «Guía más reciente de Stoat» en la sección 06 para ver las respuestas completas."
+ ],
+ [
+  "Lorsque Stoatmod est retiré d'un serveur, nous supprimons tout ce que nous détenons pour ce serveur, sauf les enregistrements de sanctions au niveau du réseau, comme une entrée de liste noire de serveurs. Cela correspond aux indications de Stoat selon lesquelles les autres données peuvent être conservées jusqu'au retrait du bot.",
+  "Quando o Stoatmod é removido de um servidor, eliminamos tudo o que guardamos para esse servidor, exceto os registos de sanções ao nível da rede, como uma entrada de lista negra de servidores. Isto corresponde à orientação do Stoat de que os outros dados podem ser guardados até o bot ser removido.",
+  "Cuando Stoatmod se elimina de un servidor, borramos todo lo que guardamos de ese servidor, salvo los registros de sanciones a nivel de red, como una entrada de lista negra de servidores. Esto coincide con la guía de Stoat de que los demás datos pueden conservarse hasta que se elimine el bot."
+ ],
+ [
+  "La vérification à l'arrivée et le formulaire de signalement utilisent toujours Cloudflare Turnstile comme CAPTCHA de navigateur, mais seulement après l'accord de la personne : il ne se charge pas tant qu'elle n'a pas coché l'accord. Kuma a retiré Cloudflare de sa vérification sur Stoat, ce que nous voyons comme un pas dans la bonne direction. Stoat ne s'est pas opposé à ce que nous continuions à l'utiliser lorsque la personne y consent.",
+  "A verificação à entrada e o formulário de denúncia continuam a usar o Cloudflare Turnstile como CAPTCHA do navegador, mas só depois de a pessoa concordar: não carrega até ela marcar o acordo. O Kuma deixou de usar a Cloudflare na sua verificação no Stoat, o que vemos como um passo na direção certa. O Stoat não se opôs a que continuemos a usá-lo quando a pessoa consente.",
+  "La verificación de ingreso y el formulario de reporte siguen usando Cloudflare Turnstile como CAPTCHA del navegador, pero solo después de que la persona acepte: no se carga hasta que marque el acuerdo. Kuma ha quitado Cloudflare de su verificación en Stoat, lo que vemos como un paso en la dirección correcta. Stoat no se ha opuesto a que sigamos usándolo cuando la persona da su consentimiento."
+ ],
+ [
+  "Nous avons soulevé log_it et AutoMod auprès de Stoat à cause de ce que leurs documentations publiques semblaient décrire au moment où nous les avons consultées. Nous avons ensuite examiné bronx, un groupe de trois bots d'un même développeur, bolt et Kuma. AutoMod, bronx et bolt sont open source, nous avons donc aussi lu leur code pour vérifier ce qu'ils font réellement. Le code de log_it, de Kuma et du groupe de trois bots n'est pas public ; pour ceux-là, nous nous sommes appuyés sur ce que disent leurs sites et leurs profils. Ces exemples servent à montrer pourquoi une réponse à l'échelle de la plateforme est nécessaire, pas à accuser qui que ce soit.",
+  "Levantámos o log_it e o AutoMod junto do Stoat por causa do que a sua documentação pública parecia descrever quando a consultámos. Depois analisámos o bronx, um grupo de três bots do mesmo programador, o bolt e o Kuma. O AutoMod, o bronx e o bolt são de código aberto, por isso lemos também o seu código para verificar o que realmente fazem. O código do log_it, do Kuma e do grupo de três bots não é público, pelo que, nestes casos, nos baseámos no que os seus sites e perfis dizem. Estes exemplos servem para mostrar por que é necessária uma resposta ao nível da plataforma, não para acusar ninguém.",
+  "Planteamos log_it y AutoMod a Stoat por lo que su documentación pública parecía describir cuando la consultamos. Después examinamos bronx, un grupo de tres bots de un mismo desarrollador, bolt y Kuma. AutoMod, bronx y bolt son de código abierto, así que también leímos su código para comprobar lo que realmente hacen. El código de log_it, Kuma y el grupo de tres bots no es público, por lo que en esos casos nos basamos en lo que dicen sus sitios web y perfiles. Estos ejemplos sirven para mostrar por qué hace falta una respuesta a nivel de plataforma, no para acusar a nadie."
+ ],
+ [
+  "Pour être juste envers AutoMod, nous n'avons trouvé aucune statistique d'activité par personne, aucun partage entre serveurs et aucun message envoyé à un service d'IA externe. Son principal défaut est qu'il n'indique pas encore aux membres ce qu'il collecte ni combien de temps il le garde.",
+  "Para ser justos com o AutoMod, não encontrámos estatísticas de atividade por pessoa, partilha entre servidores nem mensagens enviadas para um serviço de IA externo. A sua principal lacuna é ainda não informar os membros sobre o que recolhe nem durante quanto tempo o guarda.",
+  "Para ser justos con AutoMod, no encontramos estadísticas de actividad por persona, ni compartición entre servidores, ni mensajes enviados a un servicio de IA externo. Su principal carencia es que aún no informa a los miembros de lo que recopila ni de cuánto tiempo lo conserva."
+ ],
+ [
+  "Ce que le développeur d'AutoMod nous a dit :",
+  "O que o programador do AutoMod nos disse:",
+  "Lo que nos dijo el desarrollador de AutoMod:"
+ ],
+ [
+  "« AutoMod ne conserve pas de journaux de messages sur l'instance de production – ce sont une fonction de débogage. »",
+  "«O AutoMod não guarda registos de mensagens na instância de produção – são uma função de depuração.»",
+  "«AutoMod no guarda registros de mensajes en la instancia de producción: son una función de depuración.»"
+ ],
+ [
+  "« [J']ai de la même façon reçu pour consigne de créer une politique dans le cadre de la répression plus large de Stoat. Elle est appliquée de manière égale à tout le monde, pour autant que je puisse en juger. »",
+  "«[Também] me pediram que criasse uma política no âmbito da repressão mais ampla do Stoat. Está a ser aplicada de forma igual a todos, tanto quanto consigo perceber.»",
+  "«[A mí] también me han pedido que cree una política como parte de la mano dura más amplia de Stoat. Se está aplicando por igual a todos, por lo que puedo ver.»"
+ ],
+ [
+  "Declan Chidlow, développeur d'AutoMod, par e-mail · octobre 2026",
+  "Declan Chidlow, programador do AutoMod, por e-mail · outubro de 2026",
+  "Declan Chidlow, desarrollador de AutoMod, por correo electrónico · octubre de 2026"
+ ],
+ [
+  "Journaux de messages :",
+  "Registos de mensagens:",
+  "Registros de mensajes:"
+ ],
+ [
+  "nous ne voyons que le code, pas l'instance officielle, nous avons donc mis à jour la première constatation pour refléter ce que le développeur nous a dit.",
+  "só vemos o código, não a instância oficial, por isso atualizámos a primeira constatação para refletir o que o programador nos disse.",
+  "solo vemos el código, no la instancia oficial, así que hemos actualizado el primer hallazgo para reflejar lo que nos dijo el desarrollador."
+ ],
+ [
+  "Politique de confidentialité :",
+  "Política de privacidade:",
+  "Política de privacidad:"
+ ],
+ [
+  "le développeur dit que Stoat a demandé à AutoMod d'en créer une, et qu'il attend des conseils juridiques avant de la publier.",
+  "o programador diz que o Stoat pediu ao AutoMod que criasse uma, e que está a aguardar aconselhamento jurídico antes de a publicar.",
+  "el desarrollador dice que Stoat ha pedido a AutoMod que cree una y que está esperando asesoramiento jurídico antes de publicarla."
+ ],
+ [
+  "Cohérence :",
+  "Coerência:",
+  "Coherencia:"
+ ],
+ [
+  "c'est le premier signe que nous voyons que Stoat demande à d'autres bots de respecter les mêmes exigences. C'est une bonne chose. Cela s'est toutefois fait en privé, donc les règles elles-mêmes restent non publiées.",
+  "este é o primeiro sinal que vemos de que o Stoat está a pedir a outros bots que cumpram os mesmos requisitos. É bem-vindo. Mesmo assim, aconteceu em privado, pelo que as próprias regras continuam por publicar.",
+  "esta es la primera señal que vemos de que Stoat está pidiendo a otros bots que cumplan los mismos requisitos. Es bienvenido. Aun así, ocurrió en privado, por lo que las propias reglas siguen sin publicarse."
+ ],
+ [
+  "Le développeur a dit qu'une réponse plus complète suivra. Nous mettrons cette section à jour le moment venu.",
+  "O programador disse que se seguirá uma resposta mais completa. Atualizaremos esta secção quando isso acontecer.",
+  "El desarrollador ha dicho que seguirá una respuesta más completa. Actualizaremos esta sección cuando llegue."
+ ],
+ [
+  "bronx est open source, nous avons donc lu son code en plus de son site. Il a une page de confidentialité qui explique ce qu'il stocke et permet aux membres de télécharger leurs données ou de se désinscrire. Nous l'avions manquée lorsque nous avons écrit cette section, car elle n'est pas liée depuis la page d'accueil de bronx ; son développeur nous a dit qu'elle est en ligne depuis septembre. Voici ce que montrent la page de confidentialité et le code (dernière version, modifiée le 30 septembre 2026).",
+  "O bronx é de código aberto, por isso lemos o seu código além do seu site. Tem uma página de privacidade que explica o que guarda e permite aos membros descarregar os seus dados ou optar por sair. Não a vimos quando escrevemos esta secção pela primeira vez, porque não está ligada a partir da página inicial do bronx; o seu programador disse-nos que está no ar desde setembro. Eis o que mostram a página de privacidade e o código (última versão, alterada a 30 de setembro de 2026).",
+  "bronx es de código abierto, así que leímos su código además de su sitio web. Tiene una página de privacidad que explica lo que guarda y permite a los miembros descargar sus datos o darse de baja. No la vimos cuando escribimos esta sección por primera vez, porque no está enlazada desde la página de inicio de bronx; su desarrollador nos ha dicho que está en línea desde septiembre. Esto es lo que muestran la página de privacidad y el código (última versión, modificada el 30 de septiembre de 2026)."
+ ],
+ [
+  "Opt-out, pas opt-in",
+  "Opt-out, não opt-in",
+  "Opt-out, no opt-in"
+ ],
+ [
+  "Tout le monde est suivi et classé par défaut. Les membres peuvent se désinscrire, mais personne n'est consulté d'abord.",
+  "Toda a gente é rastreada e classificada por predefinição. Os membros podem optar por sair, mas ninguém lhes pergunta primeiro.",
+  "Todos son rastreados y clasificados por defecto. Los miembros pueden darse de baja, pero nadie es consultado antes."
+ ],
+ [
+  "Pour être juste envers bronx, nous n'avons trouvé aucun contenu de message stocké hors de Stoat (seulement des compteurs), aucun service d'IA, aucune collecte d'IP, et aucune donnée personnelle envoyée à des services externes sans que l'utilisateur l'ait demandé par une commande.",
+  "Para ser justos com o bronx, não encontrámos conteúdo de mensagens guardado fora do Stoat (apenas contagens), nem serviços de IA, nem recolha de IP, nem dados pessoais enviados a serviços externos que o utilizador não tenha pedido com um comando.",
+  "Para ser justos con bronx, no encontramos contenido de mensajes almacenado fuera de Stoat (solo recuentos), ni servicios de IA, ni recopilación de IP, ni datos personales enviados a servicios externos que el usuario no haya pedido con un comando."
+ ],
+ [
+  "Ce que le développeur de bronx nous a dit :",
+  "O que o programador do bronx nos disse:",
+  "Lo que nos dijo el desarrollador de bronx:"
+ ],
+ [
+  "Pas d'IA, d'adresses IP ni de contenu de message stocké.",
+  "Sem IA, endereços IP nem conteúdo de mensagens guardado.",
+  "Sin IA, direcciones IP ni contenido de mensajes almacenado."
+ ],
+ [
+  "Cela correspond à ce que nous avons trouvé dans le code.",
+  "Isto corresponde ao que encontrámos no código.",
+  "Esto coincide con lo que encontramos en el código."
+ ],
+ [
+  "Les membres peuvent se désinscrire à tout moment.",
+  "Os membros podem optar por sair a qualquer momento.",
+  "Los miembros pueden darse de baja en cualquier momento."
+ ],
+ [
+  "Nous avons confirmé que le code ignore les messages des utilisateurs désinscrits avant de les compter (",
+  "Confirmámos que o código descarta as mensagens de utilizadores que optaram por sair antes de as contar (",
+  "Hemos confirmado que el código descarta los mensajes de usuarios dados de baja antes de contarlos ("
+ ],
+ [
+  "stoat++ event_handler.cpp",
+  "stoat++ event_handler.cpp",
+  "stoat++ event_handler.cpp"
+ ],
+ [
+  "). Le développeur y voit un consentement ; nous voyons l'opt-out comme différent du fait d'être consulté d'abord.",
+  "). O programador vê isto como consentimento; nós vemos o opt-out como diferente de ser perguntado primeiro.",
+  "). El desarrollador lo ve como consentimiento; nosotros vemos el opt-out como algo distinto de que se pregunte primero."
+ ],
+ [
+  "La plupart des fonctionnalités sont désactivées par défaut.",
+  "A maioria das funcionalidades está desativada por predefinição.",
+  "La mayoría de las funciones están desactivadas por defecto."
+ ],
+ [
+  "Le comptage d'activité et les classements n'en font pas partie.",
+  "A contagem de atividade e as classificações não estão entre elas.",
+  "El recuento de actividad y las clasificaciones no están entre ellas."
+ ],
+ [
+  "bronx n'avait reçu aucun avis de Stoat.",
+  "O bronx não tinha recebido qualquer aviso do Stoat.",
+  "bronx no había recibido ningún aviso de Stoat."
+ ],
+ [
+  "Son développeur a depuis interrogé Stoat directement et nous a transmis les réponses. Elles figurent dans « Dernières indications de Stoat » ci-dessous.",
+  "O seu programador perguntou entretanto diretamente ao Stoat e partilhou connosco as respostas. Estão em «Diretrizes mais recentes do Stoat» abaixo.",
+  "Su desarrollador ha preguntado desde entonces directamente a Stoat y ha compartido las respuestas con nosotros. Están en «Guía más reciente de Stoat» más abajo."
+ ],
+ [
+  "Le développeur ne voit pas de problème de confidentialité dans les passerelles.",
+  "O programador não vê as pontes como um problema de privacidade.",
+  "El desarrollador no ve las pasarelas como un problema de privacidad."
+ ],
+ [
+  "Stoat lui a dit que sa politique sur les bots passerelles est encore à l'étude ; nous l'avons donc gardée comme question ouverte.",
+  "O Stoat disse-lhe que ainda está a decidir a sua política sobre bots de ponte, por isso mantivemo-lo como questão em aberto.",
+  "Stoat le dijo que aún está decidiendo su política sobre bots de puente, así que lo hemos mantenido como pregunta abierta."
+ ],
+ [
+  "La page de confidentialité sera liée de façon plus visible,",
+  "A página de privacidade será ligada de forma mais visível,",
+  "La página de privacidad se enlazará de forma más visible,"
+ ],
+ [
+  "nous a dit le développeur.",
+  "disse-nos o programador.",
+  "nos dijo el desarrollador."
+ ],
+ [
+  "Stoat nous a imposé d'obtenir le consentement de chaque personne avant l'envoi de son contenu à un service externe, et nous a dit que ni le choix d'un propriétaire de serveur ni une politique de confidentialité ne valent consentement. Une passerelle envoie les messages des membres vers d'autres plateformes sur la seule base du choix d'un administrateur et d'une politique de confidentialité. Si la règle qui nous a été appliquée vaut pour tous les bots, les salons reliés ont besoin d'un moyen pour que chaque membre donne son accord avant que ses messages quittent Stoat. Stoat a depuis dit à un autre développeur que sa politique sur les bots passerelles est encore à l'étude.",
+  "O Stoat exigiu que obtivéssemos o consentimento de cada pessoa antes de o seu conteúdo ser enviado para um serviço externo, e disse-nos que nem a escolha do dono de um servidor nem uma política de privacidade contam como consentimento. Uma ponte envia as mensagens dos membros para outras plataformas apenas com base na escolha de um administrador e numa política de privacidade. Se a regra a que fomos sujeitos se aplica a todos os bots, os canais ligados precisam de uma forma de cada membro concordar antes de as suas mensagens saírem do Stoat. O Stoat disse entretanto a outro programador que ainda está a decidir a sua política sobre bots de ponte.",
+  "Stoat nos exigió obtener el consentimiento de cada persona antes de enviar su contenido a un servicio externo, y nos dijo que ni la decisión del propietario de un servidor ni una política de privacidad cuentan como consentimiento. Un puente envía los mensajes de los miembros a otras plataformas basándose solo en la decisión de un administrador y en una política de privacidad. Si la regla a la que se nos sometió se aplica a todos los bots, los canales con puente necesitan una forma de que cada miembro acepte antes de que sus mensajes salgan de Stoat. Stoat ha dicho desde entonces a otro desarrollador que aún está decidiendo su política sobre bots de puente."
+ ],
+ [
+  "Exemple de bot · a une politique de confidentialité · code non public",
+  "Exemplo de bot · tem política de privacidade · código não público",
+  "Ejemplo de bot · tiene política de privacidad · código no público"
+ ],
+ [
+  "Kuma",
+  "Kuma",
+  "Kuma"
+ ],
+ [
+  "01KSQCGBPB79E4V5W6RG6VA7YC",
+  "01KSQCGBPB79E4V5W6RG6VA7YC",
+  "01KSQCGBPB79E4V5W6RG6VA7YC"
+ ],
+ [
+  "Kuma se décrit comme « le bot communautaire et de sécurité tout-en-un le plus avancé de Stoat ». Pour être juste envers Kuma, il publie une politique de confidentialité détaillée, permet aux membres de consulter, d'exporter et de supprimer leurs données, dit ne pas garder de copies des messages et supprime certains enregistrements automatiquement. Son code n'est pas public ; tout ce qui suit provient donc du site de Kuma, de sa politique de confidentialité et de son tableau de bord de démonstration public, tels que nous les avons lus le 6 octobre 2026. Chaque affirmation renvoie à l'endroit où elle figure.",
+  "O Kuma descreve-se como «o bot de comunidade e segurança tudo-em-um mais avançado do Stoat». Para ser justos com o Kuma, publica uma política de privacidade detalhada, permite aos membros ver, exportar e eliminar os seus dados, diz que não guarda cópias das mensagens e elimina alguns registos automaticamente. O seu código não é público, por isso tudo o que se segue vem do site do Kuma, da sua política de privacidade e do seu painel de demonstração público, tal como os lemos a 6 de outubro de 2026. Cada afirmação liga ao local onde aparece.",
+  "Kuma se describe como «el bot de comunidad y seguridad todo en uno más avanzado de Stoat». Para ser justos con Kuma, publica una política de privacidad detallada, permite a los miembros ver, exportar y eliminar sus datos, dice que no guarda copias de los mensajes y elimina algunos registros automáticamente. Su código no es público, así que todo lo que sigue proviene del sitio web de Kuma, su política de privacidad y su panel de demostración público, tal como los leímos el 6 de octubre de 2026. Cada afirmación enlaza al lugar donde aparece."
+ ],
+ [
+  "Kuma a mis à jour sa politique de confidentialité en octobre 2026. Elle indique désormais que l'analyse d'images, qui envoie des images à l'API Vision de Google, n'est disponible que sur Discord et Fluxer et pas sur Stoat ; nous l'avons donc écartée.",
+  "O Kuma atualizou a sua política de privacidade em outubro de 2026. Agora diz que a análise de imagens, que envia imagens para a API Vision da Google, só está disponível no Discord e no Fluxer e não no Stoat, por isso deixámo-la de fora.",
+  "Kuma actualizó su política de privacidad en octubre de 2026. Ahora dice que el análisis de imágenes, que envía imágenes a la API Vision de Google, solo está disponible en Discord y Fluxer y no en Stoat, así que lo hemos dejado fuera."
+ ],
+ [
+  "Mise à jour du 14 octobre 2026 : Kuma a refondu sa vérification sur Stoat",
+  "Atualização de 14 de outubro de 2026: o Kuma reconstruiu a sua verificação no Stoat",
+  "Actualización del 14 de octubre de 2026: Kuma ha rehecho su verificación en Stoat"
+ ],
+ [
+  "Kuma dit que ces changements alignent sa vérification sur les directives de Stoat. Son annonce indique que la vérification sur Stoat ne contrôle plus les adresses IP, les VPN ni rien concernant la connexion d'un membre, que les adresses IP hachées issues des vérifications précédentes ont été supprimées, que la vérification de navigateur propre à Kuma remplace le captcha de Cloudflare, et que Raid Guard n'utilise plus les signalements d'autres serveurs sur Stoat. La vérification sur Discord et Fluxer est inchangée.",
+  "O Kuma diz que as alterações alinham a sua verificação com as diretrizes do Stoat. O seu anúncio diz que a verificação no Stoat já não verifica endereços IP, VPN nem nada sobre a ligação de um membro, que os endereços IP em hash de verificações anteriores foram eliminados, que a verificação de navegador própria do Kuma substitui o captcha da Cloudflare, e que o Raid Guard já não usa as denúncias de outros servidores no Stoat. A verificação no Discord e no Fluxer não mudou.",
+  "Kuma dice que los cambios alinean su verificación con las directrices de Stoat. Su anuncio dice que la verificación en Stoat ya no comprueba direcciones IP, VPN ni nada sobre la conexión de un miembro, que las direcciones IP con hash de verificaciones anteriores se han eliminado, que la comprobación de navegador propia de Kuma sustituye al captcha de Cloudflare, y que Raid Guard ya no usa los reportes de otros servidores en Stoat. La verificación en Discord y Fluxer no ha cambiado."
+ ],
+ [
+  "Cela répond aux deux premières constatations ci-dessus, qui décrivent ce que nous avons lu le 6 octobre. Nous nous en réjouissons, et nous voyons l'abandon de Cloudflare Turnstile par Kuma comme un pas dans la bonne direction. Notre propre vérification à l'arrivée et notre formulaire de signalement utilisent toujours Turnstile, mais il ne se charge qu'après l'accord de la personne, et Stoat ne s'est pas opposé à ce que nous continuions à l'utiliser lorsque la personne y consent.",
+  "Isto responde às duas primeiras constatações acima, que descrevem o que lemos a 6 de outubro. Congratulamo-nos com a mudança e vemos o abandono do Cloudflare Turnstile pelo Kuma como um passo na direção certa. A nossa própria verificação à entrada e o nosso formulário de denúncia continuam a usar o Turnstile, mas só carrega depois de a pessoa concordar, e o Stoat não se opôs a que continuemos a usá-lo quando a pessoa consente.",
+  "Esto responde a los dos primeros hallazgos de arriba, que describen lo que leímos el 6 de octubre. Lo celebramos, y vemos que Kuma abandone Cloudflare Turnstile como un paso en la dirección correcta. Nuestra propia verificación de ingreso y nuestro formulario de reporte siguen usando Turnstile, pero solo se carga después de que la persona acepte, y Stoat no se ha opuesto a que sigamos usándolo cuando la persona da su consentimiento."
+ ]
+]

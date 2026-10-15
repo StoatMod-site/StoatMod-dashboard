@@ -1,0 +1,6 @@
+[
+ "Fixed on 14 October 2026. Kuma's updated privacy policy says Stoat communities are excluded from cross-server flagging, and its announcement says Raid Guard no longer uses other communities' reports on Stoat.",
+ "Fixed on 14 October 2026. Kuma's updated privacy policy says that on Stoat it has no Cloudflare captcha, no VPN or proxy check and no IP hashing, and that its verification doesn't look at your connection.",
+ "A green tick means the bot's own public pages show the issue has since been fixed. We re-checked AutoMod, bronx, bolt and Kuma on 14 October 2026, and so far only two of Kuma's findings have been fixed. We haven't re-checked log_it or the Bot Central bots.",
+ "Fixed"
+]

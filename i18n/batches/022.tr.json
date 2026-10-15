@@ -1,0 +1,47 @@
+[
+ [
+  "Copier la commande : {=0}",
+  "Copiar comando: {=0}",
+  "Copiar comando: {=0}"
+ ],
+ [
+  "{=0} : {1}. Aucune observation de surveillance.",
+  "{=0}: {1}. Sem observações de monitorização.",
+  "{=0}: {1}. Sin observaciones de supervisión."
+ ],
+ [
+  "{=0} : {1}. {2} surveillées.",
+  "{=0}: {1}. {2} monitorizados.",
+  "{=0}: {1}. {2} supervisados."
+ ],
+ [
+  "{=0} : {1}. {2} surveillées ; {3} d’indisponibilité.",
+  "{=0}: {1}. {2} monitorizados; {3} de indisponibilidade.",
+  "{=0}: {1}. {2} supervisados; {3} de inactividad."
+ ],
+ [
+  "{=0} : {1}. {2} surveillées ; {3} de redémarrage du service.",
+  "{=0}: {1}. {2} monitorizados; {3} de reinício do serviço.",
+  "{=0}: {1}. {2} supervisados; {3} de reinicio del servicio."
+ ],
+ [
+  "{=0} : {1}. {2} surveillées ; {3} d’indisponibilité ; {4} de redémarrage du service.",
+  "{=0}: {1}. {2} monitorizados; {3} de indisponibilidade; {4} de reinício do serviço.",
+  "{=0}: {1}. {2} supervisados; {3} de inactividad; {4} de reinicio del servicio."
+ ],
+ [
+  "{=0} : {1}. Aucune observation de surveillance ; {2} de redémarrage du service.",
+  "{=0}: {1}. Sem observações de monitorização; {2} de reinício do serviço.",
+  "{=0}: {1}. Sin observaciones de supervisión; {2} de reinicio del servicio."
+ ],
+ [
+  "{=0} : {1}. Aucune observation de surveillance ; {2} d’indisponibilité.",
+  "{=0}: {1}. Sem observações de monitorização; {2} de indisponibilidade.",
+  "{=0}: {1}. Sin observaciones de supervisión; {2} de inactividad."
+ ],
+ [
+  "jours",
+  "dias",
+  "días"
+ ]
+]

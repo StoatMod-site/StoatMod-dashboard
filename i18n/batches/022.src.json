@@ -1,0 +1,11 @@
+[
+ "Copy command: {=0}",
+ "{=0}: {1}. No monitoring observations.",
+ "{=0}: {1}. {2} monitored.",
+ "{=0}: {1}. {2} monitored; {3} downtime.",
+ "{=0}: {1}. {2} monitored; {3} service restart.",
+ "{=0}: {1}. {2} monitored; {3} downtime; {4} service restart.",
+ "{=0}: {1}. No monitoring observations; {2} service restart.",
+ "{=0}: {1}. No monitoring observations; {2} downtime.",
+ "days"
+]

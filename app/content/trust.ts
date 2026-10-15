@@ -1,0 +1,56 @@
+import type { ContentPage } from "./types";
+
+export const trustPages: Record<string, ContentPage> = {
+  about: {
+    slug: "about",
+    title: "About Stoatmod",
+    seoTitle: "About Stoatmod – Moderation for Stoat Servers",
+    description: "Learn about Stoatmod, its open-source bot and dashboard, and where server owners can get support.",
+    eyebrow: "About the service",
+    lede: "Stoatmod is an open-source moderation bot and server dashboard for people who run communities on Stoat.",
+    updated: "2026-10-15",
+    sections: [
+      { title: "What Stoatmod provides", bullets: ["Configurable content and image moderation.", "Spam, mass-mention, link, nickname and join controls.", "Warnings, cases, evidence and private appeals.", "Automatic roles, logs, statistics, polls and server automations.", "A reviewed public server directory for eligible communities." ] },
+      { title: "Public information and private operation", paragraphs: ["The bot, dashboard API, website and server dashboard are published under AGPL-3.0. Login codes, sessions, case evidence and internal administration remain private."], note: "Source code and self-hosting instructions are available in the two GitHub repositories. Model weights will be released separately.", links: [{ href: "https://github.com/StoatMod-site/Stoatmod", label: "Bot and API source" }, { href: "https://github.com/StoatMod-site/StoatMod-dashboard", label: "Website and dashboard source" }] },
+      { title: "How to get help", paragraphs: ["Server owners and moderators can use the official support server for Stoatmod help. Privacy or account questions can be sent to admin@modstoat.site. Never share dashboard codes, appeal codes, session cookies or private evidence in a public support channel." ] },
+    ],
+    related: ["/security", "/privacy", "/docs/getting-started"],
+  },
+  security: {
+    slug: "security",
+    title: "Security and operational safeguards",
+    seoTitle: "Stoatmod Security and Moderation Safeguards",
+    description: "Understand Stoatmod dashboard access, permission boundaries, outcome verification, fail-open moderation and responsible security reporting.",
+    eyebrow: "Security and trust",
+    lede: "Security depends on permission boundaries, private access, honest failure reporting and verification of the real server state—not on hiding an inaccurate success behind a log entry.",
+    updated: "2026-08-31",
+    sections: [
+      { title: "Dashboard access", bullets: ["Access is limited to the server owner, Manage Server members and explicit owner grants.", "Login codes are single-use and expire after ten minutes.", "Dashboard sessions last 12 hours.", "Owners can revoke access and invalidate sessions.", "Private routes are excluded from search indexing and public sitemaps." ] },
+      { title: "Moderation safeguards", bullets: ["The default content threshold is 90%.", "Observe and review modes support testing before enforcement.", "Provider failures leave content in place instead of silently deleting it.", "Suicidal-thoughts matches send support DMs without deleting messages or adding warnings.", "Serious actions should be verified against the member or message state in Stoat." ] },
+      { title: "Known boundaries", paragraphs: ["Role hierarchy and channel permissions can prevent an otherwise valid action. External Stoat events may not always identify the acting moderator. Automatic reversal after an accepted appeal can fail when permission or server state has changed. Documentation describes these boundaries so teams can plan recovery." ] },
+      { title: "Report a security concern", paragraphs: ["Send a concise report to admin@modstoat.site with the affected public URL or feature, time in UTC, reproducible steps and impact. Do not include credentials, active tokens or unrelated personal information. Use the private global-report workflow for user safety and platform-abuse reports rather than publishing evidence." ] },
+    ],
+    related: ["/privacy", "/status", "/docs/troubleshooting"],
+  },
+  changelog: {
+    slug: "changelog",
+    title: "Stoatmod changelog",
+    seoTitle: "Stoatmod Service and Documentation Changelog",
+    description: "Follow meaningful changes to Stoatmod, its documentation, trust information and public website.",
+    eyebrow: "Stoatmod history",
+    lede: "This log records changes that affect how moderators configure, understand or rely on the hosted Stoatmod service.",
+    updated: "2026-10-15",
+    sections: [
+      { title: "15 October 2026", paragraphs: ["Published the bot and dashboard API, plus the website and server dashboard, in two GitHub repositories under AGPL-3.0. Both repositories include setup instructions. The moderation model will be released separately."], links: [{ href: "https://github.com/StoatMod-site/Stoatmod", label: "Bot and API source" }, { href: "https://github.com/StoatMod-site/StoatMod-dashboard", label: "Website and dashboard source" }] },
+      { title: "14 October 2026", bullets: ["Added Thinking, an optional dashboard setting. Before acting, the AI double-checks borderline matches and writes down its reasoning. Each case now shows what the AI decided, its reasoning and the original message. Thinking is off by default, and its reasoning is deleted with the original message after 30 days.", "Added join protection options. New members can't send links or attachments for a set time after joining: 1 day by default, adjustable from 1 hour to 30 days. They get a DM when it starts and another when it ends. On by default.", "Changed the link policy: link protection is now on by default and removes every link except GifBox links. Servers that had already changed these settings keep their choice.", "Cases now name only the categories that scored 90% or higher."], links: [{ href: "/privacy", label: "Read the updated privacy policy" }] },
+      { title: "2 October 2026", paragraphs: ["We've published a full account of our privacy changes, including our correspondence with Stoat Trust & Safety."], bullets: ["OpenAI is gone: moderation now runs on our own AI, and no message is sent to an outside AI company.", "Moderated messages are deleted 30 days after the decision, or within 10 days of an appeal.", "IP addresses, IP fingerprints and alt-account checks were removed.", "Per-person statistics, popular words and leaderboards were removed. Server stats are anonymous totals only.", "Cross-server join history and alerts were removed.", "Applications are deleted after 14 days, and CAPTCHA records within 30 days.", "Moderators see a notice about these changes at the top of the dashboard for the next week."], links: [{ href: "/privacy-changes", label: "Read what changed and why" }, { href: "/privacy", label: "Read the updated privacy policy" }] },
+      { title: "1 October 2026", bullets: ["Dashboard redesign.", "Website redesign: updated features, documentation and more." ] },
+      { title: "30 September 2026", bullets: ["phase 1 complete: replaced OpenAI API & deployed local AI model (StoatGuard 4B)" ] },
+      { title: "10 September 2026", bullets: ["Added server applications, thanks to Grusiver#0322.", "Fixed Discovery issues." ] },
+      { title: "2 September 2026", bullets: ["Fixed CAPTCHA issues.", "Added per-server spam adjustment settings, thanks to zaboo#2099." ] },
+      { title: "31 August 2026", bullets: ["Reorganised the documentation.", "Added guides.", "Prepared server-rendered public statistics and Discovery data for more dependable crawling.", "Added About, Security and Changelog trust pages.", "Fixed automatic roles so grants are reported only after Stoat confirms the role on the member.", "Fixed an issue with deleted exempt channels, thanks to Yinysng#7220.", "Fixed an issue where alt detection could accidentally globally ban people.", "Standardised the Stoatmod brand and documented the hosted service." ] },
+      { title: "30 August 2026", bullets: ["Released Polls 2.0 with an improved polling system.", "Enhanced the Automations tab in the dashboard.", "Added more customisation to moderation policies.", "Enhanced the appeals page.", "Added server reports so members can report users and actions to moderators.", "Revamped global reporting so users can report someone to the Stoatmod team for review and a possible network-wide ban.", "Added an onboarding guide in the dashboard for new and returning users." ] },
+    ],
+    related: ["/privacy-changes", "/guides/how-to-set-up-server-applications", "/docs/server-applications", "/about", "/status"],
+  },
+};

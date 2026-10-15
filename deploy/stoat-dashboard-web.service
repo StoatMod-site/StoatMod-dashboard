@@ -1,0 +1,20 @@
+[Unit]
+Description=Stoatmod dashboard frontend
+After=network.target
+
+[Service]
+Type=simple
+User=stoatmod
+WorkingDirectory=/opt/stoatmod-website
+EnvironmentFile=/opt/stoatmod-website/.env
+ExecStart=/usr/bin/pnpm start
+Restart=on-failure
+RestartSec=5
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+ReadWritePaths=/opt/stoatmod-website/.wrangler
+
+[Install]
+WantedBy=multi-user.target

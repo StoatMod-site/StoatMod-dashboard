@@ -1,0 +1,18 @@
+[
+["Les liens et les pièces jointes sont supprimés", "Os links e os anexos são removidos", "Se eliminan los enlaces y los archivos adjuntos"],
+["Les liens sont supprimés", "Os links são removidos", "Se eliminan los enlaces"],
+["Les pièces jointes sont supprimées", "Os anexos são removidos", "Se eliminan los archivos adjuntos"],
+["Rien n'est limité", "Nada é limitado", "No se limita nada"],
+["Les liens sont ensuite autorisés, car la protection des liens est désactivée.", "Depois, os links são permitidos, porque a proteção de links está desativada.", "Después se permiten los enlaces, porque la protección de enlaces está desactivada."],
+["Ensuite, votre protection des liens s'applique toujours : seuls les liens GifBox sont autorisés.", "Depois, a sua proteção de links continua a aplicar-se: só são permitidos links do GifBox.", "Después, tu protección de enlaces sigue aplicándose: solo se permiten enlaces de GifBox."],
+["Ensuite, votre protection des liens s'applique toujours : les liens restent bloqués.", "Depois, a sua proteção de links continua a aplicar-se: os links continuam bloqueados.", "Después, tu protección de enlaces sigue aplicándose: los enlaces siguen bloqueados."],
+["Les nouveaux membres ne peuvent pas envoyer de liens ni de pièces jointes avant la fin de leur protection d'arrivée. Activé par défaut.", "Os novos membros não podem enviar links nem anexos até a sua proteção de entrada terminar. Ativado por predefinição.", "Los miembros nuevos no pueden enviar enlaces ni archivos adjuntos hasta que termine su protección de entrada. Activado de forma predeterminada."],
+["Ce que vit un nouveau membre", "O que um novo membro vive", "Lo que vive un miembro nuevo"],
+["Reçoit un message privé expliquant la limite", "Recebe uma mensagem privada a explicar o limite", "Recibe un mensaje privado que explica el límite"],
+["Fin de la protection", "Fim da proteção", "Fin de la protección"],
+["Reçoit un message privé indiquant ce qu'il peut envoyer", "Recebe uma mensagem privada a indicar o que pode enviar", "Recibe un mensaje privado que indica lo que puede enviar"],
+["Une modification s'applique aux membres qui arrivent après l'enregistrement.", "Uma alteração aplica-se aos membros que entrarem depois de guardar.", "Un cambio se aplica a los miembros que se unan después de guardar."],
+["Ce qui est limité", "O que é limitado", "Qué se limita"],
+["Tous les liens, GifBox compris", "Todos os links, incluindo do GifBox", "Todos los enlaces, incluidos los de GifBox"],
+["Images, vidéos et fichiers", "Imagens, vídeos e ficheiros", "Imágenes, vídeos y archivos"]
+]

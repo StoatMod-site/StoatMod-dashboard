@@ -1,0 +1,6 @@
+.page{composes:page from "./PublicPage.module.css"}
+.eyebrow{margin:0 0 8px;color:var(--muted);font:650 10px/1.5 ui-monospace,Consolas,monospace;letter-spacing:.12em;text-transform:uppercase}
+.library{max-width:var(--public-width);margin:auto;padding:0 var(--public-gutter) 56px;scroll-margin-top:24px}.library>header{margin-bottom:22px}.library h2{margin:0;font-size:24px;font-weight:570;letter-spacing:-.04em;line-height:1.2}
+.cta{display:flex;align-items:center;justify-content:space-between;gap:30px;width:calc(100% - 2 * var(--public-gutter));max-width:1136px;margin:0 auto 56px;padding:28px;border:1px solid var(--line);background:var(--panel)}
+.cta h2{margin:0;font-size:24px;font-weight:570;letter-spacing:-.04em;line-height:1.2}.cta a{display:flex;align-items:center;justify-content:space-between;gap:28px;padding:13px 16px;background:var(--ink);color:var(--paper);border:1px solid var(--ink);border-radius:4px;font-size:12px;text-decoration:none}.cta a:hover{background:var(--paper);color:var(--ink)}
+@media(max-width:700px){.cta{align-items:flex-start;flex-direction:column;padding:22px}.cta a{width:100%}.library{padding-bottom:36px}.library h2,.cta h2{font-size:22px}}

@@ -1,0 +1,37 @@
+example.com {
+    encode zstd gzip
+
+    handle /api/* {
+        reverse_proxy 127.0.0.1:8081
+    }
+
+    # The web server sends PDFs as application/octet-stream; label them so
+    # browsers open them in a tab instead of downloading.
+    @pdf path *.pdf
+    handle @pdf {
+        reverse_proxy 127.0.0.1:3000 {
+            header_up Host localhost
+            header_down Content-Type "application/pdf"
+            header_down Content-Disposition "inline"
+        }
+    }
+
+    handle {
+        reverse_proxy 127.0.0.1:3000 {
+            # vinext's production server currently routes its generated app
+            # against its loopback origin. Preserve the public hostname in
+            # X-Forwarded-Host while using the upstream host for route matching.
+            header_up Host localhost
+        }
+    }
+
+    header {
+        Strict-Transport-Security "max-age=31536000; includeSubDomains"
+        X-Content-Type-Options "nosniff"
+        Referrer-Policy "same-origin"
+    }
+}
+
+www.example.com {
+    redir https://example.com{uri} permanent
+}
