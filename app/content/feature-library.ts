@@ -56,13 +56,13 @@ export const featureProfiles: Record<string, FeatureProfile> = {
     name: "Image moderation", group: "Protection",
     summary: "Add optional checks for explicit sexual content and severe real-world violence in image uploads.",
     headline: "Bring image uploads into your policy.",
-    benefits: ["Opt in to checks for two severe image-content categories.", "Use channel overrides where uploads need different rules.", "Choose observation, review or enforcement through your policy."],
+    benefits: ["Checks for two severe image-content categories, on by default.", "Use channel overrides where uploads need different rules.", "Choose observation, review or enforcement through your policy."],
     workflow: [
-      { title: "Opt in", text: "Enable image scanning for the server and choose channel overrides." },
+      { title: "On by default", text: "Image scanning runs for every server unless it is turned off. Channel overrides exclude individual channels." },
       { title: "Check an upload", text: "Eligible images are checked against the supported content categories." },
       { title: "Follow your policy", text: "Configured thresholds and actions decide the response to a match." },
     ],
-    facts: [{ label: "Availability", value: "Opt in" }, { label: "Control", value: "Server & channel settings" }, { label: "On check failure", value: "Upload stays in place" }],
+    facts: [{ label: "Availability", value: "On by default" }, { label: "Control", value: "Server & channel settings" }, { label: "On check failure", value: "Upload stays in place" }],
     setup: { href: "/docs/automod", label: "Read the image setup guide" },
   },
   "join-protection": {

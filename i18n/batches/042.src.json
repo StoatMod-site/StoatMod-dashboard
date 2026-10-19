@@ -1,0 +1,11 @@
+[
+ "Checks uploaded images, GIFs and link previews for graphic gore and explicit nudity only. Swimwear, suggestive photos, costumes, minor injuries, games and cartoons are not flagged. On by default; you can turn it off here or for individual channels.",
+ "Checks for two severe image-content categories, on by default.",
+ "On by default",
+ "Image scanning runs for every server unless it is turned off. Channel overrides exclude individual channels.",
+ "Choose where image checks run and how your team responds to a match. Scanning is on by default and checks only for explicit nudity and severe graphic real-world gore.",
+ "Image scanning is on by default, and server owners can turn it off for the whole server or for individual channels. Uploaded images, animated GIFs and link-preview pictures are checked only for severe graphic real-world gore and explicit nudity (exposed genitals or female breasts). Swimwear, suggestive photos, costumes and fake blood, minor injuries, video games and cartoons are not flagged. Image attachments over 10 MiB are skipped.",
+ "Image scanning is now on by default for every server, except servers that had turned it off. Server owners can still turn it off for the whole server or for individual channels.",
+ "Last updated 19 October 2026",
+ "When message moderation is enabled, Stoatmod reads message text, links, website domains and account mentions. It uses message and channel IDs and timestamps to identify the content and carry out an action. Image checks are on by default and process image attachments, animated GIF frames and link-preview pictures; server owners can turn them off for the whole server or for individual channels. AI checks produce safety categories and model scores."
+]

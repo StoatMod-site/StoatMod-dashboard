@@ -29,7 +29,7 @@ export function PrivacyPage() {
   return <main className={styles.page}>
     <SiteNav active="privacy" />
     <PublicPageHeading eyebrow="Legal / Privacy" title="Privacy policy." description="How Stoatmod collects, uses, shares and protects information when moderating Stoat communities." action={{href:"mailto:admin@modstoat.site",label:"Privacy enquiries"}} />
-    <PublicSummary title="Your information, explained." description="What Stoatmod processes, how long information is kept, and the choices available to you." facts={["Last updated 14 October 2026","No advertising or data sales","Stoatmod Limited"]} />
+    <PublicSummary title="Your information, explained." description="What Stoatmod processes, how long information is kept, and the choices available to you." facts={["Last updated 19 October 2026","No advertising or data sales","Stoatmod Limited"]} />
     <PrivacyUpdateCallout />
 
     <div className="docs-layout privacy-layout">
@@ -78,7 +78,7 @@ export function PrivacyPage() {
           <h3>Stoat accounts and servers</h3>
           <p>We may process Stoat user IDs, usernames, display names, tags, nicknames, profile information available through Stoat, server IDs and names, channel/category/role IDs and names, membership events, permissions, moderator IDs and server configuration.</p>
           <h3>Messages and attachments</h3>
-          <p>When message moderation is enabled, Stoatmod reads message text, links, website domains and account mentions. It uses message and channel IDs and timestamps to identify the content and carry out an action. Enabled image checks may also process image URLs and attachments. AI checks produce safety categories and model scores.</p>
+          <p>When message moderation is enabled, Stoatmod reads message text, links, website domains and account mentions. It uses message and channel IDs and timestamps to identify the content and carry out an action. Image checks are on by default and process image attachments, animated GIF frames and link-preview pictures; server owners can turn them off for the whole server or for individual channels. AI checks produce safety categories and model scores.</p>
           <p>Stoatmod stores message content only when it is the subject of a moderation action. Deleting a message does not cause its content to be saved. Edited messages are reassessed, but their content is saved only if the edited message violates policy and is moderated. We do not keep routine message archives or before-and-after edit logs.</p>
           <p>AI-moderated message content follows the 30-day limit and appeal rules below. Information you intentionally submit through an application, report, appeal or support request is handled for that separate purpose. Messages already posted in a server&apos;s Stoat moderation-log channel are held separately from Stoatmod&apos;s database.</p>
           <h3>Moderation and safety records</h3>
