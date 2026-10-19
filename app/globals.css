@@ -582,6 +582,7 @@ html[data-theme="dark"] .poll-emoji-trigger{border-color:var(--line-strong);back
 .dashboard-global-announcement time{color:#6e6041;font-size:.65rem}
 .dashboard-global-announcement>button{display:grid;width:30px;height:30px;flex:0 0 auto;place-items:center;border:1px solid #9f7c13;background:transparent;color:inherit;cursor:pointer;font-size:1.05rem}
 .dashboard-global-announcement>button:hover{background:#17130a;color:#fff}
+.dashboard-maintenance a{color:#17130a;font-size:.75rem;font-weight:700;text-decoration:underline;text-underline-offset:3px}
 .event-row .event-reason{margin-top:.38rem;color:var(--ink);font-family:inherit;font-size:.72rem;line-height:1.45;white-space:pre-wrap}
 .event-row .event-context{color:var(--muted);font-family:monospace;font-size:.62rem;font-weight:700}
 .member-history-server{margin-top:.7rem;border:1px solid var(--line);background:var(--surface)}

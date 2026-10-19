@@ -6,6 +6,7 @@ import { useEffect, useState, type ReactNode } from "react";
 import { PublicFooter } from "./PublicFooter";
 import { SiteNav } from "./SiteNav";
 import { api } from "./lib/api";
+import { plannedMaintenance } from "./content/maintenance";
 import styles from "./StatusPage.module.css";
 
 type Health = "operational" | "degraded" | "outage" | "unknown";
@@ -51,6 +52,7 @@ export function StatusPage() {
   const [revision, setRevision] = useState(0);
   const [filter, setFilter] = useState("all");
   const [selectedDay, setSelectedDay] = useState<string | null>(null);
+  const [now, setNow] = useState<number | null>(null);
   useEffect(() => {
     let pending = false;
     let disposed = false;
@@ -74,8 +76,8 @@ export function StatusPage() {
         pending = false;
       }
     }
-    const initial = window.setTimeout(() => void refresh(), 0);
-    const timer = window.setInterval(() => void refresh(), 30_000);
+    const initial = window.setTimeout(() => { setNow(Date.now()); void refresh(); }, 0);
+    const timer = window.setInterval(() => { setNow(Date.now()); void refresh(); }, 30_000);
     return () => { disposed = true; active?.abort(); window.clearTimeout(initial); window.clearInterval(timer); };
   }, [days, revision]);
 
@@ -87,6 +89,9 @@ export function StatusPage() {
   const incidents = history?.incidents || [];
   const filtered = incidents.filter((incident) => (filter === "all" || incident.service_id === filter) && (!selectedDay || (incident.started_at.slice(0, 10) <= selectedDay && (!incident.ended_at || incident.ended_at.slice(0, 10) >= selectedDay))));
   const open = incidents.filter((incident) => !incident.resolution).length;
+  // Rendered from the build until the browser knows the time, then hidden once the window has ended.
+  const maintenance = plannedMaintenance.filter((item) => now === null || now < Date.parse(item.ends));
+  const maintenanceServices = new Set(maintenance.flatMap((item) => item.services));
   const title = failed ? "Status updates unavailable" : !data ? "Checking our systems" : overall === "operational" ? "All systems operational" : "Some systems need attention";
 
   return <main className={`docs-page ${styles.page}`}>
@@ -97,6 +102,18 @@ export function StatusPage() {
         <div className={styles.overviewTop}><span className={styles.beacon} aria-hidden="true">{overall === "operational" ? "✓" : overall === "unknown" ? "·" : "!"}</span><div className={styles.overviewText} role="status" aria-live="polite"><h2>{title}</h2><p>{failed ? "We couldn’t refresh the status feed. Any history below is the last received report." : !data ? "Connecting to the live status feed…" : overall === "operational" ? "Every monitored service is responding to its latest health check." : "See the service details below for the latest available information."}</p></div><button className={styles.refresh} type="button" disabled={refreshing} onClick={() => setRevision((value) => value + 1)}><span aria-hidden="true">↻</span>{refreshing ? "Checking…" : "Refresh"}</button></div>
         <div className={styles.overviewBottom}><span><i className={styles.liveDot}/>{data && !failed ? `${healthy} of ${services.length} systems operational` : "Waiting for live status"}</span><span>{open ? pluralize(open, "active incident", "active incidents") : "Checks every 30 seconds"}</span><time dateTime={data?.checked_at}>{data ? `Updated ${dateTime(data.checked_at)} UTC` : "Awaiting first check"}</time></div>
       </section>
+      {maintenance.length > 0 && <section className={styles.maintenance} aria-labelledby="maintenance-heading">
+        <p className={styles.eyebrow} id="maintenance-heading">PLANNED MAINTENANCE</p>
+        {maintenance.map((item) => {
+          const started = now !== null && now >= Date.parse(item.starts);
+          return <article key={item.id} className={styles.maintenanceItem}>
+            <div className={styles.maintenanceTitle}><h2>{item.title}</h2><span data-active={started}>{started ? "Maintenance day" : "Scheduled"}</span></div>
+            <p className={styles.maintenanceWhen}>{item.when}</p>
+            <p>{item.summary}</p>
+            <p>{item.impact}</p>
+          </article>;
+        })}
+      </section>}
       <section className={styles.systems} aria-labelledby="systems-heading">
         <header className={styles.sectionHead}><div><p className={styles.eyebrow}>AVAILABILITY</p><h2 id="systems-heading">The systems behind Stoatmod</h2></div><div className={styles.range} aria-label="History window">{[30, 90].map((value) => <button key={value} type="button" aria-pressed={days === value} onClick={() => { setDays(value); setSelectedDay(null); }}>{value} days</button>)}</div></header>
         <div className={styles.ledger}>{services.map((item) => {
@@ -104,7 +121,7 @@ export function StatusPage() {
           const state = failed ? "unknown" : item.status;
           const bars = serviceHistory?.days || Array.from({ length: days }, (_, index) => ({ date: `unrecorded-${index}`, status: "unknown" as Health, coverage_percent: 0, observed_seconds: 0, outage_seconds: 0, degraded_seconds: 0, restart_seconds: 0 }));
           return <article className={styles.service} key={item.id}>
-            <div className={styles.serviceInfo}><span className={styles.icon}><ServiceIcon id={item.id}/></span><div><div className={styles.serviceTitle}><h3>{item.name}</h3></div><p>{item.id === "local_ai" && item.model_name ? `${item.model_name} · ` : ""}{item.detail}</p></div></div>
+            <div className={styles.serviceInfo}><span className={styles.icon}><ServiceIcon id={item.id}/></span><div><div className={styles.serviceTitle}><h3>{item.name}</h3>{maintenanceServices.has(item.id) && <span className={styles.maintenanceTag}>Maintenance planned</span>}</div><p>{item.id === "local_ai" && item.model_name ? `${item.model_name} · ` : ""}{item.detail}</p></div></div>
             <div className={styles.serviceState} data-state={state}><span/><strong>{labels[state]}</strong></div>
             <div className={styles.history}><div className={styles.bars} style={{ gridTemplateColumns: `repeat(${bars.length}, minmax(0, 1fr))` }} aria-label={`${item.name} daily history`}>{bars.map((day) => {
               const recorded = !day.date.startsWith("unrecorded") && (day.observed_seconds > 0 || day.restart_seconds > 0);
