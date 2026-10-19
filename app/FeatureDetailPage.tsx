@@ -44,7 +44,6 @@ export function FeatureDetailPage({ page }: { page: ContentPage }) {
       <Breadcrumbs items={breadcrumbs}/>
       <PublicPageHeading compact inset eyebrow={`${feature.group} / ${feature.name}`} title={`${feature.name}.`} description={page.lede} action={{href:"/features",label:"All features"}} />
       <PublicSummary inset title={feature.headline} description={feature.summary} icon={<FeatureIcon name={page.slug}/>} facts={feature.facts.map(fact=>`${fact.label}: ${fact.value}`)} action={{href:feature.setup.href,label:feature.setup.label}} />
-      {page.slug === "image-moderation" && <p className={styles.experimental}>Experimental and off by default. Results may be inaccurate.</p>}
       <ul className={styles.benefits} aria-label={`${feature.name} benefits`}>{feature.benefits.map((benefit, index) => <li key={benefit}><span>{String(index + 1).padStart(2, "0")}</span><p>{benefit}</p></li>)}</ul>
       <section className={styles.howItWorks} aria-labelledby="workflow-title"><header className={styles.sectionHeading}><div><p className={styles.eyebrow}>The walkthrough</p><h2 id="workflow-title">How it works.</h2></div><p>From your settings to the result your team can review.</p></header><ol>{feature.workflow.map((step, index) => <li key={step.title}><span>{String(index + 1).padStart(2, "0")}</span><h3>{step.title}</h3><p>{step.text}</p></li>)}</ol></section>
       <div className={styles.detailLayout}>

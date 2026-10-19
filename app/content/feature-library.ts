@@ -62,7 +62,7 @@ export const featureProfiles: Record<string, FeatureProfile> = {
       { title: "Check an upload", text: "Eligible images are checked against the supported content categories." },
       { title: "Follow your policy", text: "Configured thresholds and actions decide the response to a match." },
     ],
-    facts: [{ label: "Availability", value: "Experimental · Opt in" }, { label: "Control", value: "Server & channel settings" }, { label: "On check failure", value: "Upload stays in place" }],
+    facts: [{ label: "Availability", value: "Opt in" }, { label: "Control", value: "Server & channel settings" }, { label: "On check failure", value: "Upload stays in place" }],
     setup: { href: "/docs/automod", label: "Read the image setup guide" },
   },
   "join-protection": {

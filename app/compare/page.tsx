@@ -41,7 +41,7 @@ const criteria: { title: string; detail: string; scores: Record<BotId, number> }
   { title: "Appeals and notices", detail: "Telling members what happened and letting them appeal.", scores: { stoatmod: 3, kuma: 3, automod: 0, bronx: 1 } },
   { title: "Logs and review", detail: "Mod logs and tools for moderators to review decisions.", scores: { stoatmod: 2, kuma: 3, automod: 2, bronx: 2 } },
   { title: "Usernames and nicknames", detail: "Screening names automatically, not only changing them by hand.", scores: { stoatmod: 2, kuma: 2, automod: 0, bronx: 0 } },
-  { title: "Images", detail: "Scanning images on Stoat for gore or explicit content.", scores: { stoatmod: 1, kuma: 0, automod: 0, bronx: 0 } },
+  { title: "Images", detail: "Scanning images on Stoat for gore or explicit content.", scores: { stoatmod: 2, kuma: 0, automod: 0, bronx: 0 } },
   { title: "Network-wide protection", detail: "Stopping a known scammer or abuser across servers on Stoat.", scores: { stoatmod: 2, kuma: 0, automod: 0, bronx: 0 } },
 ];
 
@@ -53,8 +53,8 @@ const ranking: { bot: BotId; headline: string; summary: string; strengths: strin
     bot: "stoatmod",
     headline: "The only one that reads what a message means",
     summary: "Stoatmod's own AI, running on our hardware, checks messages for serious harm across categories such as hate, violent extremism, illegal activity and sexual content. It acts only when a category scores 90% or higher, and an optional Thinking check makes it double-check borderline cases and explain itself.",
-    strengths: ["AI content moderation with per-category policies", "Cases, warning escalation and a full appeal portal", "Join protection, link protection, spam detection and optional CAPTCHA", "Global bans and reports reviewed by the Stoatmod team", "Bot, API, website and dashboard source under AGPL-3.0"],
-    gaps: ["No raid lockdown or waiting room yet", "No scam-link threat feed yet", "Image scanning is still experimental", "Model weights have not been released yet"],
+    strengths: ["AI content moderation with per-category policies", "Cases, warning escalation and a full appeal portal", "Join protection, link protection, spam detection and optional CAPTCHA", "Global bans and reports reviewed by the Stoatmod team", "Image scanning for gore and explicit nudity, including GIFs and link previews", "Bot, API, website and dashboard source under AGPL-3.0"],
+    gaps: ["No raid lockdown or waiting room yet", "No scam-link threat feed yet", "Image scanning can miss clinical close-up photos", "Model weights have not been released yet"],
   },
   {
     bot: "kuma",
@@ -149,7 +149,7 @@ const seo = {
   image: "/compare/og-stoat-bots-comparison.png",
   imageAlt: "Stoat moderation bots compared: Stoatmod, Kuma, AutoMod and bronx. Features, privacy and open-source code.",
   publishedTime: "2026-10-14T00:00:00+01:00",
-  modifiedTime: "2026-10-15T00:00:00+01:00",
+  modifiedTime: "2026-10-19T00:00:00+01:00",
 };
 
 export const metadata = buildMetadata({
@@ -311,8 +311,8 @@ export default function ComparePage() {
               })}
             </ol>
             <div className={styles.note}>
-              <strong>Stoatmod and Kuma are level on points</strong>
-              <p>Both score 22 out of 30. When totals are level, we rank by the first area on the scorecard where the scores differ. That&apos;s understanding messages, where Stoatmod&apos;s AI scores 3 and Kuma&apos;s filters score 2. AutoMod and bronx are level too, and AutoMod is ahead on spam. If raids are your biggest worry, Kuma is the stronger choice.</p>
+              <strong>Stoatmod and Kuma are one point apart</strong>
+              <p>Stoatmod scores 23 out of 30 and Kuma 22. Stoatmod leads on understanding messages, images and network-wide protection; Kuma leads on spam, links, raids and logs. If raids are your biggest worry, Kuma is the stronger choice. AutoMod and bronx are level on 7, and AutoMod ranks ahead because it is stronger on spam.</p>
             </div>
           </section>
 

@@ -876,222 +876,222 @@
  },
  {
   "text": "Server is unavailable",
-  "line": 729,
+  "line": 734,
   "file": "bot.py"
  },
  {
   "text": "The server blacklist entry is unavailable.",
-  "line": 775,
+  "line": 780,
   "file": "bot.py"
  },
  {
   "text": "The admin account no longer exists.",
-  "line": 801,
+  "line": 806,
   "file": "bot.py"
  },
  {
   "text": "Alt-account detection has been removed",
-  "line": 941,
-  "file": "bot.py"
- },
- {
-  "text": "Elevated members cannot be warned",
   "line": 946,
   "file": "bot.py"
  },
  {
+  "text": "Elevated members cannot be warned",
+  "line": 951,
+  "file": "bot.py"
+ },
+ {
   "text": "Elevated members cannot be muted",
-  "line": 993,
+  "line": 998,
   "file": "bot.py"
  },
  {
   "text": "Missing Timeout Members permission",
-  "line": 995,
+  "line": 1000,
   "file": "bot.py"
  },
  {
   "text": "Missing Kick Members permission",
-  "line": 1003,
+  "line": 1008,
   "file": "bot.py"
  },
  {
   "text": "Missing Ban Members permission",
-  "line": 1015,
+  "line": 1020,
   "file": "bot.py"
  },
  {
   "text": "Unsupported moderation action",
-  "line": 1023,
+  "line": 1028,
   "file": "bot.py"
  },
  {
   "text": "Poll is unavailable or already closed",
-  "line": 1057,
+  "line": 1062,
   "file": "bot.py"
  },
  {
   "text": "Poll is unavailable",
-  "line": 1127,
+  "line": 1132,
   "file": "bot.py"
  },
  {
   "text": "Poll message details are missing",
-  "line": 1170,
+  "line": 1175,
   "file": "bot.py"
  },
  {
   "text": "Server report is unavailable",
-  "line": 1257,
+  "line": 1262,
   "file": "bot.py"
  },
  {
   "text": "Report is unavailable",
-  "line": 1294,
+  "line": 1299,
   "file": "bot.py"
  },
  {
   "text": "Appeal is unavailable",
-  "line": 1320,
+  "line": 1325,
   "file": "bot.py"
  },
  {
   "text": "The bot cannot be globally banned",
-  "line": 1675,
+  "line": 1680,
   "file": "bot.py"
  },
  {
   "text": "Automatic appeal decision is unavailable",
-  "line": 1774,
+  "line": 1779,
   "file": "bot.py"
  },
  {
   "text": "Global bans are not eligible for appeals",
-  "line": 1799,
+  "line": 1804,
   "file": "bot.py"
  },
  {
   "text": "Appeal is unavailable in this server",
-  "line": 1801,
+  "line": 1806,
   "file": "bot.py"
  },
  {
   "text": "Appeal automatically rejected",
-  "line": 1848,
+  "line": 1853,
   "file": "bot.py"
  },
  {
   "text": "Unknown dashboard action",
-  "line": 1881,
+  "line": 1886,
   "file": "bot.py"
  },
  {
   "text": "Credential delivery failed or was replaced. Access remains disabled.",
-  "line": 1887,
+  "line": 1892,
   "file": "bot.py"
  },
  {
   "text": "Missing Manage Messages permission",
-  "line": 2230,
+  "line": 2236,
   "file": "bot.py"
  },
  {
   "text": "Elevated members are exempt from automation warnings",
-  "line": 2238,
+  "line": 2244,
   "file": "bot.py"
  },
  {
   "text": "Elevated members are exempt from automation timeouts",
-  "line": 2252,
+  "line": 2258,
   "file": "bot.py"
  },
  {
   "text": "Unsupported automation action: {0}",
-  "line": 2268,
+  "line": 2274,
   "file": "bot.py"
  },
  {
   "text": "Mute duration must be greater than zero and at most 4 weeks.",
-  "line": 2536,
+  "line": 2542,
   "file": "bot.py"
  },
  {
   "text": "Put one duration before or after the reason, not at both ends.",
-  "line": 2540,
+  "line": 2546,
   "file": "bot.py"
  },
  {
   "text": "Use a duration such as 25m, 2h, 1h30m, or 25 minutes (maximum 4 weeks).",
-  "line": 2545,
+  "line": 2551,
   "file": "bot.py"
  },
  {
   "text": "A reason is required. Add it before or after the duration.",
-  "line": 2548,
+  "line": 2554,
   "file": "bot.py"
  },
  {
   "text": "Report has not been reviewed",
-  "line": 4366,
+  "line": 4386,
   "file": "bot.py"
  },
  {
   "text": "The reporter could not be reached by direct message.",
-  "line": 4408,
+  "line": 4428,
   "file": "bot.py"
  },
  {
   "text": "**User:** `{0}` **Reason:** {1}",
-  "line": 4676,
+  "line": 4793,
   "file": "bot.py"
  },
  {
   "text": "Automatic {0} moderation: {1}",
-  "line": 4929,
+  "line": 5046,
   "file": "bot.py"
  },
  {
   "text": "No moderation log channel is configured",
-  "line": 5574,
+  "line": 5691,
   "file": "bot.py"
  },
  {
   "text": "Server owner is unavailable",
-  "line": 6237,
+  "line": 6354,
   "file": "bot.py"
  },
  {
   "text": "Moderation log channel is unavailable",
-  "line": 6242,
+  "line": 6359,
   "file": "bot.py"
  },
  {
   "text": "I do not recognise `{0}`.",
-  "line": 7669,
+  "line": 7786,
   "file": "bot.py"
  },
  {
   "text": "That user has no application in this server.",
-  "line": 7718,
+  "line": 7835,
   "file": "bot.py"
  },
  {
   "text": "**Action:** {0} **Role:** {1} (`{2}`)",
-  "line": 8249,
+  "line": 8366,
   "file": "bot.py"
  },
  {
   "text": "Warning escalation policy updated",
-  "line": 9010,
+  "line": 9127,
   "file": "bot.py"
  },
  {
   "text": "Warning escalation policy reset",
-  "line": 9014,
+  "line": 9131,
   "file": "bot.py"
  },
  {
   "text": "Automatic content moderation:",
-  "line": 9978,
+  "line": 10143,
   "file": "bot.py"
  },
  {

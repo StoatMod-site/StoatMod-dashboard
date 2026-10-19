@@ -692,8 +692,8 @@ test("protection settings use one cohesive responsive workspace", async () => {
   assert.match(dashboardSource, /id="protection-spam"[\s\S]*<SpamProtectionEditor/);
   assert.match(dashboardSource, /Repeated content[\s\S]*Rapid traffic[\s\S]*Behaviour score[\s\S]*Mentions and response/);
   assert.match(dashboardSource, /Rapid-message rule[\s\S]*messages in[\s\S]*seconds/);
-  assert.match(dashboardSource, /label="Image scanning" badge="⚠ Experimental — may be inaccurate"/);
-  assert.match(dashboardSource, /Experimental image moderation for violence and explicit sexual content only\. It may not be accurate\. Off by default/);
+  assert.doesNotMatch(dashboardSource, /label="Image scanning" badge=/);
+  assert.match(dashboardSource, /graphic gore and explicit nudity only\. Swimwear, suggestive photos, costumes, minor injuries, games and cartoons are not flagged\. Off by default/);
   assert.match(stylesheet, /\.experimental-warning\{[^}]*background:#fef3c7;[^}]*color:#8a4b08/);
   assert.match(stylesheet, /\.spam-protection-editor\{/);
   assert.match(stylesheet, /\.spam-editor-summary\{display:grid;grid-template-columns:minmax\(240px,1fr\) auto\}/);

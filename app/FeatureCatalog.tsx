@@ -20,7 +20,7 @@ export function FeatureCatalog({ features }: { features: (FeatureProfile & { slu
     <p className={styles.resultCount} role="status" aria-live="polite">{filtered.length} {filtered.length === 1 ? "feature" : "features"}{search ? ` matching “${query.trim()}”` : group === "All features" ? " to explore" : ` in ${group.toLowerCase()}`}</p>
     {filtered.length ? <div className={styles.cardGrid}>{filtered.map((feature) => <a className={styles.featureCard} href={`/features/${feature.slug}`} key={feature.slug}>
       <div className={styles.cardTop}><span className={styles.featureGlyph}><FeatureIcon name={feature.slug}/></span><span>{feature.group}</span><span className={styles.cardArrow} aria-hidden="true">↗</span></div>
-      <h3>{feature.name}</h3><p>{feature.summary}</p><div className={styles.cardBottom}><span>{feature.slug === "image-moderation" ? "Experimental · Opt in" : feature.facts[0].value}</span><strong>Explore feature <span aria-hidden="true">→</span></strong></div>
+      <h3>{feature.name}</h3><p>{feature.summary}</p><div className={styles.cardBottom}><span>{feature.facts[0].value}</span><strong>Explore feature <span aria-hidden="true">→</span></strong></div>
     </a>)}</div> : <div className={styles.empty}><h3>No features found</h3><p>Try a different search or browse the full feature library.</p><button type="button" onClick={() => { setQuery(""); setGroup("All features"); }}>Clear filters</button></div>}
   </section>;
 }
