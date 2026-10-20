@@ -5,7 +5,7 @@ import { useMemo, useState } from "react";
 import { PublicFooter } from "./PublicFooter";
 import { ServerArtwork } from "./ServerArtwork";
 import { SiteNav } from "./SiteNav";
-import { AdvertiseBand, CategoryTiles, DiscoveryNav, Faq, SectionHeading, ServerCard, ServerGrid, hueStyle, serverPath } from "./discovery/DiscoveryUI";
+import { AdvertiseBand, CategoryTiles, DiscoveryNav, Faq, SectionHeading, ServerCard, ServerGrid, serverPath } from "./discovery/DiscoveryUI";
 import { compactNumber, directoryStats, rankActive, rankBumped, rankNewest, rankPopular, topTags } from "./lib/discovery-catalog";
 import { discoveryFaq } from "./lib/discovery-faq";
 import { pluralize } from "./lib/plural";
@@ -76,11 +76,10 @@ export function DiscoveryPage({ initialServers, featuredIds = [], dataAvailable 
     <main className={styles.page}>
       <SiteNav active="discovery" />
       <section className={styles.hero} aria-labelledby="discovery-title">
-        <div className={styles.glow} aria-hidden="true" />
         <div className={styles.heroInner}>
           <div>
-            <p className={styles.kicker}><span aria-hidden="true" />Stoat Discovery · {dataAvailable ? pluralize(stats.servers, "reviewed server", "reviewed servers") : "Directory temporarily unavailable"}</p>
-            <h1 id="discovery-title">Discover the best <span className={styles.gradientText}>Stoat servers</span></h1>
+            <p className={styles.kicker}><span aria-hidden="true" />Stoatmod / Discovery · {dataAvailable ? pluralize(stats.servers, "reviewed server", "reviewed servers") : "Directory temporarily unavailable"}</p>
+            <h1 id="discovery-title">Discover the best <span className={styles.titleMuted}>Stoat servers</span></h1>
             <p className={styles.lede}>Find communities for gaming, anime, art, music and more. Every listing is reviewed, shows its live activity and opens with a direct Stoat invite.</p>
             <form className={styles.heroSearch} role="search" onSubmit={(event) => { event.preventDefault(); document.getElementById("server-directory")?.scrollIntoView({ behavior: "smooth", block: "start" }); }}>
               <span aria-hidden="true">⌕</span>
@@ -92,8 +91,9 @@ export function DiscoveryPage({ initialServers, featuredIds = [], dataAvailable 
               ? <dl className={styles.heroStats}><div><dt>servers listed</dt><dd>{compactNumber(stats.servers)}</dd></div><div><dt>community members</dt><dd>{compactNumber(stats.members)}</dd></div><div><dt>messages today</dt><dd>{compactNumber(stats.messagesToday)}</dd></div><div><dt>topics</dt><dd>{compactNumber(stats.topics)}</dd></div></dl>
               : <p className={styles.lede}>The directory could not be reached. Existing listings have not been removed. Try again shortly.</p>}
           </div>
-          {collage.length > 0 && <div className={styles.collage} aria-hidden="true">
-            {collage.map((server) => <a className={styles.collageCard} href={serverPath(server)} key={server.server_id} style={hueStyle(server.server_id)} tabIndex={-1}><ServerArtwork serverId={server.server_id} name={server.server_name} src={server.server_icon_url} kind="icon" className={styles.collageIcon} /><span><strong data-no-translate>{server.server_name}</strong><small>{compactNumber(server.member_count)} members</small></span></a>)}
+          {collage.length > 0 && <div className={styles.collage}>
+            <p className={styles.collageHeading}><span>Most active now</span><a href="/discovery/top">Top servers →</a></p>
+            {collage.map((server, index) => <a className={styles.collageCard} href={serverPath(server)} key={server.server_id}><span className={styles.collageRank}>{String(index + 1).padStart(2, "0")}</span><ServerArtwork serverId={server.server_id} name={server.server_name} src={server.server_icon_url} kind="icon" className={styles.collageIcon} /><span><strong data-no-translate>{server.server_name}</strong><small>{compactNumber(server.member_count)} members</small></span></a>)}
           </div>}
         </div>
       </section>

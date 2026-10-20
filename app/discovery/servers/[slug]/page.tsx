@@ -10,7 +10,7 @@ import { buildMetadata } from "../../../lib/seo";
 import { absoluteUrl, siteConfig } from "../../../lib/site-config";
 import { ServerArtwork } from "../../../ServerArtwork";
 import { categoriesForServer, compactNumber, similarServers } from "../../../lib/discovery-catalog";
-import { AdvertiseBand, DiscoveryNav, RankedList, SectionHeading, hueStyle } from "../../DiscoveryUI";
+import { AdvertiseBand, DiscoveryNav, RankedList, SectionHeading } from "../../DiscoveryUI";
 import styles from "../../Discovery.module.css";
 
 function readableDate(value: string | null | undefined) {
@@ -120,13 +120,13 @@ export default async function DiscoveryServerProfile({ params }: { params: Promi
         ],
       }} />
       <SiteNav active="discovery" />
-      <header className={styles.profileHero} style={hueStyle(server.server_id)}>
+      <header className={styles.profileHero}>
         <div className={styles.profileBanner}><ServerArtwork serverId={server.server_id} name={server.server_name} src={server.server_banner_url} kind="banner" priority /></div>
         <div className={styles.profileShade} aria-hidden="true" />
         <div className={styles.profileInner}>
           <ServerArtwork serverId={server.server_id} name={server.server_name} src={server.server_icon_url} kind="icon" className={styles.profileIcon} />
           <div>
-            <p className={styles.kicker}><span aria-hidden="true" />Reviewed Stoat server</p>
+            <p className={styles.kicker}><span aria-hidden="true" />Stoatmod / Reviewed Stoat server</p>
             <h1>{server.server_name}</h1>
             <p className={styles.profileMeta}>{server.member_count.toLocaleString("en-GB")} members · {server.daily_messages.toLocaleString("en-GB")} messages today{server.global_rank ? ` · #${server.global_rank} in public activity` : ""}</p>
             {server.tags.length > 0 && <div className={styles.tagRow}>{server.tags.map((tag) => <a href={"/discovery/tags/" + slugify(tag)} key={tag} data-no-translate>#{tag}</a>)}</div>}

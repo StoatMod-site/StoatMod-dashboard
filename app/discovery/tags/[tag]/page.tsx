@@ -82,7 +82,7 @@ export default async function DiscoveryTagPage({ params }: { params: Promise<{ t
         ],
       }} />
       <SiteNav active="discovery" />
-      <SubHero eyebrow="Discovery topic" title={<>#{result.displayTag} <span className={styles.gradientText}>Stoat servers</span></>} description={`${result.servers.length === 1 ? "1 reviewed listing" : `${result.servers.length} reviewed listings`} tagged #${result.displayTag}. Tags are supplied by community owners and checked as part of the directory review. Read the descriptions and server rules before joining.`} />
+      <SubHero eyebrow="Discovery topic" title={<>#{result.displayTag} <span className={styles.titleMuted}>Stoat servers</span></>} description={`${result.servers.length === 1 ? "1 reviewed listing" : `${result.servers.length} reviewed listings`} tagged #${result.displayTag}. Tags are supplied by community owners and checked as part of the directory review. Read the descriptions and server rules before joining.`} />
       <DiscoveryNav />
       <Breadcrumbs items={breadcrumbs} />
       <section className={`${styles.section} ${styles.sectionTight}`} aria-label={"Servers tagged " + result.displayTag}>

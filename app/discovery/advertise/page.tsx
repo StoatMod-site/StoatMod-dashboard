@@ -19,12 +19,12 @@ const description = "Advertise your Stoat server for free on Stoatmod Discovery.
 export const metadata = buildMetadata({ title, description, path });
 
 const benefits = [
-  { icon: "🔎", title: "Found by people searching", text: "Discovery is built to rank for Stoat server searches, so people looking for a community can find yours." },
-  { icon: "🪪", title: "A page of its own", text: "Every listing gets a server page with your banner, icon, description, tags and a direct invite that is easy to share." },
-  { icon: "🚀", title: "Bump every two hours", text: "Bump with ~bump or from the dashboard to move your server to the top of Recently bumped and into the featured spot." },
-  { icon: "📈", title: "Live activity", text: "Member counts and today's message activity show visitors that your community is active before they join." },
-  { icon: "🗂️", title: "Categories and tags", text: "Up to five tags place your server in topic pages and categories such as gaming, anime, art and music." },
-  { icon: "🛡️", title: "Reviewed and free", text: "Every listing is reviewed, which keeps the directory trustworthy. Listing and bumping cost nothing." },
+  { title: "Found by people searching", text: "Discovery is built to rank for Stoat server searches, so people looking for a community can find yours." },
+  { title: "A page of its own", text: "Every listing gets a server page with your banner, icon, description, tags and a direct invite that is easy to share." },
+  { title: "Bump every two hours", text: "Bump with ~bump or from the dashboard to move your server to the top of Recently bumped and into the featured spot." },
+  { title: "Live activity", text: "Member counts and today's message activity show visitors that your community is active before they join." },
+  { title: "Categories and tags", text: "Up to five tags place your server in topic pages and categories such as gaming, anime, art and music." },
+  { title: "Reviewed and free", text: "Every listing is reviewed, which keeps the directory trustworthy. Listing and bumping cost nothing." },
 ];
 
 export default async function AdvertisePage() {
@@ -55,7 +55,7 @@ export default async function AdvertisePage() {
         ],
       }} />
       <SiteNav active="discovery" />
-      <SubHero eyebrow="Stoat server advertising" title={<>Advertise your <span className={styles.gradientText}>Stoat server</span>, free.</>} description="List your community on Stoatmod Discovery, the reviewed directory of Stoat servers. Reach people searching for a new server, get your own server page and bump your listing every two hours.">
+      <SubHero eyebrow="Stoat server advertising" title={<>Advertise your <span className={styles.titleMuted}>Stoat server</span>, free.</>} description="List your community on Stoatmod Discovery, the reviewed directory of Stoat servers. Reach people searching for a new server, get your own server page and bump your listing every two hours.">
         <div className={styles.heroActions}>
           <a className={styles.primaryButton} href="/login">List your server <span aria-hidden="true">→</span></a>
           <a className={styles.ghostButton} href={siteConfig.inviteUrl}>Add Stoatmod to Stoat ↗</a>
@@ -67,7 +67,7 @@ export default async function AdvertisePage() {
 
       <section className={`${styles.section} ${styles.sectionTight}`} aria-labelledby="benefits-title">
         <SectionHeading eyebrow="Why list on Discovery" title="Everything you need to grow your Stoat community" />
-        <div className={styles.benefitGrid}>{benefits.map((benefit) => <article className={styles.benefit} key={benefit.title}><span aria-hidden="true">{benefit.icon}</span><h3>{benefit.title}</h3><p>{benefit.text}</p></article>)}</div>
+        <div className={styles.benefitGrid}>{benefits.map((benefit, index) => <article className={styles.benefit} key={benefit.title}><span aria-hidden="true">{String(index + 1).padStart(2, "0")}</span><h3>{benefit.title}</h3><p>{benefit.text}</p></article>)}</div>
       </section>
 
       <section className={styles.section} aria-labelledby="steps-title">
@@ -113,8 +113,7 @@ export default async function AdvertisePage() {
 
       <Faq items={advertiseFaq} title="Advertising questions" eyebrow="Stoat server advertising FAQ" />
       <section className={`${styles.band} ${styles.bandCompact}`} aria-labelledby="advertise-final">
-        <div className={styles.glow} aria-hidden="true" />
-        <div><p className={styles.kicker}><span aria-hidden="true" />Ready when you are</p><h2 id="advertise-final">Put your Stoat server in front of new members.</h2></div>
+        <div><p className={styles.kicker}><span aria-hidden="true" />Stoatmod / Ready when you are</p><h2 id="advertise-final">Put your Stoat server in front of new members.</h2></div>
         <div className={styles.bandActions}><a className={styles.primaryButton} href="/login">List your server <span aria-hidden="true">→</span></a><a className={styles.ghostButton} href="/discovery">Browse Discovery</a></div>
       </section>
       <div className={styles.spacer} />

@@ -1,6 +1,6 @@
-import type { CSSProperties, ReactNode } from "react";
+import type { ReactNode } from "react";
 import { ServerArtwork } from "../ServerArtwork";
-import { compactNumber, countLabel, discoveryCategories, serverHue, serversInCategory } from "../lib/discovery-catalog";
+import { compactNumber, countLabel, discoveryCategories, serversInCategory } from "../lib/discovery-catalog";
 import { discoveryServerSlug, slugify } from "../lib/public-slugs";
 import type { DiscoveryServer } from "../lib/public-types";
 import styles from "./Discovery.module.css";
@@ -9,14 +9,10 @@ export function serverPath(server: Pick<DiscoveryServer, "server_id" | "server_n
   return "/discovery/servers/" + discoveryServerSlug(server);
 }
 
-export function hueStyle(serverId: string) {
-  return { "--server-hue": String(serverHue(serverId)) } as CSSProperties;
-}
-
 export function ServerCard({ server, rank, note, feature = false }: { server: DiscoveryServer; rank?: number; note?: string; feature?: boolean }) {
   const path = serverPath(server);
   return (
-    <article className={`${styles.card} ${feature ? styles.cardFeature : ""}`} style={hueStyle(server.server_id)}>
+    <article className={`${styles.card} ${feature ? styles.cardFeature : ""}`}>
       <div className={styles.cardBanner}>
         <ServerArtwork serverId={server.server_id} name={server.server_name} src={server.server_banner_url} kind="banner" className={styles.cardBannerImage} href={path} />
         {rank !== undefined && <span className={styles.rank}>#{rank}</span>}
@@ -64,9 +60,8 @@ export function DiscoveryNav({ active }: { active?: DiscoveryNavKey }) {
 export function SubHero({ eyebrow, title, description, children }: { eyebrow: string; title: ReactNode; description: string; children?: ReactNode }) {
   return (
     <header className={styles.subHero}>
-      <div className={styles.glow} aria-hidden="true" />
       <div className={styles.subHeroInner}>
-        <p className={styles.kicker}><span aria-hidden="true" />{eyebrow}</p>
+        <p className={styles.kicker}><span aria-hidden="true" />Stoatmod / {eyebrow}</p>
         <h1>{title}</h1>
         <p className={styles.lede}>{description}</p>
         {children}
@@ -90,9 +85,9 @@ export function CategoryTiles({ servers, showEmpty = false }: { servers: Discove
     .filter(({ count }) => showEmpty || count > 0);
   return (
     <div className={styles.categoryGrid}>
-      {tiles.map(({ category, count }) => (
+      {tiles.map(({ category, count }, index) => (
         <a href={"/discovery/categories/" + category.slug} key={category.slug} className={styles.categoryTile}>
-          <span className={styles.categoryEmoji} aria-hidden="true">{category.emoji}</span>
+          <span className={styles.categoryNumber} aria-hidden="true">{String(index + 1).padStart(2, "0")}</span>
           <strong>{category.name}</strong>
           <small>{count === 1 ? "1 server" : `${count} servers`}</small>
         </a>
@@ -104,9 +99,8 @@ export function CategoryTiles({ servers, showEmpty = false }: { servers: Discove
 export function AdvertiseBand({ compact = false }: { compact?: boolean }) {
   return (
     <section className={`${styles.band} ${compact ? styles.bandCompact : ""}`} aria-labelledby="advertise-band-title">
-      <div className={styles.glow} aria-hidden="true" />
       <div>
-        <p className={styles.kicker}><span aria-hidden="true" />Free Stoat server advertising</p>
+        <p className={styles.kicker}><span aria-hidden="true" />Stoatmod / Free Stoat server advertising</p>
         <h2 id="advertise-band-title">Grow your Stoat server.</h2>
         <p>List your community on Stoatmod Discovery for free. Get your own server page, appear in search and categories, and bump your listing every two hours.</p>
       </div>
@@ -141,7 +135,7 @@ export function RankedList({ servers, note, numbered = true }: { servers: Discov
   return (
     <ol className={styles.rankList}>
       {servers.map((server, index) => (
-        <li className={styles.rankItem} key={server.server_id} style={hueStyle(server.server_id)}>
+        <li className={styles.rankItem} key={server.server_id}>
           <span className={styles.rankNumber}>{numbered ? String(index + 1).padStart(2, "0") : "→"}</span>
           <ServerArtwork serverId={server.server_id} name={server.server_name} src={server.server_icon_url} kind="icon" className={styles.rankIcon} />
           <div>

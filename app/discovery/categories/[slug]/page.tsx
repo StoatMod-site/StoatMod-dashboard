@@ -56,7 +56,7 @@ export default async function CategoryPage({ params }: { params: Promise<{ slug:
         ],
       }} />
       <SiteNav active="discovery" />
-      <SubHero eyebrow={`${category.emoji} Category · ${servers.length === 1 ? "1 server" : `${servers.length} servers`}`} title={category.title} description={category.intro} />
+      <SubHero eyebrow={`Category · ${servers.length === 1 ? "1 server" : `${servers.length} servers`}`} title={category.title} description={category.intro} />
       <DiscoveryNav active="categories" />
       <Breadcrumbs items={breadcrumbs} />
       <section className={`${styles.section} ${styles.sectionTight}`} aria-label={category.title}>
@@ -64,7 +64,7 @@ export default async function CategoryPage({ params }: { params: Promise<{ slug:
       </section>
       {others.length > 0 && <section className={styles.section} aria-labelledby="other-categories">
         <SectionHeading eyebrow="More topics" title="Other categories" />
-        <div className={styles.tagRow}>{others.map(({ other, count }) => <a href={"/discovery/categories/" + other.slug} key={other.slug}>{other.emoji} {other.name} · {count}</a>)}</div>
+        <div className={styles.tagRow}>{others.map(({ other, count }) => <a href={"/discovery/categories/" + other.slug} key={other.slug}>{other.name} · {count}</a>)}</div>
       </section>}
       <AdvertiseBand compact />
       <div className={styles.spacer} />

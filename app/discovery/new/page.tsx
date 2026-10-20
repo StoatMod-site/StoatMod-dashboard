@@ -39,7 +39,7 @@ export default async function NewServersPage() {
         ],
       }} />
       <SiteNav active="discovery" />
-      <SubHero eyebrow="Fresh listings" title={<>New <span className={styles.gradientText}>Stoat servers</span></>} description="Communities recently approved for Stoatmod Discovery, newest first. New servers are a great place to get in early and help shape a community." />
+      <SubHero eyebrow="Fresh listings" title={<>New <span className={styles.titleMuted}>Stoat servers</span></>} description="Communities recently approved for Stoatmod Discovery, newest first. New servers are a great place to get in early and help shape a community." />
       <DiscoveryNav active="new" />
       <Breadcrumbs items={breadcrumbs} />
       <section className={`${styles.section} ${styles.sectionTight}`} aria-label="New Stoat servers">
