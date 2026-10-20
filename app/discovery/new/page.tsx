@@ -5,6 +5,7 @@ import { SiteNav } from "../../SiteNav";
 import { rankNewest } from "../../lib/discovery-catalog";
 import { getRequiredPublicDiscovery } from "../../lib/public-data.server";
 import { breadcrumbSchema, organizationSchema, websiteSchema } from "../../lib/schema";
+import { discoveryOgImage, discoveryOgPath, imageObject } from "../../lib/discovery-seo";
 import { buildMetadata } from "../../lib/seo";
 import { absoluteUrl, siteConfig } from "../../lib/site-config";
 import { AdvertiseBand, DiscoveryNav, RankedList, SubHero, listingDate, serverPath } from "../DiscoveryUI";
@@ -14,7 +15,7 @@ const path = "/discovery/new";
 const title = "New Stoat Servers – Recently Added Communities | Stoatmod Discovery";
 const description = "New Stoat servers recently approved on Stoatmod Discovery. Be one of the first to join fresh Stoat communities.";
 
-export const metadata = buildMetadata({ title, description, path });
+export const metadata = buildMetadata({ title, description, path, ...discoveryOgImage("new", "New Stoat servers – Stoatmod Discovery") });
 
 export default async function NewServersPage() {
   const servers = rankNewest(await getRequiredPublicDiscovery());
@@ -31,7 +32,7 @@ export default async function NewServersPage() {
           organizationSchema(),
           websiteSchema(),
           {
-            "@type": "CollectionPage", "@id": absoluteUrl(path) + "#page", url: absoluteUrl(path), name: title, description,
+            "@type": "CollectionPage", "@id": absoluteUrl(path) + "#page", url: absoluteUrl(path), name: title, description, primaryImageOfPage: imageObject(discoveryOgPath("new")),
             isPartOf: { "@id": siteConfig.origin + "/#website" },
             mainEntity: { "@type": "ItemList", itemListElement: servers.map((server, index) => ({ "@type": "ListItem", position: index + 1, name: server.server_name, url: absoluteUrl(serverPath(server)) })) },
           },

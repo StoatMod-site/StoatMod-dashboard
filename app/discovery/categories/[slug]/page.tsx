@@ -3,9 +3,10 @@ import { Breadcrumbs } from "../../../Breadcrumbs";
 import { JsonLd } from "../../../JsonLd";
 import { PublicFooter } from "../../../PublicFooter";
 import { SiteNav } from "../../../SiteNav";
-import { CATEGORY_INDEX_MINIMUM, discoveryCategories, findCategory, serversInCategory } from "../../../lib/discovery-catalog";
+import { CATEGORY_INDEX_MINIMUM, discoveryCategories, exampleNames, findCategory, serversInCategory } from "../../../lib/discovery-catalog";
 import { getRequiredPublicDiscovery } from "../../../lib/public-data.server";
 import { breadcrumbSchema, organizationSchema, websiteSchema } from "../../../lib/schema";
+import { discoveryOgImage, discoveryOgPath, imageObject } from "../../../lib/discovery-seo";
 import { buildMetadata } from "../../../lib/seo";
 import { absoluteUrl, siteConfig } from "../../../lib/site-config";
 import { AdvertiseBand, DiscoveryNav, SectionHeading, ServerGrid, SubHero, serverPath } from "../../DiscoveryUI";
@@ -20,9 +21,10 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const servers = serversInCategory(await getRequiredPublicDiscovery(), category);
   return buildMetadata({
     title: `${category.title} | Stoatmod Discovery`,
-    description: category.description,
+    description: servers.length ? `${category.description} ${servers.length === 1 ? "1 reviewed server" : `${servers.length} reviewed servers`}, including ${exampleNames(servers)}.` : category.description,
     path: "/discovery/categories/" + category.slug,
     index: servers.length >= CATEGORY_INDEX_MINIMUM,
+    ...discoveryOgImage("category-" + category.slug, `${category.title} – Stoatmod Discovery`),
   });
 }
 
@@ -48,7 +50,7 @@ export default async function CategoryPage({ params }: { params: Promise<{ slug:
           organizationSchema(),
           websiteSchema(),
           {
-            "@type": "CollectionPage", "@id": absoluteUrl(path) + "#page", url: absoluteUrl(path), name: category.title, description: category.description,
+            "@type": "CollectionPage", "@id": absoluteUrl(path) + "#page", url: absoluteUrl(path), name: category.title, description: category.description, primaryImageOfPage: imageObject(discoveryOgPath("category-" + category.slug)),
             isPartOf: { "@id": siteConfig.origin + "/#website" },
             mainEntity: { "@type": "ItemList", itemListElement: servers.map((server, index) => ({ "@type": "ListItem", position: index + 1, name: server.server_name, url: absoluteUrl(serverPath(server)) })) },
           },

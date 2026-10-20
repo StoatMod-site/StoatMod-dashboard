@@ -6,9 +6,10 @@ import { SiteNav } from "../../../SiteNav";
 import { breadcrumbSchema, organizationSchema, websiteSchema } from "../../../lib/schema";
 import { getRequiredPublicDiscovery } from "../../../lib/public-data.server";
 import { discoveryServerSlug, slugify } from "../../../lib/public-slugs";
+import { discoveryOgImage, discoveryOgPath, imageObject } from "../../../lib/discovery-seo";
 import { buildMetadata } from "../../../lib/seo";
 import { absoluteUrl, siteConfig } from "../../../lib/site-config";
-import { rankPopular } from "../../../lib/discovery-catalog";
+import { exampleNames, rankPopular } from "../../../lib/discovery-catalog";
 import { AdvertiseBand, CategoryTiles, DiscoveryNav, SectionHeading, ServerGrid, SubHero } from "../../DiscoveryUI";
 import styles from "../../Discovery.module.css";
 
@@ -35,12 +36,14 @@ export async function generateMetadata({ params }: { params: Promise<{ tag: stri
     });
   }
   const title = "#" + result.displayTag + " Stoat Servers | Stoatmod Discovery";
-  const description = "Browse reviewed Stoat server listings tagged " + result.displayTag + " in the Stoatmod Discovery directory.";
+  const listed = rankPopular(result.servers);
+  const description = `${listed.length === 1 ? "1 reviewed Stoat server" : `${listed.length} reviewed Stoat servers`} tagged #${result.displayTag}, including ${exampleNames(listed)}. Join with a direct invite on Stoatmod Discovery.`;
   return buildMetadata({
     title,
     description,
     path: "/discovery/tags/" + slugify(result.displayTag),
     index: result.servers.length >= 3,
+    ...discoveryOgImage("tags", `#${result.displayTag} Stoat servers – Stoatmod Discovery`),
   });
 }
 
@@ -67,6 +70,7 @@ export default async function DiscoveryTagPage({ params }: { params: Promise<{ t
             "@id": absoluteUrl(canonicalPath) + "#page",
             url: absoluteUrl(canonicalPath),
             name: "#" + result.displayTag + " Stoat servers",
+            primaryImageOfPage: imageObject(discoveryOgPath("tags")),
             description: "Reviewed Stoat Discovery listings tagged " + result.displayTag + ".",
             mainEntity: {
               "@type": "ItemList",

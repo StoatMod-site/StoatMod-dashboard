@@ -10,7 +10,7 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: "*",
       // Public access screens must be crawlable for their noindex tags to work.
       // Authentication still protects all account data behind the API.
-      allow: ["/", "/admin/login$", "/owner/login$"],
+      allow: ["/", "/admin/login$", "/owner/login$", "/api/public/discovery/og/"],
       disallow: ["/api/", "/admin", "/dashboard", "/owner"],
     },
     sitemap: "https://modstoat.site/sitemap.xml",

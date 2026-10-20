@@ -180,6 +180,12 @@ export function directoryStats(servers: DiscoveryServer[]) {
   };
 }
 
+/** "A, B and C" for meta descriptions. */
+export function exampleNames(servers: DiscoveryServer[], count = 3) {
+  const names = servers.slice(0, count).map((server) => server.server_name.replace(/\s+/g, " ").trim());
+  return names.length > 1 ? `${names.slice(0, -1).join(", ")} and ${names[names.length - 1]}` : names[0] ?? "";
+}
+
 export function countLabel(value: number, singular: string, plural: string) {
   return value === 1 ? singular : plural;
 }

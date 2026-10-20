@@ -6,6 +6,7 @@ import { discoveryCategories, serversInCategory, topTags } from "../../lib/disco
 import { getRequiredPublicDiscovery } from "../../lib/public-data.server";
 import { slugify } from "../../lib/public-slugs";
 import { breadcrumbSchema, organizationSchema, websiteSchema } from "../../lib/schema";
+import { discoveryOgImage, discoveryOgPath, imageObject } from "../../lib/discovery-seo";
 import { buildMetadata } from "../../lib/seo";
 import { absoluteUrl, siteConfig } from "../../lib/site-config";
 import { AdvertiseBand, CategoryTiles, DiscoveryNav, SectionHeading, SubHero } from "../DiscoveryUI";
@@ -15,7 +16,7 @@ const path = "/discovery/categories";
 const title = "Stoat Server Categories – Gaming, Anime, Art & More | Stoatmod Discovery";
 const description = "Browse Stoat servers by category: gaming, anime, art, music, roleplay, social, LGBTQ+, Brazilian and tech communities on Stoatmod Discovery.";
 
-export const metadata = buildMetadata({ title, description, path });
+export const metadata = buildMetadata({ title, description, path, ...discoveryOgImage("categories", "Stoat servers by category – Stoatmod Discovery") });
 
 export default async function CategoriesPage() {
   const servers = await getRequiredPublicDiscovery();
@@ -33,7 +34,7 @@ export default async function CategoriesPage() {
           organizationSchema(),
           websiteSchema(),
           {
-            "@type": "CollectionPage", "@id": absoluteUrl(path) + "#page", url: absoluteUrl(path), name: title, description,
+            "@type": "CollectionPage", "@id": absoluteUrl(path) + "#page", url: absoluteUrl(path), name: title, description, primaryImageOfPage: imageObject(discoveryOgPath("categories")),
             isPartOf: { "@id": siteConfig.origin + "/#website" },
             mainEntity: { "@type": "ItemList", itemListElement: discoveryCategories.map((category, index) => ({ "@type": "ListItem", position: index + 1, name: category.title, url: absoluteUrl("/discovery/categories/" + category.slug) })) },
           },

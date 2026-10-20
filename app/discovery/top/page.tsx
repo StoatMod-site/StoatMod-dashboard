@@ -5,6 +5,7 @@ import { SiteNav } from "../../SiteNav";
 import { rankPopular } from "../../lib/discovery-catalog";
 import { getRequiredPublicDiscovery } from "../../lib/public-data.server";
 import { breadcrumbSchema, organizationSchema, websiteSchema } from "../../lib/schema";
+import { discoveryOgImage, discoveryOgPath, imageObject } from "../../lib/discovery-seo";
 import { buildMetadata } from "../../lib/seo";
 import { absoluteUrl, siteConfig } from "../../lib/site-config";
 import { AdvertiseBand, CategoryTiles, DiscoveryNav, RankedList, SectionHeading, SubHero, serverPath } from "../DiscoveryUI";
@@ -14,7 +15,7 @@ const path = "/discovery/top";
 const title = "Top Stoat Servers – Most Active Stoat Communities | Stoatmod Discovery";
 const description = "The top Stoat servers on Stoatmod Discovery, ranked by public activity and members. Find the most active Stoat communities and join with a direct invite.";
 
-export const metadata = buildMetadata({ title, description, path });
+export const metadata = buildMetadata({ title, description, path, ...discoveryOgImage("top", "Top Stoat servers – Stoatmod Discovery") });
 
 export default async function TopServersPage() {
   const servers = rankPopular(await getRequiredPublicDiscovery());
@@ -31,7 +32,7 @@ export default async function TopServersPage() {
           organizationSchema(),
           websiteSchema(),
           {
-            "@type": "CollectionPage", "@id": absoluteUrl(path) + "#page", url: absoluteUrl(path), name: title, description,
+            "@type": "CollectionPage", "@id": absoluteUrl(path) + "#page", url: absoluteUrl(path), name: title, description, primaryImageOfPage: imageObject(discoveryOgPath("top")),
             isPartOf: { "@id": siteConfig.origin + "/#website" },
             mainEntity: { "@type": "ItemList", itemListOrder: "https://schema.org/ItemListOrderDescending", itemListElement: servers.map((server, index) => ({ "@type": "ListItem", position: index + 1, name: server.server_name, url: absoluteUrl(serverPath(server)) })) },
           },

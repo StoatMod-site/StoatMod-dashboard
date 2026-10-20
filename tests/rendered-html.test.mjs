@@ -366,6 +366,7 @@ test("renders server-first Discovery content with conservative metadata", async 
   assert.match(html, /rel="canonical" href="https:\/\/modstoat\.site\/discovery"/i);
   assert.match(html, /<h1 id="discovery-title">Discover the best <span[^>]*>Stoat servers<\/span><\/h1>/i);
   assert.match(html, /FAQPage/);
+  assert.match(html, /property="og:image" content="https:\/\/modstoat\.site\/discovery\/og\/hub\.png"/);
   assert.match(html, /application\/ld\+json/i);
   assert.match(html, /CollectionPage/i);
   assert.match(html, /BreadcrumbList/i);
@@ -402,14 +403,17 @@ test("indexes exact server names, canonical profiles and every public listing", 
     assert.match(html, /How to join/);
     assert.match(html, /src="https:\/\/cdn.stoatusercontent.com\/banners\/often"/);
     assert.match(html, /alt="The Often Clan server banner"/);
-    assert.match(html, /property="og:image" content="https:\/\/cdn.stoatusercontent.com\/banners\/often"/);
+    // The social image is the generated server card (banner, icon, name and stats), not the raw banner.
+    const card = `https://modstoat.site/api/public/discovery/og/${servers[0].server_id}.png?v=`;
+    assert.ok(html.includes(`property="og:image" content="${card}`));
     assert.match(html, /property="og:image:alt" content="The Often Clan on Stoat"/);
-    assert.match(html, /name="twitter:image" content="https:\/\/cdn.stoatusercontent.com\/banners\/often"/);
-    assert.doesNotMatch(html, /property="og:image:width"/);
+    assert.match(html, /property="og:image:width" content="1200"/);
+    assert.ok(html.includes(`name="twitter:image" content="${card}`));
     const schemas = [...html.matchAll(/<script[^>]*type="application\/ld\+json"[^>]*>([\s\S]*?)<\/script>/g)].map((match) => JSON.parse(match[1]));
     const page = schemas.flatMap((schema) => schema["@graph"] || [schema]).find((schema) => schema["@type"] === "WebPage");
     assert.equal(page.mainEntity.name, "The Often Clan");
-    assert.equal(page.image, "https://cdn.stoatusercontent.com/banners/often");
+    assert.ok(page.image[0].startsWith(card));
+    assert.equal(page.image[1], "https://cdn.stoatusercontent.com/banners/often");
     assert.equal(page.url, `https://modstoat.site${path}`);
 
     const alias = await render(`/discovery/servers/old-name-${servers[0].server_id.toLowerCase()}`);
@@ -437,6 +441,8 @@ test("indexes exact server names, canonical profiles and every public listing", 
     assert.equal([...xml.matchAll(/<loc>https:\/\/modstoat.site\/discovery\/servers\//g)].length, 30);
     assert.ok(xml.includes(`<loc>https://modstoat.site${path}</loc>`));
     assert.match(xml, /<image:loc>https:\/\/cdn.stoatusercontent.com\/banners\/often<\/image:loc>/);
+    assert.match(xml, /<image:loc>https:\/\/modstoat.site\/discovery\/og\/hub.png<\/image:loc>/);
+    assert.match(xml, /<image:loc>https:\/\/modstoat.site\/api\/public\/discovery\/og\/01SEO0+\.png/);
     assert.doesNotMatch(xml, /untrusted.example/);
     assert.match(xml, /<loc>https:\/\/modstoat.site\/discovery\/tags\/gaming<\/loc>/);
     assert.doesNotMatch(xml, /\/discovery\/tags\/rare/);

@@ -6,6 +6,7 @@ import { SiteNav } from "../../../SiteNav";
 import { breadcrumbSchema, organizationSchema, websiteSchema } from "../../../lib/schema";
 import { getRequiredPublicDiscovery } from "../../../lib/public-data.server";
 import { discoveryServerSlug, findDiscoveryServer, slugify } from "../../../lib/public-slugs";
+import { serverOgImage, serverOgUrl } from "../../../lib/discovery-seo";
 import { buildMetadata } from "../../../lib/seo";
 import { absoluteUrl, siteConfig } from "../../../lib/site-config";
 import { ServerArtwork } from "../../../ServerArtwork";
@@ -63,10 +64,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     title: titleName + " – Stoat Server | Stoatmod",
     description,
     path: canonical,
-    ...(server.server_banner_url ? {
-      image: server.server_banner_url,
-      imageAlt: `${server.server_name} on Stoat`,
-    } : {}),
+    ...serverOgImage(server),
   });
 }
 
@@ -104,7 +102,7 @@ export default async function DiscoveryServerProfile({ params }: { params: Promi
             url: absoluteUrl(canonicalPath),
             name: server.server_name + " – Stoat server listing",
             description: server.description,
-            ...(server.server_banner_url ? { image: server.server_banner_url } : {}),
+            image: [serverOgUrl(server), ...(server.server_banner_url ? [server.server_banner_url] : [])],
             isPartOf: { "@id": siteConfig.origin + "/#website" },
             mainEntity: {
               "@type": "Organization",

@@ -7,6 +7,7 @@ import { directoryStats, featuredServers } from "../../lib/discovery-catalog";
 import { advertiseFaq } from "../../lib/discovery-faq";
 import { getPublicDiscoveryResult } from "../../lib/public-data.server";
 import { breadcrumbSchema, organizationSchema, websiteSchema } from "../../lib/schema";
+import { discoveryOgImage, discoveryOgPath, imageObject } from "../../lib/discovery-seo";
 import { buildMetadata } from "../../lib/seo";
 import { absoluteUrl, siteConfig } from "../../lib/site-config";
 import { DiscoveryNav, Faq, SectionHeading, ServerCard, SubHero, faqSchema } from "../DiscoveryUI";
@@ -16,7 +17,7 @@ const path = "/discovery/advertise";
 const title = "Stoat Server Advertising – Advertise Your Stoat Server Free | Stoatmod";
 const description = "Advertise your Stoat server for free on Stoatmod Discovery. Get a reviewed listing with its own page, appear in search and categories, and bump it every two hours.";
 
-export const metadata = buildMetadata({ title, description, path });
+export const metadata = buildMetadata({ title, description, path, ...discoveryOgImage("advertise", "Advertise your Stoat server for free – Stoatmod Discovery") });
 
 const benefits = [
   { icon: "🔎", title: "Found by people searching", text: "Discovery is built to rank for Stoat server searches, so people looking for a community can find yours." },
@@ -43,7 +44,7 @@ export default async function AdvertisePage() {
         "@graph": [
           organizationSchema(),
           websiteSchema(),
-          { "@type": "WebPage", "@id": absoluteUrl(path) + "#page", url: absoluteUrl(path), name: title, description, isPartOf: { "@id": siteConfig.origin + "/#website" } },
+          { "@type": "WebPage", "@id": absoluteUrl(path) + "#page", url: absoluteUrl(path), name: title, description, primaryImageOfPage: imageObject(discoveryOgPath("advertise")), isPartOf: { "@id": siteConfig.origin + "/#website" } },
           { "@type": "HowTo", name: "How to advertise a Stoat server on Stoatmod Discovery", step: [
             { "@type": "HowToStep", name: "Add Stoatmod", text: "Invite Stoatmod to your Stoat server." },
             { "@type": "HowToStep", name: "Give Stoatmod a role", text: "Give Stoatmod a role with its permissions above your members, add a server icon and turn on public statistics." },
