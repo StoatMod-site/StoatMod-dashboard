@@ -6,6 +6,7 @@ import type { DiscoveryServer } from "./public-types";
 export type DiscoveryCategory = {
   slug: string;
   name: string;
+  emoji: string;
   title: string;
   description: string;
   intro: string;
@@ -17,7 +18,7 @@ export const CATEGORY_INDEX_MINIMUM = 2;
 
 export const discoveryCategories: DiscoveryCategory[] = [
   {
-    slug: "gaming", name: "Gaming",
+    slug: "gaming", name: "Gaming", emoji: "🎮",
     title: "Gaming Stoat Servers",
     description: "Find gaming communities on Stoat: squads, game nights, Minecraft, trading card games and more.",
     intro: "Gaming servers on Stoat bring players together for game nights, squads, trading and voice chat. Browse reviewed gaming communities below and open an invite to join.",
@@ -25,7 +26,7 @@ export const discoveryCategories: DiscoveryCategory[] = [
     words: ["gaming", "games", "gamers", "minecraft", "roblox", "jogos", "esports"],
   },
   {
-    slug: "anime", name: "Anime & Manga",
+    slug: "anime", name: "Anime & Manga", emoji: "🌸",
     title: "Anime Stoat Servers",
     description: "Join anime and manga communities on Stoat to talk about series, share art and meet other fans.",
     intro: "Anime and manga servers on Stoat are where fans discuss new seasons, share art and recommend series. Explore reviewed anime communities below.",
@@ -33,7 +34,7 @@ export const discoveryCategories: DiscoveryCategory[] = [
     words: ["anime", "manga", "otaku"],
   },
   {
-    slug: "art-and-creative", name: "Art & Creative",
+    slug: "art-and-creative", name: "Art & Creative", emoji: "🎨",
     title: "Art & Creative Stoat Servers",
     description: "Discover art, design, writing and animation communities on Stoat to share your work and get feedback.",
     intro: "Creative servers on Stoat are places to share drawings, animation, design and writing, take part in challenges and get friendly feedback.",
@@ -41,7 +42,7 @@ export const discoveryCategories: DiscoveryCategory[] = [
     words: ["art", "artists", "drawing", "creative", "animation", "illustration"],
   },
   {
-    slug: "music", name: "Music",
+    slug: "music", name: "Music", emoji: "🎧",
     title: "Music Stoat Servers",
     description: "Find music communities on Stoat for producers, musicians and listeners.",
     intro: "Music servers on Stoat connect listeners, musicians and producers to share tracks, swap recommendations and listen together.",
@@ -49,7 +50,7 @@ export const discoveryCategories: DiscoveryCategory[] = [
     words: ["music", "musica", "producers", "playlist"],
   },
   {
-    slug: "roleplay", name: "Roleplay & Fandom",
+    slug: "roleplay", name: "Roleplay & Fandom", emoji: "🐉",
     title: "Roleplay Stoat Servers",
     description: "Explore roleplay, fandom and storytelling communities on Stoat.",
     intro: "Roleplay and fandom servers on Stoat host shared stories, characters and lore. Browse reviewed roleplay communities and find your next campaign.",
@@ -57,7 +58,7 @@ export const discoveryCategories: DiscoveryCategory[] = [
     words: ["roleplay", "fandom", "rpg", "lore"],
   },
   {
-    slug: "social", name: "Chill & Social",
+    slug: "social", name: "Chill & Social", emoji: "💬",
     title: "Chill & Social Stoat Servers",
     description: "Hang out in friendly Stoat servers for chatting, memes, voice calls and making friends.",
     intro: "Social servers on Stoat are friendly places to chat, share memes, hop into voice and make new friends. Find a relaxed community below.",
@@ -65,7 +66,7 @@ export const discoveryCategories: DiscoveryCategory[] = [
     words: ["hangout", "chill", "chatting", "make friends"],
   },
   {
-    slug: "lgbtq", name: "LGBTQ+",
+    slug: "lgbtq", name: "LGBTQ+", emoji: "🏳️‍🌈",
     title: "LGBTQ+ Stoat Servers",
     description: "Find welcoming LGBTQ+ communities on Stoat.",
     intro: "LGBTQ+ servers on Stoat offer welcoming spaces to chat, find support and meet people. Read each community's rules before joining.",
@@ -73,7 +74,7 @@ export const discoveryCategories: DiscoveryCategory[] = [
     words: ["lgbtq", "lgbt", "queer"],
   },
   {
-    slug: "brasil", name: "Brasil & Português",
+    slug: "brasil", name: "Brasil & Português", emoji: "🌎",
     title: "Brazilian Stoat Servers – Servidores Brasileiros",
     description: "Find Brazilian and Portuguese-speaking Stoat servers: servidores brasileiros para conversar e jogar.",
     intro: "Brazilian and Portuguese-speaking communities on Stoat. Encontre servidores brasileiros para conversar, jogar e fazer amigos.",
@@ -81,7 +82,7 @@ export const discoveryCategories: DiscoveryCategory[] = [
     words: ["brasil", "brazil", "brasileiro", "brasileiros"],
   },
   {
-    slug: "tech", name: "Tech & Coding",
+    slug: "tech", name: "Tech & Coding", emoji: "💻",
     title: "Tech & Coding Stoat Servers",
     description: "Join technology, programming and open-source communities on Stoat.",
     intro: "Tech servers on Stoat are for programmers, tinkerers and open-source fans to share projects, get help and talk technology.",

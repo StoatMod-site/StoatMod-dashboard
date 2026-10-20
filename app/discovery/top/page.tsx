@@ -39,7 +39,7 @@ export default async function TopServersPage() {
         ],
       }} />
       <SiteNav active="discovery" />
-      <SubHero eyebrow="Rankings" title={<>Top <span className={styles.titleMuted}>Stoat servers</span></>} description="The most active reviewed communities on Stoatmod Discovery, ranked by public activity, messages today and members. Rankings update throughout the day." />
+      <SubHero eyebrow="Rankings" title={<>Top <span className={styles.heroAccent}>Stoat servers</span></>} description="The most active reviewed communities on Stoatmod Discovery, ranked by public activity, messages today and members. Rankings update throughout the day." />
       <DiscoveryNav active="top" />
       <Breadcrumbs items={breadcrumbs} />
       <section className={`${styles.section} ${styles.sectionTight}`} aria-label="Top Stoat servers">

@@ -126,7 +126,7 @@ export default async function DiscoveryServerProfile({ params }: { params: Promi
         <div className={styles.profileInner}>
           <ServerArtwork serverId={server.server_id} name={server.server_name} src={server.server_icon_url} kind="icon" className={styles.profileIcon} />
           <div>
-            <p className={styles.kicker}><span aria-hidden="true" />Stoatmod / Reviewed Stoat server</p>
+            <p className={styles.kicker}><span aria-hidden="true" />Reviewed Stoat server</p>
             <h1>{server.server_name}</h1>
             <p className={styles.profileMeta}>{server.member_count.toLocaleString("en-GB")} members · {server.daily_messages.toLocaleString("en-GB")} messages today{server.global_rank ? ` · #${server.global_rank} in public activity` : ""}</p>
             {server.tags.length > 0 && <div className={styles.tagRow}>{server.tags.map((tag) => <a href={"/discovery/tags/" + slugify(tag)} key={tag} data-no-translate>#{tag}</a>)}</div>}

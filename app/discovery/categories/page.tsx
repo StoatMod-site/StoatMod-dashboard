@@ -41,7 +41,7 @@ export default async function CategoriesPage() {
         ],
       }} />
       <SiteNav active="discovery" />
-      <SubHero eyebrow="Categories" title={<>Stoat servers by <span className={styles.titleMuted}>category</span></>} description="Pick a topic to see reviewed Stoat communities for it, from gaming and anime to art, music and making friends." />
+      <SubHero eyebrow="Categories" title={<>Stoat servers by <span className={styles.heroAccent}>category</span></>} description="Pick a topic to see reviewed Stoat communities for it, from gaming and anime to art, music and making friends." />
       <DiscoveryNav active="categories" />
       <Breadcrumbs items={breadcrumbs} />
       <section className={`${styles.section} ${styles.sectionTight}`} aria-label="Categories">

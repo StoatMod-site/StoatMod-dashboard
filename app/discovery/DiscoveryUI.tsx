@@ -60,8 +60,9 @@ export function DiscoveryNav({ active }: { active?: DiscoveryNavKey }) {
 export function SubHero({ eyebrow, title, description, children }: { eyebrow: string; title: ReactNode; description: string; children?: ReactNode }) {
   return (
     <header className={styles.subHero}>
+      <div className={styles.glow} aria-hidden="true" />
       <div className={styles.subHeroInner}>
-        <p className={styles.kicker}><span aria-hidden="true" />Stoatmod / {eyebrow}</p>
+        <p className={styles.kicker}><span aria-hidden="true" />{eyebrow}</p>
         <h1>{title}</h1>
         <p className={styles.lede}>{description}</p>
         {children}
@@ -85,9 +86,9 @@ export function CategoryTiles({ servers, showEmpty = false }: { servers: Discove
     .filter(({ count }) => showEmpty || count > 0);
   return (
     <div className={styles.categoryGrid}>
-      {tiles.map(({ category, count }, index) => (
+      {tiles.map(({ category, count }) => (
         <a href={"/discovery/categories/" + category.slug} key={category.slug} className={styles.categoryTile}>
-          <span className={styles.categoryNumber} aria-hidden="true">{String(index + 1).padStart(2, "0")}</span>
+          <span className={styles.categoryEmoji} aria-hidden="true">{category.emoji}</span>
           <strong>{category.name}</strong>
           <small>{count === 1 ? "1 server" : `${count} servers`}</small>
         </a>
@@ -99,8 +100,9 @@ export function CategoryTiles({ servers, showEmpty = false }: { servers: Discove
 export function AdvertiseBand({ compact = false }: { compact?: boolean }) {
   return (
     <section className={`${styles.band} ${compact ? styles.bandCompact : ""}`} aria-labelledby="advertise-band-title">
+      <div className={styles.glow} aria-hidden="true" />
       <div>
-        <p className={styles.kicker}><span aria-hidden="true" />Stoatmod / Free Stoat server advertising</p>
+        <p className={styles.kicker}><span aria-hidden="true" />Free Stoat server advertising</p>
         <h2 id="advertise-band-title">Grow your Stoat server.</h2>
         <p>List your community on Stoatmod Discovery for free. Get your own server page, appear in search and categories, and bump your listing every two hours.</p>
       </div>
