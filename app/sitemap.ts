@@ -1,5 +1,6 @@
 import type { MetadataRoute } from "next";
 import { allContentPages } from "./content";
+import { CATEGORY_INDEX_MINIMUM, discoveryCategories, serversInCategory } from "./lib/discovery-catalog";
 import { getRequiredPublicDiscovery } from "./lib/public-data.server";
 import { discoveryServerSlug, slugify } from "./lib/public-slugs";
 import { isPrivatePreview } from "./lib/preview";
@@ -12,7 +13,11 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     { path: "/features", updated: "2026-10-15" },
     { path: "/guides", updated: "2026-10-15" },
     { path: "/docs", updated: "2026-10-15" },
-    { path: "/discovery", updated: "2026-09-30" },
+    { path: "/discovery", updated: "2026-10-20" },
+    { path: "/discovery/advertise", updated: "2026-10-20" },
+    { path: "/discovery/top", updated: "2026-10-20" },
+    { path: "/discovery/new", updated: "2026-10-20" },
+    { path: "/discovery/categories", updated: "2026-10-20" },
     { path: "/privacy", updated: "2026-10-02" },
     { path: "/privacy-changes", updated: "2026-10-15" },
     { path: "/compare", updated: "2026-10-15", images: [absoluteUrl("/compare/og-stoat-bots-comparison.png")] },
@@ -29,6 +34,9 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
         (value): value is string => typeof value === "string" && Number.isFinite(Date.parse(value)),
       ),
     });
+  }
+  for (const category of discoveryCategories) {
+    if (serversInCategory(servers, category).length >= CATEGORY_INDEX_MINIMUM) dynamic.push({ path: "/discovery/categories/" + category.slug });
   }
   const tagCounts = new Map<string, number>();
   for (const server of servers) {

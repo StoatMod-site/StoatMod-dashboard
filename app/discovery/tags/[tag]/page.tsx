@@ -8,17 +8,18 @@ import { getRequiredPublicDiscovery } from "../../../lib/public-data.server";
 import { discoveryServerSlug, slugify } from "../../../lib/public-slugs";
 import { buildMetadata } from "../../../lib/seo";
 import { absoluteUrl, siteConfig } from "../../../lib/site-config";
-import { PublicPageHeading, PublicSummary } from "../../../PublicPageHeading";
-import { ServerArtwork } from "../../../ServerArtwork";
-import styles from "../../DiscoveryProfile.module.css";
+import { rankPopular } from "../../../lib/discovery-catalog";
+import { AdvertiseBand, CategoryTiles, DiscoveryNav, SectionHeading, ServerGrid, SubHero } from "../../DiscoveryUI";
+import styles from "../../Discovery.module.css";
 
 async function taggedServers(tagSlug: string) {
   const servers = await getRequiredPublicDiscovery();
   const displayTag = servers.flatMap((server) => server.tags).find((tag) => slugify(tag) === tagSlug.toLowerCase());
-  if (!displayTag) return { displayTag: null, servers: [] };
+  if (!displayTag) return { displayTag: null, servers: [], all: servers };
   return {
     displayTag,
     servers: servers.filter((server) => server.tags.some((tag) => slugify(tag) === tagSlug.toLowerCase())),
+    all: servers,
   };
 }
 
@@ -47,6 +48,7 @@ export default async function DiscoveryTagPage({ params }: { params: Promise<{ t
   const { tag } = await params;
   const result = await taggedServers(tag);
   if (!result.displayTag) notFound();
+  const all = result.all;
   const canonicalPath = "/discovery/tags/" + slugify(result.displayTag);
   const breadcrumbs = [
     { name: siteConfig.name, path: "/" },
@@ -80,20 +82,18 @@ export default async function DiscoveryTagPage({ params }: { params: Promise<{ t
         ],
       }} />
       <SiteNav active="discovery" />
+      <SubHero eyebrow="Discovery topic" title={<>#{result.displayTag} <span className={styles.gradientText}>Stoat servers</span></>} description={`${result.servers.length === 1 ? "1 reviewed listing" : `${result.servers.length} reviewed listings`} tagged #${result.displayTag}. Tags are supplied by community owners and checked as part of the directory review. Read the descriptions and server rules before joining.`} />
+      <DiscoveryNav />
       <Breadcrumbs items={breadcrumbs} />
-      <PublicPageHeading compact eyebrow="Discovery topic" title={`#${result.displayTag} Stoat servers`} description="Explore reviewed communities that share this topic." action={{href:"/discovery",label:"All communities"}} />
-      <PublicSummary title={`${result.servers.length} reviewed ${result.servers.length===1?"listing":"listings"}.`} description="Tags are supplied by community owners and checked as part of the directory review. Read the descriptions and server rules before joining." facts={[`Topic: #${result.displayTag}`,"Community-provided details","Direct Stoat invites"]} icon={<span>#</span>} />
-      <section className={styles.directory} aria-label={"Servers tagged " + result.displayTag}>
-        {result.servers.map((server) => (
-          <a className={styles.card} href={"/discovery/servers/" + discoveryServerSlug(server)} key={server.server_id}>
-            <ServerArtwork serverId={server.server_id} name={server.server_name} src={server.server_banner_url} kind="banner" className={styles.cardBanner} />
-            <span>Reviewed listing</span>
-            <h2>{server.server_name}</h2>
-            <p>{server.description}</p>
-            <dl><div><dt>Memberships</dt><dd>{server.member_count.toLocaleString("en-GB")}</dd></div><div><dt>Messages today</dt><dd>{server.daily_messages.toLocaleString("en-GB")}</dd></div></dl>
-          </a>
-        ))}
+      <section className={`${styles.section} ${styles.sectionTight}`} aria-label={"Servers tagged " + result.displayTag}>
+        <ServerGrid servers={rankPopular(result.servers)} />
       </section>
+      <section className={styles.section} aria-labelledby="tag-categories">
+        <SectionHeading eyebrow="Keep exploring" title="Browse by category" action={{ href: "/discovery/categories", label: "All categories" }} />
+        <CategoryTiles servers={all} />
+      </section>
+      <AdvertiseBand compact />
+      <div className={styles.spacer} />
       <PublicFooter />
     </main>
   );

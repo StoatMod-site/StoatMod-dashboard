@@ -20,6 +20,7 @@ export function PublicFooter({ description }: { description?: string }) {
             <a href="/docs">Documentation</a>
             <a href="/guides">Guides</a>
             <a href="/discovery">Stoat servers</a>
+            <a href="/discovery/advertise">Advertise a server</a>
             <a href="/compare">Compare bots</a>
           </div>
           <div className={styles.group}>

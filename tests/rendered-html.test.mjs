@@ -362,21 +362,21 @@ test("renders server-first Discovery content with conservative metadata", async 
   const response = await render("/discovery");
   assert.equal(response.status, 200);
   const html = await response.text();
-  assert.match(html, /<title>Stoat Servers – Find &amp; Join Communities \| Stoatmod Discovery<\/title>/i);
+  assert.match(html, /<title>Stoat Servers – Discover &amp; Join Stoat Communities \| Stoatmod Discovery<\/title>/i);
   assert.match(html, /rel="canonical" href="https:\/\/modstoat\.site\/discovery"/i);
-  assert.match(html, /<h1>Find your community\./i);
-  assert.match(html, /Reviewed listings/i);
+  assert.match(html, /<h1 id="discovery-title">Discover the best <span[^>]*>Stoat servers<\/span><\/h1>/i);
+  assert.match(html, /FAQPage/);
   assert.match(html, /application\/ld\+json/i);
   assert.match(html, /CollectionPage/i);
   assert.match(html, /BreadcrumbList/i);
   assert.match(html, /og:title/i);
   assert.match(html, /name="robots" content="index, follow/i);
   assert.match(html, /Search names, topics and tags/i);
-  assert.match(html, /List your Stoat server/i);
-  assert.match(html, /Stoatmod must be installed and eligible/i);
+  assert.match(html, /href="\/discovery\/advertise"/i);
+  assert.match(html, /listings require Stoatmod with its permissions, a server icon and public statistics/i);
   assert.match(html, /Directory temporarily unavailable/i);
-  assert.match(html, /Approval is a directory review, not a safety endorsement/i);
-  assert.match(html, /Material edits return to review before publication/i);
+  assert.match(html, /approval is a directory review, not a safety endorsement/i);
+  assert.match(html, /material edits return to review before publication/i);
   assert.doesNotMatch(html, /bot-verified communities|guaranteed safe/i);
 });
 
@@ -458,11 +458,10 @@ test("discovery controls support tag search and a five-tag listing limit", async
   assert.match(discoverySource, /server\.tags/);
   assert.match(discoverySource, /searchScore/);
   assert.match(discoverySource, /initialServers/);
-  assert.match(discoverySource, /All servers/);
-  assert.match(discoverySource, /Popular Stoat servers/);
+  assert.match(discoverySource, /Featured Stoat servers/);
   assert.match(discoverySource, /Recently bumped/);
-  assert.match(discoverySource, /Newest reviewed listings/);
-  assert.match(discoverySource, /discoveryServerSlug/);
+  assert.match(discoverySource, /Most active today/);
+  assert.match(discoverySource, /Filter by tag/);
   assert.doesNotMatch(discoverySource, /useEffect|\/api\/public\/discovery/);
   assert.match(dashboardSource, /tags\.length>=5/);
   assert.match(dashboardSource, /Add up to five topics/);
@@ -470,42 +469,79 @@ test("discovery controls support tag search and a five-tag listing limit", async
   assert.match(dashboardSource, /hidden until the updated content is reviewed/);
 });
 
-function discoverySectionNames(html, id) {
-  const section = html.match(new RegExp(`<section class="[^"]+" id="${id}">([\\s\\S]*?)</section>`));
-  assert.ok(section, `Missing Discovery section: ${id}`);
-  return [...section[1].matchAll(/<h3><a[^>]*>([^<]+)<\/a><\/h3>/g)].map((match) => match[1]);
+function sectionServerNames(html, marker) {
+  const at = html.indexOf(marker);
+  assert.ok(at >= 0, `Missing Discovery section: ${marker}`);
+  const section = html.slice(at, html.indexOf("</section>", at));
+  return [...section.matchAll(/<h3><a[^>]*>([^<]+)<\/a><\/h3>/g)].map((match) => match[1]);
 }
 
-test("small directories populate newest and bumped feeds even when every server is popular", async () => {
-  await withDiscoveryFixture(async (servers) => {
-    const html = await (await render("/discovery")).text();
-    assert.equal(discoverySectionNames(html, "popular").length, 7);
-    assert.deepEqual(discoverySectionNames(html, "recently-bumped"), [servers[0], servers[2], servers[1]].map((server) => server.server_name));
-    assert.deepEqual(discoverySectionNames(html, "newest"), [...servers].reverse().map((server) => server.server_name));
-    assert.doesNotMatch(html, /No reviewed listing has been bumped in this snapshot/);
-    assert.doesNotMatch(html, /id="more-servers"/);
-  }, (servers) => servers.slice(0, 7).map((server, index) => ({
-    ...server,
-    global_rank: index + 1,
-    approved_at: `2026-09-0${index + 1}T12:00:00Z`,
-    last_bumped_at: index === 0 ? "2026-09-10T12:00:00Z" : index === 1 ? "2026-09-08T12:00:00Z" : index === 2 ? "2026-09-09T12:00:00Z" : index === 3 ? "invalid" : null,
-  })));
-});
-
-test("featured feeds keep their own eight newest entries and preserve the remaining directory", async () => {
+test("Discovery features recent bumps, then lists the whole directory by popularity", async () => {
   await withDiscoveryFixture(async (servers) => {
     const html = await (await render("/discovery")).text();
     const names = (items) => items.map((server) => server.server_name);
-    assert.deepEqual(discoverySectionNames(html, "popular"), names(servers.slice(0, 8)));
-    assert.deepEqual(discoverySectionNames(html, "recently-bumped"), names(servers.slice(0, 10).reverse().slice(0, 8)));
-    assert.deepEqual(discoverySectionNames(html, "newest"), names(servers.slice(0, 20).reverse().slice(0, 8)));
-    assert.deepEqual(discoverySectionNames(html, "more-servers"), names([...servers.slice(10, 12), ...servers.slice(20)]));
+    // Servers 5 and 2 were bumped this week (most recent first); the third featured slot goes to the most popular.
+    assert.deepEqual(sectionServerNames(html, 'id="featured"'), names([servers[5], servers[2], servers[0]]));
+    assert.deepEqual(sectionServerNames(html, 'id="discovery-results"'), names(servers));
   }, (servers) => servers.map((server, index) => ({
     ...server,
     global_rank: index + 1,
     approved_at: index < 20 ? new Date(Date.UTC(2026, 8, index + 1)).toISOString() : index === 20 ? "invalid" : null,
-    last_bumped_at: index < 10 ? new Date(Date.UTC(2026, 8, index + 1)).toISOString() : null,
+    last_bumped_at: index === 5 ? new Date(Date.now() - 3_600_000).toISOString() : index === 2 ? new Date(Date.now() - 86_400_000).toISOString() : index === 7 ? "2026-01-01T00:00:00Z" : null,
   })));
+});
+
+test("top and new Stoat server pages rank every listing and link each profile", async () => {
+  await withDiscoveryFixture(async (servers) => {
+    const names = (items) => items.map((server) => server.server_name);
+    const top = await render("/discovery/top");
+    assert.equal(top.status, 200);
+    const topHtml = await top.text();
+    assert.match(topHtml, /<title>Top Stoat Servers – Most Active Stoat Communities \| Stoatmod Discovery<\/title>/);
+    assert.deepEqual(sectionServerNames(topHtml, 'aria-label="Top Stoat servers"'), names(servers));
+    for (const server of servers) assert.ok(topHtml.includes(`href="/discovery/servers/${server.server_name.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "").slice(0, 72)}-${server.server_id.toLowerCase()}"`), server.server_name);
+    const newest = await (await render("/discovery/new")).text();
+    assert.deepEqual(sectionServerNames(newest, 'aria-label="New Stoat servers"').slice(0, 3), names([servers[19], servers[18], servers[17]]));
+    assert.match(newest, /ItemList/);
+  }, (servers) => servers.map((server, index) => ({
+    ...server,
+    global_rank: index + 1,
+    approved_at: index < 20 ? new Date(Date.UTC(2026, 8, index + 1)).toISOString() : null,
+  })));
+});
+
+test("advertise page targets Stoat server advertising with FAQ and HowTo data", async () => {
+  await withDiscoveryFixture(async () => {
+    const response = await render("/discovery/advertise");
+    assert.equal(response.status, 200);
+    const html = await response.text();
+    assert.match(html, /<title>Stoat Server Advertising – Advertise Your Stoat Server Free \| Stoatmod<\/title>/);
+    assert.match(html, /rel="canonical" href="https:\/\/modstoat\.site\/discovery\/advertise"/);
+    assert.match(html, /name="robots" content="index, follow/);
+    const schemas = [...html.matchAll(/<script[^>]*type="application\/ld\+json"[^>]*>([\s\S]*?)<\/script>/g)].flatMap((match) => JSON.parse(match[1])["@graph"] || []);
+    assert.ok(schemas.some((schema) => schema["@type"] === "FAQPage" && schema.mainEntity.length >= 5));
+    assert.ok(schemas.some((schema) => schema["@type"] === "HowTo" && schema.step.length === 4));
+    assert.match(html, /Material edits return to review before publication/);
+    assert.match(html, /href="\/login"/);
+  });
+});
+
+test("category pages match tags and descriptions and are indexed only with enough listings", async () => {
+  await withDiscoveryFixture(async () => {
+    const gaming = await render("/discovery/categories/gaming");
+    assert.equal(gaming.status, 200);
+    const gamingHtml = await gaming.text();
+    assert.match(gamingHtml, /<title>Gaming Stoat Servers \| Stoatmod Discovery<\/title>/);
+    assert.match(gamingHtml, /name="robots" content="index, follow/);
+    assert.match(gamingHtml, /Community 1/);
+    const music = await (await render("/discovery/categories/music")).text();
+    assert.match(music, /name="robots" content="noindex/);
+    assert.match(music, /No music servers are listed yet/);
+    assert.equal((await render("/discovery/categories/not-a-category")).status, 404);
+    const xml = await (await render("/sitemap.xml")).text();
+    for (const path of ["/discovery/advertise", "/discovery/top", "/discovery/new", "/discovery/categories", "/discovery/categories/gaming"]) assert.ok(xml.includes(`<loc>https://modstoat.site${path}</loc>`), path);
+    assert.doesNotMatch(xml, /\/discovery\/categories\/music/);
+  });
 });
 
 test("renders the expanded feature, guide, documentation, and trust architecture", async () => {
