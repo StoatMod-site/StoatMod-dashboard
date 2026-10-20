@@ -29,7 +29,7 @@ export function PrivacyPage() {
   return <main className={styles.page}>
     <SiteNav active="privacy" />
     <PublicPageHeading eyebrow="Legal / Privacy" title="Privacy policy." description="How Stoatmod collects, uses, shares and protects information when moderating Stoat communities." action={{href:"mailto:admin@modstoat.site",label:"Privacy enquiries"}} />
-    <PublicSummary title="Your information, explained." description="What Stoatmod processes, how long information is kept, and the choices available to you." facts={["Last updated 19 October 2026","No advertising or data sales","Stoatmod Limited"]} />
+    <PublicSummary title="Your information, explained." description="What Stoatmod processes, how long information is kept, and the choices available to you." facts={["Last updated 20 October 2026","No advertising or data sales","Stoatmod Limited"]} />
     <PrivacyUpdateCallout />
 
     <div className="docs-layout privacy-layout">
@@ -78,7 +78,7 @@ export function PrivacyPage() {
           <h3>Stoat accounts and servers</h3>
           <p>We may process Stoat user IDs, usernames, display names, tags, nicknames, profile information available through Stoat, server IDs and names, channel/category/role IDs and names, membership events, permissions, moderator IDs and server configuration.</p>
           <h3>Messages and attachments</h3>
-          <p>When message moderation is enabled, Stoatmod reads message text, links, website domains and account mentions. It uses message and channel IDs and timestamps to identify the content and carry out an action. Image checks are on by default and process image attachments, animated GIF frames and link-preview pictures; server owners can turn them off for the whole server or for individual channels. AI checks produce safety categories and model scores.</p>
+          <p>When message moderation is enabled, Stoatmod reads message text, links, website domains and account mentions. It uses message and channel IDs and timestamps to identify the content and carry out an action. Image checks are on by default and process image attachments, animated GIF frames and link-preview pictures; server owners can turn them off for the whole server or for individual channels. When an image is removed for graphic violence, a reduced copy is kept with the case so the server&apos;s moderators and Stoatmod&apos;s operators can review it behind a content warning. When an image is removed for explicit nudity, only a small, permanently blurred thumbnail is kept and the original is never stored. Images that may involve minors are never stored. AI checks produce safety categories and model scores.</p>
           <p>Stoatmod stores message content only when it is the subject of a moderation action. Deleting a message does not cause its content to be saved. Edited messages are reassessed, but their content is saved only if the edited message violates policy and is moderated. We do not keep routine message archives or before-and-after edit logs.</p>
           <p>AI-moderated message content follows the 30-day limit and appeal rules below. Information you intentionally submit through an application, report, appeal or support request is handled for that separate purpose. Messages already posted in a server&apos;s Stoat moderation-log channel are held separately from Stoatmod&apos;s database.</p>
           <h3>Moderation and safety records</h3>
@@ -187,6 +187,8 @@ export function PrivacyPage() {
           <List>
             <li>submitted applications and all associated application records: 14 days after submission, whether accepted, denied or awaiting review; incomplete applications: seven days from creation;</li>
             <li>original AI-moderated message content: 30 days from the automated decision unless an appeal is submitted;</li>
+            <li>copies of removed images kept with a case (a reduced copy for graphic violence, a permanently blurred thumbnail for explicit nudity): deleted together with the original message content, 30 days from the automated decision, or earlier when an appeal is decided;</li>
+            <li>uploaded files and images (report evidence, case evidence added by moderators, attachments sent with appeal follow-ups or to our support email): 30 days from upload, unless an open appeal still needs them;</li>
             <li>the AI&apos;s reasoning, recorded only when a server turns on the optional Thinking check: deleted together with the original message, 30 days from the automated decision unless an appeal is submitted;</li>
             <li>message text kept in any other moderation record (for example automatic link removals, self-harm removals and automation runs): 30 days from the event, unless an open appeal needs the message; the case outcome, dates and category scores remain;</li>
             <li>content linked to a submitted appeal: until the decision, with automatic rejection and content deletion if no decision is made within 10 days of submission;</li>

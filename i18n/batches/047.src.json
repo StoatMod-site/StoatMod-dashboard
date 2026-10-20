@@ -1,0 +1,18 @@
+[
+ "20 October 2026",
+ "When Stoatmod removes an image, the case now shows it behind a content warning, so moderators can see what was removed. Graphic violence is kept as a reduced copy; explicit nudity only as a small thumbnail that is permanently blurred, and the original is never stored. Both are deleted after 30 days.",
+ "Uploaded files and images, such as report evidence and case evidence, are now deleted after 30 days unless an open appeal needs them.",
+ "When a global ban can't be applied because Stoatmod's role is not above the member's, the server owner is told how to fix it.",
+ "The status page no longer marks a whole day red for a short blip: days turn amber after 5 minutes of downtime and red after an hour, and planned maintenance is shown separately.",
+ "Last updated 20 October 2026",
+ "When message moderation is enabled, Stoatmod reads message text, links, website domains and account mentions. It uses message and channel IDs and timestamps to identify the content and carry out an action. Image checks are on by default and process image attachments, animated GIF frames and link-preview pictures; server owners can turn them off for the whole server or for individual channels. When an image is removed for graphic violence, a reduced copy is kept with the case so the server's moderators and Stoatmod's operators can review it behind a content warning. When an image is removed for explicit nudity, only a small, permanently blurred thumbnail is kept and the original is never stored. Images that may involve minors are never stored. AI checks produce safety categories and model scores.",
+ "copies of removed images kept with a case (a reduced copy for graphic violence, a permanently blurred thumbnail for explicit nudity): deleted together with the original message content, 30 days from the automated decision, or earlier when an appeal is decided;",
+ "uploaded files and images (report evidence, case evidence added by moderators, attachments sent with appeal follow-ups or to our support email): 30 days from upload, unless an open appeal still needs them;",
+ "Content warning: graphic violence",
+ "A reduced copy of the image Stoatmod removed. Deleted automatically after 30 days.",
+ "Content warning: explicit nudity",
+ "Permanently blurred; the original image is never kept. Deleted automatically after 30 days.",
+ "Content warning",
+ "Hide image",
+ "Show image"
+]

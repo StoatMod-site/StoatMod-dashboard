@@ -19,6 +19,7 @@ import { CategoryScores } from "./CategoryScores";
 import { isSupportOnly, policyName } from "./lib/moderation-display";
 import styles from "./ServerDashboard.module.css";
 import { MaintenanceBanner } from "./MaintenanceBanner";
+import { CASE_IMAGE_AUTHOR, SensitiveImage, isFlaggedImage } from "./SensitiveImage";
 
 type View = "overview" | "members" | "cases" | "appeals" | "reports" | "activity" | "automations" | "polls" | "leaderboards" | "discovery" | "settings" | "support" | "applications" | "reaction-roles";
 type DailyStat = { stat_date:string; message_count:number;  new_joins:number; new_leaves:number };
@@ -684,7 +685,7 @@ function CaseDetailPanel({detail,busy,entryType,entry,images,uploadError,channel
             <header><span>{pretty(item.entry_type)}</span><small>{formatDate(item.created_at)}</small></header>
             {item.content&&<p>{item.content}</p>}
             {item.attachments?.length>0&&<EvidenceAttachmentGrid attachments={item.attachments} href={(attachment)=>`${apiBase()}/api/cases/${detail.reference_id}/attachments/${attachment.id}`}/>}
-            <small>By {shortId(item.created_by)} · {formatDate(item.created_at)}</small>
+            <small>By {item.created_by===CASE_IMAGE_AUTHOR?"Stoatmod":shortId(item.created_by)} · {formatDate(item.created_at)}</small>
           </article>
         ))}
         {!detail.entries.length&&<p className="empty-case-entries">No notes or evidence added yet.</p>}
@@ -715,7 +716,7 @@ function AiDecision({source}:{source:CaseDetail["source"]}){
 }
 
 function EvidenceAttachmentGrid({attachments,href}:{attachments:CaseAttachment[];href:(attachment:CaseAttachment)=>string}){
-  return <div className="case-attachment-grid">{attachments.map((attachment)=><a key={attachment.id} href={href(attachment)} target="_blank" rel="noreferrer"><img src={href(attachment)} alt={attachment.filename}/><span><strong>{attachment.filename}</strong><small>{formatBytes(attachment.size)} · Open original ↗</small></span></a>)}</div>;
+  return <div className="case-attachment-grid">{attachments.map((attachment)=>isFlaggedImage(attachment.filename)?<SensitiveImage key={attachment.id} src={href(attachment)} filename={attachment.filename}/>:<a key={attachment.id} href={href(attachment)} target="_blank" rel="noreferrer"><img src={href(attachment)} alt={attachment.filename}/><span><strong>{attachment.filename}</strong><small>{formatBytes(attachment.size)} · Open original ↗</small></span></a>)}</div>;
 }
 
 function PortalAttachmentList({attachments,href}:{attachments:CaseAttachment[];href:(attachment:CaseAttachment)=>string}){
