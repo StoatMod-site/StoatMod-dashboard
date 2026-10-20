@@ -1,0 +1,10 @@
+[
+ "var(--status-maintenance)",
+ "Partial disruption",
+ "Major outage",
+ "Partial disruption · 5–60 min down",
+ "Major outage · 1 hr+ down",
+ "(brief interruption)",
+ "Interruptions under 5 minutes keep a day green and are marked with a thin line. Select a day to see its incidents. All times UTC.",
+ "Checks run every 30 seconds from our monitoring service. Uptime excludes observed outages; degraded performance is tracked separately. A day turns amber after 5 minutes of downtime and red after an hour; shorter interruptions are still listed in the incident log. Earlier restarts come from retained service logs and don’t imply continuous monitoring. Local AI is monitored independently from the moderation bot."
+]
