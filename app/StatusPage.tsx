@@ -6,7 +6,7 @@ import { useEffect, useState, type ReactNode } from "react";
 import { PublicFooter } from "./PublicFooter";
 import { SiteNav } from "./SiteNav";
 import { api } from "./lib/api";
-import { plannedMaintenance } from "./content/maintenance";
+import { maintenanceDayStart, plannedMaintenance } from "./content/maintenance";
 import styles from "./StatusPage.module.css";
 
 type Health = "operational" | "degraded" | "outage" | "unknown";
@@ -115,8 +115,9 @@ export function StatusPage() {
         <p className={styles.eyebrow} id="maintenance-heading">PLANNED MAINTENANCE</p>
         {maintenance.map((item) => {
           const started = now !== null && now >= Date.parse(item.starts);
+          const today = now !== null && now >= maintenanceDayStart(item);
           return <article key={item.id} className={styles.maintenanceItem}>
-            <div className={styles.maintenanceTitle}><h2>{item.title}</h2><span data-active={started}>{started ? "Maintenance day" : "Scheduled"}</span></div>
+            <div className={styles.maintenanceTitle}><h2>{item.title}</h2><span data-active={today}>{started ? "In progress" : today ? "Today" : "Scheduled"}</span></div>
             <p className={styles.maintenanceWhen}>{item.when}</p>
             <p>{item.summary}</p>
             <p>{item.impact}</p>
