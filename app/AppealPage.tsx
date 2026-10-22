@@ -1,5 +1,4 @@
 "use client";
-/* eslint-disable @next/next/no-html-link-for-pages -- Native links preserve working public navigation. */
 
 import { FormEvent, useEffect, useRef, useState } from "react";
 import { api, apiBase } from "./lib/api";

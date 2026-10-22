@@ -1,4 +1,3 @@
-/* eslint-disable @next/next/no-html-link-for-pages -- Public links use browser navigation because the production client router fails. */
 import { Breadcrumbs } from "./Breadcrumbs";
 import { FeatureCommand } from "./FeatureCommand";
 import { FeatureIcon } from "./FeatureIcon";

@@ -1,5 +1,4 @@
 "use client";
-/* eslint-disable @next/next/no-html-link-for-pages -- Native links preserve working public navigation. */
 
 import { pluralize } from "./lib/plural";
 import { useEffect, useState, type FormEvent } from "react";

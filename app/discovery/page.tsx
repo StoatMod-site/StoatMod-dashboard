@@ -48,7 +48,7 @@ export default async function DiscoveryRoute() {
           ]),
         ],
       }} />
-      <DiscoveryPage initialServers={servers} featuredIds={featuredServers(servers).map((server) => server.server_id)} dataAvailable={discovery.available} />
+      <DiscoveryPage initialServers={servers} featuredIds={featuredServers(servers).map((server) => server.server_id)} spotlightId={discovery.spotlight} dataAvailable={discovery.available} />
     </>
   );
 }

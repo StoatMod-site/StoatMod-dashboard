@@ -9,6 +9,20 @@ export function serverPath(server: Pick<DiscoveryServer, "server_id" | "server_n
   return "/discovery/servers/" + discoveryServerSlug(server);
 }
 
+/** Join buttons go through the API so the listing owner sees a join-click count (no personal data is kept). */
+export function joinHref(server: Pick<DiscoveryServer, "server_id">) {
+  return "/api/public/discovery/join/" + encodeURIComponent(server.server_id);
+}
+
+export function VerifiedBadge({ verified, large = false }: { verified: DiscoveryServer["verified"]; large?: boolean }) {
+  if (!verified) return null;
+  return (
+    <span className={`${styles.verified} ${large ? styles.verifiedLarge : ""}`} title={`Verified: ${verified.label}`} role="img" aria-label={`Verified: ${verified.label}`}>
+      <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.5l2.2 1.6 2.7-.1.9 2.6 2.2 1.6-.8 2.6.8 2.6-2.2 1.6-.9 2.6-2.7-.1L10 18.5l-2.2-1.6-2.7.1-.9-2.6L2 12.8l.8-2.6L2 7.6l2.2-1.6.9-2.6 2.7.1z" /><path d="M6.6 10.2l2.2 2.2 4.6-4.7" fill="none" /></svg>
+    </span>
+  );
+}
+
 export function ServerCard({ server, rank, note, feature = false }: { server: DiscoveryServer; rank?: number; note?: string; feature?: boolean }) {
   const path = serverPath(server);
   return (
@@ -19,15 +33,35 @@ export function ServerCard({ server, rank, note, feature = false }: { server: Di
       </div>
       <div className={styles.cardBody}>
         <ServerArtwork serverId={server.server_id} name={server.server_name} src={server.server_icon_url} kind="icon" className={styles.cardIcon} />
-        <h3><a href={path} data-no-translate>{server.server_name}</a></h3>
+        <h3><a href={path} data-no-translate>{server.server_name}</a><VerifiedBadge verified={server.verified} /></h3>
         {note && <p className={styles.cardNote}>{note}</p>}
         <p className={styles.cardDescription} data-no-translate>{server.description}</p>
         {server.tags.length > 0 && <div className={styles.tagRow}>{server.tags.slice(0, 4).map((tag) => <a href={"/discovery/tags/" + slugify(tag)} key={tag} data-no-translate>#{tag}</a>)}</div>}
       </div>
       <footer className={styles.cardFooter}>
         <span className={styles.cardStats}><b>{compactNumber(server.member_count)}</b> {countLabel(server.member_count, "member", "members")} <i aria-hidden="true">·</i> <b>{compactNumber(server.daily_messages)}</b> {countLabel(server.daily_messages, "message today", "messages today")}</span>
-        <a className={styles.joinButton} href={server.invite_url} target="_blank" rel="ugc nofollow noopener noreferrer" aria-label={`Join ${server.server_name} on Stoat`}>Join <span aria-hidden="true">↗</span></a>
+        <a className={styles.joinButton} href={joinHref(server)} target="_blank" rel="ugc nofollow noopener noreferrer" aria-label={`Join ${server.server_name} on Stoat`}>Join <span aria-hidden="true">↗</span></a>
       </footer>
+    </article>
+  );
+}
+
+/** "Server of the week": the listing with the most visits and join clicks over the last seven days. */
+export function Spotlight({ server }: { server: DiscoveryServer }) {
+  const path = serverPath(server);
+  return (
+    <article className={styles.spotlight}>
+      <a className={styles.spotlightArt} href={path} aria-label={`View ${server.server_name}`}>
+        <ServerArtwork serverId={server.server_id} name={server.server_name} src={server.server_banner_url} kind="banner" />
+        <ServerArtwork serverId={server.server_id} name={server.server_name} src={server.server_icon_url} kind="icon" className={styles.spotlightIcon} />
+      </a>
+      <div className={styles.spotlightBody}>
+        <p className={styles.eyebrow}>Server of the week</p>
+        <h3><a href={path} data-no-translate>{server.server_name}</a><VerifiedBadge verified={server.verified} /></h3>
+        <p data-no-translate>{server.description}</p>
+        <span className={styles.cardStats}><b>{compactNumber(server.member_count)}</b> {countLabel(server.member_count, "member", "members")} <i aria-hidden="true">·</i> <b>{compactNumber(server.daily_messages)}</b> {countLabel(server.daily_messages, "message today", "messages today")}</span>
+        <a className={styles.joinButton} href={joinHref(server)} target="_blank" rel="ugc nofollow noopener noreferrer" aria-label={`Join ${server.server_name} on Stoat`}>Join {server.server_name} <span aria-hidden="true">↗</span></a>
+      </div>
     </article>
   );
 }
@@ -42,6 +76,7 @@ const navItems = [
   { key: "top", href: "/discovery/top", label: "Top servers" },
   { key: "new", href: "/discovery/new", label: "New" },
   { key: "categories", href: "/discovery/categories", label: "Categories" },
+  { key: "verified", href: "/discovery/verified", label: "Verified" },
   { key: "advertise", href: "/discovery/advertise", label: "Advertise your server" },
 ] as const;
 
@@ -141,11 +176,11 @@ export function RankedList({ servers, note, numbered = true }: { servers: Discov
           <span className={styles.rankNumber}>{numbered ? String(index + 1).padStart(2, "0") : "→"}</span>
           <ServerArtwork serverId={server.server_id} name={server.server_name} src={server.server_icon_url} kind="icon" className={styles.rankIcon} />
           <div>
-            <h3><a href={serverPath(server)} data-no-translate>{server.server_name}</a></h3>
+            <h3><a href={serverPath(server)} data-no-translate>{server.server_name}</a><VerifiedBadge verified={server.verified} /></h3>
             <p data-no-translate>{server.description}</p>
             <span className={styles.cardStats}><b>{compactNumber(server.member_count)}</b> {countLabel(server.member_count, "member", "members")} <i aria-hidden="true">·</i> <b>{compactNumber(server.daily_messages)}</b> {countLabel(server.daily_messages, "message today", "messages today")}{note ? <> <i aria-hidden="true">·</i> {note(server)}</> : null}</span>
           </div>
-          <a className={styles.joinButton} href={server.invite_url} target="_blank" rel="ugc nofollow noopener noreferrer" aria-label={`Join ${server.server_name} on Stoat`}>Join <span aria-hidden="true">↗</span></a>
+          <a className={styles.joinButton} href={joinHref(server)} target="_blank" rel="ugc nofollow noopener noreferrer" aria-label={`Join ${server.server_name} on Stoat`}>Join <span aria-hidden="true">↗</span></a>
         </li>
       ))}
     </ol>

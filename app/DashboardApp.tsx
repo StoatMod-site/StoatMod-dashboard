@@ -3,7 +3,6 @@
 import { pluralize } from "./lib/plural";
 import { AggregateActivity, type ActivityInsights } from "./AggregateActivity";
 
-/* eslint-disable @next/next/no-html-link-for-pages */
 
 import { lazy, Suspense, useCallback, useEffect, useMemo, useRef, useState, type ChangeEvent, type DragEvent, type FormEvent, type KeyboardEvent } from "react";
 import type { EmojiClickData, EmojiStyle, Theme } from "emoji-picker-react";
@@ -20,6 +19,8 @@ import { isSupportOnly, policyName } from "./lib/moderation-display";
 import styles from "./ServerDashboard.module.css";
 import { MaintenanceBanner } from "./MaintenanceBanner";
 import { CASE_IMAGE_AUTHOR, SensitiveImage, isFlaggedImage } from "./SensitiveImage";
+import { BadgePanel, CustomLinkPanel, DiscoveryNotificationsPanel, DiscoveryStatsPanel, HeldEditNotice, ListingMediaPanel, ListingProfileFields, MarkdownHelp, RecentEdits, VerificationPanel, useDiscoveryExtras } from "./DiscoveryExtras";
+import { DiscoveryMarkdown } from "./lib/discovery-markdown";
 
 type View = "overview" | "members" | "cases" | "appeals" | "reports" | "activity" | "automations" | "polls" | "leaderboards" | "discovery" | "settings" | "support" | "applications" | "reaction-roles";
 type DailyStat = { stat_date:string; message_count:number;  new_joins:number; new_leaves:number };
@@ -387,10 +388,16 @@ function DiscoveryPanel({initial,server,today,focusBump,guided,onBumpFocused,onS
   const [inviteUrl,setInviteUrl]=useState(initial.application?.invite_url||"");
   const [tags,setTags]=useState<string[]>(initial.application?.tags||[]);
   const [newTag,setNewTag]=useState("");
+  const [language,setLanguage]=useState("");
+  const [categories,setCategories]=useState<string[]>([]);
+  const [links,setLinks]=useState<string[]>([]);
   const [busy,setBusy]=useState(false);
   const [notice,setNotice]=useState("");
   const [now,setNow]=useState(()=>Date.now());
   const bumpButtonRef=useRef<HTMLButtonElement>(null);
+  const {extras,reload:reloadExtras}=useDiscoveryExtras(Boolean(initial.application));
+  const profileLoaded=useRef(false);
+  useEffect(()=>{if(!extras||profileLoaded.current)return;profileLoaded.current=true;setLanguage(extras.profile.language);setCategories(extras.profile.categories);setLinks(extras.profile.links);},[extras]);
   useEffect(()=>{if(!state.bump_cooldown_until)return;const timer=window.setInterval(()=>setNow(Date.now()),1000);return()=>window.clearInterval(timer);},[state.bump_cooldown_until]);
   const requirements=[
     {key:"stoatmod" as const,label:"StoatMod is in the server",help:"The bot must be connected and sending server snapshots."},
@@ -401,20 +408,23 @@ function DiscoveryPanel({initial,server,today,focusBump,guided,onBumpFocused,onS
   async function submit(mode:"apply"|"save"){
     setBusy(true);setNotice("");
     try{
-      const updated=await api<DiscoveryState>(mode==="apply"?"/api/discovery/apply":"/api/discovery/listing",{method:mode==="apply"?"POST":"PUT",body:JSON.stringify({description,information,invite_url:inviteUrl,tags})});
-      onStateChange(updated);setNotice(mode==="apply"?"Application sent to the Stoatmod owner for review.":status==="approved"&&updated.application?.status==="pending"?"Changes saved. The listing is hidden until the updated content is reviewed.":"Discovery listing details saved.");
+      if(status==="approved")setNotice("Running automatic checks…");
+      const updated=await api<DiscoveryState&{edit?:{status:"live"|"held";reason:string}|null}>(mode==="apply"?"/api/discovery/apply":"/api/discovery/listing",{method:mode==="apply"?"POST":"PUT",body:JSON.stringify({description,information,invite_url:inviteUrl,tags,language,categories,links:links.filter((link)=>link.trim())})});
+      onStateChange(updated);void reloadExtras();
+      setNotice(mode==="apply"?"Application sent to the Stoatmod owner for review.":updated.edit?.status==="live"?"Changes are live on Discovery.":updated.edit?.status==="held"?"Changes saved, but automatic checks held them for a quick review. Your current listing stays live.":"Discovery listing details saved.");
     }catch(error){setNotice(error instanceof Error?error.message:"Could not save the discovery application.");}finally{setBusy(false);}
   }
   async function bump(){setBusy(true);setNotice("");try{const updated=await api<DiscoveryState&{bump:{bumped:boolean;next_bump_at:string}}>("/api/discovery/bump",{method:"POST",body:"{}"});onStateChange(updated);setNow(Date.now());setNotice(updated.bump.bumped?"Listing bumped. Your server has moved to the top of Recently bumped.":"This listing is still on its two-hour bump cooldown.");}catch(error){setNotice(error instanceof Error?error.message:"Could not bump the Discovery listing.");}finally{setBusy(false);}}
   const status=state.application?.status;
-  const canSave=description.trim().length>=20&&description.trim().length<=500&&information.trim().length<=1500&&inviteUrl.trim().startsWith("https://");
+  const informationMax=extras?.options.information_max||2000;
+  const canSave=description.trim().length>=20&&description.trim().length<=500&&information.trim().length<=informationMax&&inviteUrl.trim().startsWith("https://");
   const bumpRemaining=state.bump_cooldown_until?Math.max(0,new Date(state.bump_cooldown_until).getTime()-now):0;
   const bumpCooldownActive=bumpRemaining>0;
   const canBump=status==="approved"&&state.eligibility.eligible&&!bumpCooldownActive;
   useEffect(()=>{if(!focusBump||status!=="approved")return;const frame=window.requestAnimationFrame(()=>{bumpButtonRef.current?.scrollIntoView({behavior:"smooth",block:"center"});bumpButtonRef.current?.focus();onBumpFocused();});return()=>window.cancelAnimationFrame(frame);},[focusBump,status,onBumpFocused]);
   function addTag(){const tag=newTag.trim().replace(/\s+/g," ");if(tag.length<2||tag.length>24||tags.length>=5||tags.some((item)=>item.toLowerCase()===tag.toLowerCase()))return;setTags([...tags,tag]);setNewTag("");}
   return <div id="discovery-guide-target" className={`discovery-admin-layout dashboard-surface${guided?" onboarding-destination-active":""}`}>
-    <section className="panel discovery-admin-hero"><div><p className="eyebrow">Public server directory</p><h2>{status==="approved"?<><span>Manage</span> {server.name} <span>on Discovery</span></>:<><span>Put</span> {server.name} <span>in Discovery</span></>}</h2><p>Discovery helps people find Stoat communities that use StoatMod and have completed the full setup. Applications are reviewed by the StoatMod owner before they become public.</p></div><a className="secondary-button" href="/discovery" target="_blank">View Discovery ↗</a></section>
+    <section className="panel discovery-admin-hero"><div><p className="eyebrow">Public server directory</p><h2>{status==="approved"?<><span>Manage</span> {server.name} <span>on Discovery</span></>:<><span>Put</span> {server.name} <span>in Discovery</span></>}</h2><p>Discovery helps people find Stoat communities that use StoatMod and have completed the full setup. Applications are reviewed by the StoatMod owner before they become public. After approval, edits go live straight away once automatic checks pass.</p></div><a className="secondary-button" href="/discovery" target="_blank">View Discovery ↗</a></section>
     {status==="approved"&&<section className="panel discovery-bump-panel"><div><p className="eyebrow">Listing promotion</p><h2>Bump your server</h2><p>Move this listing to the top of Recently bumped. Each approved server can be bumped once every two hours.</p></div><div><span>{bumpCooldownActive?"Next bump available in":"Your listing is ready to bump"}</span><strong>{bumpCooldownActive?discoveryCountdown(bumpRemaining):"Ready now"}</strong><button ref={bumpButtonRef} id="discovery-bump-button" aria-label="Bump server listing now" className="primary-button" type="button" disabled={busy||!canBump} onClick={()=>void bump()}>{busy?"Bumping…":"Bump now"}<b>↑</b></button></div></section>}
     <section className="panel discovery-requirements"><div className="panel-heading"><div><p className="eyebrow">Application checklist</p><h2>{state.eligibility.eligible?"Ready to apply":"Complete every requirement"}</h2></div><span>{requirements.filter((item)=>state.eligibility.requirements[item.key]).length} / {requirements.length}</span></div><div>{requirements.map((item)=><article className={state.eligibility.requirements[item.key]?"complete":"missing"} key={item.key}><b>{state.eligibility.requirements[item.key]?"✓":"×"}</b><span><strong>{item.label}</strong><small>{item.help}</small></span>{item.key==="global_statistics"&&!state.eligibility.requirements[item.key]&&<button type="button" onClick={onOpenSettings}>Open settings</button>}</article>)}</div></section>
     <section className="panel discovery-application"><div className="panel-heading"><div><p className="eyebrow">Listing details</p><h2>Describe your community</h2></div>{status&&<span className={`discovery-status ${status}`}>{pretty(status)}</span>}</div>
@@ -425,12 +435,21 @@ function DiscoveryPanel({initial,server,today,focusBump,guided,onBumpFocused,onS
       <label>Server description <span>{description.length}/500</span><textarea value={description} minLength={20} maxLength={500} onChange={(event)=>setDescription(event.target.value)} placeholder="What kind of community is this, and who is it for?"/></label>
       <label>Server invite <span>Required</span><input type="url" value={inviteUrl} maxLength={500} onChange={(event)=>setInviteUrl(event.target.value)} placeholder="https://stt.gg/your-invite"/><small className="discovery-invite-help">Only HTTPS Stoat invite links are accepted. This becomes the public Join button after approval.</small></label>
       <div className="discovery-tag-editor"><div><strong>Discovery tags</strong><span>{tags.length}/5</span></div><p>Add up to five topics that help people find your server.</p><div className="discovery-tag-entry"><input value={newTag} maxLength={24} disabled={tags.length>=5} onChange={(event)=>setNewTag(event.target.value)} onKeyDown={(event)=>{if(event.key==="Enter"){event.preventDefault();addTag();}}} placeholder="Gaming, Art, Technology…"/><button type="button" disabled={tags.length>=5||newTag.trim().length<2} onClick={addTag}>Add tag</button></div><div className="discovery-tag-list">{tags.map((tag)=><span key={tag}>{tag}<button type="button" aria-label={`Remove ${tag}`} onClick={()=>setTags(tags.filter((item)=>item!==tag))}>×</button></span>)}{!tags.length&&<small>No tags added yet.</small>}</div></div>
-      <label>More information <span>{information.length}/1500</span><textarea value={information} maxLength={1500} onChange={(event)=>setInformation(event.target.value)} placeholder="Share the topics, atmosphere, activities, rules, or anything else visitors should know."/></label>
+      <label>More information <span>{information.length}/{informationMax}</span><textarea value={information} maxLength={informationMax} onChange={(event)=>setInformation(event.target.value)} placeholder="Share the topics, atmosphere, activities, rules, or anything else visitors should know."/></label>
+      <MarkdownHelp/>
+      <ListingProfileFields language={language} categories={categories} links={links} onLanguage={setLanguage} onCategories={setCategories} onLinks={setLinks}/>
+      {extras?.held_edit&&<HeldEditNotice edit={extras.held_edit} onWithdraw={()=>void api("/api/discovery/edits/held",{method:"DELETE"}).then(reloadExtras)}/>}
       {notice&&<p className="save-notice" role="status">{notice}</p>}
-      {status==="approved"&&<p className="discovery-decision-note">Changing the description, information, invite or tags hides the current listing and sends the updated content back for review.</p>}
-      <div className="discovery-application-actions">{state.application&&<button className="secondary-button" disabled={busy||!canSave} onClick={()=>void submit("save")}>{busy?"Saving…":status==="approved"?"Save and resubmit":"Save details"}</button>}<button className="primary-button" disabled={busy||!canSave||!state.can_apply} onClick={()=>void submit("apply")}>{busy?"Sending…":status==="denied"||status==="revoked"?"Reapply for Discovery":"Apply for Discovery"}<span>→</span></button></div>
+      {status==="approved"&&<p className="discovery-decision-note">Edits go live straight away. Stoatmod&apos;s AI checks new text and a new invite must open this server; anything flagged waits for a quick review while the current listing stays live.</p>}
+      <div className="discovery-application-actions">{state.application&&<button className="secondary-button" disabled={busy||!canSave} onClick={()=>void submit("save")}>{busy?"Saving…":status==="approved"?"Save changes":"Save details"}</button>}<button className="primary-button" disabled={busy||!canSave||!state.can_apply} onClick={()=>void submit("apply")}>{busy?"Sending…":status==="denied"||status==="revoked"?"Reapply for Discovery":"Apply for Discovery"}<span>→</span></button></div>
     </section>
-    <section className="panel discovery-admin-preview"><div className="panel-heading"><div><p className="eyebrow">Visitor view</p><h2>Public listing preview</h2></div><span>Updates as you type</span></div><article><span className="discovery-preview-icon">{server.name.slice(0,1).toUpperCase()}{server.icon_url&&<img src={server.icon_url} alt="" onError={(event)=>{event.currentTarget.style.display="none";}}/>}</span><div><header><div><span className="discovery-verified">{status==="approved"?"✓ Reviewed listing":"Listing preview"}</span><h3>{server.name}</h3></div></header><div className="discovery-card-tags">{tags.map((tag)=><span key={tag}>#{tag}</span>)}</div><p className="discovery-listing-description">{description||"Your public server description will appear here."}</p><details open={Boolean(information)}><summary>More about this server <span>＋</span></summary><p>{information||"Add more information to show visitors what makes this community special."}</p></details><footer><span>{status==="approved"?(bumpCooldownActive?"Recently bumped":"Approved listing"):"Preview before approval"}</span><div className="discovery-inline-stats"><span><b>{server.member_count.toLocaleString()}</b> members</span><span><b>{today.messages.toLocaleString()}</b> messages today</span></div></footer></div><span className="discovery-preview-join">Join <b>→</b></span></article></section>
+    <section className="panel discovery-admin-preview"><div className="panel-heading"><div><p className="eyebrow">Visitor view</p><h2>Public listing preview</h2></div><span>Updates as you type</span></div><article><span className="discovery-preview-icon">{server.name.slice(0,1).toUpperCase()}{(extras?.media.logo_url||server.icon_url)&&<img src={extras?.media.logo_url?apiBase()+extras.media.logo_url:server.icon_url||""} alt="" onError={(event)=>{event.currentTarget.style.display="none";}}/>}</span><div><header><div><span className="discovery-verified">{extras?.verified?`✓ ${extras.verified.label}`:status==="approved"?"✓ Reviewed listing":"Listing preview"}</span><h3>{server.name}</h3></div></header><div className="discovery-card-tags">{tags.map((tag)=><span key={tag}>#{tag}</span>)}</div><p className="discovery-listing-description">{description||"Your public server description will appear here."}</p><details open={Boolean(information)}><summary>More about this server <span>＋</span></summary>{information?<DiscoveryMarkdown source={information} className="discovery-preview-markdown" headingBase={4}/>:<p>Add more information to show visitors what makes this community special.</p>}</details><footer><span>{status==="approved"?(bumpCooldownActive?"Recently bumped":"Approved listing"):"Preview before approval"}</span><div className="discovery-inline-stats"><span><b>{server.member_count.toLocaleString()}</b> members</span><span><b>{today.messages.toLocaleString()}</b> messages today</span></div></footer></div><span className="discovery-preview-join">Join <b>→</b></span></article>{extras&&<RecentEdits edits={extras.edits}/>}</section>
+    {extras&&status==="approved"&&<DiscoveryStatsPanel stats={extras.stats}/>}
+    {extras&&<CustomLinkPanel key={extras.vanity?.slug||"none"} extras={extras} approved={status==="approved"} onChange={()=>void reloadExtras()}/>}
+    {extras&&<ListingMediaPanel extras={extras} onChange={()=>void reloadExtras()}/>}
+    {extras&&<VerificationPanel extras={extras} approved={status==="approved"} onChange={()=>void reloadExtras()}/>}
+    {extras&&status==="approved"&&<DiscoveryNotificationsPanel extras={extras} onChange={()=>void reloadExtras()}/>}
+    {extras&&status==="approved"&&<BadgePanel serverId={server.id} vanity={extras.vanity?.slug||null}/>}
   </div>;
 }
 

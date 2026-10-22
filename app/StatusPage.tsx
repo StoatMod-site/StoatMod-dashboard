@@ -1,5 +1,4 @@
 "use client";
-/* eslint-disable @next/next/no-html-link-for-pages -- Public links use browser navigation because the production client router fails. */
 
 import { pluralize } from "./lib/plural";
 import { useEffect, useState, type ReactNode } from "react";

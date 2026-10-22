@@ -1,4 +1,3 @@
-/* eslint-disable @next/next/no-html-link-for-pages -- Public links use browser navigation because the production client router fails. */
 import { siteConfig } from "./lib/site-config";
 import styles from "./PublicFooter.module.css";
 

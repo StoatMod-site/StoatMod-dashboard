@@ -1,12 +1,11 @@
 "use client";
-/* eslint-disable @next/next/no-html-link-for-pages -- Public links use browser navigation because the production client router fails. */
 
 import { useMemo, useState } from "react";
 import { PublicFooter } from "./PublicFooter";
 import { ServerArtwork } from "./ServerArtwork";
 import { SiteNav } from "./SiteNav";
-import { AdvertiseBand, CategoryTiles, DiscoveryNav, Faq, SectionHeading, ServerCard, ServerGrid, serverPath } from "./discovery/DiscoveryUI";
-import { compactNumber, directoryStats, rankActive, rankBumped, rankNewest, rankPopular, topTags } from "./lib/discovery-catalog";
+import { AdvertiseBand, CategoryTiles, DiscoveryNav, Faq, SectionHeading, ServerCard, ServerGrid, Spotlight, serverPath } from "./discovery/DiscoveryUI";
+import { compactNumber, directoryStats, discoveryLanguages, rankActive, rankBumped, rankNewest, rankPopular, topTags } from "./lib/discovery-catalog";
 import { discoveryFaq } from "./lib/discovery-faq";
 import { pluralize } from "./lib/plural";
 import type { DiscoveryServer } from "./lib/public-types";
@@ -41,25 +40,33 @@ function sorted(servers: DiscoveryServer[], sort: Sort) {
   return rankPopular(servers);
 }
 
-export function DiscoveryPage({ initialServers, featuredIds = [], dataAvailable = true }: { initialServers: DiscoveryServer[]; featuredIds?: string[]; dataAvailable?: boolean }) {
+export function DiscoveryPage({ initialServers, featuredIds = [], spotlightId = null, dataAvailable = true }: { initialServers: DiscoveryServer[]; featuredIds?: string[]; spotlightId?: string | null; dataAvailable?: boolean }) {
   const servers = initialServers;
   const [query, setQuery] = useState("");
   const [tag, setTag] = useState("");
+  const [language, setLanguage] = useState("");
+  const [verifiedOnly, setVerifiedOnly] = useState(false);
   const [sort, setSort] = useState<Sort>("popular");
   const [visible, setVisible] = useState(PAGE_SIZE);
   const stats = useMemo(() => directoryStats(servers), [servers]);
   const tags = useMemo(() => topTags(servers, 16), [servers]);
-  const featured = useMemo(() => featuredIds.map((id) => servers.find((server) => server.server_id === id)).filter((server): server is DiscoveryServer => Boolean(server)), [featuredIds, servers]);
+  const spotlight = useMemo(() => servers.find((server) => server.server_id === spotlightId) ?? null, [servers, spotlightId]);
+  const featured = useMemo(() => featuredIds.filter((id) => id !== spotlightId).map((id) => servers.find((server) => server.server_id === id)).filter((server): server is DiscoveryServer => Boolean(server)), [featuredIds, servers, spotlightId]);
+  const languages = useMemo(() => [...new Set(servers.map((server) => server.language).filter((code) => code && discoveryLanguages[code]))].sort(), [servers]);
+  const anyVerified = useMemo(() => servers.some((server) => server.verified), [servers]);
   const collage = useMemo(() => rankPopular(servers).slice(0, 6), [servers]);
   const tokens = useMemo(() => query.trim().toLowerCase().split(/\s+/).filter(Boolean), [query]);
-  const searching = tokens.length > 0 || Boolean(tag);
+  const searching = tokens.length > 0 || Boolean(tag) || Boolean(language) || verifiedOnly;
   const results = useMemo(() => {
     const matching = servers
       .map((server) => ({ server, score: searchScore(server, tokens) }))
-      .filter(({ server, score }) => score >= 0 && (!tag || server.tags.some((item) => item.toLowerCase() === tag.toLowerCase())));
+      .filter(({ server, score }) => score >= 0
+        && (!tag || server.tags.some((item) => item.toLowerCase() === tag.toLowerCase()))
+        && (!language || server.language === language)
+        && (!verifiedOnly || Boolean(server.verified)));
     if (tokens.length) return matching.sort((a, b) => b.score - a.score).map(({ server }) => server);
     return sorted(matching.map(({ server }) => server), sort);
-  }, [servers, tokens, tag, sort]);
+  }, [servers, tokens, tag, language, verifiedOnly, sort]);
 
   function chooseTag(value: string) {
     setTag((current) => (current === value ? "" : value));
@@ -69,6 +76,8 @@ export function DiscoveryPage({ initialServers, featuredIds = [], dataAvailable 
   function clearFilters() {
     setQuery("");
     setTag("");
+    setLanguage("");
+    setVerifiedOnly(false);
     setVisible(PAGE_SIZE);
   }
 
@@ -99,6 +108,10 @@ export function DiscoveryPage({ initialServers, featuredIds = [], dataAvailable 
       </section>
       <DiscoveryNav active="explore" />
 
+      {spotlight && <section className={styles.section} aria-label="Server of the week">
+        <Spotlight server={spotlight} />
+      </section>}
+
       {featured.length > 0 && <section className={styles.section} id="featured" aria-label="Featured Stoat servers">
         <SectionHeading eyebrow="Featured" title="Featured Stoat servers" description="Recently bumped and most active communities in the directory." action={{ href: "/discovery/top", label: "See the top servers" }} />
         <div className={styles.featureGrid}>{featured.map((server) => <ServerCard server={server} feature key={server.server_id} />)}</div>
@@ -113,10 +126,11 @@ export function DiscoveryPage({ initialServers, featuredIds = [], dataAvailable 
         <SectionHeading eyebrow="Server directory" title="Browse the Stoat server list" description="Search names, topics and tags, or sort the whole directory." />
         <div className={styles.toolbar}>
           <div className={styles.toolbarRow}>
-            <label className={styles.searchField}><span aria-hidden="true">⌕</span><input type="search" aria-label="Search names, topics and tags" aria-controls="discovery-results" value={query} onChange={(event) => { setQuery(event.target.value); setVisible(PAGE_SIZE); }} placeholder="Search names, topics and tags" />{(query || tag) && <button type="button" onClick={clearFilters}>Clear</button>}</label>
+            <label className={styles.searchField}><span aria-hidden="true">⌕</span><input type="search" aria-label="Search names, topics and tags" aria-controls="discovery-results" value={query} onChange={(event) => { setQuery(event.target.value); setVisible(PAGE_SIZE); }} placeholder="Search names, topics and tags" />{searching && <button type="button" onClick={clearFilters}>Clear</button>}</label>
+            {languages.length > 1 && <label className={styles.languageFilter}><select value={language} onChange={(event) => { setLanguage(event.target.value); setVisible(PAGE_SIZE); }} aria-label="Filter by language"><option value="">All languages</option>{languages.map((code) => <option value={code} key={code}>{discoveryLanguages[code]}</option>)}</select></label>}
             <div className={styles.sortTabs} role="group" aria-label="Sort servers">{SORTS.map((item) => <button type="button" key={item.key} aria-pressed={sort === item.key && !tokens.length} disabled={tokens.length > 0} onClick={() => { setSort(item.key); setVisible(PAGE_SIZE); }}>{item.label}</button>)}</div>
           </div>
-          {tags.length > 0 && <div className={styles.chips} role="group" aria-label="Filter by tag"><button type="button" aria-pressed={!tag} onClick={() => setTag("")}>All</button>{tags.map(({ tag: item, count }) => <button type="button" key={item} aria-pressed={tag === item} onClick={() => chooseTag(item)}><span data-no-translate>#{item}</span> · {count}</button>)}</div>}
+          {tags.length > 0 && <div className={styles.chips} role="group" aria-label="Filter by tag">{anyVerified && <button type="button" aria-pressed={verifiedOnly} onClick={() => { setVerifiedOnly((value) => !value); setVisible(PAGE_SIZE); }}>✓ Verified</button>}<button type="button" aria-pressed={!tag} onClick={() => setTag("")}>All</button>{tags.map(({ tag: item, count }) => <button type="button" key={item} aria-pressed={tag === item} onClick={() => chooseTag(item)}><span data-no-translate>#{item}</span> · {count}</button>)}</div>}
         </div>
         <div id="discovery-results">
           <p className={styles.resultMeta} role="status"><span>{searching ? pluralize(results.length, "matching server", "matching servers") : pluralize(servers.length, "reviewed server", "reviewed servers")}</span>{searching && <button type="button" className={styles.linkButton} onClick={clearFilters}>Show all servers</button>}</p>
@@ -133,7 +147,7 @@ export function DiscoveryPage({ initialServers, featuredIds = [], dataAvailable 
           <div>
             <p>Stoatmod Discovery is a free directory of Stoat servers. Server owners submit their community with a description, tags and an invite, and every listing is reviewed before it appears. Each server gets its own page with its live member count and today&apos;s activity, so you can see a community is active before you join.</p>
             <p>Browse <a href="/discovery/top">the top Stoat servers</a>, see <a href="/discovery/new">new Stoat servers</a> or explore <a href="/discovery/categories">categories</a>. Member totals are server memberships, not unique people, and approval is a directory review, not a safety endorsement of every community or message.</p>
-            <p>Run a Stoat community? <a href="/discovery/advertise">Advertise your Stoat server for free</a>: listings require Stoatmod with its permissions, a server icon and public statistics, and material edits return to review before publication.</p>
+            <p>Run a Stoat community? <a href="/discovery/advertise">Advertise your Stoat server for free</a>: listings require Stoatmod with its permissions, a server icon and public statistics. After approval, edits go live straight away once automatic safety checks pass.</p>
           </div>
         </div>
       </section>

@@ -1,5 +1,4 @@
 "use client";
-/* eslint-disable @next/next/no-html-link-for-pages */
 
 import { useEffect, useRef, useState, type FormEvent } from "react";
 import { apiBase } from "./lib/api";

@@ -1,4 +1,3 @@
-/* eslint-disable @next/next/no-html-link-for-pages -- Use normal browser navigation for public pages. */
 import styles from "./PrivateForms.module.css";
 
 export function PortalHeader() {

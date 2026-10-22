@@ -28,7 +28,18 @@ export type DiscoveryServer = {
   description: string;
   information: string;
   updated_at: string;
+  /** Set when the Stoatmod team has verified the server. */
+  verified: { tier: VerificationTier; label: string } | null;
+  /** Custom modstoat.site/<vanity> link, if claimed. */
+  vanity: string | null;
+  /** Two-letter language code chosen by the owner, "other", or "". */
+  language: string;
+  /** Owner-chosen category slugs (in addition to tag matching). */
+  categories: string[];
+  links: string[];
 };
+
+export type VerificationTier = "official" | "organization" | "standing" | "impact";
 
 export type PublicProofServer = Pick<
   DiscoveryServer,

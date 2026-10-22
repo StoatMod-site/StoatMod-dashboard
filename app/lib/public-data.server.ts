@@ -1,4 +1,5 @@
-import type { DiscoveryServer, PublicStats } from "./public-types";
+import type { DiscoveryServer, PublicStats, VerificationTier } from "./public-types";
+import { safeDiscoveryMediaUrl } from "./discovery-media";
 export { discoveryServerSlug, findDiscoveryServer, slugify } from "./public-slugs";
 
 const requestTimeoutMs = 2_500;
@@ -111,13 +112,35 @@ export async function getPublicStats(): Promise<PublicStats | null> {
   };
 }
 
-export async function getPublicDiscoveryResult(): Promise<{ available: boolean; servers: DiscoveryServer[] }> {
+const verificationLabels: Record<VerificationTier, string> = {
+  official: "Official Stoatmod server",
+  organization: "Verified organisation",
+  standing: "Community of high standing",
+  impact: "Impactful community",
+};
+
+function verification(value: unknown): DiscoveryServer["verified"] {
+  if (!value || typeof value !== "object") return null;
+  const tier = (value as Record<string, unknown>).tier;
+  return typeof tier === "string" && tier in verificationLabels
+    ? { tier: tier as VerificationTier, label: verificationLabels[tier as VerificationTier] }
+    : null;
+}
+
+function safeLinks(value: unknown) {
+  if (!Array.isArray(value)) return [];
+  return value.slice(0, 4).map((link) => safeHttpsUrl(link, (hostname) => hostname.includes(".") && !/^[\d.]+$/.test(hostname))).filter(Boolean);
+}
+
+export type PublicDiscoveryResult = { available: boolean; servers: DiscoveryServer[]; spotlight: string | null };
+
+export async function getPublicDiscoveryResult(): Promise<PublicDiscoveryResult> {
   const value = await publicJson("/api/public/discovery");
   if (value === publicDataUnavailable || !value || typeof value !== "object") {
-    return { available: false, servers: [] };
+    return { available: false, servers: [], spotlight: null };
   }
   const servers = (value as Record<string, unknown>).servers;
-  if (!Array.isArray(servers)) return { available: false, servers: [] };
+  if (!Array.isArray(servers)) return { available: false, servers: [], spotlight: null };
   const sanitized = servers.slice(0, 500).flatMap((entry) => {
     if (!entry || typeof entry !== "object") return [];
     const server = entry as Record<string, unknown>;
@@ -129,8 +152,9 @@ export async function getPublicDiscoveryResult(): Promise<{ available: boolean; 
     return [{
       server_id: serverId,
       server_name: serverName,
-      server_icon_url: safeIconUrl(server.server_icon_url),
-      server_banner_url: safeIconUrl(server.server_banner_url),
+      // An uploaded logo or banner (already scanned) replaces the Stoat server artwork.
+      server_icon_url: safeDiscoveryMediaUrl(server.logo_url) || safeIconUrl(server.server_icon_url),
+      server_banner_url: safeDiscoveryMediaUrl(server.custom_banner_url) || safeIconUrl(server.server_banner_url),
       invite_url: inviteUrl,
       tags: Array.isArray(server.tags)
         ? server.tags.map((tag) => text(tag, 30).toLowerCase()).filter(Boolean).slice(0, 5)
@@ -145,9 +169,20 @@ export async function getPublicDiscoveryResult(): Promise<{ available: boolean; 
       description,
       information: text(server.information, 4_000),
       updated_at: text(server.updated_at, 64),
+      verified: verification(server.verified),
+      vanity: typeof server.vanity === "string" && /^[a-z0-9-]{3,32}$/.test(server.vanity) ? server.vanity : null,
+      language: typeof server.language === "string" && /^[a-z]{2}$|^other$/.test(server.language) ? server.language : "",
+      categories: Array.isArray(server.categories) ? server.categories.filter((slug): slug is string => typeof slug === "string" && /^[a-z-]{2,32}$/.test(slug)).slice(0, 2) : [],
+      links: safeLinks(server.links),
     }];
   });
-  return { available: true, servers: sanitized };
+  const spotlight = text((value as Record<string, unknown>).spotlight, 64);
+  return { available: true, servers: sanitized, spotlight: sanitized.some((server) => server.server_id === spotlight) ? spotlight : null };
+}
+
+export async function getDiscoverySpotlight(): Promise<DiscoveryServer | null> {
+  const result = await getPublicDiscoveryResult();
+  return result.servers.find((server) => server.server_id === result.spotlight) ?? null;
 }
 
 export async function getPublicDiscovery(): Promise<DiscoveryServer[]> {

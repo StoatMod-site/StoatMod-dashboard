@@ -96,6 +96,39 @@
 .cardStats i{margin:0 4px;font-style:normal}
 .joinButton{display:inline-flex;align-items:center;gap:6px;padding:8px 14px;border-radius:10px;background:var(--success);color:var(--paper);font-size:12px;font-weight:700;text-decoration:none;transition:transform .15s}
 .joinButton:hover{transform:translateY(-1px)}
+.verified{display:inline-flex;flex:none;width:16px;height:16px;margin-left:6px;vertical-align:-2px}
+.verified svg{width:100%;height:100%}
+.verified svg path:first-child{fill:var(--disc-live)}
+.verified svg path:last-child{stroke:#0d0d0d;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round}
+.verifiedLarge{width:.62em;height:.62em;margin-left:.22em;vertical-align:.02em}
+.markdown h3,.markdown h4,.markdown h5{margin:20px 0 8px;color:var(--ink);font-size:16px;letter-spacing:-.02em}
+.markdown h4,.markdown h5{font-size:14px}
+.markdown ul{list-style:disc}.markdown ol{list-style:decimal}
+.markdown ul,.markdown ol{margin:0 0 12px;padding-left:22px;color:var(--muted);font-size:15px;line-height:1.8}
+.markdown blockquote{margin:0 0 12px;padding:4px 0 4px 14px;border-left:3px solid var(--line);color:var(--muted);font-size:15px;line-height:1.8}
+.markdown code{padding:1px 5px;border-radius:5px;background:color-mix(in srgb,var(--ink) 8%,transparent);font-size:.9em}
+.markdown p{white-space:normal}
+.linkList{display:grid;gap:8px;margin:0;padding:0;list-style:none}
+.linkList a{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:10px 12px;border:1px solid var(--line);border-radius:10px;color:var(--ink);font-size:13px;font-weight:600;text-decoration:none;word-break:break-all}
+.linkList a:hover{border-color:color-mix(in srgb,var(--ink) 35%,transparent)}
+.reportLink{justify-self:start;padding:0;border:0;background:none;color:var(--muted);cursor:pointer;font-size:12px;text-decoration:underline;text-underline-offset:3px}
+.reportForm{display:grid;gap:10px;padding-top:14px;border-top:1px solid var(--line)}
+.reportForm label{display:grid;gap:6px;color:var(--muted);font-size:12px;font-weight:600}
+.reportForm select,.reportForm textarea{width:100%;padding:9px 10px;border:1px solid var(--line);border-radius:9px;background:var(--paper);color:var(--ink);font:inherit;font-size:13px}
+.reportForm textarea{min-height:80px;resize:vertical}
+.reportForm button{justify-self:start;padding:9px 14px;border:0;border-radius:9px;background:var(--ink);color:var(--paper);cursor:pointer;font-size:12px;font-weight:700}
+.reportForm button:disabled{opacity:.5;cursor:default}
+.reportForm .consent{display:flex;gap:8px;align-items:flex-start;font-weight:500;line-height:1.5}
+.reportStatus{margin:0;font-size:12px}
+.spotlight{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);gap:0;overflow:hidden;border:1px solid var(--line);border-radius:var(--disc-radius);background:var(--panel);box-shadow:var(--disc-card-shadow)}
+.spotlightArt{position:relative;min-height:240px;background:linear-gradient(160deg,var(--disc-night),var(--disc-night-2))}
+.spotlightArt img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.spotlightIcon{position:absolute;top:50%;left:50%;z-index:1;display:grid;width:108px;height:108px;place-items:center;overflow:hidden;transform:translate(-50%,-50%);border:4px solid var(--panel);border-radius:30px;background:rgb(73 73 73);color:#fff;font-size:40px;font-weight:750;box-shadow:0 18px 40px -18px #000}
+.spotlightBody{display:grid;align-content:center;gap:12px;padding:32px}
+.spotlightBody h3{margin:0;font-size:clamp(22px,2.6vw,30px);letter-spacing:-.04em}
+.spotlightBody h3 a{color:var(--ink);text-decoration:none}
+.spotlightBody p{margin:0;color:var(--muted);font-size:15px;line-height:1.7}
+.spotlightBody .joinButton{justify-self:start;padding:11px 18px;font-size:13px}
 .cardFeature .cardBanner{aspect-ratio:16/7}
 .cardFeature h3{font-size:20px}
 .empty{padding:44px;border:1px dashed var(--line);border-radius:var(--disc-radius);color:var(--muted);text-align:center}
@@ -153,6 +186,8 @@
 
 /* ---------- feature / step cards (advertise page) ---------- */
 .benefitGrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.tierGrid{grid-template-columns:repeat(2,minmax(0,1fr))}
+.languageFilter select{height:100%;min-height:42px;padding:0 12px;border:1px solid var(--line);border-radius:12px;background:var(--panel);color:var(--ink);font:inherit;font-size:13px}
 .benefit{padding:26px;border:1px solid var(--line);border-radius:var(--disc-radius);background:var(--panel)}
 .benefit>span{display:grid;width:46px;height:46px;margin-bottom:18px;place-items:center;border-radius:13px;background:var(--surface-soft,color-mix(in srgb,var(--ink) 6%,transparent));font-size:22px}
 .benefit h3{margin:0 0 8px;font-size:17px;letter-spacing:-.02em}
@@ -233,5 +268,5 @@
 
 /* ---------- responsive ---------- */
 @media(max-width:1080px){.heroInner{grid-template-columns:1fr}.collage{display:none}.featureGrid{grid-template-columns:1fr 1fr}.steps{grid-template-columns:1fr 1fr}.benefitGrid{grid-template-columns:1fr 1fr}.profileLayout{grid-template-columns:1fr}.sidePanel{position:static}}
-@media(max-width:760px){.page{--public-gutter:16px}.hero{padding:56px 0 48px}.subHero{padding:48px 0 40px}.featureGrid,.benefitGrid,.steps,.checklist,.copy,.faq,.statRow{grid-template-columns:1fr}.band{grid-template-columns:1fr;margin:48px 16px 0;padding:32px 22px;border-radius:22px}.sectionHeading{flex-direction:column;align-items:flex-start}.toolbar{position:static}.subnav a.subnavCta{margin-left:0}.rankItem{grid-template-columns:34px 48px minmax(0,1fr);gap:12px;padding:14px}.rankItem .joinButton{grid-column:1/-1;justify-content:center}.rankIcon{width:48px;height:48px;border-radius:14px}.rankNumber{font-size:18px}.profileInner{grid-template-columns:1fr;padding-top:120px}.profileIcon{width:84px;height:84px;border-radius:22px;font-size:30px}.heroSearch{padding-left:14px}.heroSearch button{padding:11px 14px}.grid{grid-template-columns:1fr}}
+@media(max-width:760px){.page{--public-gutter:16px}.hero{padding:56px 0 48px}.subHero{padding:48px 0 40px}.featureGrid,.benefitGrid,.steps,.checklist,.copy,.faq,.statRow{grid-template-columns:1fr}.band{grid-template-columns:1fr;margin:48px 16px 0;padding:32px 22px;border-radius:22px}.sectionHeading{flex-direction:column;align-items:flex-start}.toolbar{position:static}.subnav a.subnavCta{margin-left:0}.rankItem{grid-template-columns:34px 48px minmax(0,1fr);gap:12px;padding:14px}.rankItem .joinButton{grid-column:1/-1;justify-content:center}.rankIcon{width:48px;height:48px;border-radius:14px}.rankNumber{font-size:18px}.profileInner{grid-template-columns:1fr;padding-top:120px}.spotlight{grid-template-columns:1fr}.spotlightArt{min-height:160px}.spotlightBody{padding:22px}.profileIcon{width:84px;height:84px;border-radius:22px;font-size:30px}.heroSearch{padding-left:14px}.heroSearch button{padding:11px 14px}.grid{grid-template-columns:1fr}}
 @media(prefers-reduced-motion:reduce){.card,.card:hover,.categoryTile,.rankItem,.collageCard,.cardBannerImage img{transition:none;transform:none}}

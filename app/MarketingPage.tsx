@@ -1,4 +1,3 @@
-/* eslint-disable @next/next/no-html-link-for-pages */
 
 import { PublicFooter } from "./PublicFooter";
 import type { PublicProofServer, PublicStats } from "./lib/public-types";

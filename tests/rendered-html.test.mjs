@@ -40,9 +40,12 @@ test("new dashboard features include every supported translation", async () => {
     "Check your eligibility →",
     "Dismiss Discovery announcement",
     "Bump your server",
-    "Save and resubmit",
-    "Changes saved. The listing is hidden until the updated content is reviewed.",
-    "Changing the description, information, invite or tags hides the current listing and sends the updated content back for review.",
+    "Save changes",
+    "Changes are live on Discovery.",
+    "Changes saved, but automatic checks held them for a quick review. Your current listing stays live.",
+    "How people find your listing",
+    "Custom logo and banner",
+    "Get the verified tick",
     "Next bump available in",
     "Application checklist",
     "All required permissions",
@@ -377,7 +380,7 @@ test("renders server-first Discovery content with conservative metadata", async 
   assert.match(html, /listings require Stoatmod with its permissions, a server icon and public statistics/i);
   assert.match(html, /Directory temporarily unavailable/i);
   assert.match(html, /approval is a directory review, not a safety endorsement/i);
-  assert.match(html, /material edits return to review before publication/i);
+  assert.match(html, /edits go live straight away once automatic safety checks pass/i);
   assert.doesNotMatch(html, /bot-verified communities|guaranteed safe/i);
 });
 
@@ -399,7 +402,7 @@ test("indexes exact server names, canonical profiles and every public listing", 
     assert.match(html, /name="robots" content="index, follow/);
     assert.match(html, /name="googlebot" content="index, follow/);
     assert.ok(html.includes(`rel="canonical" href="https://modstoat.site${path}"`));
-    assert.match(html, /<h1>The Often Clan<\/h1>/);
+    assert.match(html, /<h1><span data-no-translate="[^"]*">The Often Clan<\/span><\/h1>/);
     assert.match(html, /How to join/);
     assert.match(html, /src="https:\/\/cdn.stoatusercontent.com\/banners\/often"/);
     assert.match(html, /alt="The Often Clan server banner"/);
@@ -471,8 +474,8 @@ test("discovery controls support tag search and a five-tag listing limit", async
   assert.doesNotMatch(discoverySource, /useEffect|\/api\/public\/discovery/);
   assert.match(dashboardSource, /tags\.length>=5/);
   assert.match(dashboardSource, /Add up to five topics/);
-  assert.match(dashboardSource, /Save and resubmit/);
-  assert.match(dashboardSource, /hidden until the updated content is reviewed/);
+  assert.match(dashboardSource, /Save changes/);
+  assert.match(dashboardSource, /Changes are live on Discovery/);
 });
 
 function sectionServerNames(html, marker) {
@@ -527,7 +530,7 @@ test("advertise page targets Stoat server advertising with FAQ and HowTo data", 
     const schemas = [...html.matchAll(/<script[^>]*type="application\/ld\+json"[^>]*>([\s\S]*?)<\/script>/g)].flatMap((match) => JSON.parse(match[1])["@graph"] || []);
     assert.ok(schemas.some((schema) => schema["@type"] === "FAQPage" && schema.mainEntity.length >= 5));
     assert.ok(schemas.some((schema) => schema["@type"] === "HowTo" && schema.step.length === 4));
-    assert.match(html, /Material edits return to review before publication/);
+    assert.match(html, /edits go live straight away after automatic checks/);
     assert.match(html, /href="\/login"/);
   });
 });
@@ -611,16 +614,21 @@ test("documents every per-server spam adjustment", async () => {
   assert.match(guideHtml, /@everyone and @online always count as mass mentions/i);
 });
 
-test("keeps Discovery profiles gated behind fresh listing review", async () => {
-  const [profileSource, tagSource, dashboardSource] = await Promise.all([
+test("keeps edits to approved Discovery listings behind automatic checks", async () => {
+  const [profileSource, tagSource, extrasSource, dashboardSource] = await Promise.all([
     readFile(new URL("../app/discovery/servers/[slug]/page.tsx", import.meta.url), "utf8"),
     readFile(new URL("../app/discovery/tags/[tag]/page.tsx", import.meta.url), "utf8"),
+    readFile(new URL("../app/DiscoveryExtras.tsx", import.meta.url), "utf8"),
     readFile(new URL("../app/DashboardApp.tsx", import.meta.url), "utf8"),
   ]);
   assert.match(profileSource, /findDiscoveryServer/);
   assert.match(profileSource, /ugc nofollow noopener noreferrer/);
   assert.match(tagSource, /result\.servers\.length >= 3/);
-  assert.match(dashboardSource, /Save and resubmit/);
+  // Approved listings stay live; a flagged edit is held while the previous version stays public
+  // (the API has its own tests for the checks).
+  assert.match(extrasSource, /Your current listing stays live/);
+  assert.match(dashboardSource, /updated\.edit\?\.status==="held"/);
+  assert.match(dashboardSource, /Save changes/);
 });
 
 test("contains moderator authentication and protected dashboard surfaces", async () => {

@@ -1,8 +1,9 @@
 import { slugify } from "./public-slugs";
 import type { DiscoveryServer } from "./public-types";
 
-// Curated Discovery categories. A server belongs to a category when one of its tags matches, or when its name or
-// description contains one of the category's words. Category pages are indexed once they hold enough listings.
+// Curated Discovery categories. A server belongs to a category when its owner chose it, when one of its tags matches,
+// or when its name or description contains one of the category's words. Keep the slugs in sync with
+// CATEGORY_SLUGS in website/discovery_extras.py (a test checks this). Category pages are indexed once they hold enough listings.
 export type DiscoveryCategory = {
   slug: string;
   name: string;
@@ -96,6 +97,7 @@ function hasWord(text: string, word: string) {
 }
 
 export function serverInCategory(server: DiscoveryServer, category: DiscoveryCategory) {
+  if (server.categories?.includes(category.slug)) return true;
   const tags = server.tags.map((tag) => tag.toLowerCase());
   if (tags.some((tag) => category.tags.includes(tag))) return true;
   const text = `${server.server_name} ${server.description}`;
@@ -188,6 +190,17 @@ export function exampleNames(servers: DiscoveryServer[], count = 3) {
 
 export function countLabel(value: number, singular: string, plural: string) {
   return value === 1 ? singular : plural;
+}
+
+export const discoveryLanguages: Record<string, string> = {
+  en: "English", pt: "Português", es: "Español", fr: "Français", de: "Deutsch", it: "Italiano", nl: "Nederlands",
+  pl: "Polski", ru: "Русский", uk: "Українська", tr: "Türkçe", ar: "العربية", hi: "हिन्दी", id: "Bahasa Indonesia",
+  ja: "日本語", ko: "한국어", zh: "中文", other: "Other",
+};
+
+export function verifiedServers(servers: DiscoveryServer[]) {
+  const order = { official: 0, organization: 1, impact: 2, standing: 3 } as const;
+  return rankPopular(servers.filter((server) => server.verified)).sort((a, b) => order[a.verified!.tier] - order[b.verified!.tier]);
 }
 
 export function compactNumber(value: number) {

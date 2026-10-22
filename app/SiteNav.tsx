@@ -1,4 +1,3 @@
-/* eslint-disable @next/next/no-html-link-for-pages */
 export function SiteNav({ active }: { active?: "home" | "features" | "guides" | "discovery" | "docs" | "appeal" | "privacy" | "status" | "login" }) {
   return (
     <header className="site-nav">

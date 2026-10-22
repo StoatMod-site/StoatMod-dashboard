@@ -1,4 +1,3 @@
-/* eslint-disable @next/next/no-html-link-for-pages -- Public links use browser navigation because the production client router fails. */
 import { Breadcrumbs } from "../../Breadcrumbs";
 import { JsonLd } from "../../JsonLd";
 import { PublicFooter } from "../../PublicFooter";
@@ -26,6 +25,9 @@ const benefits = [
   { icon: "📈", title: "Live activity", text: "Member counts and today's message activity show visitors that your community is active before they join." },
   { icon: "🗂️", title: "Categories and tags", text: "Up to five tags place your server in topic pages and categories such as gaming, anime, art and music." },
   { icon: "🛡️", title: "Reviewed and free", text: "Every listing is reviewed, which keeps the directory trustworthy. Listing and bumping cost nothing." },
+  { icon: "🔗", title: "Your own short link", text: "Claim modstoat.site/yourserver and share one easy link that always opens your current invite." },
+  { icon: "✅", title: "Verified tick", text: "Official servers, organisations and standout communities can apply for a verified tick on every listing." },
+  { icon: "📊", title: "Visitor statistics", text: "See daily profile views, join clicks and where visitors came from, without tracking anyone." },
 ];
 
 export default async function AdvertisePage() {

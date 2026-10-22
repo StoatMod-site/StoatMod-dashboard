@@ -10,8 +10,10 @@ import { serverOgImage, serverOgUrl } from "../../../lib/discovery-seo";
 import { buildMetadata } from "../../../lib/seo";
 import { absoluteUrl, siteConfig } from "../../../lib/site-config";
 import { ServerArtwork } from "../../../ServerArtwork";
-import { categoriesForServer, compactNumber, similarServers } from "../../../lib/discovery-catalog";
-import { AdvertiseBand, DiscoveryNav, RankedList, SectionHeading } from "../../DiscoveryUI";
+import { categoriesForServer, compactNumber, discoveryLanguages, similarServers } from "../../../lib/discovery-catalog";
+import { DiscoveryMarkdown } from "../../../lib/discovery-markdown";
+import { AdvertiseBand, DiscoveryNav, RankedList, SectionHeading, VerifiedBadge, joinHref } from "../../DiscoveryUI";
+import { ListingViewBeacon, ReportListing } from "../../ListingClient";
 import styles from "../../Discovery.module.css";
 
 function readableDate(value: string | null | undefined) {
@@ -88,7 +90,9 @@ export default async function DiscoveryServerProfile({ params }: { params: Promi
   const information = server.information.trim();
   const extraInformation = information.startsWith(server.description.trim()) ? information.slice(server.description.trim().length).trim() : information;
   const similar = similarServers(servers, server, 4);
-  const shareUrl = absoluteUrl(canonicalPath);
+  const shareUrl = server.vanity ? `${siteConfig.origin.replace(/^https:\/\//, "")}/${server.vanity}` : absoluteUrl(canonicalPath);
+  const language = server.language ? discoveryLanguages[server.language] : "";
+  const linkLabel = (url: string) => new URL(url).hostname.replace(/^www\./, "");
   return (
     <main className={styles.page}>
       <JsonLd data={{
@@ -104,6 +108,7 @@ export default async function DiscoveryServerProfile({ params }: { params: Promi
             description: server.description,
             image: [serverOgUrl(server), ...(server.server_banner_url ? [server.server_banner_url] : [])],
             isPartOf: { "@id": siteConfig.origin + "/#website" },
+            ...(server.language && server.language !== "other" ? { inLanguage: server.language } : {}),
             mainEntity: {
               "@type": "Organization",
               "@id": absoluteUrl(canonicalPath) + "#community",
@@ -112,25 +117,28 @@ export default async function DiscoveryServerProfile({ params }: { params: Promi
               url: absoluteUrl(canonicalPath),
               ...(server.server_icon_url ? { logo: server.server_icon_url } : {}),
               ...(server.tags.length ? { keywords: server.tags.join(", ") } : {}),
+              ...(server.links.length ? { sameAs: server.links } : {}),
+              ...(server.verified ? { award: server.verified.label + " on Stoatmod Discovery" } : {}),
             },
           },
           breadcrumbSchema(breadcrumbs),
         ],
       }} />
       <SiteNav active="discovery" />
+      <ListingViewBeacon serverId={server.server_id} />
       <header className={styles.profileHero}>
         <div className={styles.profileBanner}><ServerArtwork serverId={server.server_id} name={server.server_name} src={server.server_banner_url} kind="banner" priority /></div>
         <div className={styles.profileShade} aria-hidden="true" />
         <div className={styles.profileInner}>
           <ServerArtwork serverId={server.server_id} name={server.server_name} src={server.server_icon_url} kind="icon" className={styles.profileIcon} />
           <div>
-            <p className={styles.kicker}><span aria-hidden="true" />Reviewed Stoat server</p>
-            <h1>{server.server_name}</h1>
+            <p className={styles.kicker}><span aria-hidden="true" />{server.verified ? server.verified.label : "Reviewed Stoat server"}</p>
+            <h1><span data-no-translate>{server.server_name}</span><VerifiedBadge verified={server.verified} large /></h1>
             <p className={styles.profileMeta}>{server.member_count.toLocaleString("en-GB")} members · {server.daily_messages.toLocaleString("en-GB")} messages today{server.global_rank ? ` · #${server.global_rank} in public activity` : ""}</p>
             {server.tags.length > 0 && <div className={styles.tagRow}>{server.tags.map((tag) => <a href={"/discovery/tags/" + slugify(tag)} key={tag} data-no-translate>#{tag}</a>)}</div>}
           </div>
           <div className={styles.profileJoin}>
-            <a className={styles.primaryButton} href={server.invite_url} target="_blank" rel="ugc nofollow noopener noreferrer">Join {server.server_name} <span aria-hidden="true">↗</span></a>
+            <a className={styles.primaryButton} href={joinHref(server)} target="_blank" rel="ugc nofollow noopener noreferrer">Join {server.server_name} <span aria-hidden="true">↗</span></a>
             <a className={styles.ghostButton} href="/discovery">Browse more servers</a>
           </div>
         </div>
@@ -148,7 +156,7 @@ export default async function DiscoveryServerProfile({ params }: { params: Promi
             <p className={styles.eyebrow}>About this server</p>
             <h2>What is {server.server_name}?</h2>
             <p data-no-translate>{server.description}</p>
-            {extraInformation && <p data-no-translate>{extraInformation}</p>}
+            {extraInformation && <DiscoveryMarkdown source={extraInformation} className={styles.markdown} />}
           </section>
           <section className={styles.prose}>
             <h2>How to join {server.server_name}</h2>
@@ -160,14 +168,21 @@ export default async function DiscoveryServerProfile({ params }: { params: Promi
         <aside className={styles.sidePanel}>
           <h2>Visit this community on Stoat</h2>
           <p>Read the server&apos;s own rules and use your judgement before joining. The invite is supplied by the listing owner.</p>
-          <a className={styles.joinButton} href={server.invite_url} target="_blank" rel="ugc nofollow noopener noreferrer">Join on Stoat <span aria-hidden="true">↗</span></a>
+          <a className={styles.joinButton} href={joinHref(server)} target="_blank" rel="ugc nofollow noopener noreferrer">Join on Stoat <span aria-hidden="true">↗</span></a>
           <dl>
+            {server.verified && <div><dt>Verified</dt><dd>{server.verified.label}</dd></div>}
+            {language && <div><dt>Language</dt><dd>{language}</dd></div>}
             {approved && <div><dt>Listed</dt><dd>{approved}</dd></div>}
             {updated && <div><dt>Listing updated</dt><dd>{updated}</dd></div>}
             {server.global_rank && <div><dt>Activity rank</dt><dd>#{server.global_rank}</dd></div>}
             {categories.length > 0 && <div><dt>Categories</dt><dd>{categories.map((category, index) => <span key={category.slug}>{index ? ", " : ""}<a href={"/discovery/categories/" + category.slug}>{category.name}</a></span>)}</dd></div>}
           </dl>
-          <p className={styles.shareLink}>Share this server: {shareUrl}</p>
+          {server.links.length > 0 && <>
+            <h2>Links</h2>
+            <ul className={styles.linkList}>{server.links.map((link) => <li key={link}><a href={link} target="_blank" rel="ugc nofollow noopener noreferrer" data-no-translate>{linkLabel(link)} <span aria-hidden="true">↗</span></a></li>)}</ul>
+          </>}
+          <p className={styles.shareLink}>Share this server: <span data-no-translate>{shareUrl}</span></p>
+          <ReportListing serverId={server.server_id} serverName={server.server_name} />
         </aside>
       </div>
       {similar.length > 0 && <section className={styles.section} aria-labelledby="similar-servers">

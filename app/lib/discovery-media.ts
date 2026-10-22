@@ -2,6 +2,15 @@ export type ServerMedia = { name: string; icon: string; banner: string };
 
 const emptyMedia: ServerMedia = { name: "", icon: "", banner: "" };
 
+const uploadedMediaPath = /^\/api\/public\/discovery\/media\/[A-Za-z0-9]{1,64}\/(logo|banner)\.webp\?v=[0-9a-f]{1,16}$/;
+
+/** Logos and banners uploaded on the dashboard, served by the Stoatmod API after an image scan. */
+export function safeDiscoveryMediaUrl(value: unknown): string {
+  if (typeof value !== "string") return "";
+  const path = value.startsWith("https://modstoat.site/") ? value.slice("https://modstoat.site".length) : value;
+  return uploadedMediaPath.test(path) ? "https://modstoat.site" + path : "";
+}
+
 export function safeServerMediaUrl(value: unknown): string {
   if (typeof value !== "string") return "";
   try {
@@ -41,8 +50,8 @@ export function createDiscoveryMediaStore(request: typeof fetch = fetch) {
         if (!item || typeof item !== "object" || typeof item.server_id !== "string") continue;
         const entry = {
           name: typeof item.server_name === "string" ? item.server_name.slice(0, 100) : "",
-          icon: safeServerMediaUrl(item.server_icon_url),
-          banner: safeServerMediaUrl(item.server_banner_url),
+          icon: safeDiscoveryMediaUrl(item.logo_url) || safeServerMediaUrl(item.server_icon_url),
+          banner: safeDiscoveryMediaUrl(item.custom_banner_url) || safeServerMediaUrl(item.server_banner_url),
         };
         const previous = media?.get(item.server_id);
         next.set(item.server_id, previous && previous.name === entry.name && previous.icon === entry.icon && previous.banner === entry.banner ? previous : entry);

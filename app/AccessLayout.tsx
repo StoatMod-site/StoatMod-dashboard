@@ -1,4 +1,3 @@
-/* eslint-disable @next/next/no-html-link-for-pages -- Use normal browser navigation for public pages. */
 import type { ReactNode } from "react";
 import styles from "./AccessLayout.module.css";
 import { SiteNav } from "./SiteNav";
