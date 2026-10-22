@@ -1,0 +1,9 @@
+[
+ "Last updated 22 October 2026",
+ "Discovery listings",
+ "When a server lists itself on Stoatmod Discovery, its listing text, invite, tags, language, categories, links and any uploaded logo or banner are public. Edits to an approved listing are checked by Stoatmod's self-hosted moderation model, and a new invite is checked with Stoat to confirm it opens the same server. Uploaded images are re-encoded, which removes their metadata, and scanned before they appear. We keep a history of listing edits so the Stoatmod team can review or undo them.",
+ "Discovery statistics are daily totals for each listing: profile views, join clicks, custom-link visits and the kind of place visitors came from (a search engine, Stoat, Stoatmod Discovery, direct or another website). No IP address, cookie, browser details or referring address is stored with them. To ignore repeat visits and automated traffic, a keyed hash of the visitor's connection address is held in memory for up to an hour and never written to disk.",
+ "Anyone can report a listing. A report stores only the reason chosen and the details written; it does not record who sent it. The Cloudflare Turnstile check on the report form only loads after you agree to it.",
+ "Discovery statistics (daily totals per listing): about 400 days; Discovery listing edit history: 180 days; listing reports: 90 days after they are closed; declined or withdrawn verification requests: one year after the decision; a replaced custom link keeps forwarding for 30 days and is then deleted;",
+ "Discovery listing content and uploaded logos and banners: until the server removes them, the listing is removed, or the server leaves Stoatmod;"
+]

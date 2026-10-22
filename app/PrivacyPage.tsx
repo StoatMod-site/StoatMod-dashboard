@@ -29,7 +29,7 @@ export function PrivacyPage() {
   return <main className={styles.page}>
     <SiteNav active="privacy" />
     <PublicPageHeading eyebrow="Legal / Privacy" title="Privacy policy." description="How Stoatmod collects, uses, shares and protects information when moderating Stoat communities." action={{href:"mailto:admin@modstoat.site",label:"Privacy enquiries"}} />
-    <PublicSummary title="Your information, explained." description="What Stoatmod processes, how long information is kept, and the choices available to you." facts={["Last updated 20 October 2026","No advertising or data sales","Stoatmod Limited"]} />
+    <PublicSummary title="Your information, explained." description="What Stoatmod processes, how long information is kept, and the choices available to you." facts={["Last updated 22 October 2026","No advertising or data sales","Stoatmod Limited"]} />
     <PrivacyUpdateCallout />
 
     <div className="docs-layout privacy-layout">
@@ -96,6 +96,10 @@ export function PrivacyPage() {
           <h3>Statistics and technical data</h3>
           <p>Statistics use daily community totals for non-bot messages, joins and leaves, plus total memberships, servers and cases. Statistics do not retain user IDs, per-user counts, individual rankings, channel activity breakdowns or words extracted from messages. We do not calculate unique active-user counts. Website infrastructure may also process IP address, request time, endpoint, browser/device details, errors and security events.</p>
           <p>Stoatmod offers no per-user activity statistics and no leaderboards, within a server or across servers.</p>
+          <h3>Discovery listings</h3>
+          <p>When a server lists itself on Stoatmod Discovery, its listing text, invite, tags, language, categories, links and any uploaded logo or banner are public. Edits to an approved listing are checked by Stoatmod&apos;s self-hosted moderation model, and a new invite is checked with Stoat to confirm it opens the same server. Uploaded images are re-encoded, which removes their metadata, and scanned before they appear. We keep a history of listing edits so the Stoatmod team can review or undo them.</p>
+          <p>Discovery statistics are daily totals for each listing: profile views, join clicks, custom-link visits and the kind of place visitors came from (a search engine, Stoat, Stoatmod Discovery, direct or another website). No IP address, cookie, browser details or referring address is stored with them. To ignore repeat visits and automated traffic, a keyed hash of the visitor&apos;s connection address is held in memory for up to an hour and never written to disk.</p>
+          <p>Anyone can report a listing. A report stores only the reason chosen and the details written; it does not record who sent it. The Cloudflare Turnstile check on the report form only loads after you agree to it.</p>
           <h3>Information you provide</h3>
           <p>If you contact us, appeal a decision or make a privacy request, we may process your contact details, Stoat user ID, relevant server, request content, supporting evidence and correspondence. Appeal privacy agreement and optional AI-improvement permission are recorded separately with the notice version and time. We do not record an IP address as proof of either choice.</p>
           <h3>Sources</h3>
@@ -199,6 +203,8 @@ export function PrivacyPage() {
             <li>active join-verification challenges normally expire after about thirty minutes or are removed following success, moderator bypass or three failures;</li>
             <li>temporary login and verification rate-limit data stays in memory for about five to ten minutes;</li>
             <li>server snapshots are refreshed as updated server information is received;</li>
+            <li>Discovery statistics (daily totals per listing): about 400 days; Discovery listing edit history: 180 days; listing reports: 90 days after they are closed; declined or withdrawn verification requests: one year after the decision; a replaced custom link keeps forwarding for 30 days and is then deleted;</li>
+            <li>Discovery listing content and uploaded logos and banners: until the server removes them, the listing is removed, or the server leaves Stoatmod;</li>
             <li>remaining case metadata, warnings, general event logs, configuration history and statistics are retained while operationally necessary; these records currently have no single automatic deletion period, and server administrators cannot choose a separate history-retention period;</li>
             <li>removed cases may remain as audit records marked as removed;</li>
             <li>when Stoatmod is removed from a server, all records belonging to that server are deleted, except network-level enforcement records such as a server blacklist entry;</li>

@@ -20,7 +20,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     { path: "/discovery/new", updated: "2026-10-21", images: [absoluteUrl(discoveryOgPath("new"))] },
     { path: "/discovery/categories", updated: "2026-10-21", images: [absoluteUrl(discoveryOgPath("categories"))] },
     { path: "/discovery/verified", updated: "2026-10-22", images: [absoluteUrl(discoveryOgPath("verified"))] },
-    { path: "/privacy", updated: "2026-10-02" },
+    { path: "/privacy", updated: "2026-10-22" },
     { path: "/privacy-changes", updated: "2026-10-15" },
     { path: "/compare", updated: "2026-10-15", images: [absoluteUrl("/compare/og-stoat-bots-comparison.png")] },
     { path: "/status", updated: "2026-09-30" },
