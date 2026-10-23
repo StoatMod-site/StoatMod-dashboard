@@ -462,7 +462,7 @@ test("does not publish an incomplete sitemap during a cold Discovery outage", as
 test("discovery controls support tag search and a five-tag listing limit", async () => {
   const [discoverySource, dashboardSource] = await Promise.all([
     readFile(new URL("../app/DiscoveryPage.tsx", import.meta.url), "utf8"),
-    readFile(new URL("../app/DashboardApp.tsx", import.meta.url), "utf8"),
+    readFile(new URL("../app/DiscoveryTab.tsx", import.meta.url), "utf8"),
   ]);
   assert.match(discoverySource, /server\.tags/);
   assert.match(discoverySource, /searchScore/);
@@ -472,8 +472,7 @@ test("discovery controls support tag search and a five-tag listing limit", async
   assert.match(discoverySource, /Most active today/);
   assert.match(discoverySource, /Filter by tag/);
   assert.doesNotMatch(discoverySource, /useEffect|\/api\/public\/discovery/);
-  assert.match(dashboardSource, /tags\.length>=5/);
-  assert.match(dashboardSource, /Add up to five topics/);
+  assert.match(dashboardSource, /tags\.length >= 5/);
   assert.match(dashboardSource, /Save changes/);
   assert.match(dashboardSource, /Changes are live on Discovery/);
 });
@@ -619,7 +618,7 @@ test("keeps edits to approved Discovery listings behind automatic checks", async
     readFile(new URL("../app/discovery/servers/[slug]/page.tsx", import.meta.url), "utf8"),
     readFile(new URL("../app/discovery/tags/[tag]/page.tsx", import.meta.url), "utf8"),
     readFile(new URL("../app/DiscoveryExtras.tsx", import.meta.url), "utf8"),
-    readFile(new URL("../app/DashboardApp.tsx", import.meta.url), "utf8"),
+    readFile(new URL("../app/DiscoveryTab.tsx", import.meta.url), "utf8"),
   ]);
   assert.match(profileSource, /findDiscoveryServer/);
   assert.match(profileSource, /ugc nofollow noopener noreferrer/);
@@ -627,11 +626,12 @@ test("keeps edits to approved Discovery listings behind automatic checks", async
   // Approved listings stay live; a flagged edit is held while the previous version stays public
   // (the API has its own tests for the checks).
   assert.match(extrasSource, /Your current listing stays live/);
-  assert.match(dashboardSource, /updated\.edit\?\.status==="held"/);
+  assert.match(dashboardSource, /updated\.edit\?\.status === "held"/);
   assert.match(dashboardSource, /Save changes/);
 });
 
 test("contains moderator authentication and protected dashboard surfaces", async () => {
+  const discoveryTabSource = await readFile(new URL("../app/DiscoveryTab.tsx", import.meta.url), "utf8");
   const [loginSource, dashboardSource, appealSource] = await Promise.all([
     readFile(new URL("../app/LoginApp.tsx", import.meta.url), "utf8"),
     readFile(new URL("../app/DashboardApp.tsx", import.meta.url), "utf8"),
@@ -682,10 +682,11 @@ test("contains moderator authentication and protected dashboard surfaces", async
   assert.doesNotMatch(dashboardSource, /run <code>~setup<\/code> to refresh this notice/i);
   assert.match(dashboardSource, /data\.discovery\.application\?\.status==="approved"&&data\.discovery\.eligibility\.eligible/);
   assert.match(dashboardSource, /dismissDiscoveryNotice\(\);setView\("discovery"\)/);
-  assert.match(dashboardSource, /Bump server/);
-  assert.match(dashboardSource, /Next bump available in/);
-  assert.match(dashboardSource, /Public listing preview/);
-  assert.match(dashboardSource, /\/api\/discovery\/bump/);
+  assert.match(dashboardSource, /<DiscoveryTab /);
+  assert.match(discoveryTabSource, /Bump server listing now/);
+  assert.match(discoveryTabSource, /Next bump/);
+  assert.match(discoveryTabSource, /Live preview/);
+  assert.match(discoveryTabSource, /\/api\/discovery\/bump/);
   assert.doesNotMatch(dashboardSource, /1️⃣/);
   assert.match(dashboardSource, />Accept</);
   assert.match(dashboardSource, /Go to case/);
@@ -815,6 +816,7 @@ test("server reports, global reporting, and poll pages use the cohesive dashboar
 });
 
 test("every server dashboard view uses the cohesive surface system", async () => {
+  const discoveryTabSource = await readFile(new URL("../app/DiscoveryTab.tsx", import.meta.url), "utf8");
   const [dashboardSource, stylesheet, automationSource] = await Promise.all([
     readFile(new URL("../app/DashboardApp.tsx", import.meta.url), "utf8"),
     readFile(new URL("../app/globals.css", import.meta.url), "utf8"),
@@ -825,7 +827,7 @@ test("every server dashboard view uses the cohesive surface system", async () =>
   assert.match(dashboardSource, /case-workspace dashboard-surface/);
   assert.match(automationSource, /automation-layout dashboard-surface/);
   assert.match(dashboardSource, /poll-layout dashboard-surface/);
-  assert.match(dashboardSource, /discovery-admin-layout dashboard-surface/);
+  assert.match(discoveryTabSource, /\$\{styles\.tab\} dashboard-surface/);
   assert.match(dashboardSource, /support-grid dashboard-surface/);
   assert.match(dashboardSource, /leaderboard-panel dashboard-surface standalone-surface/);
   assert.match(stylesheet, /\/\* Cohesive server dashboard surfaces \*\//);
@@ -836,7 +838,6 @@ test("every server dashboard view uses the cohesive surface system", async () =>
   assert.match(stylesheet, /\.case-review-context\{display:grid;grid-template-columns:repeat\(2,minmax\(0,1fr\)\)/);
   assert.match(stylesheet, /\.owner-overview\{[^}]*border-radius:24px/);
   assert.match(stylesheet, /\.owner-sidebar nav button\.active[^}]*background:#f5f5f0/);
-  assert.match(stylesheet, /\.discovery-admin-layout>\.discovery-bump-panel\{background:var\(--surface-inverse\);color:var\(--text-inverse\)\}/);
   assert.match(stylesheet, /\.activity-insight-columns\{display:grid/);
   assert.match(stylesheet, /@media\(max-width:760px\).*\.support-grid\{grid-template-columns:1fr\}/s);
 });

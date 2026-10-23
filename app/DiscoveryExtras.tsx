@@ -2,7 +2,6 @@
 
 import { useCallback, useEffect, useState, type ChangeEvent } from "react";
 import { api, apiBase, formApi } from "./lib/api";
-import { discoveryCategories, discoveryLanguages } from "./lib/discovery-catalog";
 import styles from "./DiscoveryExtras.module.css";
 
 type Edit = { id: number; status: "live" | "held" | "approved" | "rejected" | "reverted" | "withdrawn" | "superseded"; reason: string; created_at: string; changed: string[] };
@@ -46,41 +45,6 @@ export function useDiscoveryExtras(enabled: boolean) {
   return { extras, reload };
 }
 
-/** Language, owner-chosen categories and links: saved with the rest of the listing. */
-export function ListingProfileFields({ language, categories, links, onLanguage, onCategories, onLinks }: {
-  language: string; categories: string[]; links: string[];
-  onLanguage: (value: string) => void; onCategories: (value: string[]) => void; onLinks: (value: string[]) => void;
-}) {
-  const toggle = (slug: string) => onCategories(categories.includes(slug) ? categories.filter((item) => item !== slug) : categories.length >= 2 ? categories : [...categories, slug]);
-  const rows = [...links, ...(links.length < 4 ? [""] : [])];
-  return (
-    <div className={styles.profileFields}>
-      <label>Main language
-        <select value={language} onChange={(event) => onLanguage(event.target.value)}>
-          <option value="">Not set</option>
-          {Object.entries(discoveryLanguages).map(([code, name]) => <option value={code} key={code}>{name}</option>)}
-        </select>
-      </label>
-      <fieldset>
-        <legend>Categories <span>{categories.length}/2</span></legend>
-        <p>Pick up to two. Your tags can also place the server in categories.</p>
-        <div className={styles.categoryChips}>
-          {discoveryCategories.map((category) => <button type="button" key={category.slug} aria-pressed={categories.includes(category.slug)} disabled={!categories.includes(category.slug) && categories.length >= 2} onClick={() => toggle(category.slug)}>{category.emoji} {category.name}</button>)}
-        </div>
-      </fieldset>
-      <fieldset>
-        <legend>Links <span>{links.length}/4</span></legend>
-        <p>Your website or social accounts. Use full https:// addresses; shortened links are held for review.</p>
-        {rows.map((link, index) => <input key={index} type="url" value={link} placeholder="https://example.org" onChange={(event) => {
-          const next = [...links];
-          if (index >= links.length) next.push(event.target.value); else next[index] = event.target.value;
-          onLinks(next.filter((item, itemIndex) => item.trim() || itemIndex === index).slice(0, 4));
-        }} />)}
-      </fieldset>
-    </div>
-  );
-}
-
 export function MarkdownHelp() {
   return <details className={styles.markdownHelp}><summary>Formatting help</summary><ul><li><code># Heading</code></li><li><code>**bold**</code> and <code>*italic*</code></li><li><code>- list item</code> or <code>1. step</code></li><li><code>[link text](https://example.org)</code></li><li><code>&gt; quote</code></li></ul></details>;
 }
@@ -106,14 +70,14 @@ export function RecentEdits({ edits }: { edits: Edit[] }) {
   );
 }
 
-function change(current: number, previous: number) {
+export function weekChange(current: number, previous: number) {
   if (!previous) return current ? "new this week" : "no change";
   const delta = Math.round((current - previous) / previous * 100);
   if (!delta) return "same as last week";
   return `${delta > 0 ? "+" : ""}${delta}% on last week`;
 }
 
-export function DiscoveryStatsPanel({ stats }: { stats: DiscoveryStats }) {
+export function DiscoveryStatsPanel({ stats, showTiles = true }: { stats: DiscoveryStats; showTiles?: boolean }) {
   const max = Math.max(1, ...stats.days.map((day) => day.views));
   const sourceTotal = Object.values(stats.sources).reduce((sum, value) => sum + value, 0);
   const tiles: { key: keyof Totals; label: string }[] = [
@@ -124,10 +88,10 @@ export function DiscoveryStatsPanel({ stats }: { stats: DiscoveryStats }) {
   return (
     <section className={`panel ${styles.stats}`} aria-labelledby="discovery-stats-title">
       <div className="panel-heading"><div><p className="eyebrow">Listing statistics</p><h2 id="discovery-stats-title">How people find your listing</h2></div><span>Last 30 days</span></div>
-      <div className={styles.tiles}>
-        {tiles.map((tile) => <div key={tile.key}><span>{tile.label} · 7 days</span><strong>{stats.week[tile.key].toLocaleString()}</strong><small>{change(stats.week[tile.key], stats.previous_week[tile.key])}</small></div>)}
+      {showTiles && <div className={styles.tiles}>
+        {tiles.map((tile) => <div key={tile.key}><span>{tile.label} · 7 days</span><strong>{stats.week[tile.key].toLocaleString()}</strong><small>{weekChange(stats.week[tile.key], stats.previous_week[tile.key])}</small></div>)}
         <div><span>Join rate · 30 days</span><strong>{stats.join_rate === null ? "—" : `${Math.round(stats.join_rate * 100)}%`}</strong><small>join clicks per profile view</small></div>
-      </div>
+      </div>}
       <figure className={styles.chart}>
         <figcaption>Daily profile views</figcaption>
         <div className={styles.bars} role="group" aria-label={`Daily profile views over the last 30 days, ${stats.totals.views} in total`}>
@@ -258,7 +222,10 @@ export function VerificationPanel({ extras, approved, onChange }: { extras: Disc
     <section className={`panel ${styles.card}`}>
       <p className="eyebrow">Verification</p>
       <h2>{extras.verified ? <>Verified <span className={styles.tick} aria-hidden="true">✓</span></> : "Get the verified tick"}</h2>
-      {extras.verified ? <p>Your listing shows the verified tick as <b>{extras.verified.label}</b>.</p>
+      {extras.verified ? <>
+        <p>Your listing shows the verified tick as <b>{extras.verified.label}</b>.</p>
+        <ul className={styles.tickPlaces}><li>Listing cards across Discovery</li><li>Your server&apos;s Discovery page</li><li>Link previews when your listing is shared</li><li>The verified servers page</li></ul>
+      </>
         : request?.status === "pending" ? <><p>Your request is waiting for review. We post the decision to your log channel.</p><button type="button" className={styles.textButton} disabled={busy} onClick={() => void withdraw()}>Withdraw request</button></>
         : !approved ? <p className={styles.locked}>Available once your listing is approved.</p>
         : <>
