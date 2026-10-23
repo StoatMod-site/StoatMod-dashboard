@@ -109,7 +109,6 @@
 .previewMarkdown blockquote{margin:0 0 .5rem;padding-left:.7rem;border-left:2px solid var(--line)}
 .previewMarkdown a{color:var(--ink)}
 .previewFooter{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:.6rem;padding:.8rem 1.1rem;border-top:1px solid var(--line);color:var(--muted);font-size:.68rem}
-.previewFooter b{color:var(--ink)}
 /* Same green as the public Join button, so the preview matches what visitors see. */
 .previewJoin{display:inline-flex;align-items:center;gap:.3rem;padding:.45rem .8rem;border-radius:9px;background:#26734d;color:#fff;font-weight:800}
 :global(html[data-theme="dark"]) .previewJoin{background:#72c591;color:#0d0d0d}

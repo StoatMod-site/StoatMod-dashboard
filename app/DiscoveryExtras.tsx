@@ -2,6 +2,7 @@
 
 import { useCallback, useEffect, useState, type ChangeEvent } from "react";
 import { api, apiBase, formApi } from "./lib/api";
+import { safeServerMediaUrl } from "./lib/discovery-media";
 import styles from "./DiscoveryExtras.module.css";
 
 type Edit = { id: number; status: "live" | "held" | "approved" | "rejected" | "reverted" | "withdrawn" | "superseded"; reason: string; created_at: string; changed: string[] };
@@ -14,6 +15,7 @@ export type DiscoveryExtrasState = {
   verification_request: { id: number; tier: string; status: "pending" | "approved" | "denied" | "withdrawn"; submitted_at: string; reviewed_at: string | null; review_note: string | null } | null;
   vanity: { slug: string; created_at: string } | null;
   media: { logo_url: string | null; banner_url: string | null };
+  stoat_media?: { icon_url: string | null; banner_url: string | null };
   stats: DiscoveryStats;
   held_edit: Edit | null;
   edits: Edit[];
@@ -173,8 +175,8 @@ export function ListingMediaPanel({ extras, onChange }: { extras: DiscoveryExtra
     try { await api(`/api/discovery/media/${kind}`, { method: "DELETE" }); onChange(); } catch (error) { setNotice(error instanceof Error ? error.message : "Could not remove the image."); } finally { setBusy(""); }
   }
   const slots = [
-    { kind: "logo" as const, title: "Logo", help: "Square, at least 128 × 128. Shown instead of your Stoat server icon.", src: extras.media.logo_url },
-    { kind: "banner" as const, title: "Banner", help: "Wide, at least 600 × 200 (cropped to 3:1). Shown at the top of your listing.", src: extras.media.banner_url },
+    { kind: "logo" as const, title: "Logo", help: "Square, at least 128 × 128. Shown instead of your Stoat server icon.", src: extras.media.logo_url, stoat: safeServerMediaUrl(extras.stoat_media?.icon_url) },
+    { kind: "banner" as const, title: "Banner", help: "Wide, at least 600 × 200 (cropped to 3:1). Shown at the top of your listing.", src: extras.media.banner_url, stoat: safeServerMediaUrl(extras.stoat_media?.banner_url) },
   ];
   return (
     <section className={`panel ${styles.card}`}>
@@ -184,7 +186,11 @@ export function ListingMediaPanel({ extras, onChange }: { extras: DiscoveryExtra
       <div className={styles.mediaGrid}>
         {slots.map((slot) => (
           <div key={slot.kind} className={slot.kind === "logo" ? styles.logoSlot : styles.bannerSlot}>
-            <div className={styles.mediaPreview}>{slot.src ? <img src={mediaSrc(slot.src)} alt={`Current ${slot.title.toLowerCase()}`} /> : <span>No custom {slot.title.toLowerCase()}</span>}</div>
+            <div className={styles.mediaPreview}>
+              {slot.src ? <img src={mediaSrc(slot.src)} alt={`Current ${slot.title.toLowerCase()}`} />
+                : slot.stoat ? <><img src={slot.stoat} alt={`Stoat server ${slot.title.toLowerCase()}`} referrerPolicy="no-referrer" /><em className={styles.fromStoat}>From Stoat</em></>
+                  : <span>No custom {slot.title.toLowerCase()}</span>}
+            </div>
             <strong>{slot.title}</strong><small>{slot.help}</small>
             <div className={styles.actions}>
               <label className="secondary-button">{busy === slot.kind ? "Checking…" : slot.src ? "Replace" : "Upload"}<input type="file" hidden accept="image/png,image/jpeg,image/gif,image/webp" disabled={Boolean(busy)} onChange={(event) => { void upload(slot.kind, event.target.files?.[0]); event.target.value = ""; }} /></label>

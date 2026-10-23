@@ -5,6 +5,8 @@ import { BadgePanel, CustomLinkPanel, DiscoveryNotificationsPanel, DiscoveryStat
 import { api, apiBase } from "./lib/api";
 import { discoveryCategories, discoveryLanguages } from "./lib/discovery-catalog";
 import { DiscoveryMarkdown } from "./lib/discovery-markdown";
+import { safeServerMediaUrl } from "./lib/discovery-media";
+import { pluralize } from "./lib/plural";
 import styles from "./DiscoveryTab.module.css";
 
 export type DiscoveryState = {
@@ -69,10 +71,11 @@ function Avatar({ server, extras, className }: { server: Server; extras: Discove
 function ListingPreview({ server, extras, description, information, tags, today, live }: {
   server: Server; extras: DiscoveryExtrasState | null; description: string; information: string; tags: string[]; today: number; live: boolean;
 }) {
-  const banner = media(extras?.media.banner_url);
+  // A custom banner wins; otherwise the banner set on Stoat, as on the public listing.
+  const banner = media(extras?.media.banner_url) || safeServerMediaUrl(extras?.stoat_media?.banner_url);
   return (
     <article className={styles.preview}>
-      <div className={styles.previewBanner}>{banner && <img src={banner} alt="" />}</div>
+      <div className={styles.previewBanner}>{banner && <img src={banner} alt="" referrerPolicy="no-referrer" />}</div>
       <div className={styles.previewBody}>
         <Avatar server={server} extras={extras} className={styles.previewIcon} />
         <h3><span>{server.name}</span>{extras?.verified && <Tick label={extras.verified.label} />}</h3>
@@ -84,7 +87,7 @@ function ListingPreview({ server, extras, description, information, tags, today,
         </details>}
       </div>
       <footer className={styles.previewFooter}>
-        <span><b>{server.member_count.toLocaleString()}</b> members · <b>{today.toLocaleString()}</b> messages today</span>
+        <span>{pluralize(server.member_count, "member", "members")} · {pluralize(today, "message today", "messages today")}</span>
         <span className={styles.previewJoin}>{live ? "Join" : "Join after approval"} <span aria-hidden="true">↗</span></span>
       </footer>
     </article>
