@@ -61,6 +61,8 @@
 .page :global(.automod-faq summary span){color:#aaa;font-size:22px}
 .page :global(.automod-faq details[open] summary span){transform:rotate(45deg)}
 .page :global(.automod-faq details p){max-width:670px;margin:16px 0 0;color:#aaa;font-size:13px;line-height:1.85}
+/* Links inside answers need more than colour to stand out (WCAG 1.4.1). */
+.page :global(.automod-faq details p a){text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px}
 .page :global(.automod-faq details a){color:#ddd;text-underline-offset:4px}
 .page :global(.final-cta){max-width:1340px;margin:20px auto 72px;padding:42px;gap:32px;border-color:#444}
 .page :global(.final-cta h2){font-size:clamp(36px,5vw,64px);line-height:1.08}

@@ -12,7 +12,7 @@ import { AdvertiseBand, DiscoveryNav, Faq, SectionHeading, ServerGrid, SubHero, 
 import styles from "../Discovery.module.css";
 
 const path = "/discovery/verified";
-const title = "Verified Stoat Servers – Official & Trusted Communities | Stoatmod Discovery";
+const title = "Verified Stoat Servers – Official & Trusted | Stoatmod";
 const description = "Verified Stoat servers on Stoatmod Discovery: official servers, verified organisations, communities of high standing and impactful communities, each checked by the Stoatmod team.";
 
 const tiers = [
@@ -57,7 +57,8 @@ export default async function VerifiedServersPage() {
       <SubHero eyebrow={servers.length === 1 ? "1 verified server" : `${servers.length} verified servers`} title={<>Verified <span className={styles.heroAccent}>Stoat servers</span></>} description="Official servers, verified organisations and standout communities, each checked by the Stoatmod team. Look for the green tick across Discovery." />
       <DiscoveryNav active="verified" />
       <Breadcrumbs items={breadcrumbs} />
-      <section className={`${styles.section} ${styles.sectionTight}`} aria-label="Verified Stoat servers">
+      <section className={`${styles.section} ${styles.sectionTight}`} aria-labelledby="verified-servers">
+        <h2 id="verified-servers" className="sr-only">Verified Stoat servers</h2>
         <ServerGrid servers={servers} empty="No servers are verified yet. Listed servers can apply from Dashboard → Discovery." />
       </section>
       <section className={styles.section} aria-labelledby="verification-tiers">

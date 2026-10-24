@@ -7,7 +7,7 @@ export function PublicFooter({ description }: { description?: string }) {
       <div className={styles.inner}>
         <div className={styles.identity}>
           <a className={styles.brand} href="/" aria-label="Stoatmod home">
-            <img src="/brand-mark.png" alt="" width="44" height="44" />
+            <img src="/brand-mark-88.png" alt="" width="44" height="44" loading="lazy" decoding="async" />
             <strong>{siteConfig.name}</strong>
           </a>
           {description && <p>{description}</p>}

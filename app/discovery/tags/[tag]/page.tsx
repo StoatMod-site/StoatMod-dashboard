@@ -1,4 +1,4 @@
-import { notFound } from "next/navigation";
+import { notFound, permanentRedirect } from "next/navigation";
 import { Breadcrumbs } from "../../../Breadcrumbs";
 import { JsonLd } from "../../../JsonLd";
 import { PublicFooter } from "../../../PublicFooter";
@@ -9,7 +9,7 @@ import { discoveryServerSlug, slugify } from "../../../lib/public-slugs";
 import { discoveryOgImage, discoveryOgPath, imageObject } from "../../../lib/discovery-seo";
 import { buildMetadata } from "../../../lib/seo";
 import { absoluteUrl, siteConfig } from "../../../lib/site-config";
-import { exampleNames, rankPopular } from "../../../lib/discovery-catalog";
+import { categoryReplacingTag, exampleNames, rankPopular } from "../../../lib/discovery-catalog";
 import { AdvertiseBand, CategoryTiles, DiscoveryNav, SectionHeading, ServerGrid, SubHero } from "../../DiscoveryUI";
 import styles from "../../Discovery.module.css";
 
@@ -51,6 +51,8 @@ export default async function DiscoveryTagPage({ params }: { params: Promise<{ t
   const { tag } = await params;
   const result = await taggedServers(tag);
   if (!result.displayTag) notFound();
+  const category = categoryReplacingTag(slugify(result.displayTag));
+  if (category) permanentRedirect("/discovery/categories/" + category.slug);
   const all = result.all;
   const canonicalPath = "/discovery/tags/" + slugify(result.displayTag);
   const breadcrumbs = [
@@ -89,7 +91,8 @@ export default async function DiscoveryTagPage({ params }: { params: Promise<{ t
       <SubHero eyebrow="Discovery topic" title={<>#{result.displayTag} <span className={styles.heroAccent}>Stoat servers</span></>} description={`${result.servers.length === 1 ? "1 reviewed listing" : `${result.servers.length} reviewed listings`} tagged #${result.displayTag}. Tags are supplied by community owners and checked as part of the directory review. Read the descriptions and server rules before joining.`} />
       <DiscoveryNav />
       <Breadcrumbs items={breadcrumbs} />
-      <section className={`${styles.section} ${styles.sectionTight}`} aria-label={"Servers tagged " + result.displayTag}>
+      <section className={`${styles.section} ${styles.sectionTight}`} aria-labelledby="tag-servers">
+        <h2 id="tag-servers" className="sr-only">{"Servers tagged #" + result.displayTag}</h2>
         <ServerGrid servers={rankPopular(result.servers)} />
       </section>
       <section className={styles.section} aria-labelledby="tag-categories">

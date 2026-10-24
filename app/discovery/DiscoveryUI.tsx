@@ -1,9 +1,16 @@
 import type { ReactNode } from "react";
 import { ServerArtwork } from "../ServerArtwork";
-import { compactNumber, countLabel, discoveryCategories, serversInCategory } from "../lib/discovery-catalog";
-import { discoveryServerSlug, slugify } from "../lib/public-slugs";
+import { compactNumber, countLabel, discoveryCategories, serversInCategory, tagHref } from "../lib/discovery-catalog";
+import { listingLanguage } from "../lib/listing-language";
+import { discoveryServerSlug } from "../lib/public-slugs";
 import type { DiscoveryServer } from "../lib/public-types";
 import styles from "./Discovery.module.css";
+
+/** `lang` for the owner's own text when it is not English (the page around it is). */
+function textLang(server: DiscoveryServer) {
+  const language = listingLanguage(server);
+  return language && language !== "en" ? language : undefined;
+}
 
 export function serverPath(server: Pick<DiscoveryServer, "server_id" | "server_name">) {
   return "/discovery/servers/" + discoveryServerSlug(server);
@@ -23,20 +30,20 @@ export function VerifiedBadge({ verified, large = false }: { verified: Discovery
   );
 }
 
-export function ServerCard({ server, rank, note, feature = false }: { server: DiscoveryServer; rank?: number; note?: string; feature?: boolean }) {
+export function ServerCard({ server, rank, note, feature = false, priority = false }: { server: DiscoveryServer; rank?: number; note?: string; feature?: boolean; priority?: boolean }) {
   const path = serverPath(server);
   return (
     <article className={`${styles.card} ${feature ? styles.cardFeature : ""}`}>
       <div className={styles.cardBanner}>
-        <ServerArtwork serverId={server.server_id} name={server.server_name} src={server.server_banner_url} kind="banner" className={styles.cardBannerImage} href={path} />
+        <ServerArtwork serverId={server.server_id} name={server.server_name} src={server.server_banner_url} kind="banner" className={styles.cardBannerImage} href={path} priority={priority} />
         {rank !== undefined && <span className={styles.rank}>#{rank}</span>}
       </div>
       <div className={styles.cardBody}>
         <ServerArtwork serverId={server.server_id} name={server.server_name} src={server.server_icon_url} kind="icon" className={styles.cardIcon} />
         <h3><a href={path} data-no-translate>{server.server_name}</a><VerifiedBadge verified={server.verified} /></h3>
         {note && <p className={styles.cardNote}>{note}</p>}
-        <p className={styles.cardDescription} data-no-translate>{server.description}</p>
-        {server.tags.length > 0 && <div className={styles.tagRow}>{server.tags.slice(0, 4).map((tag) => <a href={"/discovery/tags/" + slugify(tag)} key={tag} data-no-translate>#{tag}</a>)}</div>}
+        <p className={styles.cardDescription} data-no-translate lang={textLang(server)}>{server.description}</p>
+        {server.tags.length > 0 && <div className={styles.tagRow}>{server.tags.slice(0, 4).map((tag) => <a href={tagHref(tag)} key={tag} data-no-translate>#{tag}</a>)}</div>}
       </div>
       <footer className={styles.cardFooter}>
         <span className={styles.cardStats}><b>{compactNumber(server.member_count)}</b> {countLabel(server.member_count, "member", "members")} <i aria-hidden="true">·</i> <b>{compactNumber(server.daily_messages)}</b> {countLabel(server.daily_messages, "message today", "messages today")}</span>
@@ -52,13 +59,13 @@ export function Spotlight({ server }: { server: DiscoveryServer }) {
   return (
     <article className={styles.spotlight}>
       <a className={styles.spotlightArt} href={path} aria-label={`View ${server.server_name}`}>
-        <ServerArtwork serverId={server.server_id} name={server.server_name} src={server.server_banner_url} kind="banner" />
+        <ServerArtwork serverId={server.server_id} name={server.server_name} src={server.server_banner_url} kind="banner" sizes="(max-width: 700px) 100vw, 640px" />
         <ServerArtwork serverId={server.server_id} name={server.server_name} src={server.server_icon_url} kind="icon" className={styles.spotlightIcon} />
       </a>
       <div className={styles.spotlightBody}>
         <p className={styles.eyebrow}>Server of the week</p>
         <h3><a href={path} data-no-translate>{server.server_name}</a><VerifiedBadge verified={server.verified} /></h3>
-        <p data-no-translate>{server.description}</p>
+        <p data-no-translate lang={textLang(server)}>{server.description}</p>
         <span className={styles.cardStats}><b>{compactNumber(server.member_count)}</b> {countLabel(server.member_count, "member", "members")} <i aria-hidden="true">·</i> <b>{compactNumber(server.daily_messages)}</b> {countLabel(server.daily_messages, "message today", "messages today")}</span>
         <a className={styles.joinButton} href={joinHref(server)} target="_blank" rel="ugc nofollow noopener noreferrer" aria-label={`Join ${server.server_name} on Stoat`}>Join {server.server_name} <span aria-hidden="true">↗</span></a>
       </div>
@@ -66,9 +73,10 @@ export function Spotlight({ server }: { server: DiscoveryServer }) {
   );
 }
 
-export function ServerGrid({ servers, ranked = false, empty = "No servers to show yet." }: { servers: DiscoveryServer[]; ranked?: boolean; empty?: string }) {
+/** `eagerCount`: the first banners are usually the page's largest element, so they must not wait for lazy loading. */
+export function ServerGrid({ servers, ranked = false, empty = "No servers to show yet.", eagerCount = 2 }: { servers: DiscoveryServer[]; ranked?: boolean; empty?: string; eagerCount?: number }) {
   if (!servers.length) return <p className={styles.empty}>{empty}</p>;
-  return <div className={styles.grid}>{servers.map((server, index) => <ServerCard server={server} rank={ranked ? index + 1 : undefined} key={server.server_id} />)}</div>;
+  return <div className={styles.grid}>{servers.map((server, index) => <ServerCard server={server} rank={ranked ? index + 1 : undefined} key={server.server_id} priority={index < eagerCount} />)}</div>;
 }
 
 const navItems = [
@@ -177,7 +185,7 @@ export function RankedList({ servers, note, numbered = true }: { servers: Discov
           <ServerArtwork serverId={server.server_id} name={server.server_name} src={server.server_icon_url} kind="icon" className={styles.rankIcon} />
           <div>
             <h3><a href={serverPath(server)} data-no-translate>{server.server_name}</a><VerifiedBadge verified={server.verified} /></h3>
-            <p data-no-translate>{server.description}</p>
+            <p data-no-translate lang={textLang(server)}>{server.description}</p>
             <span className={styles.cardStats}><b>{compactNumber(server.member_count)}</b> {countLabel(server.member_count, "member", "members")} <i aria-hidden="true">·</i> <b>{compactNumber(server.daily_messages)}</b> {countLabel(server.daily_messages, "message today", "messages today")}{note ? <> <i aria-hidden="true">·</i> {note(server)}</> : null}</span>
           </div>
           <a className={styles.joinButton} href={joinHref(server)} target="_blank" rel="ugc nofollow noopener noreferrer" aria-label={`Join ${server.server_name} on Stoat`}>Join <span aria-hidden="true">↗</span></a>

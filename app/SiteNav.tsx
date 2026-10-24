@@ -2,7 +2,7 @@ export function SiteNav({ active }: { active?: "home" | "features" | "guides" | 
   return (
     <header className="site-nav">
       <a className="site-logo" href="/" aria-label="Stoatmod home">
-        <img src="/brand-mark.png" alt="" width="40" height="40" />
+        <img src="/brand-mark-88.png" alt="" width="40" height="40" />
         <strong>Stoatmod</strong>
       </a>
       <nav aria-label="Main navigation">

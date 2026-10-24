@@ -144,11 +144,17 @@ test("new dashboard features include every supported translation", async () => {
   }
 });
 
-async function render(path = "/", origin = "http://localhost") {
+// Site-wide rules live in globals.css; rules used only by the dashboards are split into dashboard.css.
+async function allStylesheets() {
+  const files = await Promise.all(["../app/globals.css", "../app/dashboard.css"].map((file) => readFile(new URL(file, import.meta.url), "utf8")));
+  return files.join(String.fromCharCode(10));
+}
+
+async function render(path = "/", origin = "http://localhost", headers = {}) {
   const workerUrl = new URL("../dist/server/index.js", import.meta.url);
   workerUrl.searchParams.set("test", `${process.pid}-${Date.now()}`);
   const { default: worker } = await import(workerUrl.href);
-  return worker.fetch(new Request(`${origin}${path}`, { headers: { accept: "text/html" } }), {
+  return worker.fetch(new Request(`${origin}${path}`, { headers: { accept: "text/html", ...headers } }), {
     ASSETS: { fetch: async () => new Response("Not found", { status: 404 }) },
   }, { waitUntil() {}, passThroughOnException() {} });
 }
@@ -232,7 +238,7 @@ test("keeps homepage motion, public breadcrumbs, and production routing wired", 
     readFile(new URL("../app/PointerGlow.tsx", import.meta.url), "utf8"),
     readFile(new URL("../app/MarketingPage.tsx", import.meta.url), "utf8"),
     readFile(new URL("../app/Breadcrumbs.tsx", import.meta.url), "utf8"),
-    readFile(new URL("../app/globals.css", import.meta.url), "utf8"),
+    allStylesheets(),
     readFile(new URL("../deploy/Caddyfile.example", import.meta.url), "utf8"),
     readFile(new URL("../deploy/stoat-dashboard-web.service", import.meta.url), "utf8"),
   ]);
@@ -365,7 +371,7 @@ test("renders server-first Discovery content with conservative metadata", async 
   const response = await render("/discovery");
   assert.equal(response.status, 200);
   const html = await response.text();
-  assert.match(html, /<title>Stoat Servers – Discover &amp; Join Stoat Communities \| Stoatmod Discovery<\/title>/i);
+  assert.match(html, /<title>Stoat Servers – Discover &amp; Join Stoat Communities \| Stoatmod<\/title>/i);
   assert.match(html, /rel="canonical" href="https:\/\/modstoat\.site\/discovery"/i);
   assert.match(html, /<h1 id="discovery-title">Discover the best <span[^>]*>Stoat servers<\/span><\/h1>/i);
   assert.match(html, /FAQPage/);
@@ -397,7 +403,8 @@ test("indexes exact server names, canonical profiles and every public listing", 
     const profile = await render(path);
     assert.equal(profile.status, 200);
     const html = await profile.text();
-    assert.match(html, /<title>The Often Clan – Stoat Server \| Stoatmod<\/title>/);
+    // The main category joins the title when it still fits a search result (about 60 characters).
+    assert.match(html, /<title>The Often Clan – Gaming Stoat Server \| Stoatmod<\/title>/);
     assert.match(html, /name="description" content="Join The Often Clan on Stoat\./);
     assert.match(html, /name="robots" content="index, follow/);
     assert.match(html, /name="googlebot" content="index, follow/);
@@ -447,10 +454,38 @@ test("indexes exact server names, canonical profiles and every public listing", 
     assert.match(xml, /<image:loc>https:\/\/modstoat.site\/discovery\/og\/hub.png<\/image:loc>/);
     assert.match(xml, /<image:loc>https:\/\/modstoat.site\/api\/public\/discovery\/og\/01SEO0+\.png/);
     assert.doesNotMatch(xml, /untrusted.example/);
-    assert.match(xml, /<loc>https:\/\/modstoat.site\/discovery\/tags\/gaming<\/loc>/);
+    // #gaming duplicates the Gaming category, so the tag page redirects there and stays out of the sitemap.
+    assert.doesNotMatch(xml, /\/discovery\/tags\/gaming/);
+    const gamingTag = await render("/discovery/tags/gaming");
+    assert.equal(gamingTag.status, 308);
+    assert.match(gamingTag.headers.get("location"), /\/discovery\/categories\/gaming$/);
     assert.doesNotMatch(xml, /\/discovery\/tags\/rare/);
-    assert.match(await (await render("/discovery/tags/gaming")).text(), /name="robots" content="index, follow/);
     assert.match(await (await render("/discovery/tags/rare")).text(), /name="robots" content="noindex/);
+  });
+});
+
+test("tag pages without a matching category are indexed once three servers use them", async () => {
+  await withDiscoveryFixture(async () => {
+    const xml = await (await render("/sitemap.xml")).text();
+    assert.match(xml, /<loc>https:\/\/modstoat.site\/discovery\/tags\/squad<\/loc>/);
+    const html = await (await render("/discovery/tags/squad")).text();
+    assert.match(html, /name="robots" content="index, follow/);
+    assert.match(html, /<h2 id="tag-servers" class="sr-only">/);
+  }, (servers) => servers.map((server, index) => (index < 3 ? { ...server, tags: [...server.tags, "squad"] } : server)));
+});
+
+test("every visitor gets each page's metadata in <head>, including Googlebot", async () => {
+  await withDiscoveryFixture(async (servers) => {
+    const profile = `/discovery/servers/community-1-${servers[1].server_id.toLowerCase()}`;
+    for (const userAgent of ["Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)", "Mozilla/5.0 (compatible; bingbot/2.0; +http://www.bing.com/bingbot.htm)", "Mozilla/5.0 (compatible; GPTBot/1.2)", "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0 Safari/537.36"]) {
+      for (const path of [profile, "/discovery/categories/gaming"]) {
+        const html = await (await render(path, "http://localhost", { "user-agent": userAgent })).text();
+        const head = html.slice(0, html.indexOf("</head>"));
+        for (const pattern of [/<title>/, /rel="canonical"/, /name="description"/, /name="robots"/, /property="og:image"/]) {
+          assert.match(head, pattern, `${userAgent.slice(0, 40)} ${path} ${pattern}`);
+        }
+      }
+    }
   });
 });
 
@@ -505,11 +540,11 @@ test("top and new Stoat server pages rank every listing and link each profile", 
     const top = await render("/discovery/top");
     assert.equal(top.status, 200);
     const topHtml = await top.text();
-    assert.match(topHtml, /<title>Top Stoat Servers – Most Active Stoat Communities \| Stoatmod Discovery<\/title>/);
-    assert.deepEqual(sectionServerNames(topHtml, 'aria-label="Top Stoat servers"'), names(servers));
+    assert.match(topHtml, /<title>Top Stoat Servers – Most Active Communities \| Stoatmod<\/title>/);
+    assert.deepEqual(sectionServerNames(topHtml, 'aria-labelledby="top-servers"'), names(servers));
     for (const server of servers) assert.ok(topHtml.includes(`href="/discovery/servers/${server.server_name.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "").slice(0, 72)}-${server.server_id.toLowerCase()}"`), server.server_name);
     const newest = await (await render("/discovery/new")).text();
-    assert.deepEqual(sectionServerNames(newest, 'aria-label="New Stoat servers"').slice(0, 3), names([servers[19], servers[18], servers[17]]));
+    assert.deepEqual(sectionServerNames(newest, 'aria-labelledby="new-servers"').slice(0, 3), names([servers[19], servers[18], servers[17]]));
     assert.match(newest, /ItemList/);
   }, (servers) => servers.map((server, index) => ({
     ...server,
@@ -523,7 +558,7 @@ test("advertise page targets Stoat server advertising with FAQ and HowTo data", 
     const response = await render("/discovery/advertise");
     assert.equal(response.status, 200);
     const html = await response.text();
-    assert.match(html, /<title>Stoat Server Advertising – Advertise Your Stoat Server Free \| Stoatmod<\/title>/);
+    assert.match(html, /<title>Stoat Server Advertising – List Your Server Free \| Stoatmod<\/title>/);
     assert.match(html, /rel="canonical" href="https:\/\/modstoat\.site\/discovery\/advertise"/);
     assert.match(html, /name="robots" content="index, follow/);
     const schemas = [...html.matchAll(/<script[^>]*type="application\/ld\+json"[^>]*>([\s\S]*?)<\/script>/g)].flatMap((match) => JSON.parse(match[1])["@graph"] || []);
@@ -710,7 +745,7 @@ test("contains moderator authentication and protected dashboard surfaces", async
 });
 
 test("owner case and appeal pagination has responsive controls", async () => {
-  const stylesheet = await readFile(new URL("../app/globals.css", import.meta.url), "utf8");
+  const stylesheet = await allStylesheets();
   assert.match(stylesheet, /\.owner-list-controls\{/);
   assert.match(stylesheet, /\.owner-pagination\{/);
   assert.match(stylesheet, /\.owner-pagination button\.active\{/);
@@ -720,7 +755,7 @@ test("owner case and appeal pagination has responsive controls", async () => {
 });
 
 test("appeal preparation card keeps its steps below the headline", async () => {
-  const stylesheet = await readFile(new URL("../app/globals.css", import.meta.url), "utf8");
+  const stylesheet = await allStylesheets();
   assert.match(stylesheet, /\.appeal-ready-card\{[^}]*grid-template-columns:minmax\(0,1fr\)/);
   assert.doesNotMatch(stylesheet, /\.appeal-ready-card\{[^}]*grid-template-columns:[^}]*minmax\(250px/);
 });
@@ -728,7 +763,7 @@ test("appeal preparation card keeps its steps below the headline", async () => {
 test("protection settings use one cohesive responsive workspace", async () => {
   const [dashboardSource, stylesheet] = await Promise.all([
     readFile(new URL("../app/DashboardApp.tsx", import.meta.url), "utf8"),
-    readFile(new URL("../app/globals.css", import.meta.url), "utf8"),
+    allStylesheets(),
   ]);
   assert.match(stylesheet, /\.protection-workspace\{/);
   assert.match(stylesheet, /\.protection-sheet\{/);
@@ -754,7 +789,7 @@ test("protection settings use one cohesive responsive workspace", async () => {
 test("policy, automation actions, and onboarding use the integrated redesign", async () => {
   const [dashboardSource, stylesheet] = await Promise.all([
     readFile(new URL("../app/DashboardApp.tsx", import.meta.url), "utf8"),
-    readFile(new URL("../app/globals.css", import.meta.url), "utf8"),
+    allStylesheets(),
   ]);
   assert.match(dashboardSource, /id="protection-policy"[\s\S]*<PolicyStudioPanel/);
   assert.match(dashboardSource, /id="protection-operations"/);
@@ -789,7 +824,7 @@ test("server reports, global reporting, and poll pages use the cohesive dashboar
   const [dashboardSource, reportSource, stylesheet] = await Promise.all([
     readFile(new URL("../app/DashboardApp.tsx", import.meta.url), "utf8"),
     readFile(new URL("../app/ReportApp.tsx", import.meta.url), "utf8"),
-    readFile(new URL("../app/globals.css", import.meta.url), "utf8"),
+    allStylesheets(),
   ]);
   assert.match(dashboardSource, /Server reporting setup/);
   assert.match(dashboardSource, /Members can run <code>~report<\/code> in any channel in this server/);
@@ -819,7 +854,7 @@ test("every server dashboard view uses the cohesive surface system", async () =>
   const discoveryTabSource = await readFile(new URL("../app/DiscoveryTab.tsx", import.meta.url), "utf8");
   const [dashboardSource, stylesheet, automationSource] = await Promise.all([
     readFile(new URL("../app/DashboardApp.tsx", import.meta.url), "utf8"),
-    readFile(new URL("../app/globals.css", import.meta.url), "utf8"),
+    allStylesheets(),
     readFile(new URL("../app/AutomationPanel.tsx", import.meta.url), "utf8"),
   ]);
   assert.match(dashboardSource, /page-grid dashboard-surface overview-surface/);
@@ -843,7 +878,7 @@ test("every server dashboard view uses the cohesive surface system", async () =>
 });
 
 test("dark dashboard selection states keep contrasting row text", async () => {
-  const stylesheet = await readFile(new URL("../app/globals.css", import.meta.url), "utf8");
+  const stylesheet = await allStylesheets();
   assert.match(stylesheet, /\.member-list>button\.active,html\[data-theme="dark"\] \.owner-email-list>button\.active\{background:var\(--surface-inverse\);color:var\(--text-inverse\)\}/);
   assert.match(stylesheet, /\.owner-email-list>button\.active :where\(b,p,small\)\{color:color-mix/);
   assert.match(stylesheet, /html\[data-theme="dark"\] \.owner-appeals blockquote\{[^}]*background:var\(--surface-soft\);color:var\(--ink\)\}/);
@@ -851,8 +886,21 @@ test("dark dashboard selection states keep contrasting row text", async () => {
 });
 
 test("owner inbox recipient messages keep readable theme contrast", async () => {
-  const stylesheet = await readFile(new URL("../app/globals.css", import.meta.url), "utf8");
+  const stylesheet = await allStylesheets();
   assert.match(stylesheet, /\.owner-email-messages article\{[^}]*background:#ecece7;color:#111\}/);
   assert.match(stylesheet, /html\[data-theme="dark"\] \.owner-email-messages article:not\(\.outbound\)\{[^}]*background:var\(--surface-soft\);color:var\(--ink\)\}/);
+});
+
+test("public pages load only the public stylesheet; the server dashboard adds the dashboard rules", async () => {
+  const [globals, dashboard, layout, dashboardPage] = await Promise.all([
+    "../app/globals.css", "../app/dashboard.css", "../app/layout.tsx", "../app/dashboard/page.tsx",
+  ].map((file) => readFile(new URL(file, import.meta.url), "utf8")));
+  assert.ok(globals.length < 90_000, `globals.css grew to ${globals.length} bytes; dashboard-only rules belong in dashboard.css`);
+  assert.match(layout, /import "\.\/globals\.css";/);
+  assert.doesNotMatch(layout, /dashboard\.css/);
+  assert.match(dashboardPage, /import "\.\.\/dashboard\.css";/);
+  // The moderator login keeps its keyboard focus ring: this rule must stay ahead of input:focus-visible.
+  assert.ok(globals.indexOf(".login-card input") >= 0 && globals.indexOf(".login-card input") < globals.lastIndexOf("input:focus-visible"));
+  assert.ok(dashboard.length > 0);
 });
 

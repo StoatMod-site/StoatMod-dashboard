@@ -2,7 +2,7 @@
 
 import { useEffect, useState, type FormEvent } from "react";
 import { apiBase } from "../lib/api";
-import styles from "./Discovery.module.css";
+import styles from "./ListingReport.module.css";
 
 declare global {
   interface Window {

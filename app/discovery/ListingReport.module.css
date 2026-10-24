@@ -1,0 +1,11 @@
+/* The report-a-listing form (a client component), kept apart from Discovery.module.css so server-rendered
+ pages do not download the Discovery styles twice. */
+.reportLink{justify-self:start;padding:0;border:0;background:none;color:var(--muted);cursor:pointer;font-size:12px;text-decoration:underline;text-underline-offset:3px}
+.reportForm{display:grid;gap:10px;padding-top:14px;border-top:1px solid var(--line)}
+.reportForm label{display:grid;gap:6px;color:var(--muted);font-size:12px;font-weight:600}
+.reportForm select,.reportForm textarea{width:100%;padding:9px 10px;border:1px solid var(--line);border-radius:9px;background:var(--paper);color:var(--ink);font:inherit;font-size:13px}
+.reportForm textarea{min-height:80px;resize:vertical}
+.reportForm button{justify-self:start;padding:9px 14px;border:0;border-radius:9px;background:var(--ink);color:var(--paper);cursor:pointer;font-size:12px;font-weight:700}
+.reportForm button:disabled{opacity:.5;cursor:default}
+.reportForm :global(.consent){display:flex;gap:8px;align-items:flex-start;font-weight:500;line-height:1.5}
+.reportStatus{margin:0;font-size:12px}

@@ -2,9 +2,8 @@ import { Breadcrumbs } from "../../Breadcrumbs";
 import { JsonLd } from "../../JsonLd";
 import { PublicFooter } from "../../PublicFooter";
 import { SiteNav } from "../../SiteNav";
-import { discoveryCategories, serversInCategory, topTags } from "../../lib/discovery-catalog";
+import { discoveryCategories, serversInCategory, tagHref, topTags } from "../../lib/discovery-catalog";
 import { getRequiredPublicDiscovery } from "../../lib/public-data.server";
-import { slugify } from "../../lib/public-slugs";
 import { breadcrumbSchema, organizationSchema, websiteSchema } from "../../lib/schema";
 import { discoveryOgImage, discoveryOgPath, imageObject } from "../../lib/discovery-seo";
 import { buildMetadata } from "../../lib/seo";
@@ -13,7 +12,7 @@ import { AdvertiseBand, CategoryTiles, DiscoveryNav, SectionHeading, SubHero } f
 import styles from "../Discovery.module.css";
 
 const path = "/discovery/categories";
-const title = "Stoat Server Categories – Gaming, Anime, Art & More | Stoatmod Discovery";
+const title = "Stoat Server Categories: Gaming, Anime & More | Stoatmod";
 const description = "Browse Stoat servers by category: gaming, anime, art, music, roleplay, social, LGBTQ+, Brazilian and tech communities on Stoatmod Discovery.";
 
 export const metadata = buildMetadata({ title, description, path, ...discoveryOgImage("categories", "Stoat servers by category – Stoatmod Discovery") });
@@ -50,7 +49,7 @@ export default async function CategoriesPage() {
       </section>
       {tags.length > 0 && <section className={styles.section} aria-labelledby="all-tags">
         <SectionHeading eyebrow="Tags" title="Popular tags" description="Tags are chosen by each server's owners." />
-        <div className={styles.tagRow}>{tags.map(({ tag, count }) => <a href={"/discovery/tags/" + slugify(tag)} key={tag}><span data-no-translate>#{tag}</span> · {count}</a>)}</div>
+        <div className={styles.tagRow}>{tags.map(({ tag, count }) => <a href={tagHref(tag)} key={tag}><span data-no-translate>#{tag}</span> · {count}</a>)}</div>
       </section>}
       <section className={styles.section} aria-labelledby="category-copy">
         <div className={styles.copy}>

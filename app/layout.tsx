@@ -11,10 +11,14 @@ export const metadata: Metadata = {
   title: siteConfig.name + " — moderation for Stoat servers",
   description: siteConfig.description,
   category: "technology",
+  // Small icons: the original brand-favicon.png is 2000 px (200 KB) and every browser downloads its icon.
   icons: {
-    icon: "/brand-favicon.png",
-    shortcut: "/brand-favicon.png",
-    apple: "/brand-favicon.png",
+    icon: [
+      { url: "/favicon.ico", sizes: "48x48" },
+      { url: "/brand-favicon-192.png", type: "image/png", sizes: "192x192" },
+    ],
+    shortcut: "/favicon.ico",
+    apple: { url: "/apple-touch-icon.png", sizes: "180x180" },
   },
 };
 

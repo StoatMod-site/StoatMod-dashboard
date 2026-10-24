@@ -134,7 +134,7 @@ export function DiscoveryPage({ initialServers, featuredIds = [], spotlightId = 
         </div>
         <div id="discovery-results">
           <p className={styles.resultMeta} role="status"><span>{searching ? pluralize(results.length, "matching server", "matching servers") : pluralize(servers.length, "reviewed server", "reviewed servers")}</span>{searching && <button type="button" className={styles.linkButton} onClick={clearFilters}>Show all servers</button>}</p>
-          <ServerGrid servers={results.slice(0, visible)} empty={dataAvailable ? (searching ? "No reviewed listing matches every word and tag in that search." : "No reviewed listings are available yet.") : "The reviewed directory is temporarily unavailable. Existing listings have not been removed."} />
+          <ServerGrid servers={results.slice(0, visible)} eagerCount={0} empty={dataAvailable ? (searching ? "No reviewed listing matches every word and tag in that search." : "No reviewed listings are available yet.") : "The reviewed directory is temporarily unavailable. Existing listings have not been removed."} />
           {results.length > visible && <button type="button" className={styles.loadMore} onClick={() => setVisible((value) => value + PAGE_SIZE)}>Show more servers</button>}
         </div>
       </section>

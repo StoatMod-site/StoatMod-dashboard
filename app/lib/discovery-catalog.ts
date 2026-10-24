@@ -116,6 +116,22 @@ export function findCategory(slug: string) {
   return discoveryCategories.find((category) => category.slug === slug.toLowerCase()) ?? null;
 }
 
+/**
+ * A tag page that would duplicate a category (#gaming and Gaming) points to the category instead.
+ * Only when the category's own tags include the slug: then every server with the tag is also in the category.
+ */
+export function categoryReplacingTag(tagSlug: string) {
+  const category = findCategory(tagSlug);
+  return category && category.tags.includes(tagSlug.toLowerCase()) ? category : null;
+}
+
+/** Where a tag link should go: its category when one replaces the tag page. */
+export function tagHref(tag: string) {
+  const slug = slugify(tag);
+  const category = categoryReplacingTag(slug);
+  return category ? "/discovery/categories/" + category.slug : "/discovery/tags/" + slug;
+}
+
 function timestamp(value: string | null | undefined) {
   const parsed = value ? Date.parse(value) : NaN;
   return Number.isFinite(parsed) ? parsed : 0;

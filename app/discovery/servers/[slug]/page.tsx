@@ -5,12 +5,14 @@ import { PublicFooter } from "../../../PublicFooter";
 import { SiteNav } from "../../../SiteNav";
 import { breadcrumbSchema, organizationSchema, websiteSchema } from "../../../lib/schema";
 import { getRequiredPublicDiscovery } from "../../../lib/public-data.server";
-import { discoveryServerSlug, findDiscoveryServer, slugify } from "../../../lib/public-slugs";
+import { discoveryServerSlug, findDiscoveryServer } from "../../../lib/public-slugs";
+import type { DiscoveryServer } from "../../../lib/public-types";
 import { serverOgImage, serverOgUrl } from "../../../lib/discovery-seo";
 import { buildMetadata } from "../../../lib/seo";
 import { absoluteUrl, siteConfig } from "../../../lib/site-config";
 import { ServerArtwork } from "../../../ServerArtwork";
-import { categoriesForServer, compactNumber, discoveryLanguages, similarServers } from "../../../lib/discovery-catalog";
+import { categoriesForServer, compactNumber, discoveryLanguages, similarServers, tagHref } from "../../../lib/discovery-catalog";
+import { listingLanguage } from "../../../lib/listing-language";
 import { DiscoveryMarkdown } from "../../../lib/discovery-markdown";
 import { AdvertiseBand, DiscoveryNav, RankedList, SectionHeading, VerifiedBadge, joinHref } from "../../DiscoveryUI";
 import { ListingViewBeacon, ReportListing } from "../../ListingClient";
@@ -39,12 +41,26 @@ function metadataText(value: string, maximumLength: number) {
   return shortened + "…";
 }
 
-function profileMetadataDescription(name: string, value: string) {
-  const description = value.replace(/\s+/g, " ").trim();
-  return metadataText(
-    `Join ${name} on Stoat. ${description}`,
-    160,
-  );
+function profileMetadataDescription(server: DiscoveryServer) {
+  const description = server.description.replace(/\s+/g, " ").trim();
+  let text = `Join ${server.server_name} on Stoat. ${description}`;
+  // Short owner descriptions leave room for facts that help searchers choose.
+  if (text.length < 120) {
+    const category = categoriesForServer(server)[0];
+    const facts = [
+      server.member_count > 0 ? `${server.member_count.toLocaleString("en-GB")} ${server.member_count === 1 ? "member" : "members"}` : "",
+      category ? `${category.name.toLowerCase()} community` : "",
+    ].filter(Boolean).join(", ");
+    text = `${text.replace(/[.!?…]*$/, ".")} ${facts ? facts.charAt(0).toUpperCase() + facts.slice(1) + ". " : ""}Free direct invite on Stoatmod Discovery.`;
+  }
+  return metadataText(text, 160);
+}
+
+/** "Name – Gaming Stoat Server | Stoatmod" when it fits in a search result title, otherwise without the category. */
+function profileTitle(server: DiscoveryServer) {
+  const category = categoriesForServer(server)[0];
+  const withCategory = `${server.server_name} – ${category?.name ?? ""} Stoat Server | Stoatmod`;
+  return category && withCategory.length <= 60 ? withCategory : `${server.server_name} – Stoat Server | Stoatmod`;
 }
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
@@ -60,10 +76,9 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     });
   }
   const canonical = "/discovery/servers/" + discoveryServerSlug(server);
-  const titleName = server.server_name;
-  const description = profileMetadataDescription(server.server_name, server.description);
+  const description = profileMetadataDescription(server);
   return buildMetadata({
-    title: titleName + " – Stoat Server | Stoatmod",
+    title: profileTitle(server),
     description,
     path: canonical,
     ...serverOgImage(server),
@@ -92,6 +107,9 @@ export default async function DiscoveryServerProfile({ params }: { params: Promi
   const similar = similarServers(servers, server, 4);
   const shareUrl = server.vanity ? `${siteConfig.origin.replace(/^https:\/\//, "")}/${server.vanity}` : absoluteUrl(canonicalPath);
   const language = server.language ? discoveryLanguages[server.language] : "";
+  // The owner's text keeps its own language even though the page around it is English.
+  const textLanguage = listingLanguage(server);
+  const textLang = textLanguage && textLanguage !== "en" ? textLanguage : undefined;
   const linkLabel = (url: string) => new URL(url).hostname.replace(/^www\./, "");
   return (
     <main className={styles.page}>
@@ -108,7 +126,7 @@ export default async function DiscoveryServerProfile({ params }: { params: Promi
             description: server.description,
             image: [serverOgUrl(server), ...(server.server_banner_url ? [server.server_banner_url] : [])],
             isPartOf: { "@id": siteConfig.origin + "/#website" },
-            ...(server.language && server.language !== "other" ? { inLanguage: server.language } : {}),
+            ...(textLanguage ? { inLanguage: textLanguage } : {}),
             mainEntity: {
               "@type": "Organization",
               "@id": absoluteUrl(canonicalPath) + "#community",
@@ -127,7 +145,7 @@ export default async function DiscoveryServerProfile({ params }: { params: Promi
       <SiteNav active="discovery" />
       <ListingViewBeacon serverId={server.server_id} />
       <header className={styles.profileHero}>
-        <div className={styles.profileBanner}><ServerArtwork serverId={server.server_id} name={server.server_name} src={server.server_banner_url} kind="banner" priority /></div>
+        <div className={styles.profileBanner}><ServerArtwork serverId={server.server_id} name={server.server_name} src={server.server_banner_url} kind="banner" priority original /></div>
         <div className={styles.profileShade} aria-hidden="true" />
         <div className={styles.profileInner}>
           <ServerArtwork serverId={server.server_id} name={server.server_name} src={server.server_icon_url} kind="icon" className={styles.profileIcon} />
@@ -135,7 +153,7 @@ export default async function DiscoveryServerProfile({ params }: { params: Promi
             <p className={styles.kicker}><span aria-hidden="true" />{server.verified ? server.verified.label : "Reviewed Stoat server"}</p>
             <h1><span data-no-translate>{server.server_name}</span><VerifiedBadge verified={server.verified} large /></h1>
             <p className={styles.profileMeta}>{server.member_count.toLocaleString("en-GB")} members · {server.daily_messages.toLocaleString("en-GB")} messages today{server.global_rank ? ` · #${server.global_rank} in public activity` : ""}</p>
-            {server.tags.length > 0 && <div className={styles.tagRow}>{server.tags.map((tag) => <a href={"/discovery/tags/" + slugify(tag)} key={tag} data-no-translate>#{tag}</a>)}</div>}
+            {server.tags.length > 0 && <div className={styles.tagRow}>{server.tags.map((tag) => <a href={tagHref(tag)} key={tag} data-no-translate>#{tag}</a>)}</div>}
           </div>
           <div className={styles.profileJoin}>
             <a className={styles.primaryButton} href={joinHref(server)} target="_blank" rel="ugc nofollow noopener noreferrer">Join {server.server_name} <span aria-hidden="true">↗</span></a>
@@ -155,8 +173,8 @@ export default async function DiscoveryServerProfile({ params }: { params: Promi
           <section className={styles.prose}>
             <p className={styles.eyebrow}>About this server</p>
             <h2>What is {server.server_name}?</h2>
-            <p data-no-translate>{server.description}</p>
-            {extraInformation && <DiscoveryMarkdown source={extraInformation} className={styles.markdown} />}
+            <p data-no-translate lang={textLang}>{server.description}</p>
+            {extraInformation && <div lang={textLang}><DiscoveryMarkdown source={extraInformation} className={styles.markdown} /></div>}
           </section>
           <section className={styles.prose}>
             <h2>How to join {server.server_name}</h2>

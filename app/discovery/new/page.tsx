@@ -12,7 +12,7 @@ import { AdvertiseBand, DiscoveryNav, RankedList, SubHero, listingDate, serverPa
 import styles from "../Discovery.module.css";
 
 const path = "/discovery/new";
-const title = "New Stoat Servers – Recently Added Communities | Stoatmod Discovery";
+const title = "New Stoat Servers – Recently Added Communities | Stoatmod";
 const description = "New Stoat servers recently approved on Stoatmod Discovery. Be one of the first to join fresh Stoat communities.";
 
 export const metadata = buildMetadata({ title, description, path, ...discoveryOgImage("new", "New Stoat servers – Stoatmod Discovery") });
@@ -43,7 +43,8 @@ export default async function NewServersPage() {
       <SubHero eyebrow="Fresh listings" title={<>New <span className={styles.heroAccent}>Stoat servers</span></>} description="Communities recently approved for Stoatmod Discovery, newest first. New servers are a great place to get in early and help shape a community." />
       <DiscoveryNav active="new" />
       <Breadcrumbs items={breadcrumbs} />
-      <section className={`${styles.section} ${styles.sectionTight}`} aria-label="New Stoat servers">
+      <section className={`${styles.section} ${styles.sectionTight}`} aria-labelledby="new-servers">
+        <h2 id="new-servers" className="sr-only">New Stoat servers</h2>
         <RankedList servers={servers} note={(server) => { const date = listingDate(server.approved_at); return date ? `listed ${date}` : "recently listed"; }} />
       </section>
       <AdvertiseBand compact />

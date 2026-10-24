@@ -1,6 +1,6 @@
 import type { MetadataRoute } from "next";
 import { allContentPages } from "./content";
-import { CATEGORY_INDEX_MINIMUM, discoveryCategories, serversInCategory } from "./lib/discovery-catalog";
+import { CATEGORY_INDEX_MINIMUM, categoryReplacingTag, discoveryCategories, serversInCategory } from "./lib/discovery-catalog";
 import { discoveryOgPath, serverOgUrl } from "./lib/discovery-seo";
 import { getRequiredPublicDiscovery } from "./lib/public-data.server";
 import { discoveryServerSlug, slugify } from "./lib/public-slugs";
@@ -47,7 +47,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     }
   }
   for (const [key, count] of tagCounts) {
-    if (count >= 3) dynamic.push({ path: "/discovery/tags/" + key });
+    if (count >= 3 && !categoryReplacingTag(key)) dynamic.push({ path: "/discovery/tags/" + key });
   }
   const unique = new Map([...core, ...content, ...dynamic].map((entry) => [entry.path, entry]));
   return [...unique.values()].map((entry) => ({

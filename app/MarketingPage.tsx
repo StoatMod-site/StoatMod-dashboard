@@ -109,7 +109,7 @@ export function MarketingPage({ initialStats, trustedServers }: { initialStats: 
 
       <section className="homepage-trust" aria-labelledby="trust-title"><div><p className="eyebrow">Trust and accountability</p><h2 id="trust-title">Check how the service is operated.</h2></div><div><a href="/security"><strong>Security and moderation safeguards</strong><span>Read the operational approach →</span></a><a href="/privacy"><strong>Privacy policy</strong><span>See what information is processed →</span></a><a href="/status"><strong>Live system status</strong><span>Check current service health →</span></a><a href="/changelog"><strong>Stoatmod changelog</strong><span>Follow meaningful updates →</span></a></div></section>
 
-      <section className="final-cta"><img src="/brand-mark.png" alt="" width="84" height="84" loading="lazy" /><div><p className="eyebrow">Start with a verified setup</p><h2>A calmer server.<br />A clearer process.</h2></div><a href={siteConfig.inviteUrl} target="_blank" rel="noopener noreferrer">Invite Stoatmod <span>↗</span></a></section>
+      <section className="final-cta"><img src="/brand-mark-168.png" alt="" width="84" height="84" loading="lazy" decoding="async" /><div><p className="eyebrow">Start with a verified setup</p><h2>A calmer server.<br />A clearer process.</h2></div><a href={siteConfig.inviteUrl} target="_blank" rel="noopener noreferrer">Invite Stoatmod <span>↗</span></a></section>
       <PublicFooter description="Stoat automod, moderation statistics and accountable protection for healthier communities." />
     </main>
   );

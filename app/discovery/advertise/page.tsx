@@ -13,7 +13,7 @@ import { DiscoveryNav, Faq, SectionHeading, ServerCard, SubHero, faqSchema } fro
 import styles from "../Discovery.module.css";
 
 const path = "/discovery/advertise";
-const title = "Stoat Server Advertising – Advertise Your Stoat Server Free | Stoatmod";
+const title = "Stoat Server Advertising – List Your Server Free | Stoatmod";
 const description = "Advertise your Stoat server for free on Stoatmod Discovery. Get a reviewed listing with its own page, appear in search and categories, and bump it every two hours.";
 
 export const metadata = buildMetadata({ title, description, path, ...discoveryOgImage("advertise", "Advertise your Stoat server for free – Stoatmod Discovery") });

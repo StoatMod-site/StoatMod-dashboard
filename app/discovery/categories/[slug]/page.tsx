@@ -61,7 +61,8 @@ export default async function CategoryPage({ params }: { params: Promise<{ slug:
       <SubHero eyebrow={`${category.emoji} Category · ${servers.length === 1 ? "1 server" : `${servers.length} servers`}`} title={category.title} description={category.intro} />
       <DiscoveryNav active="categories" />
       <Breadcrumbs items={breadcrumbs} />
-      <section className={`${styles.section} ${styles.sectionTight}`} aria-label={category.title}>
+      <section className={`${styles.section} ${styles.sectionTight}`} aria-labelledby="category-servers">
+        <h2 id="category-servers" className="sr-only">{category.title}</h2>
         <ServerGrid servers={servers} empty={`No ${category.name.toLowerCase()} servers are listed yet. Run a ${category.name.toLowerCase()} community? List it for free and be the first.`} />
       </section>
       {others.length > 0 && <section className={styles.section} aria-labelledby="other-categories">

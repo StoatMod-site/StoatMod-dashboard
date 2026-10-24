@@ -12,7 +12,7 @@ import { AdvertiseBand, CategoryTiles, DiscoveryNav, RankedList, SectionHeading,
 import styles from "../Discovery.module.css";
 
 const path = "/discovery/top";
-const title = "Top Stoat Servers – Most Active Stoat Communities | Stoatmod Discovery";
+const title = "Top Stoat Servers – Most Active Communities | Stoatmod";
 const description = "The top Stoat servers on Stoatmod Discovery, ranked by public activity and members. Find the most active Stoat communities and join with a direct invite.";
 
 export const metadata = buildMetadata({ title, description, path, ...discoveryOgImage("top", "Top Stoat servers – Stoatmod Discovery") });
@@ -43,7 +43,8 @@ export default async function TopServersPage() {
       <SubHero eyebrow="Rankings" title={<>Top <span className={styles.heroAccent}>Stoat servers</span></>} description="The most active reviewed communities on Stoatmod Discovery, ranked by public activity, messages today and members. Rankings update throughout the day." />
       <DiscoveryNav active="top" />
       <Breadcrumbs items={breadcrumbs} />
-      <section className={`${styles.section} ${styles.sectionTight}`} aria-label="Top Stoat servers">
+      <section className={`${styles.section} ${styles.sectionTight}`} aria-labelledby="top-servers">
+        <h2 id="top-servers" className="sr-only">Top Stoat servers</h2>
         <RankedList servers={servers} />
       </section>
       <section className={styles.section} aria-labelledby="top-categories">
