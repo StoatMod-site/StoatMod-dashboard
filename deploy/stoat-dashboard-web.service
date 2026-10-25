@@ -7,7 +7,8 @@ Type=simple
 User=stoatmod
 WorkingDirectory=/opt/stoatmod-website
 EnvironmentFile=/opt/stoatmod-website/.env
-ExecStart=/usr/bin/pnpm start
+# Listen only on this machine; the reverse proxy (see Caddyfile.example) forwards public traffic.
+ExecStart=/usr/bin/pnpm start --hostname 127.0.0.1
 Restart=on-failure
 RestartSec=5
 NoNewPrivileges=true
