@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
 import { absoluteUrl, canonicalPath, siteConfig } from "./site-config";
 import { isPrivatePreview } from "./preview";
-import type { AppLocale } from "./i18n-core";
-import { OG_LOCALES, languageAlternates, localizedPath } from "./locale-routes";
 
 type MetadataInput = {
   title: string;
@@ -15,8 +13,6 @@ type MetadataInput = {
   index?: boolean;
   type?: "website" | "article";
   modifiedTime?: string;
-  /** Publish in this language: the canonical becomes the localised URL and hreflang alternates are listed. */
-  locale?: AppLocale;
 };
 
 export function buildMetadata({
@@ -30,19 +26,18 @@ export function buildMetadata({
   index = true,
   type = "website",
   modifiedTime,
-  locale,
 }: MetadataInput): Metadata {
-  const canonical = canonicalPath(locale ? localizedPath(path, locale) : path);
+  const canonical = canonicalPath(path);
   const absoluteCanonical = absoluteUrl(canonical);
   const absoluteImage = absoluteUrl(image);
   const shouldIndex = index && !isPrivatePreview();
   return {
     title,
     description,
-    alternates: { canonical: absoluteCanonical, ...(locale ? { languages: languageAlternates(canonicalPath(path), absoluteUrl) } : {}) },
+    alternates: { canonical: absoluteCanonical },
     openGraph: {
       type,
-      locale: OG_LOCALES[locale ?? "en"],
+      locale: "en_GB",
       url: absoluteCanonical,
       siteName: siteConfig.name,
       title,

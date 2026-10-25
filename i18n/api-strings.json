@@ -1,877 +1,877 @@
 [
  {
   "text": "Enter a fresh dashboard code to continue.",
-  "line": 296,
+  "line": 295,
   "file": "api/server.py"
  },
  {
   "text": "Your dashboard session has expired.",
-  "line": 299,
+  "line": 298,
   "file": "api/server.py"
  },
  {
   "text": "The server owner has revoked your dashboard access.",
-  "line": 304,
+  "line": 303,
   "file": "api/server.py"
  },
  {
   "text": "Only the server owner can manage dashboard access.",
-  "line": 313,
+  "line": 312,
   "file": "api/server.py"
  },
  {
   "text": "The security token is missing or invalid.",
-  "line": 322,
+  "line": 321,
   "file": "api/server.py"
  },
  {
   "text": "Enter a valid 26-character Stoat user ID.",
-  "line": 328,
+  "line": 327,
   "file": "api/server.py"
  },
  {
   "text": "Too many attempts. Wait five minutes and try again.",
-  "line": 357,
+  "line": 356,
   "file": "api/server.py"
  },
  {
   "text": "A JSON request body is required.",
-  "line": 363,
+  "line": 362,
   "file": "api/server.py"
  },
  {
   "text": "Enter the eight-character code sent by the bot.",
-  "line": 366,
+  "line": 365,
   "file": "api/server.py"
  },
  {
   "text": "That code is invalid, expired, or already used.",
-  "line": 369,
+  "line": 368,
   "file": "api/server.py"
  },
  {
   "text": "A valid notification cursor is required.",
-  "line": 514,
+  "line": 513,
   "file": "api/server.py"
  },
  {
   "text": "Enter a valid Stoat user ID.",
-  "line": 534,
+  "line": 533,
   "file": "api/server.py"
  },
  {
   "text": "The server owner always has dashboard access.",
-  "line": 536,
+  "line": 535,
   "file": "api/server.py"
  },
  {
   "text": "Choose a non-bot member of this server.",
-  "line": 540,
+  "line": 539,
   "file": "api/server.py"
  },
  {
   "text": "The server owner cannot revoke their own access.",
-  "line": 565,
+  "line": 564,
   "file": "api/server.py"
  },
  {
   "text": "That user does not have dashboard access.",
-  "line": 569,
+  "line": 568,
   "file": "api/server.py"
  },
  {
   "text": "That user is not blocked from the dashboard.",
-  "line": 594,
+  "line": 593,
   "file": "api/server.py"
  },
  {
   "text": "The server description must be between 20 and 500 characters.",
-  "line": 635,
+  "line": 634,
   "file": "api/server.py"
  },
  {
   "text": "Server information must be 1,500 characters or fewer.",
-  "line": 637,
+  "line": 636,
   "file": "api/server.py"
  },
  {
   "text": "Member not found in this server snapshot.",
-  "line": 815,
+  "line": 809,
   "file": "api/server.py"
  },
  {
   "text": "Choose warn, mute, kick, or ban.",
-  "line": 843,
+  "line": 837,
   "file": "api/server.py"
  },
  {
   "text": "Enter a reason between 3 and 1,000 characters.",
-  "line": 845,
+  "line": 839,
   "file": "api/server.py"
  },
  {
   "text": "Mute duration must be a whole number of seconds.",
-  "line": 856,
+  "line": 850,
   "file": "api/server.py"
  },
  {
   "text": "Mute duration must be between one minute and four weeks.",
-  "line": 858,
+  "line": 852,
   "file": "api/server.py"
  },
  {
   "text": "Enter a valid eight-character case reference.",
-  "line": 876,
+  "line": 870,
   "file": "api/server.py"
  },
  {
   "text": "Case not found in this server.",
-  "line": 886,
+  "line": 880,
   "file": "api/server.py"
  },
  {
   "text": "A valid case entry form is required.",
-  "line": 898,
+  "line": 892,
   "file": "api/server.py"
  },
  {
   "text": "A JSON object is required.",
-  "line": 901,
+  "line": 895,
   "file": "api/server.py"
  },
  {
   "text": "Add no more than {0} evidence images.",
-  "line": 916,
+  "line": 910,
   "file": "api/server.py"
  },
  {
   "text": "Each evidence image must be 4 MB or smaller.",
-  "line": 920,
+  "line": 914,
   "file": "api/server.py"
  },
  {
   "text": "Evidence images must be 8 MB or smaller in total.",
-  "line": 924,
+  "line": 918,
   "file": "api/server.py"
  },
  {
   "text": "An evidence image filename is invalid.",
-  "line": 928,
+  "line": 922,
   "file": "api/server.py"
  },
  {
   "text": "unsupported image format",
-  "line": 936,
+  "line": 930,
   "file": "api/server.py"
  },
  {
   "text": "unsafe image dimensions",
-  "line": 938,
+  "line": 932,
   "file": "api/server.py"
  },
  {
   "text": "Evidence files must be valid PNG, JPEG, WebP, or GIF images.",
-  "line": 942,
+  "line": 936,
   "file": "api/server.py"
  },
  {
   "text": "Choose note or evidence.",
-  "line": 958,
+  "line": 952,
   "file": "api/server.py"
  },
  {
   "text": "Images can only be attached to evidence entries.",
-  "line": 960,
+  "line": 954,
   "file": "api/server.py"
  },
  {
   "text": "Enter a valid evidence image ID.",
-  "line": 1003,
+  "line": 997,
   "file": "api/server.py"
  },
  {
   "text": "Evidence image not found.",
-  "line": 1011,
+  "line": 1005,
   "file": "api/server.py"
  },
  {
   "text": "Case not found in this server or already removed.",
-  "line": 1088,
+  "line": 1082,
   "file": "api/server.py"
  },
  {
   "text": "Announcement not found.",
-  "line": 1105,
+  "line": 1099,
   "file": "api/server.py"
  },
  {
   "text": "Too many appeal attempts. Wait five minutes and try again.",
-  "line": 1120,
+  "line": 1114,
   "file": "api/server.py"
  },
  {
   "text": "Agree to the privacy policy and appeal processing before submitting.",
-  "line": 1143,
+  "line": 1137,
   "file": "api/server.py"
  },
  {
   "text": "The appeal privacy notice has changed. Refresh and review it before agreeing.",
-  "line": 1146,
+  "line": 1140,
   "file": "api/server.py"
  },
  {
   "text": "Choose whether to permit AI improvement using the separate checkbox.",
-  "line": 1155,
+  "line": 1149,
   "file": "api/server.py"
  },
  {
   "text": "Review the current AI-improvement notice before opting in.",
-  "line": 1157,
+  "line": 1151,
   "file": "api/server.py"
  },
  {
   "text": "The appeal credentials are invalid.",
-  "line": 1175,
+  "line": 1169,
   "file": "api/server.py"
  },
  {
   "text": "Enter the ten-character appeal code sent by the bot.",
-  "line": 1193,
+  "line": 1187,
   "file": "api/server.py"
  },
  {
   "text": "Enter your Stoat user ID.",
-  "line": 1195,
+  "line": 1189,
   "file": "api/server.py"
  },
  {
   "text": "The appeal code and user ID do not match an eligible case.",
-  "line": 1200,
+  "line": 1194,
   "file": "api/server.py"
  },
  {
   "text": "Your appeal must be between 20 and 2,000 characters.",
-  "line": 1233,
+  "line": 1227,
   "file": "api/server.py"
  },
  {
   "text": "This appeal has already been decided.",
-  "line": 1240,
+  "line": 1234,
   "file": "api/server.py"
  },
  {
   "text": "This appeal could not be submitted.",
-  "line": 1253,
+  "line": 1247,
   "file": "api/server.py"
  },
  {
   "text": "Your response must be between 3 and 4,000 characters.",
-  "line": 1291,
+  "line": 1285,
   "file": "api/server.py"
  },
  {
   "text": "Only open appeals accept follow-up information.",
-  "line": 1298,
+  "line": 1292,
   "file": "api/server.py"
  },
  {
   "text": "Notification enabled must be true or false.",
-  "line": 1376,
+  "line": 1370,
   "file": "api/server.py"
  },
  {
   "text": "A valid appeal and JSON request body are required.",
-  "line": 1390,
+  "line": 1384,
   "file": "api/server.py"
  },
  {
   "text": "Choose approved or denied.",
-  "line": 1394,
+  "line": 1388,
   "file": "api/server.py"
  },
  {
   "text": "The decision reason must be between 3 and 1,000 characters.",
-  "line": 1396,
+  "line": 1390,
   "file": "api/server.py"
  },
  {
   "text": "Appeal not found.",
-  "line": 1404,
+  "line": 1398,
   "file": "api/server.py"
  },
  {
   "text": "Only submitted, undecided appeals can be reviewed.",
-  "line": 1407,
+  "line": 1401,
   "file": "api/server.py"
  },
  {
   "text": "The information request must be between 3 and 2,000 characters.",
-  "line": 1427,
+  "line": 1421,
   "file": "api/server.py"
  },
  {
   "text": "Open appeal not found.",
-  "line": 1432,
+  "line": 1426,
   "file": "api/server.py"
  },
  {
   "text": "Choose a panel first.",
-  "line": 1476,
+  "line": 1470,
   "file": "api/server.py"
  },
  {
   "text": "Choose whether to remove panel grants.",
-  "line": 1478,
+  "line": 1472,
   "file": "api/server.py"
  },
  {
   "text": "Choose a question to preview.",
-  "line": 1525,
+  "line": 1519,
   "file": "api/server.py"
  },
  {
   "text": "Application not found.",
-  "line": 1567,
+  "line": 1561,
   "file": "api/server.py"
  },
  {
   "text": "The reason must be text.",
-  "line": 1580,
+  "line": 1574,
   "file": "api/server.py"
  },
  {
   "text": "Per-category policies must be a list.",
-  "line": 1615,
+  "line": 1609,
   "file": "api/server.py"
  },
  {
   "text": "A valid onboarding step is required.",
-  "line": 1655,
+  "line": 1649,
   "file": "api/server.py"
  },
  {
   "text": "The global owner cannot be reported for a global ban.",
-  "line": 1673,
+  "line": 1667,
   "file": "api/server.py"
  },
  {
   "text": "Report not found.",
-  "line": 1712,
+  "line": 1706,
   "file": "api/server.py"
  },
  {
   "text": "Choose an instruction embed channel from this server.",
-  "line": 1734,
+  "line": 1728,
   "file": "api/server.py"
  },
  {
   "text": "A valid report and JSON request body are required.",
-  "line": 1773,
+  "line": 1767,
   "file": "api/server.py"
  },
  {
   "text": "Add a note between 3 and 4,000 characters.",
-  "line": 1777,
+  "line": 1771,
   "file": "api/server.py"
  },
  {
   "text": "Open report not found.",
-  "line": 1784,
+  "line": 1778,
   "file": "api/server.py"
  },
  {
   "text": "Choose request_information, resolved, or dismissed.",
-  "line": 1794,
+  "line": 1788,
   "file": "api/server.py"
  },
  {
   "text": "Automation name must be at least two characters.",
-  "line": 1833,
+  "line": 1827,
   "file": "api/server.py"
  },
  {
   "text": "Choose a supported automation trigger.",
-  "line": 1835,
+  "line": 1829,
   "file": "api/server.py"
  },
  {
   "text": "Keyword automations require a keyword.",
-  "line": 1837,
+  "line": 1831,
   "file": "api/server.py"
  },
  {
   "text": "Choose a supported automation action.",
-  "line": 1840,
+  "line": 1834,
   "file": "api/server.py"
  },
  {
   "text": "Automation action settings must be an object.",
-  "line": 1842,
+  "line": 1836,
   "file": "api/server.py"
  },
  {
   "text": "Condition mode must be all or any.",
-  "line": 1844,
+  "line": 1838,
   "file": "api/server.py"
  },
  {
   "text": "Automations support up to ten additional conditions.",
-  "line": 1846,
+  "line": 1840,
   "file": "api/server.py"
  },
  {
   "text": "Choose a supported automation condition.",
-  "line": 1856,
+  "line": 1850,
   "file": "api/server.py"
  },
  {
   "text": "Every automation condition requires a value.",
-  "line": 1860,
+  "line": 1854,
   "file": "api/server.py"
  },
  {
   "text": "Numeric automation conditions are outside the supported range.",
-  "line": 1864,
+  "line": 1858,
   "file": "api/server.py"
  },
  {
   "text": "Automations require between one and eight ordered actions.",
-  "line": 1870,
+  "line": 1864,
   "file": "api/server.py"
  },
  {
   "text": "Automation actions must be objects.",
-  "line": 1874,
+  "line": 1868,
   "file": "api/server.py"
  },
  {
   "text": "Timeout must be between one minute and four weeks.",
-  "line": 1882,
+  "line": 1876,
   "file": "api/server.py"
  },
  {
   "text": "This automation action requires a message or reason.",
-  "line": 1887,
+  "line": 1881,
   "file": "api/server.py"
  },
  {
   "text": "Automation not found.",
-  "line": 1926,
+  "line": 1920,
   "file": "api/server.py"
  },
  {
   "text": "No actions will be sent. This is a dry run.",
-  "line": 2050,
+  "line": 2044,
   "file": "api/server.py"
  },
  {
   "text": "Individual activity leaderboards have been removed.",
-  "line": 2080,
+  "line": 2074,
   "file": "api/server.py"
  },
  {
   "text": "scope must be server or global",
-  "line": 2084,
+  "line": 2078,
   "file": "api/server.py"
  },
  {
   "text": "Polls require between two and eight options.",
-  "line": 2092,
+  "line": 2086,
   "file": "api/server.py"
  },
  {
   "text": "Every poll option needs a label and emoji.",
-  "line": 2103,
+  "line": 2097,
   "file": "api/server.py"
  },
  {
   "text": "Every poll option must use a different emoji.",
-  "line": 2106,
+  "line": 2100,
   "file": "api/server.py"
  },
  {
   "text": "A poll request must be an object.",
-  "line": 2116,
+  "line": 2110,
   "file": "api/server.py"
  },
  {
   "text": "Quorum and reminder values must be whole numbers.",
-  "line": 2133,
+  "line": 2127,
   "file": "api/server.py"
  },
  {
   "text": "Poll schedule and closing time must be valid dates.",
-  "line": 2139,
+  "line": 2133,
   "file": "api/server.py"
  },
  {
   "text": "Choose a channel, a question, and between two and eight options.",
-  "line": 2155,
+  "line": 2149,
   "file": "api/server.py"
  },
  {
   "text": "Poll page and page size must be whole numbers.",
-  "line": 2201,
+  "line": 2195,
   "file": "api/server.py"
  },
  {
   "text": "Poll not found.",
-  "line": 2229,
+  "line": 2223,
   "file": "api/server.py"
  },
  {
   "text": "A poll template request must be an object.",
-  "line": 2245,
+  "line": 2239,
   "file": "api/server.py"
  },
  {
   "text": "Template names must be at least two characters.",
-  "line": 2263,
+  "line": 2257,
   "file": "api/server.py"
  },
  {
   "text": "Poll questions must be at least three characters.",
-  "line": 2265,
+  "line": 2259,
   "file": "api/server.py"
  },
  {
   "text": "The selected voting role is not in this server.",
-  "line": 2267,
+  "line": 2261,
   "file": "api/server.py"
  },
  {
   "text": "Poll quorum is outside the supported range.",
-  "line": 2269,
+  "line": 2263,
   "file": "api/server.py"
  },
  {
   "text": "Choose a supported poll reminder.",
-  "line": 2271,
+  "line": 2265,
   "file": "api/server.py"
  },
  {
   "text": "Poll template not found.",
-  "line": 2295,
+  "line": 2289,
   "file": "api/server.py"
  },
  {
   "text": "{0} must be true or false.",
-  "line": 2410,
+  "line": 2404,
   "file": "api/server.py"
  },
  {
   "text": "Every spam-protection setting is required.",
-  "line": 2423,
+  "line": 2417,
   "file": "api/server.py"
  },
  {
   "text": "{0} must be a number.",
-  "line": 2438,
+  "line": 2432,
   "file": "api/server.py"
  },
  {
   "text": "{0} must be a whole number.",
-  "line": 2450,
+  "line": 2444,
   "file": "api/server.py"
  },
  {
   "text": "Moderation threshold must be a number.",
-  "line": 2460,
+  "line": 2454,
   "file": "api/server.py"
  },
  {
   "text": "Moderation threshold must be between 0 and 1.",
-  "line": 2462,
+  "line": 2456,
   "file": "api/server.py"
  },
  {
   "text": "Server history retention settings have been removed. Refresh the dashboard.",
-  "line": 2466,
+  "line": 2460,
   "file": "api/server.py"
  },
  {
   "text": "Warning expiry must be Never, 7, 30, 90, 180, or 365 days.",
-  "line": 2474,
+  "line": 2468,
   "file": "api/server.py"
  },
  {
   "text": "Choose a text channel from this server.",
-  "line": 2485,
+  "line": 2479,
   "file": "api/server.py"
  },
  {
   "text": "Warning thresholds must be whole numbers.",
-  "line": 2495,
+  "line": 2489,
   "file": "api/server.py"
  },
  {
   "text": "Penalty rules must be a list.",
-  "line": 2511,
+  "line": 2505,
   "file": "api/server.py"
  },
  {
   "text": "Configure between one and twelve penalty stages.",
-  "line": 2517,
+  "line": 2511,
   "file": "api/server.py"
  },
  {
   "text": "Penalty thresholds must be unique from 1 to 100.",
-  "line": 2524,
+  "line": 2518,
   "file": "api/server.py"
  },
  {
   "text": "Choose timeout, kick, or ban.",
-  "line": 2526,
+  "line": 2520,
   "file": "api/server.py"
  },
  {
   "text": "Timeout duration must be from one minute to four weeks.",
-  "line": 2530,
+  "line": 2524,
   "file": "api/server.py"
  },
  {
   "text": "Moderation categories must be a valid list.",
-  "line": 2547,
+  "line": 2541,
   "file": "api/server.py"
  },
  {
   "text": "Unsupported moderation category: {0}",
-  "line": 2552,
+  "line": 2546,
   "file": "api/server.py"
  },
  {
   "text": "Automatic roles must be a list of at most 25 role IDs.",
-  "line": 2579,
+  "line": 2573,
   "file": "api/server.py"
  },
  {
   "text": "Each automatic role must be a valid Stoat role ID.",
-  "line": 2588,
+  "line": 2582,
   "file": "api/server.py"
  },
  {
   "text": "Each automatic role must exist in this server.",
-  "line": 2590,
+  "line": 2584,
   "file": "api/server.py"
  },
  {
   "text": "Exempt channels must be a list of at most 100 channel IDs.",
-  "line": 2608,
+  "line": 2602,
   "file": "api/server.py"
  },
  {
   "text": "Each exempt channel must exist in this server.",
-  "line": 2624,
+  "line": 2618,
   "file": "api/server.py"
  },
  {
   "text": "Exempt categories must be a list of at most 100 category IDs.",
-  "line": 2632,
+  "line": 2626,
   "file": "api/server.py"
  },
  {
   "text": "Each exempt category must exist in this server.",
-  "line": 2640,
+  "line": 2634,
   "file": "api/server.py"
  },
  {
   "text": "This verification link is invalid or expired.",
-  "line": 2727,
+  "line": 2721,
   "file": "api/server.py"
  },
  {
   "text": "Verification failed three times. Removal from the server is queued.",
-  "line": 2804,
+  "line": 2798,
   "file": "api/server.py"
  },
  {
   "text": "Verification failed. Attempt {0} of 3.",
-  "line": 2829,
+  "line": 2823,
   "file": "api/server.py"
  },
  {
   "text": "Agree to the privacy policy and verification processing before submitting.",
-  "line": 2851,
+  "line": 2845,
   "file": "api/server.py"
  },
  {
   "text": "The verification privacy notice has changed. Refresh and review it before agreeing.",
-  "line": 2853,
+  "line": 2847,
   "file": "api/server.py"
  },
  {
   "text": "Too many verification attempts. Try again later.",
-  "line": 2866,
+  "line": 2860,
   "file": "api/server.py"
  },
  {
   "text": "Browser CAPTCHA is not configured yet.",
-  "line": 2869,
+  "line": 2863,
   "file": "api/server.py"
  },
  {
   "text": "Browser CAPTCHA is temporarily unavailable. Try again later.",
-  "line": 2874,
+  "line": 2868,
   "file": "api/server.py"
  },
  {
   "text": "This application is no longer waiting for verification.",
-  "line": 2880,
+  "line": 2874,
   "file": "api/server.py"
  },
  {
   "text": "This verification link has already been used or expired.",
-  "line": 2882,
+  "line": 2876,
   "file": "api/server.py"
  },
  {
   "text": "This verification link has already been used.",
-  "line": 2889,
+  "line": 2883,
   "file": "api/server.py"
  },
  {
   "text": "Choose a 30 or 90 day history window.",
-  "line": 2921,
+  "line": 2915,
   "file": "api/server.py"
  },
  {
   "text": "Requests are being accepted normally.",
-  "line": 2928,
+  "line": 2922,
   "file": "api/server.py"
  },
  {
   "text": "Waiting for the local model's first monitoring check.",
-  "line": 3020,
+  "line": 3014,
   "file": "api/server.py"
  },
  {
   "text": "Global report {0}",
-  "line": 3124,
+  "line": 3118,
   "file": "api/server.py"
  },
  {
   "text": "Missing token.",
-  "line": 3179,
+  "line": 3173,
   "file": "api/server.py"
  },
  {
   "text": "This report link has expired or is invalid.",
-  "line": 3184,
+  "line": 3178,
   "file": "api/server.py"
  },
  {
   "text": "Too many report attempts. Try again later.",
-  "line": 3213,
+  "line": 3207,
   "file": "api/server.py"
  },
  {
   "text": "This report link has expired.",
-  "line": 3225,
+  "line": 3219,
   "file": "api/server.py"
  },
  {
   "text": "Choose a valid report subject.",
-  "line": 3270,
+  "line": 3264,
   "file": "api/server.py"
  },
  {
   "text": "Global reports must identify a Stoat user.",
-  "line": 3272,
+  "line": 3266,
   "file": "api/server.py"
  },
  {
   "text": "A reason between 3 and 2,000 characters is required.",
-  "line": 3274,
+  "line": 3268,
   "file": "api/server.py"
  },
  {
   "text": "Report evidence or subject details are too long.",
-  "line": 3276,
+  "line": 3270,
   "file": "api/server.py"
  },
  {
   "text": "A target user ID is required for member reports.",
-  "line": 3278,
+  "line": 3272,
   "file": "api/server.py"
  },
  {
   "text": "Describe what you are reporting.",
-  "line": 3287,
+  "line": 3281,
   "file": "api/server.py"
  },
  {
   "text": "Your browser could not be verified.",
-  "line": 3292,
+  "line": 3286,
   "file": "api/server.py"
  },
  {
   "text": "Server reporting is no longer enabled for this server.",
-  "line": 3297,
+  "line": 3291,
   "file": "api/server.py"
  },
  {
   "text": "Anonymous reports are not enabled for this server.",
-  "line": 3301,
+  "line": 3295,
   "file": "api/server.py"
  },
  {
   "text": "Browser CAPTCHA was not completed successfully.",
-  "line": 3311,
+  "line": 3305,
   "file": "api/server.py"
  },
  {
   "text": "Maximum 5 attachments allowed.",
-  "line": 3317,
+  "line": 3311,
   "file": "api/server.py"
  },
  {
   "text": "Total attachments size must be under 8MB.",
-  "line": 3322,
+  "line": 3316,
   "file": "api/server.py"
  },
  {
   "text": "Report delivery is temporarily unavailable.",
-  "line": 3326,
+  "line": 3320,
   "file": "api/server.py"
  },
  {
   "text": "This report link was already used or has expired.",
-  "line": 3330,
+  "line": 3324,
   "file": "api/server.py"
  },
  {
   "text": "Report delivery failed. Please try again.",
-  "line": 3389,
+  "line": 3383,
   "file": "api/server.py"
  },
  {
   "text": "Report receipt not found.",
-  "line": 3412,
+  "line": 3406,
   "file": "api/server.py"
  },
  {
   "text": "Too many report responses. Try again later.",
-  "line": 3428,
+  "line": 3422,
   "file": "api/server.py"
  },
  {
   "text": "This report is closed and no longer accepts responses.",
-  "line": 3435,
+  "line": 3429,
   "file": "api/server.py"
  },
  {
   "text": "This report has reached its follow-up message limit.",
-  "line": 3447,
+  "line": 3441,
   "file": "api/server.py"
  },
  {
   "text": "This report has reached its attachment limit.",
-  "line": 3449,
+  "line": 3443,
   "file": "api/server.py"
  },
  {
   "text": "This report has reached its evidence storage limit.",
-  "line": 3451,
+  "line": 3445,
   "file": "api/server.py"
  },
  {

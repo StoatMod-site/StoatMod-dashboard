@@ -4,10 +4,7 @@ import { useMemo, useState } from "react";
 import { PublicFooter } from "./PublicFooter";
 import { ServerArtwork } from "./ServerArtwork";
 import { SiteNav } from "./SiteNav";
-import { AdvertiseBand, CategoryTiles, DiscoveryNav, Faq, SectionHeading, ServerCard, ServerGrid, Spotlight, VerifiedBadge, serverPath } from "./discovery/DiscoveryUI";
-import { compileDictionary, translateTextIn, type AppLocale } from "./lib/i18n-core";
-import { localizeTree, type LocalizeOptions } from "./lib/localize-tree";
-import { localizedPath } from "./lib/locale-routes";
+import { AdvertiseBand, CategoryTiles, DiscoveryNav, Faq, SectionHeading, ServerCard, ServerGrid, Spotlight, serverPath } from "./discovery/DiscoveryUI";
 import { compactNumber, directoryStats, discoveryLanguages, rankActive, rankBumped, rankNewest, rankPopular, topTags } from "./lib/discovery-catalog";
 import { discoveryFaq } from "./lib/discovery-faq";
 import { pluralize } from "./lib/plural";
@@ -22,17 +19,6 @@ const SORTS: { key: Sort; label: string }[] = [
   { key: "newest", label: "Newest" },
 ];
 const PAGE_SIZE = 60;
-// Components without hooks that may be rendered inline so their text can be localised.
-const INLINE = new Set<unknown>([SiteNav, PublicFooter, AdvertiseBand, CategoryTiles, DiscoveryNav, Faq, SectionHeading, ServerCard, ServerGrid, Spotlight, VerifiedBadge]);
-
-function localizeOptions(locale: AppLocale, messages: Record<string, string>): LocalizeOptions {
-  const dictionary = compileDictionary(messages);
-  return {
-    text: (value) => translateTextIn(dictionary, {}, locale, value),
-    href: (value) => (value.startsWith("/") ? localizedPath(value, locale) : value),
-    inline: (type) => INLINE.has(type),
-  };
-}
 
 function searchScore(server: DiscoveryServer, tokens: string[]) {
   const name = server.server_name.toLowerCase();
@@ -54,9 +40,7 @@ function sorted(servers: DiscoveryServer[], sort: Sort) {
   return rankPopular(servers);
 }
 
-/** `locale` and `messages` (dictionary entries chosen by the server) publish the hub in another language. */
-export function DiscoveryPage({ initialServers, featuredIds = [], spotlightId = null, dataAvailable = true, locale = "en", messages = {} }: { initialServers: DiscoveryServer[]; featuredIds?: string[]; spotlightId?: string | null; dataAvailable?: boolean; locale?: AppLocale; messages?: Record<string, string> }) {
-  const localize = useMemo(() => (locale === "en" ? null : localizeOptions(locale, messages)), [locale, messages]);
+export function DiscoveryPage({ initialServers, featuredIds = [], spotlightId = null, dataAvailable = true }: { initialServers: DiscoveryServer[]; featuredIds?: string[]; spotlightId?: string | null; dataAvailable?: boolean }) {
   const servers = initialServers;
   const [query, setQuery] = useState("");
   const [tag, setTag] = useState("");
@@ -97,8 +81,8 @@ export function DiscoveryPage({ initialServers, featuredIds = [], spotlightId = 
     setVisible(PAGE_SIZE);
   }
 
-  const page = (
-    <main className={styles.page} lang={locale === "en" ? undefined : locale}>
+  return (
+    <main className={styles.page}>
       <SiteNav active="discovery" />
       <section className={styles.hero} aria-labelledby="discovery-title">
         <div className={styles.glow} aria-hidden="true" />
@@ -172,5 +156,4 @@ export function DiscoveryPage({ initialServers, featuredIds = [], spotlightId = 
       <PublicFooter />
     </main>
   );
-  return localize ? localizeTree(page, localize) : page;
 }
