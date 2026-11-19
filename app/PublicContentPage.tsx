@@ -14,6 +14,7 @@ const staticRelatedTitles: Record<string, string> = {
   "/discovery": "Discover reviewed Stoat servers",
   "/privacy": "Privacy policy",
   "/privacy-changes": "What we changed about privacy",
+  "/stoat-privacy": "Stoat bots and how they use your data",
   "/status": "Service status",
 };
 

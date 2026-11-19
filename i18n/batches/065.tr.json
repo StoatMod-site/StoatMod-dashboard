@@ -1,0 +1,502 @@
+[
+ [
+  "Chercher des délais",
+  "Procure prazos",
+  "Busca plazos"
+ ],
+ [
+  "Le contenu des messages et les pièces jointes devraient disparaître au bout d'environ 30 jours, sauf si quelque chose comme un appel en a besoin. « Jusqu'au retrait du bot » est la durée maximale que Stoat autorise pour les autres données.",
+  "O conteúdo das mensagens e os anexos devem desaparecer ao fim de cerca de 30 dias, a menos que algo como um recurso precise deles. \"Até o bot ser removido\" é o máximo que o Stoat permite para outros dados.",
+  "El contenido de los mensajes y los adjuntos deberían desaparecer a los 30 días aproximadamente, salvo que algo como una apelación los necesite. «Hasta que se quite el bot» es lo máximo que Stoat permite para otros datos."
+ ],
+ [
+  "Vérifier si le code est public",
+  "Verifique se o código é público",
+  "Comprueba si el código es público"
+ ],
+ [
+  "Les bots open source peuvent être vérifiés ligne par ligne. Pour les bots dont le code est fermé, vous vous fiez à ce que dit le développeur.",
+  "Os bots de código aberto podem ser verificados linha a linha. Nos bots de código fechado, está a confiar no que o programador lhe diz.",
+  "Los bots de código abierto se pueden comprobar línea por línea. Con los de código cerrado dependes de lo que te diga el desarrollador."
+ ],
+ [
+  "Les bots Stoat et l'usage qu'ils font de vos données | Stoatmod",
+  "Os bots do Stoat e como usam os seus dados | Stoatmod",
+  "Los bots de Stoat y cómo usan tus datos | Stoatmod"
+ ],
+ [
+  "Les bots Stoat et l'usage qu'ils font de vos données.",
+  "Os bots do Stoat e como usam os seus dados.",
+  "Los bots de Stoat y cómo usan tus datos."
+ ],
+ [
+  "Ce que des bots Stoat populaires comme AutoMod, Kuma, bronx et bolt collectent, conservent et partagent, ce qui a changé depuis octobre 2026, et ce que Stoat a dit de la confidentialité des bots.",
+  "O que bots populares do Stoat como o AutoMod, o Kuma, o bronx e o bolt recolhem, guardam e partilham, o que mudou desde outubro de 2026 e o que o Stoat disse sobre a privacidade dos bots.",
+  "Qué recopilan, guardan y comparten bots populares de Stoat como AutoMod, Kuma, bronx y bolt, qué ha cambiado desde octubre de 2026 y qué ha dicho Stoat sobre la privacidad de los bots."
+ ],
+ [
+  "Confidentialité sur Stoat",
+  "Privacidade no Stoat",
+  "Privacidad en Stoat"
+ ],
+ [
+  "Données des bots Stoat",
+  "Dados dos bots do Stoat",
+  "Datos de los bots de Stoat"
+ ],
+ [
+  "Politique de confidentialité des bots Stoat",
+  "Política de privacidade dos bots do Stoat",
+  "Política de privacidad de los bots de Stoat"
+ ],
+ [
+  "Confidentialité d'AutoMod sur Stoat",
+  "Privacidade do AutoMod no Stoat",
+  "Privacidad de AutoMod en Stoat"
+ ],
+ [
+  "Bots-ponts Stoat",
+  "Bots de ponte do Stoat",
+  "Bots puente de Stoat"
+ ],
+ [
+  "Règles de Stoat pour les développeurs",
+  "Diretrizes do Stoat para programadores",
+  "Normas de Stoat para desarrolladores"
+ ],
+ [
+  "Politique pour les développeurs de bots",
+  "Política para programadores de bots",
+  "Política para desarrolladores de bots"
+ ],
+ [
+  "Consentement",
+  "Consentimento",
+  "Consentimiento"
+ ],
+ [
+  "Tous les bots revérifiés le",
+  "Todos os bots verificados de novo a",
+  "Todos los bots revisados de nuevo el"
+ ],
+ [
+  "Les bots Stoat et",
+  "Os bots do Stoat e",
+  "Los bots de Stoat y"
+ ],
+ [
+  "l'usage qu'ils font de vos données.",
+  "como usam os seus dados.",
+  "cómo usan tus datos."
+ ],
+ [
+  "Sur Stoat, les bots peuvent lire vos messages, suivre votre activité et copier ce que vous dites vers d'autres plateformes. Cette page examine ce que des bots populaires collectent, conservent et partagent, ce qui a changé depuis notre premier examen, et ce que Stoat a dit des règles.",
+  "No Stoat, os bots podem ler as suas mensagens, acompanhar a sua atividade e copiar o que diz para outras plataformas. Esta página analisa o que bots populares recolhem, guardam e partilham, o que mudou desde a primeira análise e o que o Stoat disse sobre as regras.",
+  "En Stoat, los bots pueden leer tus mensajes, seguir tu actividad y copiar lo que dices a otras plataformas. Esta página analiza qué recopilan, guardan y comparten bots populares, qué ha cambiado desde que los miramos por primera vez y qué ha dicho Stoat sobre las normas."
+ ],
+ [
+  "Ce que Stoatmod a changé",
+  "O que o Stoatmod mudou",
+  "Lo que ha cambiado Stoatmod"
+ ],
+ [
+  "La plupart des bots ne demandent toujours pas d'abord.",
+  "A maioria dos bots continua a não pedir autorização primeiro.",
+  "La mayoría de los bots siguen sin preguntar primero."
+ ],
+ [
+  "Stoat n'a pas encore publié ses règles pour les développeurs. Kuma a corrigé deux des problèmes que nous avions soulevés, bronx a ajouté une option de refus et AutoMod n'a toujours pas de politique de confidentialité. Les ponts copient toujours des messages hors de Stoat sans demander aux membres.",
+  "O Stoat ainda não publicou as suas regras para programadores. O Kuma corrigiu dois dos problemas que apontámos, o bronx adicionou uma opção de saída e o AutoMod continua sem política de privacidade. As pontes continuam a copiar mensagens para fora do Stoat sem perguntar aos membros.",
+  "Stoat aún no ha publicado sus normas para desarrolladores. Kuma ha corregido dos de los problemas que señalamos, bronx ha añadido una opción de exclusión y AutoMod sigue sin política de privacidad. Los puentes siguen copiando mensajes fuera de Stoat sin preguntar a los miembros."
+ ],
+ [
+  "7 bots et groupes examinés",
+  "7 bots e grupos analisados",
+  "7 bots y grupos analizados"
+ ],
+ [
+  "Chaque constat renvoie à sa source",
+  "Cada conclusão tem ligação à sua fonte",
+  "Cada hallazgo enlaza a su fuente"
+ ],
+ [
+  "01 / Où en sont les choses",
+  "01 / Ponto da situação",
+  "01 / Cómo están las cosas"
+ ],
+ [
+  "Ce qui a changé depuis octobre, et ce qui n'a pas changé.",
+  "O que mudou desde outubro, e o que não mudou.",
+  "Qué ha cambiado desde octubre, y qué no."
+ ],
+ [
+  "Nous avons relu les pages publiques de chaque bot, et leur code le plus récent quand il est public, le",
+  "Voltámos a ler as páginas públicas de cada bot, e o código mais recente quando é público, a",
+  "Volvimos a leer las páginas públicas de cada bot, y su código más reciente cuando es público, el"
+ ],
+ [
+  "État de la confidentialité des bots Stoat",
+  "Situação da privacidade dos bots do Stoat",
+  "Estado de la privacidad de los bots de Stoat"
+ ],
+ [
+  "Bot",
+  "Bot",
+  "Bot"
+ ],
+ [
+  "Toujours en suspens",
+  "Ainda em aberto",
+  "Sigue pendiente"
+ ],
+ [
+  "02 / Pourquoi nous examinons les autres bots",
+  "02 / Porque analisamos outros bots",
+  "02 / Por qué analizamos otros bots"
+ ],
+ [
+  "Le 5 septembre 2026, l'équipe Trust & Safety de Stoat a donné 30 jours à Stoatmod pour supprimer ou repenser les parties qui collectaient ou conservaient des données sans consentement, et nous l'avons fait. L'avis citait les règles de la communauté publiées par Stoat :",
+  "A 5 de setembro de 2026, a equipa Trust & Safety do Stoat deu ao Stoatmod 30 dias para remover ou redesenhar as partes que recolhiam ou guardavam dados sem consentimento, e assim fizemos. O aviso citava as Diretrizes da Comunidade publicadas pelo Stoat:",
+  "El 5 de septiembre de 2026, el equipo de Trust & Safety de Stoat dio a Stoatmod 30 días para eliminar o rediseñar las partes que recopilaban o guardaban datos sin consentimiento, y lo hicimos. El aviso citaba las Normas de la Comunidad publicadas por Stoat:"
+ ],
+ [
+  "Si chaque bot doit respecter ces exigences de façon indépendante, chaque développeur de bot doit pouvoir les lire. Plus de deux mois plus tard, elles ne sont toujours pas publiées : les autres développeurs ne peuvent donc pas les connaître, et les utilisateurs ne peuvent pas vérifier si les bots de leurs serveurs les respectent. bronx, par exemple, conserve toujours des compteurs de messages par personne sans date d'expiration et classe les gens dans des classements visibles par tous les membres, soit le genre d'« enregistrements au niveau de l'utilisateur » que Stoat nous a dit interdits.",
+  "Se todos os bots têm de cumprir estes requisitos de forma independente, todos os programadores de bots têm de os poder ler. Mais de dois meses depois, continuam por publicar, por isso os outros programadores não os podem conhecer e os utilizadores não podem verificar se os bots dos seus servidores os cumprem. O bronx, por exemplo, continua a guardar contagens de mensagens por pessoa sem prazo e a classificar pessoas em tabelas que qualquer membro pode ver, que é o tipo de \"registos ao nível do utilizador\" que o Stoat nos disse não serem permitidos.",
+  "Si cada bot debe cumplir estos requisitos de forma independiente, cada desarrollador de bots necesita poder leerlos. Más de dos meses después siguen sin publicarse, así que los demás desarrolladores no pueden conocerlos y los usuarios no pueden comprobar si los bots de sus servidores los cumplen. bronx, por ejemplo, sigue guardando recuentos de mensajes por persona sin caducidad y clasificando a la gente en tablas que cualquier miembro puede ver, que es el tipo de «registros a nivel de usuario» que Stoat nos dijo que no están permitidos."
+ ],
+ [
+  "Le propre site d'AutoMod indique que son développeur fait partie de l'équipe Stoat depuis 2023, et son serveur d'assistance porte le badge vérifié de Stoat. Il lit les messages des membres dans chaque serveur où il se trouve. Pourtant, au",
+  "O próprio site do AutoMod diz que o seu programador faz parte da equipa do Stoat desde 2023, e o servidor de suporte tem o selo de verificação do Stoat. Lê as mensagens dos membros em todos os servidores onde está. No entanto, a",
+  "El propio sitio web de AutoMod dice que su desarrollador forma parte del equipo de Stoat desde 2023, y su servidor de soporte tiene la insignia de verificación de Stoat. Lee los mensajes de los miembros en todos los servidores en los que está. Aun así, a"
+ ],
+ [
+  "son site n'a toujours ni politique de confidentialité, ni conditions, ni avis indiquant aux utilisateurs ce qu'il collecte, combien de temps il le conserve, ou comment refuser ou demander la suppression.",
+  "o seu site continua sem política de privacidade, termos ou aviso que diga aos utilizadores o que recolhe, durante quanto tempo o guarda ou como recusar ou pedir a eliminação.",
+  "su sitio web sigue sin política de privacidad, condiciones ni aviso que diga a los usuarios qué recopila, cuánto tiempo lo guarda o cómo negarse o pedir que se elimine."
+ ],
+ [
+  "03 / Bot par bot",
+  "03 / Bot a bot",
+  "03 / Bot por bot"
+ ],
+ [
+  "Ce que chaque bot collecte, conserve et partage.",
+  "O que cada bot recolhe, guarda e partilha.",
+  "Qué recopila, guarda y comparte cada bot."
+ ],
+ [
+  "Nous avons signalé log_it et AutoMod à Stoat en raison de ce que leur documentation publique semblait décrire. Nous avons examiné plus tard bronx, un groupe de trois bots d'un même développeur, bolt et Kuma. AutoMod, bronx et bolt sont open source, nous avons donc aussi lu leur code pour vérifier ce qu'ils font réellement. Le code de log_it, de Kuma et du groupe de trois bots n'est pas public : pour eux, nous nous sommes appuyés sur ce que disent leurs propres sites et profils. Ces exemples sont là pour montrer pourquoi une réponse à l'échelle de la plateforme est nécessaire, pas pour accuser qui que ce soit.",
+  "Falámos do log_it e do AutoMod ao Stoat por causa do que a sua documentação pública parecia descrever. Mais tarde analisámos o bronx, um grupo de três bots do mesmo programador, o bolt e o Kuma. O AutoMod, o bronx e o bolt são de código aberto, por isso também lemos o código para verificar o que fazem realmente. O código do log_it, do Kuma e do grupo de três bots não é público, por isso, nesses casos, baseámo-nos no que dizem os seus próprios sites e perfis. Estes exemplos servem para mostrar porque é precisa uma resposta para toda a plataforma, e não para acusar ninguém.",
+  "Planteamos log_it y AutoMod a Stoat por lo que parecía describir su documentación pública. Más tarde analizamos bronx, un grupo de tres bots del mismo desarrollador, bolt y Kuma. AutoMod, bronx y bolt son de código abierto, así que también leímos su código para comprobar qué hacen realmente. El código de log_it, Kuma y el grupo de tres bots no es público, así que en esos casos nos basamos en lo que dicen sus propios sitios web y perfiles. Estos ejemplos sirven para mostrar por qué hace falta una respuesta para toda la plataforma, no para acusar a nadie."
+ ],
+ [
+  "Une coche verte signifie que les pages publiques du bot montrent que le problème a depuis été corrigé. Nous avons revérifié chaque bot le",
+  "Um visto verde significa que as páginas públicas do bot mostram que o problema já foi corrigido. Voltámos a verificar todos os bots a",
+  "Una marca verde significa que las páginas públicas del bot muestran que el problema ya se ha corregido. Volvimos a revisar cada bot el"
+ ],
+ [
+  "Bot de modération · open source · pas de politique de confidentialité",
+  "Bot de moderação · código aberto · sem política de privacidade",
+  "Bot de moderación · código abierto · sin política de privacidad"
+ ],
+ [
+  "Le développeur d'AutoMod fait partie de l'équipe Stoat, et son serveur d'assistance est vérifié par Stoat. Nous avons lu son code pour la première fois le 2 octobre 2026. Quand nous avons revérifié le",
+  "O programador do AutoMod faz parte da equipa do Stoat, e o servidor de suporte é verificado pelo Stoat. Lemos o código pela primeira vez a 2 de outubro de 2026. Quando voltámos a verificar a",
+  "El desarrollador de AutoMod forma parte del equipo de Stoat, y su servidor de soporte está verificado por Stoat. Leímos su código por primera vez el 2 de octubre de 2026. Cuando volvimos a revisarlo el"
+ ],
+ [
+  ", le dernier commit de son dépôt était toujours cette même version : les constats ci-dessous décrivent donc le code tel qu'il est aujourd'hui. Son site ne renvoie toujours vers aucune politique de confidentialité, conditions ou page juridique, son adresse de confidentialité renvoie « introuvable », et il n'a publié aucun article de blog depuis juillet.",
+  ", o commit mais recente do repositório continuava a ser essa mesma versão, por isso as conclusões abaixo descrevem o código tal como está hoje. O site continua sem ligação a qualquer política de privacidade, termos ou página legal, o endereço de privacidade devolve \"não encontrado\" e não publicou nenhum artigo no blogue desde julho.",
+  ", el commit más reciente de su repositorio seguía siendo esa misma versión, así que los hallazgos de abajo describen el código tal como está hoy. Su sitio web sigue sin enlazar ninguna política de privacidad, condiciones ni página legal, su dirección de privacidad devuelve «no encontrado» y no ha publicado ninguna entrada de blog desde julio."
+ ],
+ [
+  "Pour être juste envers AutoMod, nous n'avons trouvé ni statistiques d'activité par personne, ni partage entre serveurs, ni messages envoyés à un service d'IA externe. Sa principale lacune est qu'il n'indique pas aux membres ce qu'il collecte ni combien de temps il le conserve.",
+  "Para sermos justos com o AutoMod, não encontrámos estatísticas de atividade por pessoa, partilha entre servidores nem mensagens enviadas para um serviço de IA externo. A sua principal lacuna é não dizer aos membros o que recolhe nem durante quanto tempo o guarda.",
+  "Para ser justos con AutoMod, no encontramos estadísticas de actividad por persona, intercambio entre servidores ni mensajes enviados a un servicio de IA externo. Su principal carencia es que no dice a los miembros qué recopila ni cuánto tiempo lo guarda."
+ ],
+ [
+  "nous ne voyons que le code, pas l'instance officielle : le premier constat reflète donc ce que le développeur nous a dit.",
+  "só conseguimos ver o código, não a instância oficial, por isso a primeira conclusão reflete o que o programador nos disse.",
+  "solo podemos ver el código, no la instancia oficial, así que el primer hallazgo refleja lo que nos dijo el desarrollador."
+ ],
+ [
+  "en octobre, le développeur a dit que Stoat avait demandé à AutoMod d'en créer une et qu'il attendait un avis juridique. Sept semaines plus tard, elle n'est toujours pas parue.",
+  "em outubro, o programador disse que o Stoat tinha pedido ao AutoMod para criar uma e que estava à espera de aconselhamento jurídico. Sete semanas depois, ainda não apareceu.",
+  "en octubre, el desarrollador dijo que Stoat había pedido a AutoMod que creara una y que estaba esperando asesoramiento legal. Siete semanas después, sigue sin aparecer."
+ ],
+ [
+  "c'était le premier signe que Stoat demande aux autres bots de respecter les mêmes exigences. C'est bienvenu, mais cela s'est fait en privé : les règles elles-mêmes restent non publiées.",
+  "foi o primeiro sinal que vimos de que o Stoat está a pedir aos outros bots que cumpram os mesmos requisitos. É bem-vindo, mas foi feito em privado, por isso as regras continuam por publicar.",
+  "fue la primera señal que vimos de que Stoat pide a otros bots que cumplan los mismos requisitos. Es positivo, pero llegó en privado, así que las normas siguen sin publicarse."
+ ],
+ [
+  "Bot tout-en-un · a une politique de confidentialité · code non public",
+  "Bot tudo-em-um · tem política de privacidade · código não público",
+  "Bot todo en uno · tiene política de privacidad · código no público"
+ ],
+ [
+  "Kuma se présente comme « le bot communautaire et de sécurité tout-en-un le plus avancé de Stoat ». Pour être juste envers Kuma, il publie une politique de confidentialité détaillée, permet aux membres de consulter, d'exporter et de supprimer leurs données, dit ne pas conserver de copies des messages et supprime automatiquement certains enregistrements. Son code n'est pas public : tout ce qui suit provient donc du site de Kuma, de sa politique de confidentialité et de sa page de commandes. Nous les avons lus pour la première fois le 6 octobre 2026, puis à nouveau le",
+  "O Kuma descreve-se como \"o bot de comunidade e segurança tudo-em-um mais avançado do Stoat\". Para sermos justos com o Kuma, publica uma política de privacidade detalhada, permite aos membros ver, exportar e eliminar os seus dados, diz que não guarda cópias das mensagens e elimina alguns registos automaticamente. O código não é público, por isso tudo o que se segue vem do próprio site do Kuma, da política de privacidade e da página de comandos. Lemo-los pela primeira vez a 6 de outubro de 2026 e novamente a",
+  "Kuma se describe como «el bot de comunidad y seguridad todo en uno más avanzado de Stoat». Para ser justos con Kuma, publica una política de privacidad detallada, permite a los miembros ver, exportar y eliminar sus datos, dice que no guarda copias de los mensajes y elimina algunos registros automáticamente. Su código no es público, así que todo lo que sigue procede del propio sitio web de Kuma, su política de privacidad y su página de comandos. Los leímos por primera vez el 6 de octubre de 2026 y de nuevo el"
+ ],
+ [
+  ", quand sa politique de confidentialité indiquait une dernière mise à jour en novembre 2026.",
+  ", quando a política de privacidade indicava ter sido atualizada pela última vez em novembro de 2026.",
+  ", cuando su política de privacidad decía haberse actualizado por última vez en noviembre de 2026."
+ ],
+ [
+  "Sur Stoat, la vérification de Kuma utilise désormais son propre puzzle, un dessin, un quiz sur les règles ou une période probatoire pour les nouveaux, sans CAPTCHA Cloudflare et sans rien examiner de votre connexion. L'analyse des images, qui envoie les images à l'API Vision de Google, n'est disponible que sur Discord et Fluxer. La liaison de comptes avec !link se fait sur consentement.",
+  "No Stoat, a verificação do Kuma usa agora o seu próprio puzzle, um desenho, um questionário sobre as regras ou um período de experiência para recém-chegados, sem CAPTCHA da Cloudflare e sem nada sobre a sua ligação. A análise de imagens, que envia imagens para a API Vision da Google, só está disponível no Discord e no Fluxer. A ligação de contas com !link exige consentimento.",
+  "En Stoat, la verificación de Kuma usa ahora su propio rompecabezas, un dibujo, un cuestionario sobre las normas o un periodo de prueba para los recién llegados, sin CAPTCHA de Cloudflare y sin mirar nada de tu conexión. El análisis de imágenes, que envía imágenes a la API Vision de Google, solo está disponible en Discord y Fluxer. La vinculación de cuentas con !link requiere consentimiento."
+ ],
+ [
+  "14 octobre 2026 : Kuma a refait sa vérification sur Stoat",
+  "14 de outubro de 2026: o Kuma refez a verificação no Stoat",
+  "14 de octubre de 2026: Kuma rehízo su verificación en Stoat"
+ ],
+ [
+  "Kuma a dit que ces changements mettent sa vérification en conformité avec les règles de Stoat : aucune vérification d'IP, de VPN ou de connexion, suppression des adresses IP hachées des vérifications précédentes, sa propre vérification de navigateur à la place du CAPTCHA Cloudflare, et aucune utilisation des signalements d'autres serveurs sur Stoat. Sa politique de confidentialité de novembre dit toujours tout cela. Nous nous en réjouissons, et nous voyons l'abandon de Cloudflare Turnstile par Kuma comme un pas dans la bonne direction.",
+  "O Kuma disse que as alterações põem a sua verificação de acordo com as diretrizes do Stoat: sem verificações de IP, VPN ou ligação, endereços IP com hash de verificações anteriores eliminados, a sua própria verificação do navegador em vez do CAPTCHA da Cloudflare e sem uso das denúncias de outros servidores no Stoat. A política de privacidade de novembro continua a dizer tudo isto. Saudamos a mudança e vemos o abandono do Cloudflare Turnstile pelo Kuma como um passo na direção certa.",
+  "Kuma dijo que los cambios adaptan su verificación a las normas de Stoat: sin comprobaciones de IP, VPN ni de conexión, con las direcciones IP con hash de verificaciones anteriores eliminadas, su propia comprobación de navegador en lugar del CAPTCHA de Cloudflare y sin usar las denuncias de otros servidores en Stoat. Su política de privacidad de noviembre sigue diciendo todo esto. Lo celebramos, y vemos que Kuma deje Cloudflare Turnstile como un paso en la buena dirección."
+ ],
+ [
+  "Kuma a supprimé le signalement entre serveurs et les vérifications d'IP sur Stoat, comme nous l'avons fait. Son pont envoie toujours les messages des membres vers d'autres plateformes sur la seule décision d'un administrateur. Si la même norme s'applique à chaque bot, Stoat devrait le dire publiquement. Sinon, il devrait expliquer ce qui différencie les cas.",
+  "O Kuma removeu a sinalização entre servidores e as verificações de IP no Stoat, tal como nós. As suas pontes continuam a enviar as mensagens dos membros para outras plataformas apenas por decisão de um administrador. Se a mesma norma se aplica a todos os bots, o Stoat deve dizê-lo publicamente. Se não, deve explicar o que distingue os casos.",
+  "Kuma ha eliminado el marcado entre servidores y las comprobaciones de IP en Stoat, igual que nosotros. Sus puentes siguen enviando los mensajes de los miembros a otras plataformas solo por decisión de un administrador. Si la misma norma se aplica a todos los bots, Stoat debería decirlo públicamente. Si no, debería explicar qué diferencia los casos."
+ ],
+ [
+  "Bot utilitaire · open source · a une page de confidentialité",
+  "Bot utilitário · código aberto · tem página de privacidade",
+  "Bot de utilidades · código abierto · tiene página de privacidad"
+ ],
+ [
+  "bronx est open source : nous avons donc lu son code en plus de son site. Il a une page de confidentialité qui explique ce qu'il conserve et permet aux membres de télécharger leurs données ou de refuser. Le 14 octobre 2026, il a aussi ajouté une option de refus pour les niveaux. Sa dernière modification de code date du 28 octobre. Les constats ci-dessous proviennent du code au 30 septembre 2026 et de sa page de confidentialité telle que nous l'avons lue le",
+  "O bronx é de código aberto, por isso lemos o código além do site. Tem uma página de privacidade que explica o que guarda e permite aos membros transferir os seus dados ou optar por sair. A 14 de outubro de 2026 adicionou também uma opção de saída para os níveis. A última alteração ao código foi a 28 de outubro. As conclusões abaixo baseiam-se no código a 30 de setembro de 2026 e na página de privacidade tal como a lemos a",
+  "bronx es de código abierto, así que leímos su código además de su sitio web. Tiene una página de privacidad que explica qué guarda y permite a los miembros descargar sus datos o excluirse. El 14 de octubre de 2026 añadió también una opción de exclusión para los niveles. Su último cambio de código fue el 28 de octubre. Los hallazgos de abajo proceden del código a 30 de septiembre de 2026 y de su página de privacidad tal como la leímos el"
+ ],
+ [
+  "Son développeur a interrogé Stoat directement et nous a transmis les réponses. Elles figurent dans « Ce que Stoat a dit » ci-dessous.",
+  "O programador perguntou diretamente ao Stoat e partilhou as respostas connosco. Estão em \"O que o Stoat disse\", abaixo.",
+  "Su desarrollador preguntó directamente a Stoat y compartió las respuestas con nosotros. Están en «Lo que ha dicho Stoat», más abajo."
+ ],
+ [
+  "Code source le plus récent",
+  "Código-fonte mais recente",
+  "Código fuente más reciente"
+ ],
+ [
+  "Bot-pont · open source · a une politique de confidentialité",
+  "Bot de ponte · código aberto · tem política de privacidade",
+  "Bot puente · código abierto · tiene política de privacidad"
+ ],
+ [
+  "bolt relie des salons Stoat à des salons d'autres plateformes pour que la même conversation apparaisse des deux côtés. Il prend toujours en charge Stoat et a été mis à jour pour la dernière fois le 18 novembre 2026. Pour être juste envers bolt, il publie une politique de confidentialité avec un contact pour les demandes de données, et son code est open source. Quand nous avons lu son code en octobre, sa base de données stockait les identifiants des messages plutôt que leur contenu. Sa page juridique, qui n'indique aucune date, liste plus largement les données qu'il peut collecter : contenu et métadonnées des messages, informations sur les utilisateurs, activité des utilisateurs et adresses IP, stockés sur du matériel aux États-Unis avec des sauvegardes chiffrées sur Microsoft OneDrive. Le principal problème est le consentement.",
+  "O bolt liga canais do Stoat a canais de outras plataformas para que a mesma conversa apareça em ambos. Continua a suportar o Stoat e foi atualizado pela última vez a 18 de novembro de 2026. Para sermos justos com o bolt, publica uma política de privacidade com um contacto para pedidos de dados e o código é aberto. Quando lemos o código em outubro, a base de dados guardava os IDs das mensagens e não o seu conteúdo. A página legal, que não mostra data, lista de forma mais ampla os dados que pode recolher: conteúdo e metadados das mensagens, informações de utilizadores, atividade dos utilizadores e endereços IP, guardados em hardware nos Estados Unidos com cópias de segurança encriptadas no Microsoft OneDrive. O principal problema é o consentimento.",
+  "bolt conecta canales de Stoat con canales de otras plataformas para que la misma conversación aparezca en ambos. Sigue siendo compatible con Stoat y se actualizó por última vez el 18 de noviembre de 2026. Para ser justos con bolt, publica una política de privacidad con un contacto para solicitudes de datos y su código es abierto. Cuando leímos su código en octubre, su base de datos guardaba los ID de los mensajes y no su contenido. Su página legal, que no muestra fecha, enumera de forma más amplia los datos que puede recopilar: contenido y metadatos de los mensajes, información de usuario, actividad de usuario y direcciones IP, almacenados en hardware en Estados Unidos con copias de seguridad cifradas en Microsoft OneDrive. El principal problema es el consentimiento."
+ ],
+ [
+  "Stoat nous a obligés à obtenir le consentement de chaque personne avant d'envoyer son contenu à un service externe, et nous a dit que ni le choix d'un propriétaire de serveur ni une politique de confidentialité ne valent consentement. Un pont envoie les messages des membres vers d'autres plateformes sur la seule base du choix d'un administrateur et d'une politique de confidentialité. Si la règle qui nous a été imposée s'applique à chaque bot, les salons reliés ont besoin d'un moyen pour que chaque membre accepte avant que ses messages quittent Stoat. Stoat a dit à un autre développeur qu'il décide encore de sa politique sur les bots-ponts.",
+  "O Stoat exigiu-nos que obtivéssemos o consentimento de cada pessoa antes de o seu conteúdo ser enviado para um serviço externo, e disse-nos que nem a escolha do dono do servidor nem uma política de privacidade contam como consentimento. Uma ponte envia as mensagens dos membros para outras plataformas apenas com base na escolha de um administrador e numa política de privacidade. Se a regra que nos foi imposta se aplica a todos os bots, os canais com ponte precisam de uma forma de cada membro concordar antes de as suas mensagens saírem do Stoat. O Stoat disse a outro programador que ainda está a decidir a sua política sobre bots de ponte.",
+  "Stoat nos exigió obtener el consentimiento de cada persona antes de enviar su contenido a un servicio externo, y nos dijo que ni la elección del propietario del servidor ni una política de privacidad cuentan como consentimiento. Un puente envía los mensajes de los miembros a otras plataformas basándose solo en la elección de un administrador y en una política de privacidad. Si la norma que se nos aplicó vale para todos los bots, los canales con puente necesitan una forma de que cada miembro acepte antes de que sus mensajes salgan de Stoat. Stoat le ha dicho a otro desarrollador que aún está decidiendo su política sobre los bots puente."
+ ],
+ [
+  "Bot de journalisation · code non public",
+  "Bot de registos · código não público",
+  "Bot de registros · código no público"
+ ],
+ [
+  "La page de confidentialité de log_it, modifiée pour la dernière fois le 15 septembre 2024, indique qu'il collecte les identifiants de serveurs et de salons et toute l'activité de chaque serveur où il se trouve, enregistre chaque serveur qu'il rejoint dans son serveur d'assistance et envoie les données d'erreur à Sentry. Sa page de transparence indique qu'il conserve les messages supprimés et modifiés avec leur contenu, et que la plupart des événements finissent dans un fichier local",
+  "A página de privacidade do log_it, editada pela última vez a 15 de setembro de 2024, diz que recolhe IDs de servidores e canais e toda a atividade de eventos em todos os servidores onde está, regista cada servidor em que entra no seu servidor de suporte e envia dados de erros para o Sentry. A página de transparência diz que guarda mensagens eliminadas e editadas com o seu conteúdo, e que a maioria dos eventos acaba num ficheiro local",
+  "La página de privacidad de log_it, editada por última vez el 15 de septiembre de 2024, dice que recopila los ID de servidores y canales y toda la actividad de eventos de cada servidor en el que está, registra en su servidor de soporte cada servidor al que se une y envía datos de errores a Sentry. Su página de transparencia dice que guarda los mensajes eliminados y editados con su contenido, y que la mayoría de los eventos acaban en un archivo local"
+ ],
+ [
+  "sauvegardé fréquemment. La page de confidentialité indique que tout est supprimé quand le bot est retiré, sauf le fichier journal, pour lequel aucune durée de conservation n'est donnée. Ses développeurs publient le code du site mais pas celui du bot : nous ne pouvons donc pas vérifier ce qu'il fait réellement. Rien n'avait changé lors de notre vérification du",
+  "do qual são feitas cópias de segurança com frequência. A página de privacidade diz que tudo é eliminado quando o bot é removido, mas não o ficheiro de registo, e não indica prazo de conservação para ele. Os programadores publicam o código do site, mas não o do bot, por isso não podemos verificar o que faz realmente. Nada tinha mudado quando verificámos a",
+  "del que se hacen copias de seguridad con frecuencia. La página de privacidad dice que todo se elimina cuando se quita el bot, pero no el archivo de registro, y no indica un plazo de conservación para él. Sus desarrolladores publican el código del sitio web pero no el del bot, así que no podemos comprobar qué hace realmente. No había cambiado nada cuando lo revisamos el"
+ ],
+ [
+  "Ces trois bots ont été créés par le même développeur le même jour, le 15 juin 2023, et renvoient tous vers un même serveur d'assistance, Bot Central. Nous avons cherché des informations publiques à leur sujet le 2 octobre 2026 et n'avons presque rien trouvé. Il n'y a toujours ni site, ni politique, ni code à revérifier.",
+  "Estes três bots foram criados pelo mesmo programador no mesmo dia, 15 de junho de 2023, e apontam todos para o mesmo servidor de suporte, o Bot Central. Procurámos informações públicas sobre eles a 2 de outubro de 2026 e não encontrámos quase nada. Continua a não haver site, política ou código para verificar de novo.",
+  "Estos tres bots los creó el mismo desarrollador el mismo día, el 15 de junio de 2023, y todos remiten a un mismo servidor de soporte, Bot Central. Buscamos información pública sobre ellos el 2 de octubre de 2026 y no encontramos casi nada. Sigue sin haber sitio web, política ni código que revisar."
+ ],
+ [
+  "La documentation publique ne nous dit pas exactement comment un bot fonctionne aujourd'hui, ce qu'il conserve vraiment, quel consentement il obtient ni si Stoat l'a examiné. Des fonctions similaires ne signifient pas non plus un traitement identique. Ce que montrent ces exemples, c'est pourquoi tout le monde a besoin d'une règle claire qui s'applique aux comportements similaires. Si vous gérez l'un de ces bots et que quelque chose ici n'est plus à jour,",
+  "A documentação pública não nos diz exatamente como um bot funciona hoje, o que guarda realmente, que consentimento obtém nem se o Stoat o analisou. Funcionalidades semelhantes também não significam tratamento idêntico. O que os exemplos mostram é porque todos precisam de uma regra clara que se aplique a comportamentos semelhantes. Se gere um destes bots e algo aqui está desatualizado,",
+  "La documentación pública no nos dice exactamente cómo funciona hoy un bot, qué guarda realmente, qué consentimiento obtiene ni si Stoat lo ha revisado. Que las funciones se parezcan tampoco significa que el tratamiento sea idéntico. Lo que sí muestran los ejemplos es por qué todos necesitan una norma clara que se aplique a comportamientos similares. Si gestionas uno de estos bots y algo de aquí está desactualizado,"
+ ],
+ [
+  "dites-le-nous",
+  "diga-nos",
+  "avísanos"
+ ],
+ [
+  "et nous corrigerons.",
+  "e corrigiremos.",
+  "y lo corregiremos."
+ ],
+ [
+  "04 / Ce que Stoat a dit",
+  "04 / O que o Stoat disse",
+  "04 / Lo que ha dicho Stoat"
+ ],
+ [
+  "Consentement préalable, 30 jours pour le contenu, et des politiques de confidentialité à venir.",
+  "Consentimento prévio, 30 dias para o conteúdo e políticas de privacidade a caminho.",
+  "Consentimiento previo, 30 días para el contenido y políticas de privacidad en camino."
+ ],
+ [
+  "Au",
+  "A",
+  "A"
+ ],
+ [
+  ", Stoat n'a pas publié de règles pour les développeurs de bots. Sa page juridique ne liste que ses conditions générales, sa politique de confidentialité et ses règles de la communauté, et la dernière mise à jour de ses politiques sur sa page de nouveautés date du 30 juin 2026. Les réponses les plus détaillées restent donc celles ci-dessous, que le développeur de bronx a obtenues de l'équipe Trust & Safety de Stoat et nous a transmises le 10 octobre 2026. Nous avons résumé chaque question et cité la réponse de Stoat.",
+  ", o Stoat não tinha publicado diretrizes para programadores de bots. A página legal lista apenas os termos gerais, a política de privacidade e as diretrizes da comunidade, e a última atualização de políticas na página de novidades foi a 30 de junho de 2026. Por isso, as respostas mais detalhadas continuam a ser as que estão abaixo, que o programador do bronx obteve da equipa Trust & Safety do Stoat e partilhou connosco a 10 de outubro de 2026. Resumimos cada pergunta e citámos a resposta do Stoat.",
+  ", Stoat no ha publicado normas para desarrolladores de bots. Su página legal solo incluye sus condiciones generales, su política de privacidad y sus normas de la comunidad, y la última actualización de políticas en su página de novedades fue el 30 de junio de 2026. Así que las respuestas más detalladas siguen siendo las de abajo, que el desarrollador de bronx obtuvo del equipo de Trust & Safety de Stoat y compartió con nosotros el 10 de octubre de 2026. Hemos resumido cada pregunta y citado la respuesta de Stoat."
+ ],
+ [
+  "Les réponses de Stoat aux développeurs de bots",
+  "As respostas do Stoat aos programadores de bots",
+  "Las respuestas de Stoat a los desarrolladores de bots"
+ ],
+ [
+  "Stoat demande à chaque bot d'utiliser le consentement préalable pour les données liées à une personne, y compris les statistiques et classements par personne. Le contenu des messages et les pièces jointes doivent être conservés 30 jours, sauf raison précise comme un dossier en appel. Les autres données opérationnelles peuvent être conservées tant qu'elles sont utiles, au plus tard jusqu'au retrait du bot. Les politiques de confidentialité deviendront obligatoires, avec une période de transition une fois les règles publiées. Stoat n'a pas encore tranché sur les bots-ponts.",
+  "O Stoat está a pedir a todos os bots que usem consentimento prévio para dados ligados a uma pessoa, incluindo estatísticas e classificações por pessoa. O conteúdo das mensagens e os anexos devem ser guardados durante 30 dias, a menos que haja um motivo específico, como um caso em recurso. Outros dados operacionais podem ser guardados enquanto forem necessários, no máximo até o bot ser removido. As políticas de privacidade passarão a ser obrigatórias, com um período de transição depois de as diretrizes serem publicadas. O Stoat ainda não decidiu sobre os bots de ponte.",
+  "Stoat pide a todos los bots que usen el consentimiento previo para los datos vinculados a una persona, incluidas las estadísticas y clasificaciones por persona. El contenido de los mensajes y los adjuntos deben guardarse 30 días, salvo que haya un motivo concreto, como un caso en apelación. Otros datos operativos pueden guardarse mientras sean necesarios, como máximo hasta que se quite el bot. Las políticas de privacidad serán obligatorias, con un periodo de transición cuando se publiquen las normas. Stoat aún no ha decidido sobre los bots puente."
+ ],
+ [
+  "05 / Ce que nous demandons à Stoat",
+  "05 / O que pedimos ao Stoat",
+  "05 / Qué le pedimos a Stoat"
+ ],
+ [
+  "Nous sommes contents que des règles pour les développeurs soient en préparation. Elles n'avaient pas été publiées au",
+  "Ficamos contentes por as diretrizes para programadores estarem a caminho. Ainda não tinham sido publicadas a",
+  "Nos alegra que las normas para desarrolladores estén en camino. No se habían publicado a"
+ ],
+ [
+  ", et nous mettrons cette page à jour quand elles le seront.",
+  ", e atualizaremos esta página quando forem.",
+  ", y actualizaremos esta página cuando se publiquen."
+ ],
+ [
+  "06 / Comment vérifier un bot vous-même",
+  "06 / Como verificar um bot por si próprio",
+  "06 / Cómo comprobar un bot por tu cuenta"
+ ],
+ [
+  "Cinq points à vérifier avant de confier vos messages à un bot.",
+  "Cinco coisas a verificar antes de confiar as suas mensagens a um bot.",
+  "Cinco cosas que mirar antes de confiar tus mensajes a un bot."
+ ],
+ [
+  "Lire notre politique de confidentialité",
+  "Ler a nossa política de privacidade",
+  "Leer nuestra política de privacidad"
+ ],
+ [
+  "Comparer les bots Stoat",
+  "Comparar bots do Stoat",
+  "Comparar bots de Stoat"
+ ],
+ [
+  "Comment promouvoir un serveur Stoat sur Stoatmod Discovery",
+  "Como divulgar um servidor do Stoat no Stoatmod Discovery",
+  "Cómo anunciar un servidor de Stoat en Stoatmod Discovery"
+ ],
+ [
+  "Donner un rôle à Stoatmod",
+  "Dar um cargo ao Stoatmod",
+  "Dar un rol a Stoatmod"
+ ],
+ [
+  "Être examiné et remonter",
+  "Ser analisado e subir",
+  "Pasar la revisión y subir"
+ ],
+ [
+  "1 membre",
+  "1 membro",
+  "1 miembro"
+ ],
+ [
+  "Invitation directe gratuite sur Stoatmod Discovery.",
+  "Convite direto gratuito no Stoatmod Discovery.",
+  "Invitación directa gratuita en Stoatmod Discovery."
+ ],
+ [
+  "Serveur Stoat",
+  "Servidor do Stoat",
+  "Servidor de Stoat"
+ ],
+ [
+  "Pas de politique de confidentialité, de conditions ni d'avis de confidentialité, alors que son développeur fait partie de l'équipe Stoat et que son serveur d'assistance est vérifié. Son développeur a dit en octobre qu'une politique était préparée avec l'aide d'un conseil juridique ; au 19 novembre, elle n'était toujours pas publiée.",
+  "Sem política de privacidade, termos ou aviso de privacidade, apesar de o seu programador fazer parte da equipa do Stoat e o servidor de suporte ser verificado. O programador disse em outubro que estava a ser preparada uma com aconselhamento jurídico; a 19 de novembro, ainda não tinha sido publicada.",
+  "Sin política de privacidad, condiciones ni aviso de privacidad, aunque su desarrollador forma parte del equipo de Stoat y su servidor de soporte está verificado. Su desarrollador dijo en octubre que se estaba preparando una con asesoramiento legal; a 19 de noviembre, seguía sin publicarse."
+ ],
+ [
+  "Les messages, modifications, suppressions et commandes de chaque membre sont comptés par personne dès l'arrivée de bronx. Les membres peuvent refuser (bronx a ajouté la même option aux niveaux le 14 octobre), mais personne n'est consulté d'abord.",
+  "As mensagens, edições, eliminações e comandos de cada membro são contados por pessoa a partir do momento em que o bronx entra. Os membros podem optar por sair (o bronx adicionou a mesma opção aos níveis a 14 de outubro), mas ninguém é consultado primeiro.",
+  "Los mensajes, ediciones, eliminaciones y comandos de cada miembro se cuentan por persona desde que bronx se une. Los miembros pueden excluirse (bronx añadió la misma opción a los niveles el 14 de octubre), pero a nadie se le pregunta primero."
+ ],
+ [
+  "Les bots de modération lisent beaucoup de messages : la façon dont ils traitent les données compte autant que ce qu'ils détectent. Ces résumés proviennent de notre page sur la confidentialité des bots Stoat, où chaque constat renvoie au code ou à la page d'où il vient. Stoat a indiqué demander à chaque bot d'utiliser le consentement préalable pour les données liées à une personne, et que les politiques de confidentialité deviendront obligatoires.",
+  "Os bots de moderação leem muitas mensagens, por isso a forma como tratam os dados importa tanto como o que detetam. Estes resumos vêm da nossa página sobre a privacidade dos bots do Stoat, onde cada conclusão tem ligação ao código ou à página de onde veio. O Stoat disse que está a pedir a todos os bots que usem consentimento prévio para dados ligados a uma pessoa, e que as políticas de privacidade passarão a ser obrigatórias.",
+  "Los bots de moderación leen muchos mensajes, así que cómo tratan los datos importa tanto como lo que detectan. Estos resúmenes proceden de nuestra página sobre la privacidad de los bots de Stoat, donde cada hallazgo enlaza al código o la página de la que procede. Stoat ha dicho que pide a todos los bots que usen el consentimiento previo para los datos vinculados a una persona, y que las políticas de privacidad serán obligatorias."
+ ],
+ [
+  "Les bots Stoat et l'usage qu'ils font de vos données",
+  "Os bots do Stoat e como usam os seus dados",
+  "Los bots de Stoat y cómo usan tus datos"
+ ],
+ [
+  "février",
+  "février",
+  "février"
+ ],
+ [
+  "août",
+  "août",
+  "août"
+ ],
+ [
+  "décembre",
+  "décembre",
+  "décembre"
+ ],
+ [
+  "févr.",
+  "févr.",
+  "févr."
+ ],
+ [
+  "março",
+  "março",
+  "março"
+ ],
+ [
+  "días",
+  "días",
+  "días"
+ ],
+ [
+  "en_GB",
+  "en_GB",
+  "en_GB"
+ ],
+ [
+  "fr_FR",
+  "fr_FR",
+  "fr_FR"
+ ],
+ [
+  "pt_PT",
+  "pt_PT",
+  "pt_PT"
+ ],
+ [
+  "es_ES",
+  "es_ES",
+  "es_ES"
+ ]
+]

@@ -268,17 +268,17 @@ test("publishes the privacy changes statement and links it from public pages", a
   assert.doesNotMatch(html, /Draft for review|Not published yet/i);
   assert.match(html, /We stopped sending messages to OpenAI/i);
   assert.match(html, /an appeal on day 29 could keep the message until day 39/i);
-  assert.match(html, /Each bot service on the platform must comply with our policies independently/i);
-  assert.match(html, /cannot contain message content or user-level records/i);
-  assert.match(html, /01J4Q9DS6CV4DNCW6AZRMV349A/);
-  assert.match(html, /01FHGJ3NPP7XANQQH8C2BE44ZY/);
-  assert.match(html, /01FZB4GBHDVYY6KT8JH4RBX4KR/);
+  assert.match(html, /Removed images and uploaded files get a deadline/i);
+  assert.match(html, /href="\/stoat-privacy"/);
+  assert.doesNotMatch(html, /01FHGJ3NPP7XANQQH8C2BE44ZY|01FZB4GBHDVYY6KT8JH4RBX4KR/, "bot findings belong on /stoat-privacy");
   assert.match(html, /href="\/stoat-trust-and-safety-emails\.pdf" target="_blank"/i);
   assert.doesNotMatch(html, /name="robots" content="noindex/i);
   assert.match(html, /rel="canonical" href="https:\/\/modstoat\.site\/privacy-changes"/i);
   assert.match(html, /og-privacy-changes\.png/);
   assert.doesNotMatch(html, /has violated|no action was taken|Stoat protects/i);
-  assert.match(await sitemap.text(), /https:\/\/modstoat\.site\/privacy-changes</i);
+  const sitemapText = await sitemap.text();
+  assert.match(sitemapText, /https:\/\/modstoat\.site\/privacy-changes</i);
+  assert.match(sitemapText, /https:\/\/modstoat\.site\/stoat-privacy</i);
   for (const [path, response] of [["/changelog", changelog], ["/privacy", privacy], ["/features", features], ["/docs", docs]]) {
     assert.equal(response.status, 200, "unexpected status for " + path);
     assert.match(await response.text(), /href="\/privacy-changes"/, "missing privacy update link on " + path);
@@ -287,9 +287,29 @@ test("publishes the privacy changes statement and links it from public pages", a
   assert.equal(pdf.subarray(0, 5).toString(), "%PDF-");
 });
 
+test("publishes the Stoat bot privacy page with the bot findings", async () => {
+  const page = await render("/stoat-privacy");
+  assert.equal(page.status, 200);
+  const html = await page.text();
+  assert.match(html, /Stoat bots and/i);
+  assert.match(html, /Every bot re-checked (<!-- -->)?19 November 2026/i);
+  assert.match(html, /Each bot service on the platform must comply with our policies independently/i);
+  assert.match(html, /cannot contain message content or user-level records/i);
+  for (const id of ["01J4Q9DS6CV4DNCW6AZRMV349A", "01FHGJ3NPP7XANQQH8C2BE44ZY", "01FZB4GBHDVYY6KT8JH4RBX4KR", "01G1Y9M6G254VWBF41W3N5DQY5", "01KSQCGBPB79E4V5W6RG6VA7YC", "01KXJ0Z72PMQ01V3Z4GHGK21G0"]) {
+    assert.match(html, new RegExp(id));
+  }
+  for (const anchor of ["status", "consistency", "examples", "automod", "kuma", "bronx", "bolt", "log-it", "bot-central", "magbot", "discovery", "stoat-guidance", "request"]) {
+    assert.match(html, new RegExp(`id="${anchor}"`), "missing anchor " + anchor);
+  }
+  assert.match(html, /rel="canonical" href="https:\/\/modstoat\.site\/stoat-privacy"/i);
+  assert.match(html, /property="og:image" content="https:\/\/modstoat\.site\/og-stoat-privacy\.png"/);
+  assert.doesNotMatch(html, /name="robots" content="noindex/i);
+  assert.doesNotMatch(html, /has violated|no action was taken|Stoat protects/i);
+});
+
 test("every prepared public route renders a canonical indexable page", async () => {
   const paths = [
-    "/", "/features", "/guides", "/docs", "/discovery", "/privacy", "/privacy-changes", "/status",
+    "/", "/features", "/guides", "/docs", "/discovery", "/privacy", "/privacy-changes", "/stoat-privacy", "/status",
     "/features/automod", "/features/spam-protection", "/features/link-protection",
     "/features/image-moderation", "/features/join-protection", "/features/moderation-cases",
     "/features/automatic-roles", "/features/moderation-statistics",

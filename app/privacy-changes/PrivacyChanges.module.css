@@ -86,3 +86,13 @@
 .findings p.fixedNote{padding-left:10px;border-left:3px solid #1f9d4a;color:var(--ink)}
 .legend{display:flex;align-items:flex-start;gap:8px;margin:0 0 18px;padding:12px 14px;border:1px solid var(--line);font-size:12px;line-height:1.7}
 .legend .tick{margin-top:2px}
+.timeline{display:grid;gap:0;margin:26px 0 0;padding:0;list-style:none;border-top:1px solid var(--line)}
+.timeline>li{display:grid;grid-template-columns:150px minmax(0,1fr);gap:20px;padding:22px 0;border-bottom:1px solid var(--line)}
+.timeline time{padding-top:3px;color:var(--muted);font:650 10px/1.6 ui-monospace,SFMono-Regular,Consolas,monospace;letter-spacing:.08em;text-transform:uppercase}
+.timeline h3{margin:0 0 10px;font-size:16px;font-weight:650;line-height:1.35;letter-spacing:-.025em}
+.timeline ul{margin:0;padding:0 0 0 18px;color:var(--muted);font-size:13px;line-height:1.8}.timeline ul li+li{margin-top:6px}
+.timeline a{display:inline-block;margin-top:12px;color:var(--ink);font-size:12px;text-underline-offset:4px}
+.caveat p a{color:var(--ink);text-underline-offset:3px}
+@media(max-width:700px){.timeline>li{grid-template-columns:1fr;gap:8px}}
+.screenshot{margin:24px 0;padding:0}.screenshot img{display:block;width:100%;height:auto;border:1px solid var(--line)}.screenshot figcaption{margin-top:10px;color:var(--muted);font:10px/1.5 ui-monospace,SFMono-Regular,Consolas,monospace;letter-spacing:.06em}
+.officialResponse blockquote.emailQuote p,.officialResponse blockquote.emailQuote li{color:var(--ink);font-size:13px;font-weight:450;line-height:1.75;letter-spacing:0}.officialResponse blockquote.emailQuote p+p{margin-top:10px}.officialResponse blockquote.emailQuote ul{margin:10px 0;padding-left:20px}

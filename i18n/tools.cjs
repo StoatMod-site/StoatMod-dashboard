@@ -14,7 +14,7 @@ fs.mkdirSync(batchDir, { recursive: true });
 const PRIORITY = [
   /^(DashboardApp|MemberPanel|ApplicationsPanel|AutomationPanel|ReactionRolesPanel|OperationsChrome|AggregateActivity|CategoryScores|DashboardIcon|lib\/moderation-display|lib\/api)/,
   /^content\/(docs|commands)/, /^DocsPage|^docs\//, /^content\/guides/, /^guides\//, /^content\/features|^content\/feature-library|^Feature|^features\//, /^content\/trust|^about|^security|^changelog/,
-  /^(AppealPage|ReportApp|VerifyApp|LoginApp|AccessLayout|StatusPage|status\/)/, /^(PrivacyPage|privacy\/|privacy-changes|PrivacyUpdate)/,
+  /^(AppealPage|ReportApp|VerifyApp|LoginApp|AccessLayout|StatusPage|status\/)/, /^(PrivacyPage|privacy\/|privacy-changes|stoat-privacy|PrivacyUpdate)/,
   /^(MarketingPage|PublicFooter|PublicContentPage|PublicHubPage|ResourceLibrary|not-found|discovery|DiscoveryPage|PublicPageHeading|Breadcrumbs|SiteNav|PortalHeader|ThemeToggle)/,
   /^(OwnerDashboardApp|OwnerLoginApp|AdminDashboardApp|AdminLoginApp)/,
 ];

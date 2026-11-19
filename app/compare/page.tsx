@@ -85,13 +85,14 @@ const privacy: { bot: BotId; anchor: string; badge: string; findings: Finding[];
     bot: "kuma",
     anchor: "kuma",
     badge: "Two findings fixed",
-    good: "Kuma publishes a detailed privacy policy, lets members view, export and delete their data, and says it doesn't keep copies of messages.",
+    good: "Kuma publishes a detailed privacy policy, rewritten in November 2026, lets members view, export and delete their data, keeps logged message text only in the server's own log channel and stores chat snapshots as message IDs for 60 days.",
     findings: [
       { text: "Cross-server flagging was on by default. Stoat communities are now excluded.", fixed: true },
       { text: "IP checks and network linking were on by default. Stoat verification no longer looks at your connection.", fixed: true },
       { text: "Bridging copies members' messages, names and avatars to Discord and Fluxer on an admin's decision alone, with no notice or consent step for members." },
+      { text: "Most data is kept while Kuma is in a server and deleted after it leaves only on request." },
     ],
-    better: ["Tell members when a channel is bridged and let them agree before their messages leave Stoat.", "Publish its code, or have it checked independently, so its claims can be verified."],
+    better: ["Tell members when a channel is bridged and let them agree before their messages leave Stoat.", "Delete a server's data automatically when Kuma is removed.", "Publish its code, or have it checked independently, so its claims can be verified."],
   },
   {
     bot: "automod",
@@ -99,7 +100,7 @@ const privacy: { bot: BotId; anchor: string; badge: string; findings: Finding[];
     badge: "No privacy policy yet",
     good: "We found no per-person activity stats, no sharing between servers and no messages sent to an outside AI service.",
     findings: [
-      { text: "No privacy policy, terms or privacy notice, even though its developer is on the Stoat team and its support server is verified. Its developer says one is being prepared with legal advice." },
+      { text: "No privacy policy, terms or privacy notice, even though its developer is on the Stoat team and its support server is verified. Its developer said in October that one was being prepared with legal advice; it still wasn't published on 19 November." },
       { text: "The code prints the text of every message to the bot's output. Its developer says this is a debugging feature and isn't kept on the official instance." },
       { text: "Every command is logged with the username, user ID, server name and full command text." },
       { text: "Votekick records keep who voted against whom, with nothing that deletes them." },
@@ -112,7 +113,7 @@ const privacy: { bot: BotId; anchor: string; badge: string; findings: Finding[];
     badge: "Tracks people by default",
     good: "We found no message content stored outside Stoat (only counts), no AI services and no IP collection, and members can download their data or opt out.",
     findings: [
-      { text: "Every member's messages, edits, deletes and commands are counted per person from the moment bronx joins. Members can opt out, but nobody is asked first." },
+      { text: "Every member's messages, edits, deletes and commands are counted per person from the moment bronx joins. Members can opt out (bronx added the same opt-out to levels on 14 October), but nobody is asked first." },
       { text: "Anyone can rank the most active people across every server bronx is in." },
       { text: "Its privacy page says nothing is collected passively, but the code counts every message a person sends." },
       { text: "Server details are posted to a developer channel, and application answers are kept with no deletion deadline." },
@@ -125,7 +126,7 @@ const stoatmodBetter = [
   { text: "Our bot and website code is public, but the moderation model's weights have not been released yet.", href: siteConfig.botSourceUrl, label: "Bot and API source" },
   { text: "Join verification and the report form still use Cloudflare Turnstile, though only after the person agrees.", href: "/privacy-changes#remains", label: "What's still there" },
   { text: "Global bans and warnings work across servers. Only authorised Stoatmod admins can see them, and only to deal with abuse.", href: "/privacy-changes#remains", label: "What's still there" },
-  { text: "Our AI reads every message in the channels it moderates. Stoat has said this is allowed without opt-in as long as nothing is kept after the check, which is how it works.", href: "/privacy-changes#consistency", label: "What Stoat told us" },
+  { text: "Our AI reads every message in the channels it moderates. Stoat has said this is allowed without opt-in as long as nothing is kept after the check, which is how it works.", href: "/stoat-privacy#consistency", label: "What Stoat told us" },
 ];
 
 const choices = [
@@ -344,10 +345,11 @@ export default function ComparePage() {
           <section className={styles.section} id="privacy">
             <p className={styles.sectionNumber}>03 / Privacy</p>
             <h2>What each bot does with your data.</h2>
-            <p>Moderation bots read a lot of messages, so how they handle data matters as much as what they catch. These summaries come straight from our privacy changes page, where every finding links to the code or page it came from. Stoat has said it&apos;s asking every bot to use opt-in for data tied to a person, and that privacy policies will become a requirement.</p>
+            <p>Moderation bots read a lot of messages, so how they handle data matters as much as what they catch. These summaries come from our Stoat bot privacy page, where every finding links to the code or page it came from. Stoat has said it&apos;s asking every bot to use opt-in for data tied to a person, and that privacy policies will become a requirement.</p>
             <div className={styles.inlineLinks}>
-              <a href="/privacy-changes#examples">Read the privacy changes page <span aria-hidden="true">→</span></a>
-              <a href="/privacy-changes#stoat-guidance">Stoat&apos;s latest guidance <span aria-hidden="true">→</span></a>
+              <a href="/stoat-privacy#examples">Stoat bots and how they use your data <span aria-hidden="true">→</span></a>
+              <a href="/stoat-privacy#stoat-guidance">Stoat&apos;s latest guidance <span aria-hidden="true">→</span></a>
+              <a href="/stoat-privacy#discovery">How Discovery bots are checked <span aria-hidden="true">→</span></a>
             </div>
             <div className={styles.privacyGrid}>
               {privacy.map((item) => (
@@ -368,7 +370,7 @@ export default function ComparePage() {
                   </ul>
                   <strong className={styles.subhead}>How it could do better</strong>
                   <ul className={styles.better}>{item.better.map((text) => <li key={text}>{text}</li>)}</ul>
-                  <a className={styles.readMore} href={`/privacy-changes#${item.anchor}`}>Read the full findings <span aria-hidden="true">→</span></a>
+                  <a className={styles.readMore} href={`/stoat-privacy#${item.anchor}`}>Read the full findings <span aria-hidden="true">→</span></a>
                 </article>
               ))}
               <article className={`${styles.privacyCard} ${styles.ours}`}>

@@ -21,8 +21,9 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     { path: "/discovery/categories", updated: "2026-10-21", images: [absoluteUrl(discoveryOgPath("categories"))] },
     { path: "/discovery/verified", updated: "2026-10-22", images: [absoluteUrl(discoveryOgPath("verified"))] },
     { path: "/privacy", updated: "2026-10-22" },
-    { path: "/privacy-changes", updated: "2026-10-15" },
-    { path: "/compare", updated: "2026-10-15", images: [absoluteUrl("/compare/og-stoat-bots-comparison.png")] },
+    { path: "/privacy-changes", updated: "2026-11-19" },
+    { path: "/stoat-privacy", updated: "2026-11-19" },
+    { path: "/compare", updated: "2026-11-19", images: [absoluteUrl("/compare/og-stoat-bots-comparison.png")] },
     { path: "/status", updated: "2026-09-30" },
   ];
   const content = allContentPages().map(({ href, page }) => ({ path: href, updated: page.updated }));

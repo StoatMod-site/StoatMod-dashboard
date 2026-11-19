@@ -34,6 +34,8 @@ export function PublicFooter({ description }: { description?: string }) {
             <a href="/about">About</a>
             <a href="/security">Security</a>
             <a href="/privacy">Privacy</a>
+            <a href="/privacy-changes">Privacy changes</a>
+            <a href="/stoat-privacy">Stoat bot privacy</a>
           </div>
         </nav>
       </div>
