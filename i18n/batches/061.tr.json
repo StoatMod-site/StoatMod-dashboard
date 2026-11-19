@@ -1,0 +1,22 @@
+[
+ [
+  "Publié dans le salon du journal de modération.",
+  "Publicado no canal de registo de moderação.",
+  "Publicado en el canal del registro de moderación."
+ ],
+ [
+  "Stoatmod n’a pas pu publier ceci dans le salon du journal de modération. Vérifiez qu’il peut y envoyer des messages.",
+  "O Stoatmod não conseguiu publicar isto no canal de registo de moderação. Verifique se pode enviar mensagens aí.",
+  "Stoatmod no pudo publicar esto en el canal del registro de moderación. Comprueba que puede enviar mensajes allí."
+ ],
+ [
+  "Les modifications de rôles sont publiées dans votre salon du journal de modération.",
+  "As alterações de cargos são publicadas no seu canal de registo de moderação.",
+  "Los cambios de roles se publican en tu canal del registro de moderación."
+ ],
+ [
+  "Aucun salon du journal de modération n’est défini ; les modifications de rôles ne sont donc conservées que dans le journal d’activité. Choisissez-en un dans le Studio des politiques.",
+  "Não há nenhum canal de registo de moderação definido, por isso as alterações de cargos só ficam no registo de atividade. Escolha um no Estúdio de políticas.",
+  "No hay ningún canal del registro de moderación definido, así que los cambios de roles solo se conservan en el registro de actividad. Elige uno en el Estudio de políticas."
+ ]
+]

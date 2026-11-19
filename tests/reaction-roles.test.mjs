@@ -25,7 +25,7 @@ test("dashboard navigation restores Applications after Members and retains revie
   const source=await readFile(new URL("../app/DashboardApp.tsx",import.meta.url),"utf8");
   const block=source.slice(source.indexOf("const navItems:"),source.indexOf("const FullEmojiPicker"));
   const labels=[...block.matchAll(/label:"([^"]+)"/g)].map(match=>match[1]);
-  assert.deepEqual(labels,["Overview","Cases","Appeals","Members","Applications","Activity log","Policy Studio","Automation Lab","Reaction roles","Polls 2.0","Leaderboards","Discovery"]);
+  assert.deepEqual(labels,["Overview","Cases","Appeals","Members","Applications","Activity log","Policy Studio","Automation Lab","Reaction roles","Roles","Polls 2.0","Leaderboards","Discovery"]);
   assert.match(source,/<\/nav><button className=\{`sidebar-support/);
   assert.doesNotMatch(source,/view==="applications"\?"members"/);
   assert.match(source,/view==="applications"&&<ApplicationsPanel\/>/);

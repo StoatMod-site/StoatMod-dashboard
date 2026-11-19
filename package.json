@@ -9,7 +9,7 @@
     "dev": "vinext dev",
     "build": "vinext build",
     "start": "vinext start",
-    "test": "npm run build && node --test tests/rendered-html.test.mjs tests/application-channels.test.mjs tests/reaction-roles.test.mjs tests/discovery-media.test.mjs tests/theme.test.mjs tests/moderation-display.test.mjs tests/i18n-coverage.test.mjs",
+    "test": "npm run build && node --test tests/rendered-html.test.mjs tests/application-channels.test.mjs tests/reaction-roles.test.mjs tests/role-colour.test.mjs tests/roles-panel.test.mjs tests/discovery-media.test.mjs tests/theme.test.mjs tests/moderation-display.test.mjs tests/i18n-coverage.test.mjs",
     "lint": "eslint . --ignore-pattern dist --ignore-pattern .next"
   },
   "dependencies": {

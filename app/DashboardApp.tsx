@@ -11,6 +11,7 @@ import { MemberAvatar, MemberPanel, type MemberRecord } from "./MemberPanel";
 import { tr, useSiteLocale } from "./WebsiteI18n";
 import { ApplicationsPanel } from "./ApplicationsPanel";
 import { ReactionRolesPanel } from "./ReactionRolesPanel";
+import { RolesPanel } from "./RolesPanel";
 import { AutomationPanel, type AutomationRule } from "./AutomationPanel";
 import { DashboardIcon } from "./DashboardIcon";
 import { PrivacyUpdateBanner } from "./PrivacyUpdateBanner";
@@ -21,7 +22,7 @@ import { MaintenanceBanner } from "./MaintenanceBanner";
 import { CASE_IMAGE_AUTHOR, SensitiveImage, isFlaggedImage } from "./SensitiveImage";
 import { DiscoveryTab, type DiscoveryState } from "./DiscoveryTab";
 
-type View = "overview" | "members" | "cases" | "appeals" | "reports" | "activity" | "automations" | "polls" | "leaderboards" | "discovery" | "settings" | "support" | "applications" | "reaction-roles";
+type View = "overview" | "members" | "cases" | "appeals" | "reports" | "activity" | "automations" | "polls" | "leaderboards" | "discovery" | "settings" | "support" | "applications" | "reaction-roles" | "roles";
 type DailyStat = { stat_date:string; message_count:number;  new_joins:number; new_leaves:number };
 type CaseRecord = { reference_id:string; user_id:string; action:string; reason:string; status:string; created_at:string; username?:string|null; display_name?:string|null; moderator_username?:string|null; moderator_display_name?:string|null; scores?:Record<string,number>|null; stoatmod_initiated?:boolean|null };
 type CaseAttachment = { id:number; filename:string; content_type:string; size:number; created_at:string };
@@ -79,7 +80,7 @@ const navItems:{id:View;label:string;symbol:string}[] = [
   {id:"overview",label:"Overview",symbol:"⌂"},{id:"cases",label:"Cases",symbol:"▤"},{id:"appeals",label:"Appeals",symbol:"A"},{id:"members",label:"Members",symbol:"M"},
   {id:"applications",label:"Applications",symbol:"✉"},
   {id:"activity",label:"Activity log",symbol:"≋"},{id:"settings",label:"Policy Studio",symbol:"⚙"},
-  {id:"automations",label:"Automation Lab",symbol:"↯"},{id:"reaction-roles",label:"Reaction roles",symbol:"☺"},
+  {id:"automations",label:"Automation Lab",symbol:"↯"},{id:"reaction-roles",label:"Reaction roles",symbol:"☺"},{id:"roles",label:"Roles",symbol:"R"},
   {id:"polls",label:"Polls 2.0",symbol:"P"},{id:"leaderboards",label:"Leaderboards",symbol:"#"},{id:"discovery",label:"Discovery",symbol:"D"},
 ];
 
@@ -226,7 +227,7 @@ export function DashboardApp(){
   const hasConfirmedPermissionIssue=missingPermissions.length>0||inaccessibleChannelCount>0||logPermissionIssues.length>0;
   return <main id="server-dashboard" className={`dashboard-shell ${styles.shell}`}>
     <aside className="sidebar"><img className="corner-brand sidebar-brand" src="/corner-logo.png" alt="Stoatmod"/><div className="server-chip"><span className="server-avatar">{data.overview.server.name.slice(0,1)}{data.overview.server.icon_url&&<img src={data.overview.server.icon_url} alt={`${data.overview.server.name} icon`} onError={(event)=>{event.currentTarget.style.display="none";}}/>}</span><span><strong>{data.overview.server.name}</strong><small>{data.overview.server.member_count.toLocaleString()} {data.overview.server.member_count===1?"member":"members"}</small></span></div><nav aria-label="Dashboard sections">{navItems.map((item)=>{const count=item.id==="activity"?data.notifications.activity.unread_count:item.id==="appeals"?(data.notifications.appeals.unread_count+data.notifications.reports.unread_count):item.id==="reports"?data.notifications.reports.unread_count:0;return <button key={item.id} className={sidebarView===item.id?"active":""} aria-current={sidebarView===item.id?"page":undefined} onClick={()=>void openDashboardView(item.id)}><DashboardIcon name={item.id}/>{item.label}{count>0&&<em className="sidebar-notification-badge" aria-label={`${count} new ${item.label.toLowerCase()}`}>{count>99?"99+":count}</em>}</button>;})}</nav><button className={`sidebar-support${view==="support"?" active":""}`} onClick={()=>{setGuidedDestination(null);setView("support");}}><span aria-hidden="true">?</span>Support</button><div className="sidebar-foot"><div><span className="status-dot"></span>Bot connected</div><button onClick={signOut}>Sign out</button></div></aside>
-    <section className="workspace"><PrivacyUpdateBanner/><header className="topbar"><div><p className="eyebrow">Server workspace <span aria-hidden="true">/</span> {data.overview.server.name}</p><h1>{pageTitle}</h1><p className="workspace-description">{view==="cases"?"Every decision, with the context you need.":view==="automations"?"Thoughtful rules for a well-run community.":view==="settings"?"Protection that fits your community.":view==="overview"?"A clear view of your community, today.":view==="activity"?"A complete record of what happened and why.":"Manage your community in one place."}</p></div><div className="live-pill"><span></span>Server dashboard</div></header>
+    <section className="workspace"><PrivacyUpdateBanner/><header className="topbar"><div><p className="eyebrow">Server workspace <span aria-hidden="true">/</span> {data.overview.server.name}</p><h1>{pageTitle}</h1><p className="workspace-description">{view==="cases"?"Every decision, with the context you need.":view==="automations"?"Thoughtful rules for a well-run community.":view==="settings"?"Protection that fits your community.":view==="overview"?"A clear view of your community, today.":view==="activity"?"A complete record of what happened and why.":view==="roles"?"See every role as members see it, and change how it looks and what it can do.":"Manage your community in one place."}</p></div><div className="live-pill"><span></span>Server dashboard</div></header>
       <MaintenanceBanner/>
       {data.announcements.map((announcement)=><aside className="dashboard-global-announcement" role="status" aria-label="Official Stoatmod announcement" key={announcement.id}><div><span aria-hidden="true">!</span><div><p className="eyebrow">Official announcement</p><h2>{announcement.title}</h2><p>{announcement.message}</p><time>{formatDate(announcement.created_at)}</time></div></div><button type="button" onClick={()=>void dismissGlobalAnnouncement(announcement.id)} aria-label="Dismiss announcement permanently">×</button></aside>)}
       {showDiscoveryNotice&&!(data.discovery.application?.status==="approved"&&data.discovery.eligibility.eligible)&&<aside className="dashboard-discovery-notice" aria-label="Discovery announcement"><div><span aria-hidden="true">D</span><p>You can now advertise your server using our Discovery page. <a href="#discovery" onClick={(event)=>{event.preventDefault();dismissDiscoveryNotice();setView("discovery");}}>Check your eligibility →</a></p></div><button type="button" onClick={dismissDiscoveryNotice} aria-label="Dismiss Discovery announcement">×</button></aside>}
@@ -246,6 +247,7 @@ export function DashboardApp(){
       {view==="reports"&&<ServerReportPanel initialReports={data.server_reports} initialSettings={data.server_report_settings} channels={settings.channels} onChanged={(reports,reportSettings)=>setData((current)=>current?{...current,server_reports:reports,server_report_settings:reportSettings}:current)}/>}
       {view==="applications"&&<ApplicationsPanel/>}
       {view==="reaction-roles"&&<ReactionRolesPanel/>}
+      {view==="roles"&&<RolesPanel/>}
       {view==="activity"&&<ActivityLog events={allEvents||data.events}/>}
       {view==="automations"&&<AutomationPanel rules={data.automations} channels={settings.channels} roles={settings.roles} onChanged={loadDashboard}/>} 
       {view==="polls"&&<PollPanel polls={data.polls} templates={data.poll_templates} channels={settings.channels} roles={settings.roles} onChanged={loadDashboard}/>}

@@ -1,0 +1,6 @@
+[
+ "Posted to the moderation log channel.",
+ "Stoatmod could not post this to the moderation log channel. Check that it can send messages there.",
+ "Role changes are posted to your moderation log channel.",
+ "No moderation log channel is set, so role changes are only kept in the Activity log. Choose one in Policy Studio."
+]

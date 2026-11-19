@@ -5,12 +5,13 @@
 const fs = require('fs'), path = require('path');
 const root = path.resolve(__dirname, '..');
 const botRoot = process.env.STOATMOD_BOT_SOURCE || path.resolve(root, '..', 'stoatmod');
-const files = [['api/server.py', path.join(botRoot, 'api', 'server.py')], ['bot.py', path.join(botRoot, 'bot.py')]];
+const files = [['api/server.py', path.join(botRoot, 'api', 'server.py')], ['api/role_manager.py', path.join(botRoot, 'api', 'role_manager.py')], ['bot.py', path.join(botRoot, 'bot.py')]];
 const broad = process.argv.includes('--broad');
 
 const CTX = [
   /json_error\(\s*(f?)("(?:[^"\\]|\\.)*")/g,
-  /raise (?:ValueError|PermissionError|LookupError|HTTPException|ApiError)\(\s*(f?)("(?:[^"\\]|\\.)*")/g,
+  /raise (?:ValueError|PermissionError|LookupError|HTTPException|ApiError|RoleError)\(\s*(f?)("(?:[^"\\]|\\.)*")/g,
+  /\b[A-Z_]*ERROR\s*=\s*(f?)("(?:[^"\\]|\\.)*")/g,
   /\b(?:error|message|detail|impact|reason|label|title|description|summary|hint|note|status_text)["']?\s*[:=]\s*(f?)("(?:[^"\\]|\\.)*")/g,
 ];
 const LITERAL = /(?<![A-Za-z0-9_])(f?)("(?:[^"\\\n]|\\.)*")/g;
@@ -54,7 +55,7 @@ for (const [name, file] of files) {
   });
 }
 // Multi-line permission requirement tuples in bot.py: ("view_channel", "View Channels", "inspect and moderate ...")
-const botFile = files[1][1];
+const botFile = files.find(([name]) => name === 'bot.py')[1];
 if (fs.existsSync(botFile)) {
   const bot = fs.readFileSync(botFile, 'utf8');
   const block = /SERVER_PERMISSION_REQUIREMENTS\s*=\s*\(([\s\S]*?)\n\)/.exec(bot);

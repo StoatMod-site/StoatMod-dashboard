@@ -14,6 +14,7 @@ export function DashboardIcon({ name, style }: { name: string; style?: CSSProper
     settings: "M4 7h16M4 17h16M8 4v6M16 14v6",
     automations: "m13 2-9 12h7l-1 8 10-12h-8Z",
     "reaction-roles": "M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0M8 9h.01M16 9h.01M8 14s1 3 4 3 4-3 4-3",
+    roles: "M20.6 13.4 13.4 20.6a2 2 0 0 1-2.8 0L3 13V3h10l7.6 7.6a2 2 0 0 1 0 2.8ZM7.5 7.5h.01",
     polls: "M4 20V10h4v10M10 20V4h4v16M16 20v-7h4v7",
     leaderboards: "M8 3h8v6a4 4 0 0 1-8 0ZM8 5H4v2a4 4 0 0 0 4 4M16 5h4v2a4 4 0 0 1-4 4M12 13v5M8 21h8M9 18h6",
     discovery: "M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0m-6-3-2 4-4 2 2-4 4-2Z",

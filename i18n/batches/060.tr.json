@@ -1,0 +1,717 @@
+[
+ [
+  "Voyez chaque rôle tel que les membres le voient, et modifiez son apparence et ses autorisations.",
+  "Veja cada cargo como os membros o veem e altere o seu aspeto e o que pode fazer.",
+  "Mira cada rol como lo ven los miembros y cambia su aspecto y lo que puede hacer."
+ ],
+ [
+  "Utilisez une couleur comme #7c3aed, un nom de couleur CSS ou un dégradé linéaire, radial ou conique de deux à huit couleurs.",
+  "Use uma cor como #7c3aed, um nome de cor CSS ou um gradiente linear, radial ou cónico de duas a oito cores.",
+  "Usa un color como #7c3aed, un nombre de color CSS o un degradado lineal, radial o cónico de dos a ocho colores."
+ ],
+ [
+  "Impossible de charger les rôles.",
+  "Não foi possível carregar os cargos.",
+  "No se pudieron cargar los roles."
+ ],
+ [
+  "Impossible d’enregistrer la modification.",
+  "Não foi possível guardar a alteração.",
+  "No se pudo guardar el cambio."
+ ],
+ [
+  "Enregistré. La modification est active dans Stoat.",
+  "Guardado. A alteração já está ativa no Stoat.",
+  "Guardado. El cambio ya está activo en Stoat."
+ ],
+ [
+  "L’ordre des rôles a été enregistré dans Stoat.",
+  "A ordem dos cargos foi guardada no Stoat.",
+  "El orden de los roles se guardó en Stoat."
+ ],
+ [
+  "Le rôle a été créé en bas de la liste. Choisissez sa couleur et ses autorisations, puis enregistrez.",
+  "O cargo foi criado no fim da lista. Escolha a sua cor e permissões e depois guarde.",
+  "El rol se creó al final de la lista. Elige su color y sus permisos y luego guarda."
+ ],
+ [
+  "Le rôle a été supprimé.",
+  "O cargo foi eliminado.",
+  "El rol se eliminó."
+ ],
+ [
+  "Chargement des rôles depuis Stoat…",
+  "A carregar os cargos do Stoat…",
+  "Cargando los roles desde Stoat…"
+ ],
+ [
+  "Rôles du serveur",
+  "Cargos do servidor",
+  "Roles del servidor"
+ ],
+ [
+  "Consultez et modifiez vos rôles.",
+  "Veja e edite os seus cargos.",
+  "Consulta y edita tus roles."
+ ],
+ [
+  "Les modifications sont appliquées immédiatement dans Stoat. Stoatmod ne peut modifier que les rôles situés sous son propre rôle, et vous ne pouvez modifier que les rôles situés sous le vôtre.",
+  "As alterações são feitas no Stoat de imediato. O Stoatmod só pode alterar cargos abaixo do seu próprio cargo, e só pode alterar cargos abaixo do seu.",
+  "Los cambios se aplican en Stoat de inmediato. Stoatmod solo puede cambiar roles que estén por debajo de su propio rol, y tú solo puedes cambiar roles por debajo del tuyo."
+ ],
+ [
+  "Rôles par ordre hiérarchique",
+  "Cargos por ordem hierárquica",
+  "Roles por orden jerárquico"
+ ],
+ [
+  "Rôles, du plus élevé au plus bas",
+  "Cargos, do mais alto ao mais baixo",
+  "Roles, del más alto al más bajo"
+ ],
+ [
+  "Lecture seule",
+  "Só de leitura",
+  "Solo lectura"
+ ],
+ [
+  "Autorisations uniquement",
+  "Só permissões",
+  "Solo permisos"
+ ],
+ [
+  "Monter",
+  "Subir",
+  "Subir"
+ ],
+ [
+  "Descendre",
+  "Descer",
+  "Bajar"
+ ],
+ [
+  "Autorisations par défaut",
+  "Permissões predefinidas",
+  "Permisos predeterminados"
+ ],
+ [
+  "Le nouvel ordre n’a pas encore été enregistré.",
+  "A nova ordem ainda não foi guardada.",
+  "El nuevo orden aún no se ha guardado."
+ ],
+ [
+  "Enregistrer l’ordre",
+  "Guardar ordem",
+  "Guardar orden"
+ ],
+ [
+  "Réinitialiser l’ordre",
+  "Repor ordem",
+  "Restablecer orden"
+ ],
+ [
+  "Nom du nouveau rôle",
+  "Nome do novo cargo",
+  "Nombre del nuevo rol"
+ ],
+ [
+  "＋ Créer un rôle",
+  "＋ Criar cargo",
+  "＋ Crear rol"
+ ],
+ [
+  "Éditeur de rôle",
+  "Editor de cargo",
+  "Editor de rol"
+ ],
+ [
+  "Choisissez un rôle pour le consulter ou le modifier.",
+  "Escolha um cargo para o ver ou alterar.",
+  "Elige un rol para verlo o cambiarlo."
+ ],
+ [
+  "Modifier le rôle",
+  "Editar cargo",
+  "Editar rol"
+ ],
+ [
+  "Modifiable",
+  "Editável",
+  "Editable"
+ ],
+ [
+  "Apparence",
+  "Aspeto",
+  "Aspecto"
+ ],
+ [
+  "Nom du rôle",
+  "Nome do cargo",
+  "Nombre del rol"
+ ],
+ [
+  "Afficher séparément dans la liste des membres les membres ayant ce rôle",
+  "Mostrar separadamente na lista de membros os membros com este cargo",
+  "Mostrar por separado en la lista de miembros a quienes tengan este rol"
+ ],
+ [
+  "Autoriser accorde une autorisation. Refuser la retire, même si un autre rôle l’accorde. Neutre laisse la décision aux valeurs par défaut du serveur et aux autres rôles.",
+  "Permitir concede uma permissão. Recusar retira-a, mesmo que outro cargo a conceda. Neutro deixa a decisão para as predefinições do servidor e para os outros cargos.",
+  "Permitir concede un permiso. Denegar lo quita, aunque otro rol lo conceda. Neutral deja la decisión a los valores predeterminados del servidor y a otros roles."
+ ],
+ [
+  "Trouver une autorisation",
+  "Encontrar uma permissão",
+  "Buscar un permiso"
+ ],
+ [
+  "Rechercher des autorisations",
+  "Pesquisar permissões",
+  "Buscar permisos"
+ ],
+ [
+  "Stoatmod ou vous n’avez pas cette autorisation, elle ne peut donc pas être accordée ici.",
+  "Esta permissão falta ao Stoatmod ou à sua conta, por isso não pode ser concedida aqui.",
+  "Stoatmod o tú no tienes este permiso, por lo que no se puede conceder aquí."
+ ],
+ [
+  "Aucune autorisation ne correspond à votre recherche.",
+  "Nenhuma permissão corresponde à sua pesquisa.",
+  "Ningún permiso coincide con tu búsqueda."
+ ],
+ [
+  "Annuler les modifications",
+  "Descartar alterações",
+  "Descartar cambios"
+ ],
+ [
+  "Supprimer ce rôle",
+  "Eliminar este cargo",
+  "Eliminar este rol"
+ ],
+ [
+  "Le rôle est retiré à chaque membre qui le possède. Cette action est irréversible. Un rôle que Stoatmod utilise pour les rôles automatiques, les candidatures, les rôles par réaction ou l’Automation Lab doit d’abord y être retiré.",
+  "O cargo é retirado de todos os membros que o têm. Não é possível anular. Um cargo que o Stoatmod usa em cargos automáticos, candidaturas, cargos por reação ou no Automation Lab tem de ser retirado aí primeiro.",
+  "El rol se quita a todos los miembros que lo tienen. No se puede deshacer. Un rol que Stoatmod usa en roles automáticos, solicitudes, roles por reacción o Automation Lab debe quitarse primero allí."
+ ],
+ [
+  "Saisissez le nom du rôle pour confirmer",
+  "Escreva o nome do cargo para confirmar",
+  "Escribe el nombre del rol para confirmar"
+ ],
+ [
+  "Supprimer le rôle",
+  "Eliminar cargo",
+  "Eliminar rol"
+ ],
+ [
+  "Aperçu du rôle en direct",
+  "Pré-visualização do cargo em direto",
+  "Vista previa del rol en directo"
+ ],
+ [
+  "Aucun rôle sélectionné",
+  "Nenhum cargo selecionado",
+  "Ningún rol seleccionado"
+ ],
+ [
+  "Voici l’aspect du nom à côté des messages et dans la liste des membres. Les clients Stoat étalent le dégradé sur tout le nom.",
+  "É assim que o nome aparece junto às mensagens e na lista de membros. Os clientes do Stoat aplicam o gradiente a todo o nome.",
+  "Así se ve el nombre junto a los mensajes y en la lista de miembros. Los clientes de Stoat aplican el degradado a todo el nombre."
+ ],
+ [
+  "Alex",
+  "Alex",
+  "Alex"
+ ],
+ [
+  "Aujourd’hui à 12:34",
+  "Hoje às 12:34",
+  "Hoy a las 12:34"
+ ],
+ [
+  "Bienvenue sur le serveur !",
+  "Bem-vindo ao servidor!",
+  "¡Bienvenido al servidor!"
+ ],
+ [
+  "En ligne — 3",
+  "Online — 3",
+  "En línea — 3"
+ ],
+ [
+  "Sam",
+  "Sam",
+  "Sam"
+ ],
+ [
+  "Type de couleur du rôle",
+  "Tipo de cor do cargo",
+  "Tipo de color del rol"
+ ],
+ [
+  "Aucune couleur",
+  "Sem cor",
+  "Sin color"
+ ],
+ [
+  "Unie",
+  "Sólida",
+  "Sólido"
+ ],
+ [
+  "Dégradé",
+  "Gradiente",
+  "Degradado"
+ ],
+ [
+  "CSS personnalisé",
+  "CSS personalizado",
+  "CSS personalizado"
+ ],
+ [
+  "Couleur",
+  "Cor",
+  "Color"
+ ],
+ [
+  "Style",
+  "Estilo",
+  "Estilo"
+ ],
+ [
+  "Linéaire",
+  "Linear",
+  "Lineal"
+ ],
+ [
+  "Radial",
+  "Radial",
+  "Radial"
+ ],
+ [
+  "Conique",
+  "Cónico",
+  "Cónico"
+ ],
+ [
+  "Auto",
+  "Auto",
+  "Auto"
+ ],
+ [
+  "＋ Ajouter une couleur",
+  "＋ Adicionar uma cor",
+  "＋ Añadir un color"
+ ],
+ [
+  "Inverser",
+  "Inverter",
+  "Invertir"
+ ],
+ [
+  "Dégradés prédéfinis",
+  "Gradientes predefinidos",
+  "Degradados predefinidos"
+ ],
+ [
+  "Couleur ou dégradé CSS",
+  "Cor ou gradiente CSS",
+  "Color o degradado CSS"
+ ],
+ [
+  "Salons textuels",
+  "Canais de texto",
+  "Canales de texto"
+ ],
+ [
+  "Salons vocaux",
+  "Canais de voz",
+  "Canales de voz"
+ ],
+ [
+  "Modifier le nom, la description, l’icône, la bannière et les paramètres du serveur.",
+  "Alterar o nome, a descrição, o ícone, o banner e as definições do servidor.",
+  "Cambiar el nombre, la descripción, el icono, el banner y los ajustes del servidor."
+ ],
+ [
+  "Modifier les autorisations des rôles et des salons.",
+  "Alterar as permissões dos cargos e dos canais.",
+  "Cambiar los permisos de los roles y de los canales."
+ ],
+ [
+  "Ajouter et supprimer des emojis personnalisés.",
+  "Adicionar e remover emojis personalizados.",
+  "Añadir y quitar emojis personalizados."
+ ],
+ [
+  "Retirer des membres du serveur. Ils peuvent revenir avec une invitation.",
+  "Remover membros do servidor. Podem voltar a entrar com um convite.",
+  "Quitar miembros del servidor. Pueden volver a entrar con una invitación."
+ ],
+ [
+  "Bannir des membres du serveur.",
+  "Banir membros do servidor.",
+  "Banear miembros del servidor."
+ ],
+ [
+  "Empêcher temporairement des membres de parler ou de réagir.",
+  "Impedir temporariamente membros de falar ou reagir.",
+  "Impedir temporalmente que los miembros hablen o reaccionen."
+ ],
+ [
+  "Donner et retirer des rôles aux membres situés sous leur propre rôle.",
+  "Atribuir e remover cargos a membros abaixo do seu próprio cargo.",
+  "Dar y quitar roles a miembros que estén por debajo de su propio rol."
+ ],
+ [
+  "Modifier leur propre pseudo.",
+  "Alterar a sua própria alcunha.",
+  "Cambiar su propio apodo."
+ ],
+ [
+  "Modifier ou supprimer le pseudo des autres membres.",
+  "Alterar ou remover as alcunhas de outros membros.",
+  "Cambiar o quitar los apodos de otros miembros."
+ ],
+ [
+  "Modifier leur propre avatar de serveur.",
+  "Alterar o seu próprio avatar do servidor.",
+  "Cambiar su propio avatar del servidor."
+ ],
+ [
+  "Retirer les avatars de serveur des autres membres.",
+  "Remover os avatares do servidor de outros membros.",
+  "Quitar los avatares del servidor de otros miembros."
+ ],
+ [
+  "Voir les salons et lire ce qu’ils contiennent.",
+  "Ver canais e ler o que contêm.",
+  "Ver canales y leer lo que contienen."
+ ],
+ [
+  "Lire les messages précédents d’un salon.",
+  "Ler mensagens anteriores de um canal.",
+  "Leer mensajes anteriores de un canal."
+ ],
+ [
+  "Envoyer des messages dans les salons textuels.",
+  "Enviar mensagens em canais de texto.",
+  "Enviar mensajes en canales de texto."
+ ],
+ [
+  "Envoyer des messages avec du contenu intégré et des aperçus de liens.",
+  "Enviar mensagens com conteúdo incorporado e pré-visualizações de ligações.",
+  "Enviar mensajes con contenido incrustado y vistas previas de enlaces."
+ ],
+ [
+  "Joindre des fichiers, des images et d’autres médias.",
+  "Anexar ficheiros, imagens e outros conteúdos multimédia.",
+  "Adjuntar archivos, imágenes y otros medios."
+ ],
+ [
+  "Envoyer des messages avec un nom et un avatar personnalisés.",
+  "Enviar mensagens com um nome e um avatar personalizados.",
+  "Enviar mensajes con un nombre y un avatar personalizados."
+ ],
+ [
+  "Ajouter des réactions aux messages.",
+  "Adicionar reações às mensagens.",
+  "Añadir reacciones a los mensajes."
+ ],
+ [
+  "Mentionner tout le monde et tous les membres en ligne.",
+  "Mencionar todos e todos os membros online.",
+  "Mencionar a todos y a todos los miembros en línea."
+ ],
+ [
+  "Mentionner des rôles.",
+  "Mencionar cargos.",
+  "Mencionar roles."
+ ],
+ [
+  "Parler dans les salons vocaux.",
+  "Falar em canais de voz.",
+  "Hablar en canales de voz."
+ ],
+ [
+  "Partager la vidéo et l’écran dans les salons vocaux.",
+  "Partilhar vídeo e ecrãs em canais de voz.",
+  "Compartir vídeo y pantallas en canales de voz."
+ ],
+ [
+  "Rendre muets les membres de rang inférieur dans un salon vocal.",
+  "Silenciar membros de categoria inferior num canal de voz.",
+  "Silenciar a miembros de rango inferior en un canal de voz."
+ ],
+ [
+  "Mettre en sourdine les membres de rang inférieur dans un salon vocal.",
+  "Ensurdecer membros de categoria inferior num canal de voz.",
+  "Ensordecer a miembros de rango inferior en un canal de voz."
+ ],
+ [
+  "Déplacer des membres entre les salons vocaux.",
+  "Mover membros entre canais de voz.",
+  "Mover miembros entre canales de voz."
+ ],
+ [
+  "Entendre les autres membres dans les salons vocaux.",
+  "Ouvir outros membros em canais de voz.",
+  "Escuchar a otros miembros en canales de voz."
+ ],
+ [
+  "Choisissez les autorisations {0} dans la liste.",
+  "Escolha as permissões {0} na lista.",
+  "Elige los permisos {0} de la lista."
+ ],
+ [
+  "L’une des autorisations n’est pas reconnue.",
+  "Uma das permissões não é reconhecida.",
+  "Uno de los permisos no se reconoce."
+ ],
+ [
+  "Une autorisation figure en double.",
+  "Uma permissão foi indicada duas vezes.",
+  "Un permiso aparece dos veces."
+ ],
+ [
+  "Saisissez un nom de rôle.",
+  "Introduza um nome de cargo.",
+  "Introduce un nombre de rol."
+ ],
+ [
+  "Un nom de rôle doit comporter de 1 à {0} caractères.",
+  "O nome de um cargo deve ter entre 1 e {0} caracteres.",
+  "El nombre de un rol debe tener entre 1 y {0} caracteres."
+ ],
+ [
+  "Un nom de rôle ne peut pas contenir de caractères de contrôle ou invisibles.",
+  "O nome de um cargo não pode conter caracteres de controlo ou invisíveis.",
+  "El nombre de un rol no puede contener caracteres de control ni invisibles."
+ ],
+ [
+  "Les canaux de couleur vont de 0 à 255.",
+  "Os canais de cor vão de 0 a 255.",
+  "Los canales de color van de 0 a 255."
+ ],
+ [
+  "L’angle d’un dégradé va de 0 à 360 degrés.",
+  "O ângulo de um gradiente vai de 0 a 360 graus.",
+  "El ángulo de un degradado va de 0 a 360 grados."
+ ],
+ [
+  "Une étape de dégradé va de 0 % à 100 %.",
+  "Um ponto de cor do gradiente vai de 0% a 100%.",
+  "Un punto de color del degradado va del 0 % al 100 %."
+ ],
+ [
+  "La couleur d’un rôle peut comporter au plus {0} caractères. Utilisez moins de couleurs dans le dégradé.",
+  "A cor de um cargo pode ter no máximo {0} caracteres. Use menos pontos de cor no gradiente.",
+  "El color de un rol puede tener como máximo {0} caracteres. Usa menos colores en el degradado."
+ ],
+ [
+  "Stoatmod n’a aucun rôle sur ce serveur. Donnez un rôle au bot Stoatmod dans Stoat et placez-le au-dessus des rôles que vous voulez gérer.",
+  "O Stoatmod não tem nenhum cargo neste servidor. Atribua um cargo ao bot Stoatmod no Stoat e coloque-o acima dos cargos que pretende gerir.",
+  "Stoatmod no tiene ningún rol en este servidor. Dale un rol al bot de Stoatmod en Stoat y colócalo por encima de los roles que quieras gestionar."
+ ],
+ [
+  "Le rôle de Stoatmod n’est pas au-dessus de ce rôle. Placez le rôle de Stoatmod plus haut dans la liste des rôles de Stoat pour le gérer.",
+  "O cargo do Stoatmod não está acima deste cargo. Mova o cargo do Stoatmod para mais alto na lista de cargos do Stoat para o gerir.",
+  "El rol de Stoatmod no está por encima de este rol. Mueve el rol de Stoatmod más arriba en la lista de roles de Stoat para gestionarlo."
+ ],
+ [
+  "Stoatmod a besoin de l’autorisation Manage Roles pour modifier les rôles.",
+  "O Stoatmod precisa da permissão Manage Roles para alterar cargos.",
+  "Stoatmod necesita el permiso Manage Roles para cambiar roles."
+ ],
+ [
+  "Stoatmod a besoin de l’autorisation Manage Permissions pour modifier les autorisations des rôles.",
+  "O Stoatmod precisa da permissão Manage Permissions para alterar as permissões dos cargos.",
+  "Stoatmod necesita el permiso Manage Permissions para cambiar los permisos de los roles."
+ ],
+ [
+  "Vous avez besoin de l’autorisation Manage Roles sur ce serveur, ou d’en être le propriétaire, pour modifier les rôles ici.",
+  "Precisa da permissão Manage Roles neste servidor, ou de ser o seu proprietário, para alterar cargos aqui.",
+  "Necesitas el permiso Manage Roles en este servidor, o ser su propietario, para cambiar roles aquí."
+ ],
+ [
+  "Vous avez besoin de l’autorisation Manage Permissions sur ce serveur, ou d’en être le propriétaire, pour modifier les autorisations des rôles ici.",
+  "Precisa da permissão Manage Permissions neste servidor, ou de ser o seu proprietário, para alterar as permissões dos cargos aqui.",
+  "Necesitas el permiso Manage Permissions en este servidor, o ser su propietario, para cambiar los permisos de los roles aquí."
+ ],
+ [
+  "Ce rôle n’est pas situé sous votre rôle le plus élevé ; vous ne pouvez donc pas le modifier ici.",
+  "Este cargo não está abaixo do seu cargo mais alto, por isso não o pode alterar aqui.",
+  "Este rol no está por debajo de tu rol más alto, por lo que no puedes cambiarlo aquí."
+ ],
+ [
+  "L’un des champs n’est pas reconnu.",
+  "Um dos campos não é reconhecido.",
+  "Uno de los campos no se reconoce."
+ ],
+ [
+  "Choisissez si le rôle est affiché séparément.",
+  "Escolha se o cargo é mostrado separadamente.",
+  "Elige si el rol se muestra por separado."
+ ],
+ [
+  "Envoyez à la fois les autorisations accordées et refusées.",
+  "Envie tanto as permissões concedidas como as negadas.",
+  "Envía tanto los permisos concedidos como los denegados."
+ ],
+ [
+  "Une autorisation ne peut pas être à la fois accordée et refusée.",
+  "Uma permissão não pode ser ao mesmo tempo concedida e negada.",
+  "Un permiso no puede estar concedido y denegado a la vez."
+ ],
+ [
+  "Il n’y a aucune modification à enregistrer.",
+  "Não há alterações para guardar.",
+  "No hay cambios que guardar."
+ ],
+ [
+  "Stoatmod et vous ne pouvez accorder que les autorisations que vous possédez tous les deux. Impossible à accorder : {0}.",
+  "Só podem ser concedidas permissões que tanto o Stoatmod como a sua conta têm. Não podem ser concedidas: {0}.",
+  "Stoatmod y tú solo podéis conceder los permisos que ambos tenéis. No se pueden conceder: {0}."
+ ],
+ [
+  "Envoyez le nouvel ordre des rôles.",
+  "Envie a nova ordem dos cargos.",
+  "Envía el nuevo orden de los roles."
+ ],
+ [
+  "L’ordre des rôles n’est pas valide.",
+  "A ordem dos cargos não é válida.",
+  "El orden de los roles no es válido."
+ ],
+ [
+  "La liste des rôles a changé. Rechargez les rôles et réessayez.",
+  "A lista de cargos mudou. Recarregue os cargos e tente novamente.",
+  "La lista de roles cambió. Recarga los roles e inténtalo de nuevo."
+ ],
+ [
+  "L’ordre des rôles n’a pas changé.",
+  "A ordem dos cargos não mudou.",
+  "El orden de los roles no ha cambiado."
+ ],
+ [
+  "Stoatmod n’a pas l’autorisation que Stoat exige pour cette modification.",
+  "O Stoatmod não tem a permissão que o Stoat exige para esta alteração.",
+  "Stoatmod no tiene el permiso que Stoat exige para este cambio."
+ ],
+ [
+  "Stoat ne permet pas à Stoatmod d’accorder des autorisations que Stoatmod ne possède pas lui-même.",
+  "O Stoat não permite que o Stoatmod conceda permissões que o próprio Stoatmod não tem.",
+  "Stoat no permite que Stoatmod conceda permisos que el propio Stoatmod no tiene."
+ ],
+ [
+  "Cette modification empêcherait Stoatmod de voir les salons ; Stoat l’a donc refusée.",
+  "Esta alteração impediria o Stoatmod de ver canais, por isso o Stoat recusou-a.",
+  "Este cambio impediría que Stoatmod viera los canales, así que Stoat lo rechazó."
+ ],
+ [
+  "Ce serveur a atteint la limite de rôles de Stoat.",
+  "Este servidor atingiu o limite de cargos do Stoat.",
+  "Este servidor alcanzó el límite de roles de Stoat."
+ ],
+ [
+  "Stoat a rejeté l’une des valeurs.",
+  "O Stoat rejeitou um dos valores.",
+  "Stoat rechazó uno de los valores."
+ ],
+ [
+  "Ce rôle n’existe plus sur le serveur.",
+  "Esse cargo já não existe no servidor.",
+  "Ese rol ya no existe en el servidor."
+ ],
+ [
+  "Stoatmod n’a pas pu se connecter à Stoat. Réessayez dans un instant.",
+  "O Stoatmod não conseguiu iniciar sessão no Stoat. Tente novamente dentro de instantes.",
+  "Stoatmod no pudo iniciar sesión en Stoat. Inténtalo de nuevo en un momento."
+ ],
+ [
+  "La gestion des rôles n’est pas disponible pour le moment.",
+  "A gestão de cargos não está disponível neste momento.",
+  "La gestión de roles no está disponible en este momento."
+ ],
+ [
+  "Trop de demandes de rôles. Attendez une minute et réessayez.",
+  "Demasiados pedidos de cargos. Aguarde um minuto e tente novamente.",
+  "Demasiadas solicitudes de roles. Espera un minuto e inténtalo de nuevo."
+ ],
+ [
+  "Stoatmod n’est plus sur ce serveur.",
+  "O Stoatmod já não está neste servidor.",
+  "Stoatmod ya no está en este servidor."
+ ],
+ [
+  "Ce rôle n’existe pas sur ce serveur.",
+  "Esse cargo não existe neste servidor.",
+  "Ese rol no existe en este servidor."
+ ],
+ [
+  "Certaines modifications ont été enregistrées, mais pas toutes. {0}",
+  "Algumas alterações foram guardadas, mas não todas. {0}",
+  "Algunos cambios se guardaron, pero no todos. {0}"
+ ],
+ [
+  "Un objet JSON avec un nom est requis.",
+  "É necessário um objeto JSON com um nome.",
+  "Se requiere un objeto JSON con un nombre."
+ ],
+ [
+  "Saisissez exactement le nom du rôle pour confirmer que vous voulez le supprimer.",
+  "Escreva exatamente o nome do cargo para confirmar que pretende eliminá-lo.",
+  "Escribe exactamente el nombre del rol para confirmar que quieres eliminarlo."
+ ],
+ [
+  "Ce rôle est utilisé par {0}. Retirez-le d’abord de là, puis supprimez le rôle.",
+  "Este cargo é usado por {0}. Retire-o primeiro de lá e depois elimine o cargo.",
+  "Este rol lo usa {0}. Quítalo primero de allí y luego elimina el rol."
+ ],
+ [
+  "Autoriser",
+  "Permitir",
+  "Permitir"
+ ],
+ [
+  "Neutre",
+  "Neutro",
+  "Neutral"
+ ],
+ [
+  "{0} rôles sur {1} peuvent être modifiés ici",
+  "{0} de {1} cargos podem ser editados aqui",
+  "{0} de {1} roles se pueden editar aquí"
+ ],
+ [
+  "Utilisez de 1 à {0} caractères.",
+  "Use de 1 a {0} caracteres.",
+  "Usa de 1 a {0} caracteres."
+ ],
+ [
+  "Accorde {0} autorisations et en refuse {1}.",
+  "Concede {0} permissões e nega {1}.",
+  "Concede {0} permisos y deniega {1}."
+ ],
+ [
+  "Couleur {0}",
+  "Cor {0}",
+  "Color {0}"
+ ],
+ [
+  "Position de la couleur {0} en pourcentage",
+  "Posição da cor {0} em percentagem",
+  "Posición del color {0} en porcentaje"
+ ],
+ [
+  "Retirer la couleur {0}",
+  "Remover a cor {0}",
+  "Quitar el color {0}"
+ ],
+ [
+  "Angle : {0}°",
+  "Ângulo: {0}°",
+  "Ángulo: {0}°"
+ ]
+]
