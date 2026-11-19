@@ -21,11 +21,18 @@ function harness(){
 }
 function elements(node,type){if(!node||typeof node!=="object")return [];if(Array.isArray(node))return node.flatMap(item=>elements(item,type));return [...(node.type===type?[node]:[]),...elements(node.props?.children,type)];}
 
-test("dashboard navigation restores Applications after Members and retains review workflows",async()=>{
+test("dashboard navigation is grouped into titled sections and retains review workflows",async()=>{
   const source=await readFile(new URL("../app/DashboardApp.tsx",import.meta.url),"utf8");
-  const block=source.slice(source.indexOf("const navItems:"),source.indexOf("const FullEmojiPicker"));
-  const labels=[...block.matchAll(/label:"([^"]+)"/g)].map(match=>match[1]);
-  assert.deepEqual(labels,["Overview","Cases","Appeals","Members","Applications","Activity log","Policy Studio","Automation Lab","Reaction roles","Roles","Polls 2.0","Leaderboards","Discovery"]);
+  const block=source.slice(source.indexOf("const navGroups"),source.indexOf("const FullEmojiPicker"));
+  const groups=[...block.matchAll(/\{id:"[a-z-]+",label:"([^"]+)",items:\[([^\]]*)\]\}/g)].map(match=>[match[1],[...match[2].matchAll(/label:"([^"]+)"/g)].map(item=>item[1])]);
+  assert.deepEqual(groups,[
+    ["Workspace",["Overview","Activity log"]],
+    ["Moderation",["Cases","Appeals","Members","Applications"]],
+    ["Protection",["Policy Studio","Automation Lab"]],
+    ["Community",["Roles","Reaction roles","Polls 2.0","Leaderboards","Discovery"]],
+  ]);
+  assert.match(source,/<p className="nav-group-title"/);
+  assert.match(source,/role="group" aria-labelledby=/);
   assert.match(source,/<\/nav><button className=\{`sidebar-support/);
   assert.doesNotMatch(source,/view==="applications"\?"members"/);
   assert.match(source,/view==="applications"&&<ApplicationsPanel\/>/);

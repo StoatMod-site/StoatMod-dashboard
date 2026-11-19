@@ -95,6 +95,47 @@
 .shell:global(#server-dashboard) :global(.sidebar-support) { margin-top: 1.5rem; }
 .shell:global(#server-dashboard) :global(.sidebar-foot) { margin-top: auto; padding: 1.5rem .75rem 0; border: 0; color: var(--muted); font-size: .65rem; }
 .shell:global(#server-dashboard) :global(.sidebar-foot button) { color: var(--muted); }
+
+/* Grouped navigation: titled sections, icon tiles, a clear current page and a quiet footer. */
+.shell:global(#server-dashboard) :global(.sidebar) { padding: 1.15rem .8rem 1rem; scrollbar-width: thin; }
+.shell:global(#server-dashboard) :global(.sidebar-brand) { width: 124px; height: 58px; margin: -.45rem 0 .55rem .45rem; }
+.shell:global(#server-dashboard) :global(.server-chip) { align-items: center; margin: 0 0 .35rem; padding: .7rem; border-radius: 12px; }
+.shell:global(#server-dashboard) :global(.server-avatar) { border-radius: 10px; font-weight: 700; }
+.shell:global(#server-dashboard) :global(.sidebar nav) { display: block; flex: 0 0 auto; margin: 0; overflow: visible; }
+.shell:global(#server-dashboard) :global(.nav-group) { display: grid; gap: .1rem; padding: .95rem 0 .3rem; }
+.shell:global(#server-dashboard) :global(.nav-group + .nav-group) { margin-top: .4rem; border-top: 1px solid var(--line); }
+.shell:global(#server-dashboard) :global(.nav-group-title) { margin: 0 0 .3rem; padding: 0 .65rem; color: var(--muted); font-size: .6rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; }
+.shell:global(#server-dashboard) :global(.sidebar nav button), .shell:global(#server-dashboard) :global(.sidebar-support) { position: relative; min-height: 38px; gap: .7rem; padding: .3rem .5rem .3rem .4rem; border: 0; border-radius: 10px; color: var(--muted); font-size: .79rem; font-weight: 550; transition: background .15s ease, color .15s ease; }
+.shell:global(#server-dashboard) :global(.sidebar nav button .nav-label), .shell:global(#server-dashboard) :global(.sidebar-support .nav-label) { flex: 1 1 auto; min-width: 0; overflow: hidden; font-size: inherit; font-weight: inherit; text-overflow: ellipsis; white-space: nowrap; }
+.shell:global(#server-dashboard) :global(.nav-icon) { display: grid; flex: 0 0 28px; width: 28px; height: 28px; place-items: center; border-radius: 8px; background: var(--surface-soft); color: var(--muted); font-style: normal; transition: background .15s ease, color .15s ease; }
+.shell:global(#server-dashboard) :global(.nav-icon svg) { width: 16px; height: 16px; flex: none; }
+.shell:global(#server-dashboard) :global(.sidebar nav button:hover), .shell:global(#server-dashboard) :global(.sidebar-support:hover) { transform: none; background: var(--surface-soft); color: var(--ink); }
+.shell:global(#server-dashboard) :global(.sidebar nav button:hover .nav-icon), .shell:global(#server-dashboard) :global(.sidebar-support:hover .nav-icon) { background: var(--panel); color: var(--ink); }
+.shell:global(#server-dashboard) :global(.sidebar nav button.active), .shell:global(#server-dashboard) :global(.sidebar-support.active) { background: var(--accent-soft); color: var(--ink); font-weight: 700; }
+.shell:global(#server-dashboard) :global(.sidebar nav button.active .nav-icon), .shell:global(#server-dashboard) :global(.sidebar-support.active .nav-icon) { background: var(--ink); color: var(--panel); }
+.shell:global(#server-dashboard) :global(.sidebar nav button.active::before) { content: ""; position: absolute; top: 9px; bottom: 9px; left: -.8rem; display: block; width: 3px; border-radius: 0 3px 3px 0; background: var(--ink); }
+.shell:global(#server-dashboard) :global(.sidebar nav button.active::after) { display: none; }
+.shell:global(#server-dashboard) :global(.sidebar-notification-badge) { position: static; display: grid; flex: 0 0 auto; min-width: 20px; height: 20px; margin-left: auto; padding: 0 .35rem; place-items: center; border: 0; border-radius: 999px; background: var(--ink); color: var(--panel); font: 700 .6rem/1 ui-monospace, Consolas, monospace; font-style: normal; }
+.shell:global(#server-dashboard) :global(.sidebar-support) { width: 100%; margin: .5rem 0 0; justify-content: flex-start; border-top: 0; }
+.shell:global(#server-dashboard) :global(.sidebar-foot) { display: flex; align-items: center; justify-content: space-between; gap: .8rem; margin-top: auto; padding: .85rem .65rem 0; border-top: 1px solid var(--line); }
+.shell:global(#server-dashboard) :global(.sidebar-foot > div) { display: flex; align-items: center; gap: .45rem; }
+.shell:global(#server-dashboard) :global(.sidebar-foot button) { color: var(--muted); font-size: .65rem; text-decoration: underline; text-underline-offset: 3px; }
+@media (max-height: 960px) and (min-width: 851px) {
+  .shell:global(#server-dashboard) :global(.sidebar-brand) { display: none; }
+  .shell:global(#server-dashboard) :global(.sidebar) { padding-top: .9rem; }
+  .shell:global(#server-dashboard) :global(.sidebar nav button), .shell:global(#server-dashboard) :global(.sidebar-support) { min-height: 36px; }
+}
+@media (max-height: 800px) and (min-width: 851px) {
+  .shell:global(#server-dashboard) :global(.server-chip) { padding: .5rem .6rem; }
+  .shell:global(#server-dashboard) :global(.nav-group) { padding-top: .5rem; padding-bottom: .15rem; }
+  .shell:global(#server-dashboard) :global(.nav-group + .nav-group) { margin-top: .2rem; }
+  .shell:global(#server-dashboard) :global(.sidebar-support) { margin-top: .3rem; }
+  .shell:global(#server-dashboard) :global(.nav-group-title) { margin-bottom: .2rem; }
+  .shell:global(#server-dashboard) :global(.sidebar nav button), .shell:global(#server-dashboard) :global(.sidebar-support) { min-height: 32px; padding-block: .15rem; }
+  .shell:global(#server-dashboard) :global(.nav-icon) { flex-basis: 24px; width: 24px; height: 24px; border-radius: 7px; }
+  .shell:global(#server-dashboard) :global(.nav-icon svg) { width: 14px; height: 14px; }
+  .shell:global(#server-dashboard) :global(.sidebar-foot) { padding-top: .6rem; }
+}
 .shell:global(#server-dashboard) :global(.workspace) { width: 100%; max-width: 1740px; min-width: 0; margin: 0 auto; padding: 2.1rem clamp(1.2rem, 3.1vw, 3.2rem) 4rem; background: transparent; }
 .shell:global(#server-dashboard) :global(.topbar) { display: flex; justify-content: space-between; align-items: center; gap: 1rem; min-height: 0; margin: 0 0 2rem; padding: 0; border: 0; background: transparent; }
 .shell:global(#server-dashboard) :global(.topbar .eyebrow) { display: flex; flex-wrap: wrap; gap: .65rem; margin: 0 0 .7rem; font-size: .62rem; font-weight: 500; letter-spacing: .04em; text-transform: none; }
@@ -382,6 +423,13 @@
   .shell:global(#server-dashboard) :global(.sidebar-brand) { display: none; }
   .shell:global(#server-dashboard) :global(.server-chip) { width: max-content; max-width: 100%; margin: 0 0 1rem; padding: 0; border: 0; background: transparent; }
   .shell:global(#server-dashboard) :global(.sidebar nav) { display: flex; gap: .4rem; overflow-x: auto; padding: 0 0 .3rem; scrollbar-width: thin; }
+  .shell:global(#server-dashboard) :global(.nav-group) { display: flex; flex: 0 0 auto; align-items: center; gap: .35rem; padding: 0; }
+  .shell:global(#server-dashboard) :global(.nav-group + .nav-group) { margin: 0 0 0 .1rem; padding-left: .45rem; border-top: 0; border-left: 1px solid var(--line); }
+  .shell:global(#server-dashboard) :global(.nav-group-title) { display: none; }
+  .shell:global(#server-dashboard) :global(.sidebar nav button.active::before) { display: none; }
+  .shell:global(#server-dashboard) :global(.sidebar nav button .nav-label) { flex: 0 0 auto; }
+  .shell:global(#server-dashboard) :global(.nav-icon) { flex-basis: 24px; width: 24px; height: 24px; }
+  .shell:global(#server-dashboard) :global(.nav-icon svg) { width: 14px; height: 14px; }
   .shell:global(#server-dashboard) :global(.sidebar nav button) { flex: 0 0 auto; width: auto; min-height: 38px; gap: .5rem; padding: .55rem .7rem; white-space: nowrap; }
   .shell:global(#server-dashboard) :global(.sidebar nav button svg) { width: 16px; height: 16px; }
   .shell:global(#server-dashboard) :global(.sidebar-support) { position: absolute; top: 1rem; right: 1rem; width: auto; margin: 0; }
