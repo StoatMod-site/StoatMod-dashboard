@@ -4,7 +4,7 @@ export const documentationPages: Record<string, ContentPage> = {
   "server-applications": {
     slug: "server-applications",
     title: "Server applications",
-    seoTitle: "Server Applications: Forms, Verification and Approvals | Stoatmod Docs",
+    seoTitle: "Server Applications: Forms and Approvals | Stoatmod Docs",
     description: "Reference for Stoatmod DM applications: form settings, visible channels, CAPTCHA checks, deadlines, review commands, roles and recovery.",
     eyebrow: "Member admission reference",
     lede: "Server applications restrict new members until they complete your DM questionnaire and receive an admin's approval. Configure the form and channel access in Applications → Form & setup in the server dashboard.",

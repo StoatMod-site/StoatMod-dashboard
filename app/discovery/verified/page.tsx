@@ -13,7 +13,7 @@ import styles from "../Discovery.module.css";
 
 const path = "/discovery/verified";
 const title = "Verified Stoat Servers – Official & Trusted | Stoatmod";
-const description = "Verified Stoat servers on Stoatmod Discovery: official servers, verified organisations, communities of high standing and impactful communities, each checked by the Stoatmod team.";
+const description = "Verified Stoat servers on Stoatmod Discovery: official servers, verified organisations and trusted communities, each checked by the Stoatmod team.";
 
 const tiers = [
   { name: "Official Stoatmod server", text: "Servers run by the Stoatmod team, such as our support community." },

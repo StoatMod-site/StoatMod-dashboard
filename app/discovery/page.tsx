@@ -11,7 +11,7 @@ import { absoluteUrl, siteConfig } from "../lib/site-config";
 import { faqSchema } from "./DiscoveryUI";
 
 const title = "Stoat Servers – Discover & Join Stoat Communities | Stoatmod";
-const description = "Find Stoat servers to join with Stoat Discovery by Stoatmod. Browse reviewed Stoat communities by topic, see live activity, and advertise your own Stoat server for free.";
+const description = "Find Stoat servers to join on Stoat Discovery. Browse reviewed Stoat communities by topic, see live activity and advertise your own Stoat server for free.";
 
 export const metadata = buildMetadata({ title, description, path: "/discovery", ...discoveryOgImage("hub", "Stoat servers worth joining – Stoatmod Discovery") });
 

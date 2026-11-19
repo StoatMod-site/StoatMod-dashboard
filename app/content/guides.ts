@@ -4,7 +4,7 @@ export const guidePages: Record<string, ContentPage> = {
   "how-to-set-up-server-applications": {
     slug: "how-to-set-up-server-applications",
     title: "How to set up server applications",
-    seoTitle: "Set Up Stoat Server Applications and Member Verification | Stoatmod",
+    seoTitle: "Set Up Stoat Server Applications and Verification | Stoatmod",
     description: "Create a DM application form, choose channels applicants can see, combine it with CAPTCHA checks and review new members in Stoatmod.",
     eyebrow: "New-member application guide",
     lede: "Ask new members to answer your questions privately before granting server access. This walkthrough takes you from the first form to an approved member who can view channels and chat.",

@@ -11,6 +11,8 @@ type MetadataInput = {
   imageWidth?: number;
   imageHeight?: number;
   index?: boolean;
+  /** Only for public pages left out of results: let Google follow their links. Private screens keep nofollow. */
+  followWhenNoindex?: boolean;
   type?: "website" | "article";
   modifiedTime?: string;
 };
@@ -24,6 +26,7 @@ export function buildMetadata({
   imageWidth,
   imageHeight,
   index = true,
+  followWhenNoindex = false,
   type = "website",
   modifiedTime,
 }: MetadataInput): Metadata {
@@ -69,6 +72,7 @@ export function buildMetadata({
             "max-video-preview": -1,
           },
         }
-      : { index: false, follow: false },
+      // Thin public pages (small tag lists) stay out of results but still pass Google on to the servers they list.
+      : { index: false, follow: followWhenNoindex && !isPrivatePreview() },
   };
 }

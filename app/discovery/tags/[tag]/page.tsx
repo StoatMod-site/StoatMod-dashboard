@@ -43,6 +43,7 @@ export async function generateMetadata({ params }: { params: Promise<{ tag: stri
     description,
     path: "/discovery/tags/" + slugify(result.displayTag),
     index: result.servers.length >= 3,
+    followWhenNoindex: true,
     ...discoveryOgImage("tags", `#${result.displayTag} Stoat servers – Stoatmod Discovery`),
   });
 }

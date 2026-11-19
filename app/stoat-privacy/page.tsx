@@ -315,7 +315,7 @@ const checklist = [
 const seo = {
   title: "Stoat Bots and How They Use Your Data | Stoatmod",
   headline: "Stoat bots and how they use your data.",
-  description: "What popular Stoat bots like AutoMod, Kuma, bronx and bolt collect, keep and share, what's changed since October 2026, and what Stoat has said about bot privacy.",
+  description: "What popular Stoat bots like AutoMod, Kuma, bronx and bolt collect, keep and share, what has changed since October 2026, and what Stoat has said.",
   path: "/stoat-privacy",
   image: "/og-stoat-privacy.png",
   imageAlt: "Stoat bots and your data: what they collect, keep and share. AutoMod, Kuma, bolt, bronx and log_it, every finding sourced.",

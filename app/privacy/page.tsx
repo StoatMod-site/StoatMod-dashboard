@@ -5,10 +5,10 @@ import { buildMetadata } from "../lib/seo";
 
 export const metadata = buildMetadata({
   title: "Privacy Policy | Stoatmod",
-  description: "How Stoatmod Limited processes and protects personal information.",
+  description: "What personal data Stoatmod processes, why, how long it is kept, who it is shared with and how to use your privacy rights.",
   path: "/privacy",
 });
 
 export default function PrivacyPolicyPage() {
-  return <><JsonLd data={pageSchema({ title: "Stoatmod Privacy Policy", description: "How Stoatmod Limited processes and protects personal information.", path: "/privacy" })} /><PrivacyPage /></>;
+  return <><JsonLd data={pageSchema({ title: "Stoatmod Privacy Policy", description: "What personal data Stoatmod processes, why, how long it is kept, who it is shared with and how to use your privacy rights.", path: "/privacy" })} /><PrivacyPage /></>;
 }

@@ -19,11 +19,18 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     return buildMetadata({ title: "Category not found | Stoatmod Discovery", description: "This Discovery category does not exist.", path: "/discovery/categories", index: false });
   }
   const servers = serversInCategory(await getRequiredPublicDiscovery(), category);
+  const fullTitle = `${category.title} | Stoatmod Discovery`;
+  const countLabel = servers.length === 1 ? "1 reviewed server" : `${servers.length} reviewed servers`;
+  // Name as many example servers as fit in a search snippet (about 160 characters).
+  const description = !servers.length ? category.description
+    : [3, 2, 1].map((names) => `${category.description} ${countLabel}, including ${exampleNames(servers, names)}.`).find((text) => text.length <= 160)
+      ?? `${category.description} ${countLabel}.`;
   return buildMetadata({
-    title: `${category.title} | Stoatmod Discovery`,
-    description: servers.length ? `${category.description} ${servers.length === 1 ? "1 reviewed server" : `${servers.length} reviewed servers`}, including ${exampleNames(servers)}.` : category.description,
+    title: fullTitle.length > 60 ? `${category.title} | Stoatmod` : fullTitle,
+    description,
     path: "/discovery/categories/" + category.slug,
     index: servers.length >= CATEGORY_INDEX_MINIMUM,
+    followWhenNoindex: true,
     ...discoveryOgImage("category-" + category.slug, `${category.title} – Stoatmod Discovery`),
   });
 }

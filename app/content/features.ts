@@ -105,7 +105,7 @@ export const featurePages: Record<string, ContentPage> = {
   "link-protection": {
     slug: "link-protection",
     title: "External-link protection",
-    seoTitle: "Stoat Link Protection Bot and External-Link Filter | Stoatmod",
+    seoTitle: "Stoat Link Protection and External-Link Filter | Stoatmod",
     description: "Configure Stoatmod to remove external links from a Stoat server according to your community policy.",
     eyebrow: "Stoat link filter",
     lede: "Enable a broad external-link rule when a channel should not accept web addresses, bare domains or IP-address links.",
@@ -154,7 +154,7 @@ export const featurePages: Record<string, ContentPage> = {
   "join-protection": {
     slug: "join-protection",
     title: "New-account and join protection",
-    seoTitle: "Protect a Stoat Server from Suspicious New Accounts | Stoatmod",
+    seoTitle: "Stop Suspicious New Accounts on a Stoat Server | Stoatmod",
     description: "Use Stoatmod verification, account-age checks and controlled bypasses for suspicious new accounts joining a Stoat server.",
     eyebrow: "Stoat join protection",
     lede: "Give suspicious new accounts a private verification path before they can fully participate, with clear expiry and moderator recovery controls.",
@@ -170,7 +170,7 @@ export const featurePages: Record<string, ContentPage> = {
   "moderation-cases": {
     slug: "moderation-cases",
     title: "Moderation cases and review history",
-    seoTitle: "Stoat Moderation Cases, Warnings and Review History | Stoatmod",
+    seoTitle: "Stoat Moderation Cases and Warning History | Stoatmod",
     description: "Record warnings and eligible moderation actions as reviewable Stoatmod cases with reasons, evidence and appeal status.",
     eyebrow: "Accountable moderation",
     lede: "Bring the action, reason and follow-up into one server-scoped record. Find a member’s history, add context and give your team a clear starting point for review.",

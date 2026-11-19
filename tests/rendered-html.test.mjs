@@ -480,7 +480,7 @@ test("indexes exact server names, canonical profiles and every public listing", 
     assert.equal(gamingTag.status, 308);
     assert.match(gamingTag.headers.get("location"), /\/discovery\/categories\/gaming$/);
     assert.doesNotMatch(xml, /\/discovery\/tags\/rare/);
-    assert.match(await (await render("/discovery/tags/rare")).text(), /name="robots" content="noindex/);
+    assert.match(await (await render("/discovery/tags/rare")).text(), /name="robots" content="noindex, follow"/, "thin tag pages stay out of results but pass Google on to the servers they list");
   });
 });
 
@@ -598,7 +598,7 @@ test("category pages match tags and descriptions and are indexed only with enoug
     assert.match(gamingHtml, /name="robots" content="index, follow/);
     assert.match(gamingHtml, /Community 1/);
     const music = await (await render("/discovery/categories/music")).text();
-    assert.match(music, /name="robots" content="noindex/);
+    assert.match(music, /name="robots" content="noindex, follow"/, "thin tag pages stay out of results but pass Google on to the servers they list");
     assert.match(music, /No music servers are listed yet/);
     assert.equal((await render("/discovery/categories/not-a-category")).status, 404);
     const xml = await (await render("/sitemap.xml")).text();

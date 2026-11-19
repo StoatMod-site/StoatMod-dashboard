@@ -10,6 +10,8 @@ export function organizationSchema() {
     legalName: siteConfig.legalName,
     url: `${siteConfig.origin}/`,
     logo: absoluteUrl("/brand-mark.png"),
+    email: siteConfig.contactEmail,
+    sameAs: [siteConfig.githubUrl, siteConfig.botSourceUrl, siteConfig.websiteSourceUrl, siteConfig.inviteUrl],
   };
 }
 

@@ -14,7 +14,7 @@ import styles from "../Discovery.module.css";
 
 const path = "/discovery/advertise";
 const title = "Stoat Server Advertising – List Your Server Free | Stoatmod";
-const description = "Advertise your Stoat server for free on Stoatmod Discovery. Get a reviewed listing with its own page, appear in search and categories, and bump it every two hours.";
+const description = "Advertise your Stoat server free on Stoatmod Discovery: a reviewed listing with its own page, a place in search and categories, and a bump every two hours.";
 
 export const metadata = buildMetadata({ title, description, path, ...discoveryOgImage("advertise", "Advertise your Stoat server for free – Stoatmod Discovery") });
 

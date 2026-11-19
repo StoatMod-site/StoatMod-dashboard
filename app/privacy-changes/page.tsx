@@ -160,7 +160,7 @@ const retentionRows = [
 const seo = {
   title: "What We Changed About Privacy | Stoatmod",
   headline: "What we changed about privacy, and when.",
-  description: "Every change Stoatmod has made to how it handles your data, newest first: AI on our own hardware, 30-day deletion, no IP checks, and deadlines for images and files.",
+  description: "Every change Stoatmod has made to how it handles your data, newest first: AI on our own hardware, 30-day deletion, no IP checks and deadlines for files.",
   path: "/privacy-changes",
   image: "/og-privacy-changes.png",
   imageAlt: "Stoatmod privacy update: what we changed. Less data, kept for less time.",

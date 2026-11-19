@@ -144,7 +144,7 @@ const sources: { bot: BotId; links: { label: string; href: string }[] }[] = [
 ];
 
 const seo = {
-  title: "Stoat Moderation Bots Compared: Stoatmod, Kuma, AutoMod & bronx",
+  title: "Stoat Moderation Bots Compared: Stoatmod, Kuma, AutoMod",
   description: "Compare Stoatmod, Kuma, AutoMod and bronx across 10 moderation features, privacy practices and source availability. See scores, evidence and setup links.",
   path: "/compare",
   image: "/compare/og-stoat-bots-comparison.png",
