@@ -1,0 +1,12 @@
+[
+["Les membres avec des permissions élevées ne peuvent pas être expulsés","Membros com permissões elevadas não podem ser expulsos","Los miembros con permisos elevados no pueden ser expulsados"],
+["Les membres avec des permissions élevées ne peuvent pas être bannis","Membros com permissões elevadas não podem ser banidos","Los miembros con permisos elevados no pueden ser baneados"],
+["L'utilisateur du tableau de bord n'a pas pu être identifié","Não foi possível identificar o utilizador do painel","No se pudo identificar al usuario del panel"],
+["Vos permissions sur le serveur n'ont pas pu être vérifiées","Não foi possível verificar as suas permissões no servidor","No se pudieron verificar tus permisos en el servidor"],
+["Vous devez être membre de ce serveur pour modérer des membres","Tem de ser membro deste servidor para moderar membros","Debes ser miembro de este servidor para moderar a otros miembros"],
+["Le propriétaire du serveur ne peut pas être modéré","O proprietário do servidor não pode ser moderado","El propietario del servidor no puede ser moderado"],
+["Impossible de vérifier la hiérarchie des rôles. Réessayez dans un instant","Não foi possível verificar a hierarquia de cargos. Tente novamente daqui a pouco","No se pudo verificar la jerarquía de roles. Inténtalo de nuevo en un momento"],
+["Impossible de vérifier votre rôle sur ce serveur","Não foi possível verificar o seu cargo neste servidor","No se pudo verificar tu rol en este servidor"],
+["Votre rôle le plus élevé doit être au-dessus du rôle le plus élevé de ce membre","O seu cargo mais alto tem de estar acima do cargo mais alto desse membro","Tu rol más alto debe estar por encima del rol más alto de ese miembro"],
+["Vous avez besoin de la permission {0} pour cette action","Precisa da permissão {0} para esta ação","Necesitas el permiso {0} para esta acción"]
+]

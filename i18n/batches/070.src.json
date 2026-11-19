@@ -1,0 +1,12 @@
+[
+ "Elevated members cannot be kicked",
+ "Elevated members cannot be banned",
+ "The dashboard user could not be identified",
+ "Your server permissions could not be verified",
+ "You must be a member of this server to moderate members",
+ "The server owner can't be moderated",
+ "I could not verify the role hierarchy. Please try again shortly",
+ "I could not verify your role in this server",
+ "Your highest role must be above that member's highest role",
+ "You need the {0} permission for this action"
+]

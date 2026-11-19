@@ -1,0 +1,13 @@
+[
+ "Reorganised the dashboard sidebar into clearer sections.",
+ "Added a Roles tab to the dashboard. Change a role's name, colour (including gradients), permissions and display settings, reorder roles, and create or delete them, just as you can in the Stoat app.",
+ "Role changes made from the dashboard, and attempts that were refused, are now posted to the moderation log so you can see what moderators do with roles.",
+ "The privacy changes page now covers only Stoatmod's own changes. Our review of how other Stoat bots handle your data has moved to its own page, Stoat bots and your data.",
+ "Fixed join protection stopping moderators from sending links and attachments. Moderators are no longer limited, and a member who is given moderator permissions after joining is told by DM that their join protection has ended.",
+ "Security: moderation and settings commands now need the matching Stoat permission, such as Ban Members for ~ban or Manage Server to change settings. Before, any one moderator permission was enough.",
+ "Security: ~ban, ~kick and ~mute, and the same actions on the dashboard, can no longer target members whose highest role is equal to or above yours. Dashboard kicks and bans now also respect the moderator exemption.",
+ "Security: fixed a sign-in limit that let one person block dashboard sign-in for everyone.",
+ "Security: other websites can no longer show Stoatmod's pages inside a frame.",
+ "Security: report attachments are now always downloaded as files, with their names made safe, instead of opening with the type the uploader chose.",
+ "Stoat bots and your data"
+]
