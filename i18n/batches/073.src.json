@@ -1,0 +1,21 @@
+[
+ "Too many requests.",
+ "Retrying your request now…",
+ "Stoat is ratelimiting us! Retrying your request now…",
+ "You're still making changes faster than Stoatmod allows, so we stopped retrying. Wait a minute, then try again.",
+ "Stoat is still ratelimiting us, so we stopped retrying. Wait a minute, then try again.",
+ "Changes are paused until the list has updated.",
+ "Changes are paused until then, so we don't make the limit worse.",
+ "Stoat is ratelimiting us! We'll retry your request in {0} seconds and reflect the change here.",
+ "Stoat is ratelimiting us! We'll retry your request in {0} second and reflect the change here.",
+ "You're making changes faster than Stoatmod allows. We'll retry your request in {0} seconds and reflect the change here.",
+ "You're making changes faster than Stoatmod allows. We'll retry your request in {0} second and reflect the change here.",
+ "Saved. The change is live in Stoat. Stoat is ratelimiting us, so this list will update in {0} seconds.",
+ "Saved. The change is live in Stoat. Stoat is ratelimiting us, so this list will update in {0} second.",
+ "Saved. The change is live in Stoat. Stoat is ratelimiting us, so this list will update now.",
+ "Saved. The change is live in Stoat. This list will update in {0} seconds.",
+ "Saved. The change is live in Stoat. This list will update in {0} second.",
+ "Saved. The change is live in Stoat. This list will update now.",
+ "Waiting {0}s…",
+ "Retrying…"
+]

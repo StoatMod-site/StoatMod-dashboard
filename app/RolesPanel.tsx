@@ -1,7 +1,7 @@
 "use client";
 
-import { useEffect, useMemo, useState, type CSSProperties } from "react";
-import { api } from "./lib/api";
+import { useEffect, useMemo, useRef, useState, type CSSProperties } from "react";
+import { api, RateLimitedError } from "./lib/api";
 import {
   MAX_COLOUR_LENGTH, MAX_GRADIENT_STOPS, buildColour, colourProblem, nameStyle, parseColour, swatch,
   type ColourModel, type GradientKind, type GradientStop,
@@ -28,6 +28,47 @@ type Snapshot = {
   log_channel?: { configured: boolean };
   log_status?: "posted" | "no_channel" | "failed";
 };
+/** A change Stoat has already made, when Stoat would not hand over the updated list straight away. */
+type Deferred = {
+  saved: true; needs_refresh: true; rate_limited: boolean; retry_after: number;
+  changed_role_id?: string; log_status?: Snapshot["log_status"];
+};
+type Changed = Snapshot | Deferred;
+/** A pause while a rate limit runs out: "retry" sends the same request again, "refresh" reloads the list. */
+type Wait = { until: number; source: string; reason: "retry" | "refresh" };
+
+const MAX_RATE_LIMIT_RETRIES = 3;
+const RETRY_MARGIN_MS = 300;
+
+class Abandoned extends Error {}
+
+/** The clock, read only from event handlers and timers (never while rendering). */
+function currentTime() {
+  return Date.now();
+}
+
+function waitMessage(wait: Wait, seconds: number): string {
+  const when = seconds > 0 ? `in ${seconds} ${seconds === 1 ? "second" : "seconds"}` : "now";
+  if (wait.reason === "refresh") {
+    return wait.source === "stoat"
+      ? `Saved. The change is live in Stoat. Stoat is ratelimiting us, so this list will update ${when}.`
+      : `Saved. The change is live in Stoat. This list will update ${when}.`;
+  }
+  if (wait.source === "stoatmod") {
+    return seconds > 0
+      ? `You're making changes faster than Stoatmod allows. We'll retry your request ${when} and reflect the change here.`
+      : "Retrying your request now…";
+  }
+  return seconds > 0
+    ? `Stoat is ratelimiting us! We'll retry your request ${when} and reflect the change here.`
+    : "Stoat is ratelimiting us! Retrying your request now…";
+}
+
+function gaveUp(reason: RateLimitedError): Error {
+  return new Error(reason.source === "stoatmod"
+    ? "You're still making changes faster than Stoatmod allows, so we stopped retrying. Wait a minute, then try again."
+    : "Stoat is still ratelimiting us, so we stopped retrying. Wait a minute, then try again.");
+}
 type Draft = { name: string; colour: ColourModel; hoist: boolean; allow: string[]; deny: string[] };
 type PermissionState = "allow" | "neutral" | "deny";
 
@@ -66,7 +107,7 @@ function changesFor(role: Role, draft: Draft) {
 function mergeOrder(order: string[], movable: string[]) {
   return [...order.filter((id) => movable.includes(id)), ...movable.filter((id) => !order.includes(id))];
 }
-function logNoteFor(result: Snapshot) {
+function logNoteFor(result: Pick<Snapshot, "log_status">) {
   if (result.log_status === "posted") return "Posted to the moderation log channel.";
   if (result.log_status === "failed") return "Stoatmod could not post this to the moderation log channel. Check that it can send messages there.";
   return "";
@@ -86,7 +127,7 @@ export function RolesPanel() {
   const [selectedId, setSelectedId] = useState<string | null>(null);
   const [draft, setDraft] = useState<Draft | null>(null);
   const [order, setOrder] = useState<string[] | null>(null);
-  const [busy, setBusy] = useState(false);
+  const [working, setWorking] = useState(false);
   const [error, setError] = useState("");
   const [notice, setNotice] = useState("");
   const [loadError, setLoadError] = useState("");
@@ -94,24 +135,59 @@ export function RolesPanel() {
   const [newName, setNewName] = useState("");
   const [deleteName, setDeleteName] = useState("");
   const [logNote, setLogNote] = useState("");
+  const [wait, setWait] = useState<Wait | null>(null);
+  const [now, setNow] = useState(() => Date.now());
+  const alive = useRef(true);
+  // While a rate limit runs out, everything that would send another request stays disabled.
+  const busy = working || wait !== null;
+
+  useEffect(() => {
+    alive.current = true;
+    return () => {
+      alive.current = false;
+    };
+  }, []);
+
+  useEffect(() => {
+    if (!wait) return;
+    const timer = window.setInterval(() => setNow(Date.now()), 250);
+    return () => window.clearInterval(timer);
+  }, [wait]);
 
   useEffect(() => {
     let active = true;
-    api<Snapshot>("/api/roles")
-      .then((result) => {
-        if (!active) return;
-        setData(result);
-        const first = result.roles.find((role) => role.editable || role.permissions_editable) ?? result.roles[0];
-        if (first) {
-          setSelectedId(first.id);
-          setDraft(draftFrom(first));
-        }
-      })
-      .catch((reason) => {
-        if (active) setLoadError(reason instanceof Error ? reason.message : "The roles could not be loaded.");
-      });
+    let timer = 0;
+    const load = (attempt: number) => {
+      api<Snapshot>("/api/roles")
+        .then((result) => {
+          if (!active) return;
+          setData(result);
+          const first = result.roles.find((role) => role.editable || role.permissions_editable) ?? result.roles[0];
+          if (first) {
+            setSelectedId(first.id);
+            setDraft(draftFrom(first));
+          }
+        })
+        .catch((reason) => {
+          if (!active) return;
+          if (reason instanceof RateLimitedError && attempt < MAX_RATE_LIMIT_RETRIES) {
+            const until = Date.now() + reason.retryAfter * 1000 + RETRY_MARGIN_MS;
+            setNow(Date.now());
+            setWait({ until, source: reason.source, reason: "retry" });
+            timer = window.setTimeout(() => {
+              if (!active) return;
+              setWait(null);
+              load(attempt + 1);
+            }, until - Date.now());
+            return;
+          }
+          setLoadError(reason instanceof RateLimitedError ? gaveUp(reason).message : reason instanceof Error ? reason.message : "The roles could not be loaded.");
+        });
+    };
+    load(0);
     return () => {
       active = false;
+      window.clearTimeout(timer);
     };
   }, []);
 
@@ -156,14 +232,55 @@ export function RolesPanel() {
     setDeleteName("");
   }
 
+  /** Show the countdown and lock the page until the limit runs out. False if the panel was closed meanwhile. */
+  function pause(seconds: number, source: string, reason: Wait["reason"]): Promise<boolean> {
+    const started = currentTime();
+    const until = started + Math.max(1, seconds) * 1000 + RETRY_MARGIN_MS;
+    setNow(started);
+    setWait({ until, source, reason });
+    return new Promise((resolve) => {
+      window.setTimeout(() => {
+        if (!alive.current) return resolve(false);
+        setWait(null);
+        resolve(true);
+      }, until - started);
+    });
+  }
+
+  /** Send a request; when it is rate limited, wait out the limit and send the same request again. */
+  async function withRetries<T>(call: () => Promise<T>): Promise<T> {
+    for (let attempt = 0; ; attempt += 1) {
+      try {
+        return await call();
+      } catch (reason) {
+        if (!(reason instanceof RateLimitedError)) throw reason;
+        if (attempt >= MAX_RATE_LIMIT_RETRIES) throw gaveUp(reason);
+        if (!(await pause(reason.retryAfter, reason.source, "retry"))) throw new Abandoned();
+      }
+    }
+  }
+
+  /** Show the result of a change. If Stoat has made it but would not send the new list yet, fetch it once the limit runs out. */
+  async function settle(result: Changed, keep: string | null, done: string) {
+    setNotice(done);
+    setLogNote(logNoteFor(result));
+    if ("needs_refresh" in result) {
+      if (!(await pause(result.retry_after, result.rate_limited ? "stoat" : "", "refresh"))) throw new Abandoned();
+      adopt(await withRetries(() => api<Snapshot>("/api/roles")), keep);
+      return;
+    }
+    adopt(result, keep);
+  }
+
   async function run(work: () => Promise<void>) {
-    setBusy(true);
+    setWorking(true);
     setError("");
     setNotice("");
     setLogNote("");
     try {
       await work();
     } catch (reason) {
+      if (reason instanceof Abandoned || !alive.current) return;
       setError(reason instanceof Error ? reason.message : "The change could not be saved.");
       // Part of a change may have been applied, so show what Stoat really has now, but keep the edits on screen.
       try {
@@ -178,27 +295,25 @@ export function RolesPanel() {
         /* the next successful load corrects the list */
       }
     } finally {
-      setBusy(false);
+      if (alive.current) setWorking(false);
     }
   }
 
   async function save() {
     if (!selected || !canSave) return;
+    const body = JSON.stringify(payload);
     await run(async () => {
-      const result = await api<Snapshot>(`/api/roles/${selected.id}`, { method: "PUT", body: JSON.stringify(payload) });
-      adopt(result, selected.id);
-      setNotice("Saved. The change is live in Stoat.");
-      setLogNote(logNoteFor(result));
+      const result = await withRetries(() => api<Changed>(`/api/roles/${selected.id}`, { method: "PUT", body }));
+      await settle(result, selected.id, "Saved. The change is live in Stoat.");
     });
   }
 
   async function saveOrder() {
+    const body = JSON.stringify({ order: movableOrder });
     await run(async () => {
-      const result = await api<Snapshot>("/api/roles/order", { method: "PUT", body: JSON.stringify({ order: movableOrder }) });
+      const result = await withRetries(() => api<Changed>("/api/roles/order", { method: "PUT", body }));
       setOrder(null);
-      adopt(result, selectedId);
-      setNotice("The role order was saved in Stoat.");
-      setLogNote(logNoteFor(result));
+      await settle(result, selectedId, "The role order was saved in Stoat.");
     });
   }
 
@@ -206,21 +321,18 @@ export function RolesPanel() {
     const name = normalName(newName);
     if (!name) return;
     await run(async () => {
-      const result = await api<Snapshot>("/api/roles", { method: "POST", body: JSON.stringify({ name }) });
+      const result = await withRetries(() => api<Changed>("/api/roles", { method: "POST", body: JSON.stringify({ name }) }));
       setNewName("");
-      adopt(result, result.changed_role_id ?? null);
-      setNotice("The role was created at the bottom of the list. Choose its colour and permissions, then save.");
-      setLogNote(logNoteFor(result));
+      await settle(result, result.changed_role_id ?? null, "The role was created at the bottom of the list. Choose its colour and permissions, then save.");
     });
   }
 
   async function deleteRole() {
     if (!selected || deleteName !== selected.name) return;
+    const body = JSON.stringify({ confirm_name: deleteName });
     await run(async () => {
-      const result = await api<Snapshot>(`/api/roles/${selected.id}`, { method: "DELETE", body: JSON.stringify({ confirm_name: deleteName }) });
-      adopt(result, null);
-      setNotice("The role was deleted.");
-      setLogNote(logNoteFor(result));
+      const result = await withRetries(() => api<Changed>(`/api/roles/${selected.id}`, { method: "DELETE", body }));
+      await settle(result, null, "The role was deleted.");
     });
   }
 
@@ -241,8 +353,14 @@ export function RolesPanel() {
     });
   }
 
+  const secondsLeft = wait ? Math.max(0, Math.ceil((wait.until - RETRY_MARGIN_MS - now) / 1000)) : 0;
+  const waitBanner = wait && <div className={styles.wait} role="status" aria-live="polite">
+    <span className={styles.clock} aria-hidden="true">{secondsLeft > 0 ? secondsLeft : "…"}</span>
+    <p>{waitMessage(wait, secondsLeft)}<small>{wait.reason === "refresh" ? "Changes are paused until the list has updated." : "Changes are paused until then, so we don't make the limit worse."}</small></p>
+  </div>;
+
   if (loadError) return <div className={`dashboard-surface ${styles.page}`}><p className={styles.error} role="alert">{loadError}</p></div>;
-  if (!data) return <div className={`dashboard-surface ${styles.page}`}><p className={styles.loading} role="status">Loading roles from Stoat…</p></div>;
+  if (!data) return <div className={`dashboard-surface ${styles.page}`}>{waitBanner || <p className={styles.loading} role="status">Loading roles from Stoat…</p>}</div>;
 
   const query = permissionQuery.trim().toLowerCase();
   const visiblePermissions = data.catalog.permissions.filter((permission) => !query || `${permission.name} ${permission.description}`.toLowerCase().includes(query));
@@ -258,8 +376,9 @@ export function RolesPanel() {
       <p className={styles.count} role="status">{`${editableCount} of ${roles.length} roles can be edited here`}</p>
     </header>
     {blockedAll && <p className={styles.warning} role="status">{roles[0]?.locked_message}</p>}
+    {waitBanner}
     {error && <p className={styles.error} role="alert">{error}</p>}
-    {notice && <p className={styles.notice} role="status">{notice}{logNote && <span className={styles.logNote}>{logNote}</span>}</p>}
+    {notice && !(wait && wait.reason === "refresh") && <p className={styles.notice} role="status">{notice}{logNote && <span className={styles.logNote}>{logNote}</span>}</p>}
     <div className={styles.layout}>
       <aside className={styles.list} aria-label="Roles in rank order">
         <div className={styles.row}><h3>Roles, highest first</h3></div>
@@ -342,7 +461,7 @@ export function RolesPanel() {
           </fieldset>
 
           <div className={styles.actions}>
-            <button type="button" className="primary-button" disabled={!canSave} onClick={() => void save()}>{busy ? "Saving…" : "Save changes"} <span>→</span></button>
+            <button type="button" className="primary-button" disabled={!canSave} onClick={() => void save()}>{wait ? (secondsLeft > 0 ? `Waiting ${secondsLeft}s…` : "Retrying…") : working ? "Saving…" : "Save changes"} <span>→</span></button>
             <button type="button" className="secondary-button" disabled={busy || !Object.keys(payload).length} onClick={() => setDraft(draftFrom(selected))}>Discard changes</button>
           </div>
 

@@ -16,6 +16,19 @@ export class ApiError extends Error {
   }
 }
 
+/** A request that was refused for now because of a rate limit; `retryAfter` is the wait in seconds. */
+export class RateLimitedError extends Error {
+  retryAfter: number;
+  source: string;
+
+  constructor(message: string, retryAfter: number, source: string) {
+    super(message);
+    this.name = "RateLimitedError";
+    this.retryAfter = retryAfter;
+    this.source = source;
+  }
+}
+
 function cookie(name: string) {
   if (typeof document === "undefined") return "";
   const prefix = `${name}=`;
@@ -36,7 +49,12 @@ export async function api<T>(path: string, init?: RequestInit): Promise<T> {
     },
   });
   const body = await response.json().catch(() => ({}));
-  if (!response.ok) throw new Error(body.error || "The dashboard request failed.");
+  if (!response.ok) {
+    if (response.status === 429 && body.rate_limited && typeof body.retry_after === "number") {
+      throw new RateLimitedError(body.error || "Too many requests.", body.retry_after, typeof body.source === "string" ? body.source : "");
+    }
+    throw new Error(body.error || "The dashboard request failed.");
+  }
   return body as T;
 }
 

@@ -40,7 +40,15 @@ const snapshot = () => ({
   ],
 });
 
-function harness({ selected = "MODS", edit, response = {} } = {}) {
+class RateLimitedError extends Error {
+  constructor(message, retryAfter, source) {
+    super(message);
+    this.retryAfter = retryAfter;
+    this.source = source;
+  }
+}
+
+function harness({ selected = "MODS", edit, response = {}, limited = 0 } = {}) {
   const data = snapshot();
   const found = data.roles.find((item) => item.id === selected);
   const draft = {
@@ -57,6 +65,7 @@ function harness({ selected = "MODS", edit, response = {} } = {}) {
     ...React,
     useEffect() {},
     useMemo: (factory) => factory(),
+    useRef: (initial) => ({ current: initial }),
     useState(initial) {
       const index = cursor++;
       if (!(index in states)) states[index] = typeof initial === "function" ? initial() : initial;
@@ -68,14 +77,21 @@ function harness({ selected = "MODS", edit, response = {} } = {}) {
   const compiled = { exports: {} };
   const api = async (path, init) => {
     requests.push({ path, init });
+    if (requests.length <= limited) {
+      throw new RateLimitedError("Stoat is ratelimiting us! We'll retry your request in 7 seconds and reflect the change here.", 7, "stoat");
+    }
     return { ...snapshot(), ...response };
   };
-  runInNewContext(`(function(require,module,exports){${panelSource}\n})`, { structuredClone })(
-    (id) => id === "react" ? hooks : id.endsWith(".css") ? new Proxy({}, { get: (_, key) => key === "__esModule" ? false : String(key) }) : id === "./lib/api" ? { api } : id === "./lib/role-colour" ? colour.exports : require(id),
+  // Timers the panel starts are held until the test runs them, so a countdown can be inspected mid-wait.
+  const timers = [];
+  const window = { setTimeout: (fn) => timers.push(fn), clearTimeout() {}, setInterval: () => 0, clearInterval() {} };
+  runInNewContext(`(function(require,module,exports){${panelSource}\n})`, { structuredClone, window })(
+    (id) => id === "react" ? hooks : id.endsWith(".css") ? new Proxy({}, { get: (_, key) => key === "__esModule" ? false : String(key) }) : id === "./lib/api" ? { api, RateLimitedError } : id === "./lib/role-colour" ? colour.exports : require(id),
     compiled, compiled.exports);
   if (edit) edit(states);
   return {
     states, requests,
+    runTimers() { timers.splice(0).forEach((fn) => fn()); },
     tree() { cursor = 0; return compiled.exports.RolesPanel(); },
     html() { cursor = 0; return renderToStaticMarkup(compiled.exports.RolesPanel()); },
   };
@@ -192,6 +208,39 @@ test("a save reports whether the change was posted to the log channel", async ()
   const none = await saveAndWait({ log_status: "no_channel" });
   assert.equal(none.states[11], "");
   assert.equal(none.states[6], "Saved. The change is live in Stoat.");
+});
+
+test("a save that Stoat rate limits counts down, locks saving, then sends the same request again by itself", async () => {
+  const h = harness({ edit: (states) => { states[2].name = "Moderators"; }, limited: 1, response: { log_status: "posted" } });
+  elements(h.tree(), "button").find((button) => text(button).startsWith("Save changes")).props.onClick();
+  await new Promise((resolve) => setTimeout(resolve, 20));
+  const waiting = h.html();
+  assert.match(waiting, /Stoat is ratelimiting us! We&#x27;ll retry your request in 7 seconds and reflect the change here\./);
+  assert.match(waiting, /Changes are paused until then/);
+  const save = elements(h.tree(), "button").find((button) => text(button).startsWith("Waiting 7s"));
+  assert.equal(save.props.disabled, true);
+  assert.equal(h.states[6], "");  // nothing claims success yet
+  assert.equal(h.requests.length, 1);
+
+  h.runTimers();
+  await new Promise((resolve) => setTimeout(resolve, 20));
+  assert.equal(h.requests.length, 2);
+  assert.equal(h.requests[1].path, h.requests[0].path);
+  assert.equal(h.requests[1].init.body, h.requests[0].init.body);
+  assert.equal(h.states[6], "Saved. The change is live in Stoat.");
+  assert.equal(h.states[11], "Posted to the moderation log channel.");
+  assert.doesNotMatch(h.html(), /ratelimiting/);
+});
+
+test("a change Stoat made whose refresh is rate limited is shown as saved, then the list is fetched again", async () => {
+  const h = harness({ edit: (states) => { states[2].name = "Moderators"; }, response: { saved: true, needs_refresh: true, rate_limited: true, retry_after: 3 } });
+  elements(h.tree(), "button").find((button) => text(button).startsWith("Save changes")).props.onClick();
+  await new Promise((resolve) => setTimeout(resolve, 20));
+  assert.match(h.html(), /Saved\. The change is live in Stoat\. Stoat is ratelimiting us, so this list will update in 3 seconds\./);
+  assert.doesNotMatch(h.html(), /role="alert"/);
+  h.runTimers();
+  await new Promise((resolve) => setTimeout(resolve, 20));
+  assert.deepEqual(h.requests.map((request) => request.path), ["/api/roles/MODS", "/api/roles"]);
 });
 
 test("a colour the role already has is never a reason to refuse a save, even when the editor cannot check it", () => {
