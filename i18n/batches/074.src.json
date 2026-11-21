@@ -1,0 +1,6 @@
+[
+ "21 November 2026",
+ "Fixed commands, and moderation, not working in a private channel that Stoatmod was given access to after it joined, for example by adding its role to the channel's permissions. Messages in that channel were not reaching Stoatmod until it reconnected. Stoatmod now notices this and reconnects by itself, usually within a minute and always within the hour.",
+ "Roles tab: when Stoat limits how quickly Stoatmod can make changes, the dashboard now says so, counts down the wait, pauses other changes so the limit isn't made worse, then retries your change by itself and shows the result.",
+ "Roles tab: saving a role now uses fewer requests to Stoat, so the limit is reached far less often. A change that was saved is no longer reported as an error when only refreshing the list was delayed."
+]
